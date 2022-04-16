@@ -14,6 +14,7 @@
 		2DCAB46D280AB66D00308095 /* ClickmeliveHostCore.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2DCAB46B280AB66D00308095 /* ClickmeliveHostCore.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		2DCAB49B280ABBE700308095 /* ClickmeliveHostCoreIOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2DCAB49A280ABBE700308095 /* ClickmeliveHostCoreIOS.framework */; };
 		2DCAB49C280ABBE700308095 /* ClickmeliveHostCoreIOS.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2DCAB49A280ABBE700308095 /* ClickmeliveHostCoreIOS.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		2DCAB4BF280AC5C600308095 /* ListEventsUIComposer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DCAB4BE280AC5C600308095 /* ListEventsUIComposer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -39,6 +40,7 @@
 		2D7D87C128017836006FFDE7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2DCAB46B280AB66D00308095 /* ClickmeliveHostCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = ClickmeliveHostCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2DCAB49A280ABBE700308095 /* ClickmeliveHostCoreIOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = ClickmeliveHostCoreIOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2DCAB4BE280AC5C600308095 /* ListEventsUIComposer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListEventsUIComposer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +76,7 @@
 		2D7D87B228017835006FFDE7 /* ClickMeLiveHost */ = {
 			isa = PBXGroup;
 			children = (
+				2DCAB4BC280AC5A500308095 /* List Events */,
 				2D7D87B328017835006FFDE7 /* AppDelegate.swift */,
 				2D7D87BC28017836006FFDE7 /* Assets.xcassets */,
 				2D7D87BE28017836006FFDE7 /* LaunchScreen.storyboard */,
@@ -89,6 +92,22 @@
 				2DCAB46B280AB66D00308095 /* ClickmeliveHostCore.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		2DCAB4BC280AC5A500308095 /* List Events */ = {
+			isa = PBXGroup;
+			children = (
+				2DCAB4BD280AC5B600308095 /* Composers */,
+			);
+			path = "List Events";
+			sourceTree = "<group>";
+		};
+		2DCAB4BD280AC5B600308095 /* Composers */ = {
+			isa = PBXGroup;
+			children = (
+				2DCAB4BE280AC5C600308095 /* ListEventsUIComposer.swift */,
+			);
+			path = Composers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -163,6 +182,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2D7D87B428017835006FFDE7 /* AppDelegate.swift in Sources */,
+				2DCAB4BF280AC5C600308095 /* ListEventsUIComposer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

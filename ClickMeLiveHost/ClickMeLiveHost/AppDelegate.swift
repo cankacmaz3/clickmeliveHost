@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import ClickmeliveHostCoreIOS
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -17,7 +18,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         window = UIWindow()
         window?.makeKeyAndVisible()
-        window?.rootViewController = ViewController()
+        let listEventVC = ListEventsUIComposer.makeListEventsController()
+        window?.rootViewController = listEventVC
         return true
     }
 
