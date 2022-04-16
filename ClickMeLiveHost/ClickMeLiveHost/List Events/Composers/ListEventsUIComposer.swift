@@ -20,10 +20,13 @@ final class ListEventsUIComposer {
         let refreshController = ListEventsRefreshController(viewModel: viewModel)
         let listEventsViewController = ListEventsViewController(refreshController: refreshController)
         
+        let router = ListEventsRouter()
+        router.viewController = listEventsViewController
+        
         viewModel.onEventsLoaded = { [weak listEventsViewController] events in
             listEventsViewController?.display(events.map { event in
                 let viewModel = EventViewModel(model: event) {
-                    print("Selected here \(event)")
+                    router.openBroadcastModule()
                 }
                 return ListEventCellController(viewModel: viewModel)
             })

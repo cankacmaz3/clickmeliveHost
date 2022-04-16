@@ -18,7 +18,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         window = UIWindow()
         window?.makeKeyAndVisible()
-        let listEventVC = ListEventsUIComposer.makeListEventsController()
+        let listEventVC = UINavigationController(rootViewController: ListEventsUIComposer.makeListEventsController())
         window?.rootViewController = listEventVC
         return true
     }

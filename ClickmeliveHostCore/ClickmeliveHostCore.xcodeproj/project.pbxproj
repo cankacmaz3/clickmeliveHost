@@ -41,6 +41,8 @@
 		2DCAB4E3280ADF2900308095 /* ClickmeliveHostCore.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2DCAB452280AB5DF00308095 /* ClickmeliveHostCore.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		2DCAB4F1280AE66400308095 /* DateFormatter+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DCAB4F0280AE66400308095 /* DateFormatter+Extensions.swift */; };
 		2DCAB557280B679F00308095 /* EventViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DCAB556280B679F00308095 /* EventViewModel.swift */; };
+		2DCAB55C280B6B0600308095 /* BroadcastViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DCAB55B280B6B0600308095 /* BroadcastViewController.swift */; };
+		2DCAB55E280B6B0F00308095 /* BroadcastView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DCAB55D280B6B0F00308095 /* BroadcastView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -117,6 +119,8 @@
 		2DCAB4DF280ADDCF00308095 /* ListEventRefreshController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListEventRefreshController.swift; sourceTree = "<group>"; };
 		2DCAB4F0280AE66400308095 /* DateFormatter+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DateFormatter+Extensions.swift"; sourceTree = "<group>"; };
 		2DCAB556280B679F00308095 /* EventViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventViewModel.swift; sourceTree = "<group>"; };
+		2DCAB55B280B6B0600308095 /* BroadcastViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BroadcastViewController.swift; sourceTree = "<group>"; };
+		2DCAB55D280B6B0F00308095 /* BroadcastView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BroadcastView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -235,6 +239,7 @@
 				2DCAB4AC280ABE9E00308095 /* Shared Helpers */,
 				2DCAB4AF280ABEBF00308095 /* Shared UI */,
 				2DCAB4B5280ABFDF00308095 /* List Events UI */,
+				2DCAB558280B6A2500308095 /* Broadcast UI */,
 			);
 			path = ClickmeliveHostCoreIOS;
 			sourceTree = "<group>";
@@ -401,6 +406,31 @@
 				2DCAB4F0280AE66400308095 /* DateFormatter+Extensions.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		2DCAB558280B6A2500308095 /* Broadcast UI */ = {
+			isa = PBXGroup;
+			children = (
+				2DCAB559280B6AEA00308095 /* Controllers */,
+				2DCAB55A280B6AEF00308095 /* Views */,
+			);
+			path = "Broadcast UI";
+			sourceTree = "<group>";
+		};
+		2DCAB559280B6AEA00308095 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				2DCAB55B280B6B0600308095 /* BroadcastViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		2DCAB55A280B6AEF00308095 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				2DCAB55D280B6B0F00308095 /* BroadcastView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -616,6 +646,8 @@
 				2DCAB4A0280ABD9800308095 /* Fonts.swift in Sources */,
 				2DCAB4B9280AC34B00308095 /* ListEventsViewController.swift in Sources */,
 				2DCAB4C3280AD6D000308095 /* ListEventCellController.swift in Sources */,
+				2DCAB55E280B6B0F00308095 /* BroadcastView.swift in Sources */,
+				2DCAB55C280B6B0600308095 /* BroadcastViewController.swift in Sources */,
 				2DCAB4C1280AC8EA00308095 /* EventCell.swift in Sources */,
 				2DCAB4A5280ABDC400308095 /* UIColor+Helpers.swift in Sources */,
 				2DCAB4A7280ABDCD00308095 /* UIView+Helpers.swift in Sources */,
