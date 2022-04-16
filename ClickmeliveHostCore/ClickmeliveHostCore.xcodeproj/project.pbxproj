@@ -1,0 +1,877 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2DCAB45B280AB5DF00308095 /* ClickmeliveHostCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2DCAB452280AB5DF00308095 /* ClickmeliveHostCore.framework */; };
+		2DCAB472280ABAA500308095 /* HTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DCAB471280ABAA500308095 /* HTTPClient.swift */; };
+		2DCAB475280ABACF00308095 /* HTTPURLResponse+StatusCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DCAB474280ABACF00308095 /* HTTPURLResponse+StatusCode.swift */; };
+		2DCAB477280ABAEC00308095 /* URLSessionHTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DCAB476280ABAEC00308095 /* URLSessionHTTPClient.swift */; };
+		2DCAB479280ABAFF00308095 /* URLRequestBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DCAB478280ABAFF00308095 /* URLRequestBuilder.swift */; };
+		2DCAB47B280ABB1D00308095 /* AppEnvironment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DCAB47A280ABB1D00308095 /* AppEnvironment.swift */; };
+		2DCAB47D280ABB4600308095 /* Servers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DCAB47C280ABB4600308095 /* Servers.swift */; };
+		2DCAB47F280ABB6000308095 /* AuthenticatedURLRequestBuilderDecorator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DCAB47E280ABB6000308095 /* AuthenticatedURLRequestBuilderDecorator.swift */; };
+		2DCAB48D280ABBB600308095 /* ClickmeliveHostCoreIOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2DCAB485280ABBB600308095 /* ClickmeliveHostCoreIOS.framework */; };
+		2DCAB4A0280ABD9800308095 /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DCAB49F280ABD9800308095 /* Fonts.swift */; };
+		2DCAB4A2280ABDA700308095 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DCAB4A1280ABDA700308095 /* Colors.swift */; };
+		2DCAB4A5280ABDC400308095 /* UIColor+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DCAB4A4280ABDC400308095 /* UIColor+Helpers.swift */; };
+		2DCAB4A7280ABDCD00308095 /* UIView+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DCAB4A6280ABDCD00308095 /* UIView+Helpers.swift */; };
+		2DCAB4AE280ABEB100308095 /* UITableView+Dequeueing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DCAB4AD280ABEB100308095 /* UITableView+Dequeueing.swift */; };
+		2DCAB4B2280ABED800308095 /* Layoutable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DCAB4B1280ABED800308095 /* Layoutable.swift */; };
+		2DCAB4B4280ABEEB00308095 /* Layouting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DCAB4B3280ABEEB00308095 /* Layouting.swift */; };
+		2DCAB4B9280AC34B00308095 /* ListEventsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DCAB4B8280AC34B00308095 /* ListEventsViewController.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		2DCAB45C280AB5DF00308095 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2DCAB449280AB5DF00308095 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2DCAB451280AB5DF00308095;
+			remoteInfo = ClickmeliveHostCore;
+		};
+		2DCAB48E280ABBB600308095 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2DCAB449280AB5DF00308095 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2DCAB484280ABBB600308095;
+			remoteInfo = ClickmeliveHostCoreIOS;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		2DCAB452280AB5DF00308095 /* ClickmeliveHostCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ClickmeliveHostCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2DCAB45A280AB5DF00308095 /* ClickmeliveHostCoreTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ClickmeliveHostCoreTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		2DCAB471280ABAA500308095 /* HTTPClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPClient.swift; sourceTree = "<group>"; };
+		2DCAB474280ABACF00308095 /* HTTPURLResponse+StatusCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HTTPURLResponse+StatusCode.swift"; sourceTree = "<group>"; };
+		2DCAB476280ABAEC00308095 /* URLSessionHTTPClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionHTTPClient.swift; sourceTree = "<group>"; };
+		2DCAB478280ABAFF00308095 /* URLRequestBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLRequestBuilder.swift; sourceTree = "<group>"; };
+		2DCAB47A280ABB1D00308095 /* AppEnvironment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppEnvironment.swift; sourceTree = "<group>"; };
+		2DCAB47C280ABB4600308095 /* Servers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Servers.swift; sourceTree = "<group>"; };
+		2DCAB47E280ABB6000308095 /* AuthenticatedURLRequestBuilderDecorator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticatedURLRequestBuilderDecorator.swift; sourceTree = "<group>"; };
+		2DCAB485280ABBB600308095 /* ClickmeliveHostCoreIOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ClickmeliveHostCoreIOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2DCAB48C280ABBB600308095 /* ClickmeliveHostCoreIOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ClickmeliveHostCoreIOSTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		2DCAB49D280ABD7700308095 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		2DCAB49F280ABD9800308095 /* Fonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fonts.swift; sourceTree = "<group>"; };
+		2DCAB4A1280ABDA700308095 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		2DCAB4A4280ABDC400308095 /* UIColor+Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Helpers.swift"; sourceTree = "<group>"; };
+		2DCAB4A6280ABDCD00308095 /* UIView+Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Helpers.swift"; sourceTree = "<group>"; };
+		2DCAB4AD280ABEB100308095 /* UITableView+Dequeueing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Dequeueing.swift"; sourceTree = "<group>"; };
+		2DCAB4B1280ABED800308095 /* Layoutable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Layoutable.swift; sourceTree = "<group>"; };
+		2DCAB4B3280ABEEB00308095 /* Layouting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Layouting.swift; sourceTree = "<group>"; };
+		2DCAB4B8280AC34B00308095 /* ListEventsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListEventsViewController.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		2DCAB44F280AB5DF00308095 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2DCAB457280AB5DF00308095 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2DCAB45B280AB5DF00308095 /* ClickmeliveHostCore.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2DCAB482280ABBB600308095 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2DCAB489280ABBB600308095 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2DCAB48D280ABBB600308095 /* ClickmeliveHostCoreIOS.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2DCAB448280AB5DF00308095 = {
+			isa = PBXGroup;
+			children = (
+				2DCAB454280AB5DF00308095 /* ClickmeliveHostCore */,
+				2DCAB45E280AB5DF00308095 /* ClickmeliveHostCoreTests */,
+				2DCAB486280ABBB600308095 /* ClickmeliveHostCoreIOS */,
+				2DCAB490280ABBB600308095 /* ClickmeliveHostCoreIOSTests */,
+				2DCAB453280AB5DF00308095 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		2DCAB453280AB5DF00308095 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2DCAB452280AB5DF00308095 /* ClickmeliveHostCore.framework */,
+				2DCAB45A280AB5DF00308095 /* ClickmeliveHostCoreTests.xctest */,
+				2DCAB485280ABBB600308095 /* ClickmeliveHostCoreIOS.framework */,
+				2DCAB48C280ABBB600308095 /* ClickmeliveHostCoreIOSTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2DCAB454280AB5DF00308095 /* ClickmeliveHostCore */ = {
+			isa = PBXGroup;
+			children = (
+				2DCAB46F280ABA6F00308095 /* Shared API */,
+				2DCAB470280ABA7900308095 /* Shared API Infra */,
+			);
+			path = ClickmeliveHostCore;
+			sourceTree = "<group>";
+		};
+		2DCAB45E280AB5DF00308095 /* ClickmeliveHostCoreTests */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ClickmeliveHostCoreTests;
+			sourceTree = "<group>";
+		};
+		2DCAB46F280ABA6F00308095 /* Shared API */ = {
+			isa = PBXGroup;
+			children = (
+				2DCAB471280ABAA500308095 /* HTTPClient.swift */,
+				2DCAB473280ABAB500308095 /* Helpers */,
+			);
+			path = "Shared API";
+			sourceTree = "<group>";
+		};
+		2DCAB470280ABA7900308095 /* Shared API Infra */ = {
+			isa = PBXGroup;
+			children = (
+				2DCAB476280ABAEC00308095 /* URLSessionHTTPClient.swift */,
+				2DCAB478280ABAFF00308095 /* URLRequestBuilder.swift */,
+				2DCAB47A280ABB1D00308095 /* AppEnvironment.swift */,
+				2DCAB47C280ABB4600308095 /* Servers.swift */,
+				2DCAB47E280ABB6000308095 /* AuthenticatedURLRequestBuilderDecorator.swift */,
+			);
+			path = "Shared API Infra";
+			sourceTree = "<group>";
+		};
+		2DCAB473280ABAB500308095 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				2DCAB474280ABACF00308095 /* HTTPURLResponse+StatusCode.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		2DCAB486280ABBB600308095 /* ClickmeliveHostCoreIOS */ = {
+			isa = PBXGroup;
+			children = (
+				2DCAB49D280ABD7700308095 /* Info.plist */,
+				2DCAB49E280ABD8900308095 /* Utility */,
+				2DCAB4A3280ABDB300308095 /* Extensions */,
+				2DCAB4AC280ABE9E00308095 /* Shared Helpers */,
+				2DCAB4AF280ABEBF00308095 /* Shared UI */,
+				2DCAB4B5280ABFDF00308095 /* List Events UI */,
+			);
+			path = ClickmeliveHostCoreIOS;
+			sourceTree = "<group>";
+		};
+		2DCAB490280ABBB600308095 /* ClickmeliveHostCoreIOSTests */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ClickmeliveHostCoreIOSTests;
+			sourceTree = "<group>";
+		};
+		2DCAB49E280ABD8900308095 /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				2DCAB49F280ABD9800308095 /* Fonts.swift */,
+				2DCAB4A1280ABDA700308095 /* Colors.swift */,
+			);
+			path = Utility;
+			sourceTree = "<group>";
+		};
+		2DCAB4A3280ABDB300308095 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				2DCAB4A4280ABDC400308095 /* UIColor+Helpers.swift */,
+				2DCAB4A6280ABDCD00308095 /* UIView+Helpers.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		2DCAB4AC280ABE9E00308095 /* Shared Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				2DCAB4AD280ABEB100308095 /* UITableView+Dequeueing.swift */,
+			);
+			path = "Shared Helpers";
+			sourceTree = "<group>";
+		};
+		2DCAB4AF280ABEBF00308095 /* Shared UI */ = {
+			isa = PBXGroup;
+			children = (
+				2DCAB4B0280ABECD00308095 /* Views */,
+			);
+			path = "Shared UI";
+			sourceTree = "<group>";
+		};
+		2DCAB4B0280ABECD00308095 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				2DCAB4B1280ABED800308095 /* Layoutable.swift */,
+				2DCAB4B3280ABEEB00308095 /* Layouting.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		2DCAB4B5280ABFDF00308095 /* List Events UI */ = {
+			isa = PBXGroup;
+			children = (
+				2DCAB4B6280AC33600308095 /* Controllers */,
+				2DCAB4B7280AC33C00308095 /* Views */,
+			);
+			path = "List Events UI";
+			sourceTree = "<group>";
+		};
+		2DCAB4B6280AC33600308095 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				2DCAB4B8280AC34B00308095 /* ListEventsViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		2DCAB4B7280AC33C00308095 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		2DCAB44D280AB5DF00308095 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2DCAB480280ABBB600308095 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		2DCAB451280AB5DF00308095 /* ClickmeliveHostCore */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2DCAB464280AB5DF00308095 /* Build configuration list for PBXNativeTarget "ClickmeliveHostCore" */;
+			buildPhases = (
+				2DCAB44D280AB5DF00308095 /* Headers */,
+				2DCAB44E280AB5DF00308095 /* Sources */,
+				2DCAB44F280AB5DF00308095 /* Frameworks */,
+				2DCAB450280AB5DF00308095 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ClickmeliveHostCore;
+			productName = ClickmeliveHostCore;
+			productReference = 2DCAB452280AB5DF00308095 /* ClickmeliveHostCore.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		2DCAB459280AB5DF00308095 /* ClickmeliveHostCoreTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2DCAB467280AB5DF00308095 /* Build configuration list for PBXNativeTarget "ClickmeliveHostCoreTests" */;
+			buildPhases = (
+				2DCAB456280AB5DF00308095 /* Sources */,
+				2DCAB457280AB5DF00308095 /* Frameworks */,
+				2DCAB458280AB5DF00308095 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2DCAB45D280AB5DF00308095 /* PBXTargetDependency */,
+			);
+			name = ClickmeliveHostCoreTests;
+			productName = ClickmeliveHostCoreTests;
+			productReference = 2DCAB45A280AB5DF00308095 /* ClickmeliveHostCoreTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		2DCAB484280ABBB600308095 /* ClickmeliveHostCoreIOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2DCAB494280ABBB600308095 /* Build configuration list for PBXNativeTarget "ClickmeliveHostCoreIOS" */;
+			buildPhases = (
+				2DCAB480280ABBB600308095 /* Headers */,
+				2DCAB481280ABBB600308095 /* Sources */,
+				2DCAB482280ABBB600308095 /* Frameworks */,
+				2DCAB483280ABBB600308095 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ClickmeliveHostCoreIOS;
+			productName = ClickmeliveHostCoreIOS;
+			productReference = 2DCAB485280ABBB600308095 /* ClickmeliveHostCoreIOS.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		2DCAB48B280ABBB600308095 /* ClickmeliveHostCoreIOSTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2DCAB497280ABBB600308095 /* Build configuration list for PBXNativeTarget "ClickmeliveHostCoreIOSTests" */;
+			buildPhases = (
+				2DCAB488280ABBB600308095 /* Sources */,
+				2DCAB489280ABBB600308095 /* Frameworks */,
+				2DCAB48A280ABBB600308095 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2DCAB48F280ABBB600308095 /* PBXTargetDependency */,
+			);
+			name = ClickmeliveHostCoreIOSTests;
+			productName = ClickmeliveHostCoreIOSTests;
+			productReference = 2DCAB48C280ABBB600308095 /* ClickmeliveHostCoreIOSTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		2DCAB449280AB5DF00308095 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1310;
+				LastUpgradeCheck = 1310;
+				TargetAttributes = {
+					2DCAB451280AB5DF00308095 = {
+						CreatedOnToolsVersion = 13.1;
+						LastSwiftMigration = 1310;
+					};
+					2DCAB459280AB5DF00308095 = {
+						CreatedOnToolsVersion = 13.1;
+					};
+					2DCAB484280ABBB600308095 = {
+						CreatedOnToolsVersion = 13.1;
+						LastSwiftMigration = 1310;
+					};
+					2DCAB48B280ABBB600308095 = {
+						CreatedOnToolsVersion = 13.1;
+					};
+				};
+			};
+			buildConfigurationList = 2DCAB44C280AB5DF00308095 /* Build configuration list for PBXProject "ClickmeliveHostCore" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 2DCAB448280AB5DF00308095;
+			productRefGroup = 2DCAB453280AB5DF00308095 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				2DCAB451280AB5DF00308095 /* ClickmeliveHostCore */,
+				2DCAB459280AB5DF00308095 /* ClickmeliveHostCoreTests */,
+				2DCAB484280ABBB600308095 /* ClickmeliveHostCoreIOS */,
+				2DCAB48B280ABBB600308095 /* ClickmeliveHostCoreIOSTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		2DCAB450280AB5DF00308095 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2DCAB458280AB5DF00308095 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2DCAB483280ABBB600308095 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2DCAB48A280ABBB600308095 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		2DCAB44E280AB5DF00308095 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2DCAB47F280ABB6000308095 /* AuthenticatedURLRequestBuilderDecorator.swift in Sources */,
+				2DCAB47B280ABB1D00308095 /* AppEnvironment.swift in Sources */,
+				2DCAB475280ABACF00308095 /* HTTPURLResponse+StatusCode.swift in Sources */,
+				2DCAB47D280ABB4600308095 /* Servers.swift in Sources */,
+				2DCAB479280ABAFF00308095 /* URLRequestBuilder.swift in Sources */,
+				2DCAB472280ABAA500308095 /* HTTPClient.swift in Sources */,
+				2DCAB477280ABAEC00308095 /* URLSessionHTTPClient.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2DCAB456280AB5DF00308095 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2DCAB481280ABBB600308095 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2DCAB4A0280ABD9800308095 /* Fonts.swift in Sources */,
+				2DCAB4B9280AC34B00308095 /* ListEventsViewController.swift in Sources */,
+				2DCAB4A5280ABDC400308095 /* UIColor+Helpers.swift in Sources */,
+				2DCAB4A7280ABDCD00308095 /* UIView+Helpers.swift in Sources */,
+				2DCAB4B2280ABED800308095 /* Layoutable.swift in Sources */,
+				2DCAB4AE280ABEB100308095 /* UITableView+Dequeueing.swift in Sources */,
+				2DCAB4A2280ABDA700308095 /* Colors.swift in Sources */,
+				2DCAB4B4280ABEEB00308095 /* Layouting.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2DCAB488280ABBB600308095 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		2DCAB45D280AB5DF00308095 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2DCAB451280AB5DF00308095 /* ClickmeliveHostCore */;
+			targetProxy = 2DCAB45C280AB5DF00308095 /* PBXContainerItemProxy */;
+		};
+		2DCAB48F280ABBB600308095 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2DCAB484280ABBB600308095 /* ClickmeliveHostCoreIOS */;
+			targetProxy = 2DCAB48E280ABBB600308095 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		2DCAB462280AB5DF00308095 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 12.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		2DCAB463280AB5DF00308095 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 12.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		2DCAB465280AB5DF00308095 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = P624PPMU63;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = org.clickmelive.ClickmeliveHostCore.ClickmeliveHostCore;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		2DCAB466280AB5DF00308095 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = P624PPMU63;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = org.clickmelive.ClickmeliveHostCore.ClickmeliveHostCore;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		2DCAB468280AB5DF00308095 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = P624PPMU63;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = org.clickmelive.ClickmeliveHostCore.ClickmeliveHostCoreTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		2DCAB469280AB5DF00308095 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = P624PPMU63;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = org.clickmelive.ClickmeliveHostCore.ClickmeliveHostCoreTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		2DCAB495280ABBB600308095 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = P624PPMU63;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ClickmeliveHostCoreIOS/Info.plist;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = org.clickmelive.ClickmeliveHostCoreIOS.ClickmeliveHostCoreIOS;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		2DCAB496280ABBB600308095 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = P624PPMU63;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ClickmeliveHostCoreIOS/Info.plist;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = org.clickmelive.ClickmeliveHostCoreIOS.ClickmeliveHostCoreIOS;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		2DCAB498280ABBB600308095 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = P624PPMU63;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = org.clickmelive.ClickmeliveHostCoreIOS.ClickmeliveHostCoreIOSTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		2DCAB499280ABBB600308095 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = P624PPMU63;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = org.clickmelive.ClickmeliveHostCoreIOS.ClickmeliveHostCoreIOSTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2DCAB44C280AB5DF00308095 /* Build configuration list for PBXProject "ClickmeliveHostCore" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2DCAB462280AB5DF00308095 /* Debug */,
+				2DCAB463280AB5DF00308095 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2DCAB464280AB5DF00308095 /* Build configuration list for PBXNativeTarget "ClickmeliveHostCore" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2DCAB465280AB5DF00308095 /* Debug */,
+				2DCAB466280AB5DF00308095 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2DCAB467280AB5DF00308095 /* Build configuration list for PBXNativeTarget "ClickmeliveHostCoreTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2DCAB468280AB5DF00308095 /* Debug */,
+				2DCAB469280AB5DF00308095 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2DCAB494280ABBB600308095 /* Build configuration list for PBXNativeTarget "ClickmeliveHostCoreIOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2DCAB495280ABBB600308095 /* Debug */,
+				2DCAB496280ABBB600308095 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2DCAB497280ABBB600308095 /* Build configuration list for PBXNativeTarget "ClickmeliveHostCoreIOSTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2DCAB498280ABBB600308095 /* Debug */,
+				2DCAB499280ABBB600308095 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 2DCAB449280AB5DF00308095 /* Project object */;
+}
