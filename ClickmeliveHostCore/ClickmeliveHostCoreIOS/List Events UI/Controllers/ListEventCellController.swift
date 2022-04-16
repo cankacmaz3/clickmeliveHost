@@ -6,10 +6,15 @@
 //
 
 import UIKit
+import ClickmeliveHostCore
 
 public final class ListEventCellController {
     
-    public init() {}
+    private let viewModel: EventViewModel
+    
+    public init(viewModel: EventViewModel) {
+        self.viewModel = viewModel
+    }
     
     private var cell: EventCell?
     
@@ -17,8 +22,13 @@ public final class ListEventCellController {
         return binded(cell: tableView.dequeueReusableCell())
     }
     
+    func select() {
+        viewModel.select()
+    }
+    
     private func binded(cell: EventCell) -> EventCell {
         self.cell = cell
+        cell.configure(with: viewModel)
         return cell
     }
     

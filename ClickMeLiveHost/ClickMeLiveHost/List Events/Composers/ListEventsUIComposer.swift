@@ -21,7 +21,12 @@ final class ListEventsUIComposer {
         let listEventsViewController = ListEventsViewController(refreshController: refreshController)
         
         viewModel.onEventsLoaded = { [weak listEventsViewController] events in
-            listEventsViewController?.display(events.map { _ in return ListEventCellController() })
+            listEventsViewController?.display(events.map { event in
+                let viewModel = EventViewModel(model: event) {
+                    print("Selected here \(event)")
+                }
+                return ListEventCellController(viewModel: viewModel)
+            })
         }
         
         viewModel.onError = {

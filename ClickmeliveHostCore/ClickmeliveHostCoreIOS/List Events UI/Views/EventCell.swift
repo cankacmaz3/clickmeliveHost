@@ -6,6 +6,13 @@
 //
 
 import UIKit
+import ClickmeliveHostCore
+
+extension EventCell {
+    func configure(with viewModel: EventViewModel) {
+        lblTitle.text = viewModel.title
+    }
+}
 
 public final class EventCell: UITableViewCell {
     

@@ -40,6 +40,7 @@
 		2DCAB4E2280ADF2900308095 /* ClickmeliveHostCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2DCAB452280AB5DF00308095 /* ClickmeliveHostCore.framework */; };
 		2DCAB4E3280ADF2900308095 /* ClickmeliveHostCore.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2DCAB452280AB5DF00308095 /* ClickmeliveHostCore.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		2DCAB4F1280AE66400308095 /* DateFormatter+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DCAB4F0280AE66400308095 /* DateFormatter+Extensions.swift */; };
+		2DCAB557280B679F00308095 /* EventViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DCAB556280B679F00308095 /* EventViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -115,6 +116,7 @@
 		2DCAB4DD280ADD0000308095 /* ListEventsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListEventsViewModel.swift; sourceTree = "<group>"; };
 		2DCAB4DF280ADDCF00308095 /* ListEventRefreshController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListEventRefreshController.swift; sourceTree = "<group>"; };
 		2DCAB4F0280AE66400308095 /* DateFormatter+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DateFormatter+Extensions.swift"; sourceTree = "<group>"; };
+		2DCAB556280B679F00308095 /* EventViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -381,6 +383,7 @@
 			isa = PBXGroup;
 			children = (
 				2DCAB4DD280ADD0000308095 /* ListEventsViewModel.swift */,
+				2DCAB556280B679F00308095 /* EventViewModel.swift */,
 			);
 			path = "List Events Presentation";
 			sourceTree = "<group>";
@@ -578,6 +581,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2DCAB4DB280ADC3700308095 /* EventResponse.swift in Sources */,
+				2DCAB557280B679F00308095 /* EventViewModel.swift in Sources */,
 				2DCAB4DE280ADD0000308095 /* ListEventsViewModel.swift in Sources */,
 				2DCAB47F280ABB6000308095 /* AuthenticatedURLRequestBuilderDecorator.swift in Sources */,
 				2DCAB4D7280ADB0500308095 /* RemoteEventLoader.swift in Sources */,

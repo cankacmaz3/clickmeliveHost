@@ -72,6 +72,10 @@ extension ListEventsViewController: UITableViewDelegate, UITableViewDataSource {
         loadingControllers[indexPath] = nil
     }
     
+    public func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableModel[indexPath.row].select()
+    }
+    
     private func cellController(forRowAt indexPath: IndexPath) -> ListEventCellController {
         let controller = tableModel[indexPath.row]
         loadingControllers[indexPath] = controller
