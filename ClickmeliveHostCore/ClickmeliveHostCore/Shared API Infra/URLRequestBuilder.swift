@@ -1,8 +1,8 @@
 //
 //  URLRequestBuilder.swift
-//  ClickmeliveHostCore
+//  ClickmeliveCore
 //
-//  Created by Can Kaçmaz on 16.04.2022.
+//  Created by Can Kaçmaz on 15.04.2022.
 //
 
 import Foundation
@@ -16,13 +16,10 @@ public enum HTTPMethod: String {
 }
 
 public protocol URLRequestBuilder {
-    var baseURL: URL { get }
-    var requestURL: URL? { get }
     var path: String { get }
     var parameters: [String: Any]? { get }
     var queryItems: [URLQueryItem]? { get }
     var method: HTTPMethod { get }
-    var urlRequest: URLRequest { get }
     var withHeader: [String: String]? { get }
 }
 
@@ -40,11 +37,7 @@ extension URLRequestBuilder {
         return "application/json"
     }
     
-    var baseURL: URL {
-        return AppEnvironment.baseURL
-    }
-    
-    var requestURL: URL? {
+    func urlRequest(baseURL: URL) -> URLRequest {
         var urlComponents = URLComponents(string: baseURL.absoluteString)
         urlComponents?.path = path
         if let queryItems = queryItems {
@@ -52,18 +45,15 @@ extension URLRequestBuilder {
                 urlComponents?.queryItems = queryItems
             }
         }
-        return urlComponents?.url
-    }
-    
-    var urlRequest: URLRequest {
-        guard let requestURL = self.requestURL else {
+        
+        guard let requestURL = urlComponents?.url else {
             fatalError("URL could not be built")
         }
         
         var request = URLRequest(url: requestURL)
         
         request.httpMethod = method.rawValue
-        request.setValue(version, forHTTPHeaderField: "Client-Version")
+        request.setValue("1.0.17", forHTTPHeaderField: "Client-Version")
         request.setValue(clientDevice, forHTTPHeaderField: "Client-Device")
         request.setValue(contentType, forHTTPHeaderField: "Content-Type")
         
@@ -84,5 +74,4 @@ extension URLRequestBuilder {
         return request
     }
 }
-
 

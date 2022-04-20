@@ -15,4 +15,3 @@ enum Fonts {
     static let semibold = "Montserrat-SemiBold"
     static let extraBold = "Montserrat-ExtraBold"
 }
-

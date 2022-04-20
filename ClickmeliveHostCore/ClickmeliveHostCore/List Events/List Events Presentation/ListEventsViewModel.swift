@@ -9,6 +9,9 @@ import Foundation
 
 public final class ListEventsViewModel {
     public typealias Observer<T> = (T) -> Void
+    public typealias Next<T> = (Result<Paginated<T>, Error>) -> Void
+    
+    private var events: [Event] = []
     
     private let eventLoader: EventLoader
    
@@ -16,20 +19,46 @@ public final class ListEventsViewModel {
         self.eventLoader = eventLoader
     }
     
+    private var nextEventResult: ((@escaping Next<EventResponse>) -> ())? = nil
+    
     public var onEventsLoadingStateChange: Observer<Bool>?
     public var onEventsLoaded: Observer<[Event]>?
     public var onError: (() -> Void)?
     
-    public func loadEvents() {
+    public func loadEvents(with status: Event.EventStatus) {
         onEventsLoadingStateChange?(true)
-        eventLoader.load { [weak self] result in
+        eventLoader.load(with: status, page: 1) { [weak self] result in
             switch result {
-            case let .success(events):
-                self?.onEventsLoaded?(events)
+            case let .success(eventResponse):
+                self?.events = []
+                self?.newEventsHandling(result: eventResponse, error: nil)
             case .failure:
                 self?.onError?()
             }
             self?.onEventsLoadingStateChange?(false)
         }
+    }
+    
+    public func onNextEvent() {
+        self.nextEventResult?() { [weak self] result  in
+            switch result {
+            case let .success(nextEvents):
+                self?.newEventsHandling(result: nextEvents, error: nil)
+            case .failure:
+                print("failure")
+            }
+        }
+    }
+    
+    private func newEventsHandling(result: Paginated<EventResponse>, error: Error?) {
+        
+        guard let newItems = result.value?.events, let next = result.next else {
+            return
+        }
+        
+        self.nextEventResult = result.value?.loadMore == true ? next: nil
+        self.events = self.events + newItems
+        
+        onEventsLoaded?(self.events)
     }
 }

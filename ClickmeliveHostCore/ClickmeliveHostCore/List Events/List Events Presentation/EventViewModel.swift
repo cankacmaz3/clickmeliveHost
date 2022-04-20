@@ -21,5 +21,13 @@ public final class EventViewModel {
     public var title: String {
         model.title
     }
+    
+    public var image: String? {
+        model.image
+    }
+    
+    public var startingDate: String? {
+        model.startingDate?.convertDateToString(returnFormat: .upcomingFormat)
+    }
 }
 

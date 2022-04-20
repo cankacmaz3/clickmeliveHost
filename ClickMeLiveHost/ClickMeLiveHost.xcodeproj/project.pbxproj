@@ -22,6 +22,21 @@
 		2DCAB56C280B6D9E00308095 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DCAB56B280B6D9E00308095 /* Router.swift */; };
 		2DCAB56E280B6DE500308095 /* ListEventsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DCAB56D280B6DE500308095 /* ListEventsRouter.swift */; };
 		2DCAB570280B6E1B00308095 /* BroadcastRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DCAB56F280B6E1B00308095 /* BroadcastRoute.swift */; };
+		2DCAB597280B7BEA00308095 /* Montserrat-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2DCAB591280B7BEA00308095 /* Montserrat-Regular.ttf */; };
+		2DCAB598280B7BEA00308095 /* Montserrat-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2DCAB592280B7BEA00308095 /* Montserrat-SemiBold.ttf */; };
+		2DCAB599280B7BEA00308095 /* Montserrat-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2DCAB593280B7BEA00308095 /* Montserrat-Bold.ttf */; };
+		2DCAB59A280B7BEA00308095 /* Montserrat-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2DCAB594280B7BEA00308095 /* Montserrat-ExtraBold.ttf */; };
+		2DCAB59B280B7BEA00308095 /* Montserrat-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2DCAB595280B7BEA00308095 /* Montserrat-Light.ttf */; };
+		2DCAB59C280B7BEA00308095 /* Montserrat-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2DCAB596280B7BEA00308095 /* Montserrat-Medium.ttf */; };
+		2DD3988F280C1A6600A575DA /* AmazonIVSBroadcast.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2DD3988A280C148C00A575DA /* AmazonIVSBroadcast.xcframework */; };
+		2DD39890280C1A6600A575DA /* AmazonIVSBroadcast.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2DD3988A280C148C00A575DA /* AmazonIVSBroadcast.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		2DD398D32810B58000A575DA /* AppEnvironment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DD398D12810B58000A575DA /* AppEnvironment.swift */; };
+		2DD398D42810B58000A575DA /* Servers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DD398D22810B58000A575DA /* Servers.swift */; };
+		2DD398EA2810C1B100A575DA /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DD398E92810C1B100A575DA /* LoadingView.swift */; };
+		2DD398ED2810C1F400A575DA /* Loading.json in Resources */ = {isa = PBXBuildFile; fileRef = 2DD398EC2810C1F400A575DA /* Loading.json */; };
+		2DD398F02810C47900A575DA /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = 2DD398EF2810C47900A575DA /* Lottie */; };
+		2DD398F22810C4D200A575DA /* LoadingViewHTTPClientDecorator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DD398F12810C4D200A575DA /* LoadingViewHTTPClientDecorator.swift */; };
+		2DD398F52810C75800A575DA /* UIColor+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DD398F42810C75800A575DA /* UIColor+Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -33,6 +48,7 @@
 			files = (
 				2DCAB49C280ABBE700308095 /* ClickmeliveHostCoreIOS.framework in Embed Frameworks */,
 				2DCAB46D280AB66D00308095 /* ClickmeliveHostCore.framework in Embed Frameworks */,
+				2DD39890280C1A6600A575DA /* AmazonIVSBroadcast.xcframework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -55,6 +71,19 @@
 		2DCAB56B280B6D9E00308095 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		2DCAB56D280B6DE500308095 /* ListEventsRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListEventsRouter.swift; sourceTree = "<group>"; };
 		2DCAB56F280B6E1B00308095 /* BroadcastRoute.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BroadcastRoute.swift; sourceTree = "<group>"; };
+		2DCAB591280B7BEA00308095 /* Montserrat-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Regular.ttf"; sourceTree = "<group>"; };
+		2DCAB592280B7BEA00308095 /* Montserrat-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-SemiBold.ttf"; sourceTree = "<group>"; };
+		2DCAB593280B7BEA00308095 /* Montserrat-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Bold.ttf"; sourceTree = "<group>"; };
+		2DCAB594280B7BEA00308095 /* Montserrat-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-ExtraBold.ttf"; sourceTree = "<group>"; };
+		2DCAB595280B7BEA00308095 /* Montserrat-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Light.ttf"; sourceTree = "<group>"; };
+		2DCAB596280B7BEA00308095 /* Montserrat-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Medium.ttf"; sourceTree = "<group>"; };
+		2DD3988A280C148C00A575DA /* AmazonIVSBroadcast.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = AmazonIVSBroadcast.xcframework; path = /Users/cankacmaz/Documents/IOS/clickmelivehost/ClickmeliveHostCore/../AmazonIVSBroadcast.xcframework; sourceTree = "<absolute>"; };
+		2DD398D12810B58000A575DA /* AppEnvironment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppEnvironment.swift; sourceTree = "<group>"; };
+		2DD398D22810B58000A575DA /* Servers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Servers.swift; sourceTree = "<group>"; };
+		2DD398E92810C1B100A575DA /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
+		2DD398EC2810C1F400A575DA /* Loading.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Loading.json; sourceTree = "<group>"; };
+		2DD398F12810C4D200A575DA /* LoadingViewHTTPClientDecorator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingViewHTTPClientDecorator.swift; sourceTree = "<group>"; };
+		2DD398F42810C75800A575DA /* UIColor+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +93,8 @@
 			files = (
 				2DCAB49B280ABBE700308095 /* ClickmeliveHostCoreIOS.framework in Frameworks */,
 				2DCAB46C280AB66D00308095 /* ClickmeliveHostCore.framework in Frameworks */,
+				2DD3988F280C1A6600A575DA /* AmazonIVSBroadcast.xcframework in Frameworks */,
+				2DD398F02810C47900A575DA /* Lottie in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -90,6 +121,11 @@
 		2D7D87B228017835006FFDE7 /* ClickMeLiveHost */ = {
 			isa = PBXGroup;
 			children = (
+				2DD398F32810C74400A575DA /* Extensions */,
+				2DD398EB2810C1E900A575DA /* Animations */,
+				2DD398E82810C19F00A575DA /* Loading */,
+				2DD398CE2810B55F00A575DA /* NetworkLayer */,
+				2DCAB58A280B7B8300308095 /* Fonts */,
 				2DCAB563280B6C0A00308095 /* Routing */,
 				2DCAB4BC280AC5A500308095 /* List Events */,
 				2DCAB55F280B6B8A00308095 /* Broadcast */,
@@ -104,6 +140,7 @@
 		2DCAB46A280AB66D00308095 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				2DD3988A280C148C00A575DA /* AmazonIVSBroadcast.xcframework */,
 				2DCAB49A280ABBE700308095 /* ClickmeliveHostCoreIOS.framework */,
 				2DCAB46B280AB66D00308095 /* ClickmeliveHostCore.framework */,
 			);
@@ -163,6 +200,53 @@
 			path = Transitions;
 			sourceTree = "<group>";
 		};
+		2DCAB58A280B7B8300308095 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				2DCAB593280B7BEA00308095 /* Montserrat-Bold.ttf */,
+				2DCAB594280B7BEA00308095 /* Montserrat-ExtraBold.ttf */,
+				2DCAB595280B7BEA00308095 /* Montserrat-Light.ttf */,
+				2DCAB596280B7BEA00308095 /* Montserrat-Medium.ttf */,
+				2DCAB591280B7BEA00308095 /* Montserrat-Regular.ttf */,
+				2DCAB592280B7BEA00308095 /* Montserrat-SemiBold.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		2DD398CE2810B55F00A575DA /* NetworkLayer */ = {
+			isa = PBXGroup;
+			children = (
+				2DD398D12810B58000A575DA /* AppEnvironment.swift */,
+				2DD398D22810B58000A575DA /* Servers.swift */,
+			);
+			path = NetworkLayer;
+			sourceTree = "<group>";
+		};
+		2DD398E82810C19F00A575DA /* Loading */ = {
+			isa = PBXGroup;
+			children = (
+				2DD398E92810C1B100A575DA /* LoadingView.swift */,
+				2DD398F12810C4D200A575DA /* LoadingViewHTTPClientDecorator.swift */,
+			);
+			path = Loading;
+			sourceTree = "<group>";
+		};
+		2DD398EB2810C1E900A575DA /* Animations */ = {
+			isa = PBXGroup;
+			children = (
+				2DD398EC2810C1F400A575DA /* Loading.json */,
+			);
+			path = Animations;
+			sourceTree = "<group>";
+		};
+		2DD398F32810C74400A575DA /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				2DD398F42810C75800A575DA /* UIColor+Extensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -180,6 +264,9 @@
 			dependencies = (
 			);
 			name = ClickMeLiveHost;
+			packageProductDependencies = (
+				2DD398EF2810C47900A575DA /* Lottie */,
+			);
 			productName = ClickMeLiveHost;
 			productReference = 2D7D87B028017835006FFDE7 /* ClickMeLiveHost.app */;
 			productType = "com.apple.product-type.application";
@@ -208,6 +295,9 @@
 				Base,
 			);
 			mainGroup = 2D7D87A728017835006FFDE7;
+			packageReferences = (
+				2DD398EE2810C47900A575DA /* XCRemoteSwiftPackageReference "lottie-ios" */,
+			);
 			productRefGroup = 2D7D87B128017835006FFDE7 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -222,7 +312,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2DCAB59B280B7BEA00308095 /* Montserrat-Light.ttf in Resources */,
+				2DCAB599280B7BEA00308095 /* Montserrat-Bold.ttf in Resources */,
+				2DD398ED2810C1F400A575DA /* Loading.json in Resources */,
+				2DCAB59A280B7BEA00308095 /* Montserrat-ExtraBold.ttf in Resources */,
+				2DCAB597280B7BEA00308095 /* Montserrat-Regular.ttf in Resources */,
 				2D7D87C028017836006FFDE7 /* LaunchScreen.storyboard in Resources */,
+				2DCAB598280B7BEA00308095 /* Montserrat-SemiBold.ttf in Resources */,
+				2DCAB59C280B7BEA00308095 /* Montserrat-Medium.ttf in Resources */,
 				2D7D87BD28017836006FFDE7 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -238,9 +335,14 @@
 				2DCAB566280B6C2800308095 /* ModalTransition.swift in Sources */,
 				2DCAB570280B6E1B00308095 /* BroadcastRoute.swift in Sources */,
 				2D7D87B428017835006FFDE7 /* AppDelegate.swift in Sources */,
+				2DD398F22810C4D200A575DA /* LoadingViewHTTPClientDecorator.swift in Sources */,
+				2DD398D42810B58000A575DA /* Servers.swift in Sources */,
+				2DD398EA2810C1B100A575DA /* LoadingView.swift in Sources */,
 				2DCAB56E280B6DE500308095 /* ListEventsRouter.swift in Sources */,
+				2DD398D32810B58000A575DA /* AppEnvironment.swift in Sources */,
 				2DCAB56C280B6D9E00308095 /* Router.swift in Sources */,
 				2DCAB4BF280AC5C600308095 /* ListEventsUIComposer.swift in Sources */,
+				2DD398F52810C75800A575DA /* UIColor+Extensions.swift in Sources */,
 				2DCAB56A280B6D4400308095 /* PushTransition.swift in Sources */,
 				2DCAB562280B6BA000308095 /* BroadcasterUIComposer.swift in Sources */,
 			);
@@ -386,8 +488,11 @@
 				DEVELOPMENT_TEAM = P624PPMU63;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = ClickMeLiveHost/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "We need access to your camera to broadcast your video feed";
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "We need access to your microphone to broadcast your audio feed";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
@@ -414,8 +519,11 @@
 				DEVELOPMENT_TEAM = P624PPMU63;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = ClickMeLiveHost/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "We need access to your camera to broadcast your video feed";
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "We need access to your microphone to broadcast your audio feed";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
@@ -454,6 +562,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		2DD398EE2810C47900A575DA /* XCRemoteSwiftPackageReference "lottie-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/airbnb/lottie-ios.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		2DD398EF2810C47900A575DA /* Lottie */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2DD398EE2810C47900A575DA /* XCRemoteSwiftPackageReference "lottie-ios" */;
+			productName = Lottie;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 2D7D87A828017835006FFDE7 /* Project object */;
 }

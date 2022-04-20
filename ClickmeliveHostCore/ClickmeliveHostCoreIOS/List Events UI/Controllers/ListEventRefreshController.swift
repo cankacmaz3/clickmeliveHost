@@ -18,7 +18,11 @@ public final class ListEventsRefreshController: NSObject {
     }
     
     @objc public func refresh() {
-        viewModel.loadEvents()
+        viewModel.loadEvents(with: .LONG_VIDEO)
+    }
+    
+    public func onNext() {
+        viewModel.onNextEvent()
     }
     
     private func binded(_ view: UIRefreshControl) -> UIRefreshControl {
