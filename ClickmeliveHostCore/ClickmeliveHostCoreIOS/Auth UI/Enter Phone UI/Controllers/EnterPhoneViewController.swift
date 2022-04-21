@@ -25,13 +25,47 @@ public final class EnterPhoneViewController: UIViewController, Layouting {
     public override func viewDidLoad() {
         super.viewDidLoad()
         setupLocalizedTitles()
+        setupTextField()
+        registerActions()
     }
     
     public override func loadView() {
         view = ViewType.create()
     }
     
+    @objc private func sendCodeTapped() {
+        let phone = layoutableView.tfValidate.text ?? ""
+        viewModel.sendCode(to: phone)
+    }
+    
+    private func registerActions() {
+        layoutableView.btnValidate.addTarget(self, action: #selector(sendCodeTapped), for: .touchUpInside)
+    }
+    
+    @objc private func textFieldDidChange(_ textField: UITextField) {
+        guard let phone = textField.text else { return }
+        layoutableView.btnValidate.handleIsEnabled(viewModel.isValid(phone: phone))
+        textField.text = viewModel.formatPhone(phone)
+    }
+    
+    private func setupTextField() {
+        layoutableView.tfValidate.delegate = self
+        layoutableView.tfValidate.addTarget(self, action: #selector(textFieldDidChange(_:)), for: .editingChanged)
+    }
+    
     private func setupLocalizedTitles() {
         layoutableView.setLocalizedTitles(with: viewModel)
+    }
+}
+
+// MARK: - TextField delegate methods
+extension EnterPhoneViewController: UITextFieldDelegate {
+    public func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        // Make sure all entered characters are numbers
+        guard CharacterSet(charactersIn: "0123456789").isSuperset(of: CharacterSet(charactersIn: string)) else {
+            return false
+        }
+        
+        return true
     }
 }

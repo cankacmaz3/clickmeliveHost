@@ -7,11 +7,11 @@
 
 import Foundation
 
-enum EventEndpoint: URLRequestBuilder {
+enum EventEndpoints: URLRequestBuilder {
     case statusEvents(status: Event.EventStatus, page: Int)
 }
 
-extension EventEndpoint {
+extension EventEndpoints {
     var path: String {
         switch self {
         case .statusEvents:
@@ -20,13 +20,13 @@ extension EventEndpoint {
     }
 }
 
-extension EventEndpoint {
+extension EventEndpoints {
     var withHeader: [String: String]? {
         return ["Authorization" : "apiKey 617196fc65dc0778fb59e97660856d1921bef5a092bb4071f3c071704e5ca4cc"]
     }
 }
 
-extension EventEndpoint {
+extension EventEndpoints {
     var parameters: [String: Any]? {
         switch self {
         case .statusEvents:
@@ -35,7 +35,7 @@ extension EventEndpoint {
     }
 }
 
-extension EventEndpoint {
+extension EventEndpoints {
     var queryItems: [URLQueryItem]? {
         switch self {
         case let .statusEvents(status, page):
@@ -45,7 +45,7 @@ extension EventEndpoint {
     }
 }
 
-extension EventEndpoint {
+extension EventEndpoints {
     var method: HTTPMethod {
         switch self {
         case .statusEvents:

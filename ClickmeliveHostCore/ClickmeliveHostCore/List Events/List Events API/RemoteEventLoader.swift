@@ -29,7 +29,7 @@ public final class RemoteEventLoader: EventLoader {
     }
     
     public func load(with status: Event.EventStatus, page: Int, completion: @escaping (EventResult) -> Void) {
-        let endpoint = EventEndpoint.statusEvents(status: status, page: page)
+        let endpoint = EventEndpoints.statusEvents(status: status, page: page)
                                        
         let authenticatedEndpoint = AuthenticatedURLRequestBuilderDecorator(decoratee: endpoint,
                                                                             authenticationTokenHeader: authenticationTokenHeader)
