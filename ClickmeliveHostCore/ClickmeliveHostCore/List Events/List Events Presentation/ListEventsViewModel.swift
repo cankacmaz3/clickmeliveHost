@@ -25,6 +25,10 @@ public final class ListEventsViewModel {
     public var onEventsLoaded: Observer<[Event]>?
     public var onError: (() -> Void)?
     
+    
+}
+
+extension ListEventsViewModel {
     public func loadEvents(with status: Event.EventStatus) {
         onEventsLoadingStateChange?(true)
         eventLoader.load(with: status, page: 1) { [weak self] result in

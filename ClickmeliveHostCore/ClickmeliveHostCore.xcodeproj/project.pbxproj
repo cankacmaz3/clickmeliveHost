@@ -7,6 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2D9E0C852811CDC0000E4321 /* Auth.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2D9E0C842811CDC0000E4321 /* Auth.xcassets */; };
+		2D9E0C9E2811E7B8000E4321 /* Localized+Landing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D9E0C9D2811E7B8000E4321 /* Localized+Landing.swift */; };
+		2D9E0CA12811E7C9000E4321 /* Landing.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2D9E0CA32811E7C9000E4321 /* Landing.strings */; };
+		2D9E0CA72811E82B000E4321 /* LandingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D9E0CA62811E82B000E4321 /* LandingViewModel.swift */; };
+		2D9E0CAC2811EE09000E4321 /* EnterPhoneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D9E0CAB2811EE09000E4321 /* EnterPhoneViewController.swift */; };
+		2D9E0CAE2811EE11000E4321 /* EnterPhoneView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D9E0CAD2811EE11000E4321 /* EnterPhoneView.swift */; };
+		2D9E0CB82811F377000E4321 /* CMLTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D9E0CB72811F377000E4321 /* CMLTextField.swift */; };
+		2D9E0CBA2811F44B000E4321 /* CMLButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D9E0CB92811F44B000E4321 /* CMLButton.swift */; };
+		2D9E0CC02811F581000E4321 /* IQKeyboardManagerSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 2D9E0CBF2811F581000E4321 /* IQKeyboardManagerSwift */; };
+		2D9E0CCA2811F866000E4321 /* EnterPhoneViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D9E0CC92811F866000E4321 /* EnterPhoneViewModel.swift */; };
+		2D9E0CCD2811F8A4000E4321 /* EnterPhone.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2D9E0CCF2811F8A4000E4321 /* EnterPhone.strings */; };
+		2D9E0CD22811F975000E4321 /* Localized+EnterPhone.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D9E0CD12811F975000E4321 /* Localized+EnterPhone.swift */; };
+		2DBFF5F728119306006F7E40 /* LandingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DBFF5F628119306006F7E40 /* LandingViewController.swift */; };
+		2DBFF5F92811930F006F7E40 /* LandingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DBFF5F82811930F006F7E40 /* LandingView.swift */; };
 		2DCAB45B280AB5DF00308095 /* ClickmeliveHostCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2DCAB452280AB5DF00308095 /* ClickmeliveHostCore.framework */; };
 		2DCAB472280ABAA500308095 /* HTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DCAB471280ABAA500308095 /* HTTPClient.swift */; };
 		2DCAB475280ABACF00308095 /* HTTPURLResponse+StatusCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DCAB474280ABACF00308095 /* HTTPURLResponse+StatusCode.swift */; };
@@ -56,6 +70,7 @@
 		2DD398F72810C80400A575DA /* Paginated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DD398F62810C80400A575DA /* Paginated.swift */; };
 		2DD398F92810CA5400A575DA /* Metadata.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DD398F82810CA5400A575DA /* Metadata.swift */; };
 		2DD398FB2810CA9900A575DA /* EventResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DD398FA2810CA9900A575DA /* EventResponse.swift */; };
+		2DD398FD2810D1AF00A575DA /* Broadcast.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2DD398FC2810D1AF00A575DA /* Broadcast.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -98,6 +113,21 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		2D9E0C842811CDC0000E4321 /* Auth.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Auth.xcassets; sourceTree = "<group>"; };
+		2D9E0C9D2811E7B8000E4321 /* Localized+Landing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Localized+Landing.swift"; sourceTree = "<group>"; };
+		2D9E0CA22811E7C9000E4321 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Landing.strings; sourceTree = "<group>"; };
+		2D9E0CA42811E7CA000E4321 /* tr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = tr; path = tr.lproj/Landing.strings; sourceTree = "<group>"; };
+		2D9E0CA62811E82B000E4321 /* LandingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingViewModel.swift; sourceTree = "<group>"; };
+		2D9E0CAB2811EE09000E4321 /* EnterPhoneViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterPhoneViewController.swift; sourceTree = "<group>"; };
+		2D9E0CAD2811EE11000E4321 /* EnterPhoneView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterPhoneView.swift; sourceTree = "<group>"; };
+		2D9E0CB72811F377000E4321 /* CMLTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CMLTextField.swift; sourceTree = "<group>"; };
+		2D9E0CB92811F44B000E4321 /* CMLButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CMLButton.swift; sourceTree = "<group>"; };
+		2D9E0CC92811F866000E4321 /* EnterPhoneViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterPhoneViewModel.swift; sourceTree = "<group>"; };
+		2D9E0CCE2811F8A4000E4321 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/EnterPhone.strings; sourceTree = "<group>"; };
+		2D9E0CD02811F8A6000E4321 /* tr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = tr; path = tr.lproj/EnterPhone.strings; sourceTree = "<group>"; };
+		2D9E0CD12811F975000E4321 /* Localized+EnterPhone.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Localized+EnterPhone.swift"; sourceTree = "<group>"; };
+		2DBFF5F628119306006F7E40 /* LandingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingViewController.swift; sourceTree = "<group>"; };
+		2DBFF5F82811930F006F7E40 /* LandingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingView.swift; sourceTree = "<group>"; };
 		2DCAB452280AB5DF00308095 /* ClickmeliveHostCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ClickmeliveHostCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2DCAB45A280AB5DF00308095 /* ClickmeliveHostCoreTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ClickmeliveHostCoreTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2DCAB471280ABAA500308095 /* HTTPClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPClient.swift; sourceTree = "<group>"; };
@@ -147,6 +177,7 @@
 		2DD398F62810C80400A575DA /* Paginated.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Paginated.swift; sourceTree = "<group>"; };
 		2DD398F82810CA5400A575DA /* Metadata.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Metadata.swift; sourceTree = "<group>"; };
 		2DD398FA2810CA9900A575DA /* EventResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventResponse.swift; sourceTree = "<group>"; };
+		2DD398FC2810D1AF00A575DA /* Broadcast.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Broadcast.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -155,6 +186,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2DD398D72810B80F00A575DA /* SDWebImage in Frameworks */,
+				2D9E0CC02811F581000E4321 /* IQKeyboardManagerSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -186,6 +218,111 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2D9E0C9C2811E798000E4321 /* Landing Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				2D9E0CA62811E82B000E4321 /* LandingViewModel.swift */,
+				2D9E0C9D2811E7B8000E4321 /* Localized+Landing.swift */,
+				2D9E0CA32811E7C9000E4321 /* Landing.strings */,
+			);
+			path = "Landing Presentation";
+			sourceTree = "<group>";
+		};
+		2D9E0CA82811EA2A000E4321 /* Enter Phone UI */ = {
+			isa = PBXGroup;
+			children = (
+				2D9E0CA92811EDF6000E4321 /* Controllers */,
+				2D9E0CAA2811EDFB000E4321 /* Views */,
+			);
+			path = "Enter Phone UI";
+			sourceTree = "<group>";
+		};
+		2D9E0CA92811EDF6000E4321 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				2D9E0CAB2811EE09000E4321 /* EnterPhoneViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		2D9E0CAA2811EDFB000E4321 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				2D9E0CAD2811EE11000E4321 /* EnterPhoneView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		2D9E0CC62811F83C000E4321 /* Landing */ = {
+			isa = PBXGroup;
+			children = (
+				2D9E0C9C2811E798000E4321 /* Landing Presentation */,
+			);
+			path = Landing;
+			sourceTree = "<group>";
+		};
+		2D9E0CC72811F844000E4321 /* Enter Phone */ = {
+			isa = PBXGroup;
+			children = (
+				2D9E0CC82811F84D000E4321 /* Enter Phone Presentation */,
+			);
+			path = "Enter Phone";
+			sourceTree = "<group>";
+		};
+		2D9E0CC82811F84D000E4321 /* Enter Phone Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				2D9E0CC92811F866000E4321 /* EnterPhoneViewModel.swift */,
+				2D9E0CD12811F975000E4321 /* Localized+EnterPhone.swift */,
+				2D9E0CCF2811F8A4000E4321 /* EnterPhone.strings */,
+			);
+			path = "Enter Phone Presentation";
+			sourceTree = "<group>";
+		};
+		2DBFF5F128118F96006F7E40 /* Auth UI */ = {
+			isa = PBXGroup;
+			children = (
+				2DBFF5F3281192C5006F7E40 /* Landing UI */,
+				2D9E0CA82811EA2A000E4321 /* Enter Phone UI */,
+				2D9E0C842811CDC0000E4321 /* Auth.xcassets */,
+			);
+			path = "Auth UI";
+			sourceTree = "<group>";
+		};
+		2DBFF5F228118FA7006F7E40 /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				2D9E0CC62811F83C000E4321 /* Landing */,
+				2D9E0CC72811F844000E4321 /* Enter Phone */,
+			);
+			path = Auth;
+			sourceTree = "<group>";
+		};
+		2DBFF5F3281192C5006F7E40 /* Landing UI */ = {
+			isa = PBXGroup;
+			children = (
+				2DBFF5F4281192EC006F7E40 /* Controllers */,
+				2DBFF5F5281192F2006F7E40 /* Views */,
+			);
+			path = "Landing UI";
+			sourceTree = "<group>";
+		};
+		2DBFF5F4281192EC006F7E40 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				2DBFF5F628119306006F7E40 /* LandingViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		2DBFF5F5281192F2006F7E40 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				2DBFF5F82811930F006F7E40 /* LandingView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		2DCAB448280AB5DF00308095 = {
 			isa = PBXGroup;
 			children = (
@@ -218,6 +355,7 @@
 				2DCAB46F280ABA6F00308095 /* Shared API */,
 				2DCAB470280ABA7900308095 /* Shared API Infra */,
 				2DD398D82810B95500A575DA /* Shared Presentation */,
+				2DBFF5F228118FA7006F7E40 /* Auth */,
 				2DCAB4C6280AD85A00308095 /* List Events */,
 			);
 			path = ClickmeliveHostCore;
@@ -265,6 +403,7 @@
 				2DCAB4A3280ABDB300308095 /* Extensions */,
 				2DCAB4AC280ABE9E00308095 /* Shared Helpers */,
 				2DCAB4AF280ABEBF00308095 /* Shared UI */,
+				2DBFF5F128118F96006F7E40 /* Auth UI */,
 				2DCAB4B5280ABFDF00308095 /* List Events UI */,
 				2DCAB558280B6A2500308095 /* Broadcast UI */,
 			);
@@ -308,6 +447,8 @@
 		2DCAB4AF280ABEBF00308095 /* Shared UI */ = {
 			isa = PBXGroup;
 			children = (
+				2DCAB4B1280ABED800308095 /* Layoutable.swift */,
+				2DCAB4B3280ABEEB00308095 /* Layouting.swift */,
 				2DCAB4B0280ABECD00308095 /* Views */,
 			);
 			path = "Shared UI";
@@ -316,8 +457,8 @@
 		2DCAB4B0280ABECD00308095 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				2DCAB4B1280ABED800308095 /* Layoutable.swift */,
-				2DCAB4B3280ABEEB00308095 /* Layouting.swift */,
+				2D9E0CB72811F377000E4321 /* CMLTextField.swift */,
+				2D9E0CB92811F44B000E4321 /* CMLButton.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -439,6 +580,7 @@
 			children = (
 				2DCAB559280B6AEA00308095 /* Controllers */,
 				2DCAB55A280B6AEF00308095 /* Views */,
+				2DD398FC2810D1AF00A575DA /* Broadcast.xcassets */,
 			);
 			path = "Broadcast UI";
 			sourceTree = "<group>";
@@ -540,6 +682,7 @@
 			name = ClickmeliveHostCore;
 			packageProductDependencies = (
 				2DD398D62810B80F00A575DA /* SDWebImage */,
+				2D9E0CBF2811F581000E4321 /* IQKeyboardManagerSwift */,
 			);
 			productName = ClickmeliveHostCore;
 			productReference = 2DCAB452280AB5DF00308095 /* ClickmeliveHostCore.framework */;
@@ -639,6 +782,7 @@
 			mainGroup = 2DCAB448280AB5DF00308095;
 			packageReferences = (
 				2DD398D52810B80F00A575DA /* XCRemoteSwiftPackageReference "SDWebImage" */,
+				2D9E0CBE2811F581000E4321 /* XCRemoteSwiftPackageReference "IQKeyboardManager" */,
 			);
 			productRefGroup = 2DCAB453280AB5DF00308095 /* Products */;
 			projectDirPath = "";
@@ -657,6 +801,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2D9E0CA12811E7C9000E4321 /* Landing.strings in Resources */,
+				2D9E0CCD2811F8A4000E4321 /* EnterPhone.strings in Resources */,
 				2DD398E02810B9A400A575DA /* Date.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -672,7 +818,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2D9E0C852811CDC0000E4321 /* Auth.xcassets in Resources */,
 				2DD398E72810C02100A575DA /* ListEvents.xcassets in Resources */,
+				2DD398FD2810D1AF00A575DA /* Broadcast.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -699,7 +847,10 @@
 				2DCAB4D7280ADB0500308095 /* RemoteEventLoader.swift in Sources */,
 				2DCAB4D1280AD9BF00308095 /* Event.swift in Sources */,
 				2DCAB4C9280AD89200308095 /* EventEndpoint.swift in Sources */,
+				2D9E0C9E2811E7B8000E4321 /* Localized+Landing.swift in Sources */,
 				2DCAB475280ABACF00308095 /* HTTPURLResponse+StatusCode.swift in Sources */,
+				2D9E0CA72811E82B000E4321 /* LandingViewModel.swift in Sources */,
+				2D9E0CCA2811F866000E4321 /* EnterPhoneViewModel.swift in Sources */,
 				2DCAB4D5280ADA4D00308095 /* UserDTO.swift in Sources */,
 				2DCAB479280ABAFF00308095 /* URLRequestBuilder.swift in Sources */,
 				2DCAB4CE280AD99600308095 /* EventDTO.swift in Sources */,
@@ -712,6 +863,7 @@
 				2DD398FB2810CA9900A575DA /* EventResponse.swift in Sources */,
 				2DD398DD2810B98E00A575DA /* Localized+Date.swift in Sources */,
 				2DCAB477280ABAEC00308095 /* URLSessionHTTPClient.swift in Sources */,
+				2D9E0CD22811F975000E4321 /* Localized+EnterPhone.swift in Sources */,
 				2DCAB4F1280AE66400308095 /* DateFormatter+Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -732,8 +884,10 @@
 				2DCAB4A0280ABD9800308095 /* Fonts.swift in Sources */,
 				2DCAB4B9280AC34B00308095 /* ListEventsViewController.swift in Sources */,
 				2DCAB4C3280AD6D000308095 /* ListEventCellController.swift in Sources */,
+				2DBFF5F92811930F006F7E40 /* LandingView.swift in Sources */,
 				2DCAB55E280B6B0F00308095 /* BroadcastView.swift in Sources */,
 				2DCAB55C280B6B0600308095 /* BroadcastViewController.swift in Sources */,
+				2D9E0CB82811F377000E4321 /* CMLTextField.swift in Sources */,
 				2DCAB4C1280AC8EA00308095 /* EventCell.swift in Sources */,
 				2DD398C3280FF70E00A575DA /* UICollectionView+Dequeueing.swift in Sources */,
 				2DCAB4A5280ABDC400308095 /* UIColor+Helpers.swift in Sources */,
@@ -742,7 +896,11 @@
 				2DCAB4B2280ABED800308095 /* Layoutable.swift in Sources */,
 				2DCAB4AE280ABEB100308095 /* UITableView+Dequeueing.swift in Sources */,
 				2DCAB4A2280ABDA700308095 /* Colors.swift in Sources */,
+				2D9E0CBA2811F44B000E4321 /* CMLButton.swift in Sources */,
+				2D9E0CAE2811EE11000E4321 /* EnterPhoneView.swift in Sources */,
+				2D9E0CAC2811EE09000E4321 /* EnterPhoneViewController.swift in Sources */,
 				2DCAB4B4280ABEEB00308095 /* Layouting.swift in Sources */,
+				2DBFF5F728119306006F7E40 /* LandingViewController.swift in Sources */,
 				2DD398BE280F7F7A00A575DA /* EventCategoryCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -775,6 +933,24 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		2D9E0CA32811E7C9000E4321 /* Landing.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2D9E0CA22811E7C9000E4321 /* en */,
+				2D9E0CA42811E7CA000E4321 /* tr */,
+			);
+			name = Landing.strings;
+			sourceTree = "<group>";
+		};
+		2D9E0CCF2811F8A4000E4321 /* EnterPhone.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2D9E0CCE2811F8A4000E4321 /* en */,
+				2D9E0CD02811F8A6000E4321 /* tr */,
+			);
+			name = EnterPhone.strings;
+			sourceTree = "<group>";
+		};
 		2DD398E22810B9A400A575DA /* Date.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -1187,6 +1363,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		2D9E0CBE2811F581000E4321 /* XCRemoteSwiftPackageReference "IQKeyboardManager" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/hackiftekhar/IQKeyboardManager.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
 		2DD398D52810B80F00A575DA /* XCRemoteSwiftPackageReference "SDWebImage" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/SDWebImage/SDWebImage.git";
@@ -1198,6 +1382,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		2D9E0CBF2811F581000E4321 /* IQKeyboardManagerSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2D9E0CBE2811F581000E4321 /* XCRemoteSwiftPackageReference "IQKeyboardManager" */;
+			productName = IQKeyboardManagerSwift;
+		};
 		2DD398D62810B80F00A575DA /* SDWebImage */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 2DD398D52810B80F00A575DA /* XCRemoteSwiftPackageReference "SDWebImage" */;

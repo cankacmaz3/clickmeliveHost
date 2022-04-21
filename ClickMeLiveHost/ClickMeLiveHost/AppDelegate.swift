@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import IQKeyboardManagerSwift
 import ClickmeliveHostCoreIOS
 
 @main
@@ -18,10 +19,24 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         window = UIWindow()
         window?.makeKeyAndVisible()
-        let listEventVC = UINavigationController(rootViewController: ListEventsUIComposer.makeListEventsController())
-        window?.rootViewController = listEventVC
+        
+        setupIQKeyboard()
+        
+        window?.rootViewController = UINavigationController(rootViewController:
+                                                                LandingUIComposer.makeLandingController())
         return true
     }
 
 }
 
+extension AppDelegate {
+    private func setupIQKeyboard() {
+        
+        IQKeyboardManager.shared.enable = true
+        IQKeyboardManager.shared.toolbarDoneBarButtonItemImage = UIImage(named: Image.dismiss_keyboard)
+        IQKeyboardManager.shared.toolbarTintColor = Colors.primary
+        IQKeyboardManager.shared.shouldShowToolbarPlaceholder = true
+        IQKeyboardManager.shared.shouldResignOnTouchOutside = true
+        IQKeyboardManager.shared.previousNextDisplayMode = .alwaysHide
+    }
+}

@@ -10,17 +10,23 @@
 		2D7D87B428017835006FFDE7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D7D87B328017835006FFDE7 /* AppDelegate.swift */; };
 		2D7D87BD28017836006FFDE7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2D7D87BC28017836006FFDE7 /* Assets.xcassets */; };
 		2D7D87C028017836006FFDE7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2D7D87BE28017836006FFDE7 /* LaunchScreen.storyboard */; };
+		2D9E0C932811CFB6000E4321 /* ListEventsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D9E0C912811CFB6000E4321 /* ListEventsRouter.swift */; };
+		2D9E0C942811CFB6000E4321 /* ListEventsUIComposer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D9E0C922811CFB6000E4321 /* ListEventsUIComposer.swift */; };
+		2D9E0C9A2811D071000E4321 /* LandingUIComposer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D9E0C992811D071000E4321 /* LandingUIComposer.swift */; };
+		2D9E0CB02811EEAB000E4321 /* LandingRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D9E0CAF2811EEAB000E4321 /* LandingRouter.swift */; };
+		2D9E0CB42811EEEC000E4321 /* EnterPhoneUIComposer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D9E0CB32811EEEB000E4321 /* EnterPhoneUIComposer.swift */; };
+		2D9E0CB62811EF52000E4321 /* EnterPhoneRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D9E0CB52811EF52000E4321 /* EnterPhoneRoute.swift */; };
+		2D9E0CC32811F5FC000E4321 /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D9E0CC22811F5FC000E4321 /* Image.swift */; };
+		2D9E0CC52811F646000E4321 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D9E0CC42811F646000E4321 /* Colors.swift */; };
 		2DCAB46C280AB66D00308095 /* ClickmeliveHostCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2DCAB46B280AB66D00308095 /* ClickmeliveHostCore.framework */; };
 		2DCAB46D280AB66D00308095 /* ClickmeliveHostCore.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2DCAB46B280AB66D00308095 /* ClickmeliveHostCore.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		2DCAB49B280ABBE700308095 /* ClickmeliveHostCoreIOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2DCAB49A280ABBE700308095 /* ClickmeliveHostCoreIOS.framework */; };
 		2DCAB49C280ABBE700308095 /* ClickmeliveHostCoreIOS.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2DCAB49A280ABBE700308095 /* ClickmeliveHostCoreIOS.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		2DCAB4BF280AC5C600308095 /* ListEventsUIComposer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DCAB4BE280AC5C600308095 /* ListEventsUIComposer.swift */; };
 		2DCAB562280B6BA000308095 /* BroadcasterUIComposer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DCAB561280B6BA000308095 /* BroadcasterUIComposer.swift */; };
 		2DCAB566280B6C2800308095 /* ModalTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DCAB565280B6C2800308095 /* ModalTransition.swift */; };
 		2DCAB568280B6D1E00308095 /* Transition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DCAB567280B6D1E00308095 /* Transition.swift */; };
 		2DCAB56A280B6D4400308095 /* PushTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DCAB569280B6D4400308095 /* PushTransition.swift */; };
 		2DCAB56C280B6D9E00308095 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DCAB56B280B6D9E00308095 /* Router.swift */; };
-		2DCAB56E280B6DE500308095 /* ListEventsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DCAB56D280B6DE500308095 /* ListEventsRouter.swift */; };
 		2DCAB570280B6E1B00308095 /* BroadcastRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DCAB56F280B6E1B00308095 /* BroadcastRoute.swift */; };
 		2DCAB597280B7BEA00308095 /* Montserrat-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2DCAB591280B7BEA00308095 /* Montserrat-Regular.ttf */; };
 		2DCAB598280B7BEA00308095 /* Montserrat-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2DCAB592280B7BEA00308095 /* Montserrat-SemiBold.ttf */; };
@@ -61,15 +67,21 @@
 		2D7D87BC28017836006FFDE7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2D7D87BF28017836006FFDE7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2D7D87C128017836006FFDE7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2D9E0C912811CFB6000E4321 /* ListEventsRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListEventsRouter.swift; sourceTree = "<group>"; };
+		2D9E0C922811CFB6000E4321 /* ListEventsUIComposer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListEventsUIComposer.swift; sourceTree = "<group>"; };
+		2D9E0C992811D071000E4321 /* LandingUIComposer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingUIComposer.swift; sourceTree = "<group>"; };
+		2D9E0CAF2811EEAB000E4321 /* LandingRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingRouter.swift; sourceTree = "<group>"; };
+		2D9E0CB32811EEEB000E4321 /* EnterPhoneUIComposer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterPhoneUIComposer.swift; sourceTree = "<group>"; };
+		2D9E0CB52811EF52000E4321 /* EnterPhoneRoute.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterPhoneRoute.swift; sourceTree = "<group>"; };
+		2D9E0CC22811F5FC000E4321 /* Image.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Image.swift; sourceTree = "<group>"; };
+		2D9E0CC42811F646000E4321 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		2DCAB46B280AB66D00308095 /* ClickmeliveHostCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = ClickmeliveHostCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2DCAB49A280ABBE700308095 /* ClickmeliveHostCoreIOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = ClickmeliveHostCoreIOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		2DCAB4BE280AC5C600308095 /* ListEventsUIComposer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListEventsUIComposer.swift; sourceTree = "<group>"; };
 		2DCAB561280B6BA000308095 /* BroadcasterUIComposer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BroadcasterUIComposer.swift; sourceTree = "<group>"; };
 		2DCAB565280B6C2800308095 /* ModalTransition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalTransition.swift; sourceTree = "<group>"; };
 		2DCAB567280B6D1E00308095 /* Transition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Transition.swift; sourceTree = "<group>"; };
 		2DCAB569280B6D4400308095 /* PushTransition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PushTransition.swift; sourceTree = "<group>"; };
 		2DCAB56B280B6D9E00308095 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
-		2DCAB56D280B6DE500308095 /* ListEventsRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListEventsRouter.swift; sourceTree = "<group>"; };
 		2DCAB56F280B6E1B00308095 /* BroadcastRoute.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BroadcastRoute.swift; sourceTree = "<group>"; };
 		2DCAB591280B7BEA00308095 /* Montserrat-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Regular.ttf"; sourceTree = "<group>"; };
 		2DCAB592280B7BEA00308095 /* Montserrat-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-SemiBold.ttf"; sourceTree = "<group>"; };
@@ -121,20 +133,99 @@
 		2D7D87B228017835006FFDE7 /* ClickMeLiveHost */ = {
 			isa = PBXGroup;
 			children = (
+				2D9E0CC12811F5E4000E4321 /* Utility */,
 				2DD398F32810C74400A575DA /* Extensions */,
 				2DD398EB2810C1E900A575DA /* Animations */,
 				2DD398E82810C19F00A575DA /* Loading */,
 				2DD398CE2810B55F00A575DA /* NetworkLayer */,
 				2DCAB58A280B7B8300308095 /* Fonts */,
 				2DCAB563280B6C0A00308095 /* Routing */,
-				2DCAB4BC280AC5A500308095 /* List Events */,
-				2DCAB55F280B6B8A00308095 /* Broadcast */,
+				2DBFF5FA28119388006F7E40 /* Features */,
 				2D7D87B328017835006FFDE7 /* AppDelegate.swift */,
 				2D7D87BC28017836006FFDE7 /* Assets.xcassets */,
 				2D7D87BE28017836006FFDE7 /* LaunchScreen.storyboard */,
 				2D7D87C128017836006FFDE7 /* Info.plist */,
 			);
 			path = ClickMeLiveHost;
+			sourceTree = "<group>";
+		};
+		2D9E0C862811CEDB000E4321 /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				2D9E0C962811D044000E4321 /* Landing */,
+				2D9E0CB12811EEC8000E4321 /* Enter Phone */,
+			);
+			path = Auth;
+			sourceTree = "<group>";
+		};
+		2D9E0C952811CFBB000E4321 /* ListEvent */ = {
+			isa = PBXGroup;
+			children = (
+				2D9E0C9B2811D07E000E4321 /* Composers */,
+				2D9E0C912811CFB6000E4321 /* ListEventsRouter.swift */,
+			);
+			path = ListEvent;
+			sourceTree = "<group>";
+		};
+		2D9E0C962811D044000E4321 /* Landing */ = {
+			isa = PBXGroup;
+			children = (
+				2D9E0C972811D04B000E4321 /* Composers */,
+				2D9E0CAF2811EEAB000E4321 /* LandingRouter.swift */,
+			);
+			path = Landing;
+			sourceTree = "<group>";
+		};
+		2D9E0C972811D04B000E4321 /* Composers */ = {
+			isa = PBXGroup;
+			children = (
+				2D9E0C992811D071000E4321 /* LandingUIComposer.swift */,
+			);
+			path = Composers;
+			sourceTree = "<group>";
+		};
+		2D9E0C9B2811D07E000E4321 /* Composers */ = {
+			isa = PBXGroup;
+			children = (
+				2D9E0C922811CFB6000E4321 /* ListEventsUIComposer.swift */,
+			);
+			path = Composers;
+			sourceTree = "<group>";
+		};
+		2D9E0CB12811EEC8000E4321 /* Enter Phone */ = {
+			isa = PBXGroup;
+			children = (
+				2D9E0CB22811EED7000E4321 /* Composers */,
+				2D9E0CB52811EF52000E4321 /* EnterPhoneRoute.swift */,
+			);
+			path = "Enter Phone";
+			sourceTree = "<group>";
+		};
+		2D9E0CB22811EED7000E4321 /* Composers */ = {
+			isa = PBXGroup;
+			children = (
+				2D9E0CB32811EEEB000E4321 /* EnterPhoneUIComposer.swift */,
+			);
+			path = Composers;
+			sourceTree = "<group>";
+		};
+		2D9E0CC12811F5E4000E4321 /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				2D9E0CC22811F5FC000E4321 /* Image.swift */,
+				2D9E0CC42811F646000E4321 /* Colors.swift */,
+			);
+			path = Utility;
+			sourceTree = "<group>";
+		};
+		2DBFF5FA28119388006F7E40 /* Features */ = {
+			isa = PBXGroup;
+			children = (
+				2D9E0C862811CEDB000E4321 /* Auth */,
+				2D9E0C952811CFBB000E4321 /* ListEvent */,
+				2DCAB55F280B6B8A00308095 /* Broadcast */,
+			);
+			path = Features;
 			sourceTree = "<group>";
 		};
 		2DCAB46A280AB66D00308095 /* Frameworks */ = {
@@ -145,23 +236,6 @@
 				2DCAB46B280AB66D00308095 /* ClickmeliveHostCore.framework */,
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		2DCAB4BC280AC5A500308095 /* List Events */ = {
-			isa = PBXGroup;
-			children = (
-				2DCAB4BD280AC5B600308095 /* Composers */,
-				2DCAB56D280B6DE500308095 /* ListEventsRouter.swift */,
-			);
-			path = "List Events";
-			sourceTree = "<group>";
-		};
-		2DCAB4BD280AC5B600308095 /* Composers */ = {
-			isa = PBXGroup;
-			children = (
-				2DCAB4BE280AC5C600308095 /* ListEventsUIComposer.swift */,
-			);
-			path = Composers;
 			sourceTree = "<group>";
 		};
 		2DCAB55F280B6B8A00308095 /* Broadcast */ = {
@@ -333,16 +407,22 @@
 			files = (
 				2DCAB568280B6D1E00308095 /* Transition.swift in Sources */,
 				2DCAB566280B6C2800308095 /* ModalTransition.swift in Sources */,
+				2D9E0CB42811EEEC000E4321 /* EnterPhoneUIComposer.swift in Sources */,
 				2DCAB570280B6E1B00308095 /* BroadcastRoute.swift in Sources */,
+				2D9E0C9A2811D071000E4321 /* LandingUIComposer.swift in Sources */,
 				2D7D87B428017835006FFDE7 /* AppDelegate.swift in Sources */,
+				2D9E0C932811CFB6000E4321 /* ListEventsRouter.swift in Sources */,
 				2DD398F22810C4D200A575DA /* LoadingViewHTTPClientDecorator.swift in Sources */,
+				2D9E0C942811CFB6000E4321 /* ListEventsUIComposer.swift in Sources */,
 				2DD398D42810B58000A575DA /* Servers.swift in Sources */,
 				2DD398EA2810C1B100A575DA /* LoadingView.swift in Sources */,
-				2DCAB56E280B6DE500308095 /* ListEventsRouter.swift in Sources */,
 				2DD398D32810B58000A575DA /* AppEnvironment.swift in Sources */,
 				2DCAB56C280B6D9E00308095 /* Router.swift in Sources */,
-				2DCAB4BF280AC5C600308095 /* ListEventsUIComposer.swift in Sources */,
+				2D9E0CC52811F646000E4321 /* Colors.swift in Sources */,
+				2D9E0CC32811F5FC000E4321 /* Image.swift in Sources */,
+				2D9E0CB02811EEAB000E4321 /* LandingRouter.swift in Sources */,
 				2DD398F52810C75800A575DA /* UIColor+Extensions.swift in Sources */,
+				2D9E0CB62811EF52000E4321 /* EnterPhoneRoute.swift in Sources */,
 				2DCAB56A280B6D4400308095 /* PushTransition.swift in Sources */,
 				2DCAB562280B6BA000308095 /* BroadcasterUIComposer.swift in Sources */,
 			);
@@ -494,7 +574,7 @@
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = UIInterfaceOrientationPortrait;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -525,7 +605,7 @@
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = UIInterfaceOrientationPortrait;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

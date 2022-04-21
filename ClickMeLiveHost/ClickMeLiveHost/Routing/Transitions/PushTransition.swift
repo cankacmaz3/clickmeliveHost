@@ -9,6 +9,10 @@ import UIKit
 
 class PushTransition: NSObject {
 
+    private enum Constants {
+        static let backImage: String = "img_back"
+    }
+    
     var isAnimated: Bool = true
     var completionHandler: (() -> Void)?
 
@@ -23,10 +27,11 @@ class PushTransition: NSObject {
 extension PushTransition: Transition {
 
     func open(_ viewController: UIViewController) {
+        viewController.navigationItem.leftBarButtonItem = UIBarButtonItem.init(image: UIImage(named: Constants.backImage), style: .done, target: self, action: #selector(close))
         self.viewController?.navigationController?.pushViewController(viewController, animated: isAnimated)
     }
 
-    func close(_ viewController: UIViewController) {
+    @objc func close(_ viewController: UIViewController) {
         self.viewController?.navigationController?.popViewController(animated: isAnimated)
     }
 }

@@ -7,10 +7,25 @@
 
 import UIKit
 
+extension BroadcastView {
+    func handleSoundImage(isMuted: Bool) {
+        ivSound.image = UIImage(named: isMuted ? Constants.soundOffImage:
+                                                 Constants.soundOnImage,
+                                  in: Bundle(for: BroadcastView.self),
+                                  compatibleWith: nil)
+    }
+}
+
 public final class BroadcastView: UIView, Layoutable {
     
     private enum Constants {
         static let controlButtonsBg: UIColor = .black.withAlphaComponent(0.7)
+        static let soundOnImage: String = "img_sound_on"
+        static let soundOffImage: String = "img_sound_off"
+        static let rotateCameraImage: String = "img_rotate_camera"
+        static let streamStatusBgColor: UIColor = UIColor.rgb(red: 73, green: 80, blue: 87)
+        static let streamStatusStartColor: UIColor = UIColor.rgb(red: 42, green: 185, blue: 48)
+        static let streamStatusStopColor: UIColor = UIColor.rgb(red: 255, green: 0, blue: 27)
     }
     
     let previewView: UIView = {
@@ -24,15 +39,20 @@ public final class BroadcastView: UIView, Layoutable {
         return view
     }()
     
-    private let ivSound: UIImageView = {
+    let ivSound: UIImageView = {
         let imageView = UIImageView()
-        imageView.backgroundColor = .red
+        imageView.image = UIImage(named: Constants.soundOnImage,
+                                  in: Bundle(for: BroadcastView.self),
+                                  compatibleWith: nil)
+        imageView.isUserInteractionEnabled = true
         return imageView
     }()
     
     private let ivRotateCamera: UIImageView = {
         let imageView = UIImageView()
-        imageView.backgroundColor = .red
+        imageView.image = UIImage(named: Constants.rotateCameraImage,
+                                  in: Bundle(for: BroadcastView.self),
+                                  compatibleWith: nil)
         return imageView
     }()
     
@@ -46,7 +66,15 @@ public final class BroadcastView: UIView, Layoutable {
     
     private let streamStatusContainer: UIView = {
         let view = UIView()
-        view.backgroundColor = .green
+        return view
+    }()
+    
+    let streamStatusView: UIView = {
+        let view = UIView()
+        view.backgroundColor = Constants.streamStatusBgColor
+        view.layer.borderColor = Constants.streamStatusStartColor.cgColor
+        view.layer.borderWidth = 1.0
+        view.layer.cornerRadius = 23
         return view
     }()
     
@@ -59,10 +87,13 @@ public final class BroadcastView: UIView, Layoutable {
     }()
     
     public func setupViews() {
-        backgroundColor = .white
+        backgroundColor = .black
+        
         addSubview(previewView)
         
         addSubview(controlButtonsView)
+        
+        streamStatusContainer.addSubview(streamStatusView)
         
         [streamStatusContainer, lblStreamStatus].forEach {
             stackView.addArrangedSubview($0)
@@ -77,6 +108,10 @@ public final class BroadcastView: UIView, Layoutable {
         previewView.fillSuperview()
         
         controlButtonsView.anchor(nil, left: leftAnchor, bottom: safeAreaLayoutGuide.bottomAnchor, right: rightAnchor, topConstant: 0, leftConstant: 0, bottomConstant: 0, rightConstant: 0, widthConstant: 0, heightConstant: 101)
+        
+        streamStatusView.anchorCenterSuperview()
+        streamStatusView.constrainWidth(46)
+        streamStatusView.constrainHeight(46)
         
         ivSound.anchor(nil, left: controlButtonsView.leftAnchor, bottom: nil, right: nil, topConstant: 0, leftConstant: 16, bottomConstant: 0, rightConstant: 0, widthConstant: 40, heightConstant: 40)
         ivSound.anchorCenterYToSuperview()

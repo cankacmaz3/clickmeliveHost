@@ -1,0 +1,12 @@
+/* 
+  EnterPhone.strings
+  ClickmeliveHostCore
+
+  Created by Can Kaçmaz on 21.04.2022.
+  
+*/
+
+"ENTER_PHONE_TITLE" = "Telefon\nnumaranı gir";
+"ENTER_PHONE_DETAIL" = "Giriş yapabilmen için sana SMS ile\ndoğrulama kodu göndereceğiz.";
+"ENTER_PHONE_PLACEHOLDER" = "Telefon Numarası";
+"ENTER_PHONE_SEND_CODE" = "Kodu Gönder";
