@@ -47,6 +47,7 @@ public final class BroadcastViewController: UIViewController, Layouting {
     public override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         self.navigationController?.setNavigationBarHidden(false, animated: animated)
+        viewerViewModel.removeViewerListener()
     }
     
     public override func loadView() {
