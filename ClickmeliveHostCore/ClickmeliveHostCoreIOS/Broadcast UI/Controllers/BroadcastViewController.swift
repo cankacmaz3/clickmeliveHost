@@ -70,7 +70,9 @@ public final class BroadcastViewController: UIViewController, Layouting {
     
     private func observeViewerCount() {
         viewerViewModel.onMessageReceived = { [weak self] viewerCount in
-            self?.layoutableView.updateViewerCount(viewerCount)
+            DispatchQueue.main.async {
+                self?.layoutableView.updateViewerCount(viewerCount)
+            }
         }
     }
     
