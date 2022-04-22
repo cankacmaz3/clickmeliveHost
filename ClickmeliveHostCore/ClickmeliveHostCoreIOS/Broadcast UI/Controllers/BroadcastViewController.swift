@@ -7,13 +7,17 @@
 
 import UIKit
 import AmazonIVSBroadcast
+import ClickmeliveHostCore
 
 public final class BroadcastViewController: UIViewController, Layouting {
     public typealias ViewType = BroadcastView
     
+    private let viewerViewModel: ViewerViewModel
     private let broadcastEventProductsController: BroadcastEventProductsController
     
-    public init(broadcastEventProductsController: BroadcastEventProductsController) {
+    public init(viewerViewModel: ViewerViewModel,
+                broadcastEventProductsController: BroadcastEventProductsController) {
+        self.viewerViewModel = viewerViewModel
         self.broadcastEventProductsController = broadcastEventProductsController
         super.init(nibName: nil, bundle: nil)
     }
@@ -24,11 +28,25 @@ public final class BroadcastViewController: UIViewController, Layouting {
     
     public override func viewDidLoad() {
         super.viewDidLoad()
+        
         setupCollectionView()
         registerActions()
+        
+        observeViewerCount()
         observeProductEventLoad()
         
+        viewerViewModel.listenViewerUpdates(eventId: 1338)
         broadcastEventProductsController.loadEventProducts(eventId: 1338)
+    }
+    
+    public override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.navigationController?.setNavigationBarHidden(true, animated: animated)
+    }
+    
+    public override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        self.navigationController?.setNavigationBarHidden(false, animated: animated)
     }
     
     public override func loadView() {
@@ -47,6 +65,12 @@ public final class BroadcastViewController: UIViewController, Layouting {
     private func observeProductEventLoad() {
         broadcastEventProductsController.onEventProductsLoaded = { [weak self] count in
             self?.layoutableView.showProductToggleView(count: count)
+        }
+    }
+    
+    private func observeViewerCount() {
+        viewerViewModel.onMessageReceived = { [weak self] viewerCount in
+            self?.layoutableView.updateViewerCount(viewerCount)
         }
     }
     

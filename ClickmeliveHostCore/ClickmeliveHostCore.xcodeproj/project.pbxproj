@@ -61,9 +61,13 @@
 		2D9E0D762813025F000E4321 /* BroadcastEventProductsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D9E0D752813025F000E4321 /* BroadcastEventProductsController.swift */; };
 		2D9E0D7928131649000E4321 /* ProductCellController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D9E0D7828131649000E4321 /* ProductCellController.swift */; };
 		2D9E0D7B28131699000E4321 /* ProductViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D9E0D7A28131699000E4321 /* ProductViewModel.swift */; };
-		2D9E0D7D28131D7F000E4321 /* BroadcastViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D9E0D7C28131D7F000E4321 /* BroadcastViewModel.swift */; };
 		2D9E0D812813215C000E4321 /* UILabel+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D9E0D802813215C000E4321 /* UILabel+Helpers.swift */; };
 		2D9E0D83281322A6000E4321 /* BadgeContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D9E0D82281322A6000E4321 /* BadgeContainer.swift */; };
+		2D9E0D8728132EBF000E4321 /* WebSocketConnector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D9E0D8628132EBF000E4321 /* WebSocketConnector.swift */; };
+		2D9E0D8928132FE7000E4321 /* RemoteViewerLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D9E0D8828132FE7000E4321 /* RemoteViewerLoader.swift */; };
+		2D9E0D8B28133125000E4321 /* ViewerListener.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D9E0D8A28133125000E4321 /* ViewerListener.swift */; };
+		2D9E0D8D28133EED000E4321 /* ViewerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D9E0D8C28133EED000E4321 /* ViewerViewModel.swift */; };
+		2D9E0D93281348E5000E4321 /* VirtualViewerDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D9E0D92281348E5000E4321 /* VirtualViewerDTO.swift */; };
 		2DBFF5F728119306006F7E40 /* LandingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DBFF5F628119306006F7E40 /* LandingViewController.swift */; };
 		2DBFF5F92811930F006F7E40 /* LandingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DBFF5F82811930F006F7E40 /* LandingView.swift */; };
 		2DCAB45B280AB5DF00308095 /* ClickmeliveHostCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2DCAB452280AB5DF00308095 /* ClickmeliveHostCore.framework */; };
@@ -216,9 +220,13 @@
 		2D9E0D752813025F000E4321 /* BroadcastEventProductsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BroadcastEventProductsController.swift; sourceTree = "<group>"; };
 		2D9E0D7828131649000E4321 /* ProductCellController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCellController.swift; sourceTree = "<group>"; };
 		2D9E0D7A28131699000E4321 /* ProductViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductViewModel.swift; sourceTree = "<group>"; };
-		2D9E0D7C28131D7F000E4321 /* BroadcastViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BroadcastViewModel.swift; sourceTree = "<group>"; };
 		2D9E0D802813215C000E4321 /* UILabel+Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+Helpers.swift"; sourceTree = "<group>"; };
 		2D9E0D82281322A6000E4321 /* BadgeContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BadgeContainer.swift; sourceTree = "<group>"; };
+		2D9E0D8628132EBF000E4321 /* WebSocketConnector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebSocketConnector.swift; sourceTree = "<group>"; };
+		2D9E0D8828132FE7000E4321 /* RemoteViewerLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteViewerLoader.swift; sourceTree = "<group>"; };
+		2D9E0D8A28133125000E4321 /* ViewerListener.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewerListener.swift; sourceTree = "<group>"; };
+		2D9E0D8C28133EED000E4321 /* ViewerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewerViewModel.swift; sourceTree = "<group>"; };
+		2D9E0D92281348E5000E4321 /* VirtualViewerDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VirtualViewerDTO.swift; sourceTree = "<group>"; };
 		2DBFF5F628119306006F7E40 /* LandingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingViewController.swift; sourceTree = "<group>"; };
 		2DBFF5F82811930F006F7E40 /* LandingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingView.swift; sourceTree = "<group>"; };
 		2DCAB452280AB5DF00308095 /* ClickmeliveHostCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ClickmeliveHostCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -540,6 +548,7 @@
 			isa = PBXGroup;
 			children = (
 				2D9E0D592812F508000E4321 /* EventProductLoader.swift */,
+				2D9E0D8A28133125000E4321 /* ViewerListener.swift */,
 			);
 			path = "Broadcast Features";
 			sourceTree = "<group>";
@@ -548,6 +557,8 @@
 			isa = PBXGroup;
 			children = (
 				2D9E0D662812F6AD000E4321 /* RemoteEventProductLoader.swift */,
+				2D9E0D8828132FE7000E4321 /* RemoteViewerLoader.swift */,
+				2D9E0D92281348E5000E4321 /* VirtualViewerDTO.swift */,
 			);
 			path = "Broadcast API";
 			sourceTree = "<group>";
@@ -557,7 +568,7 @@
 			children = (
 				2D9E0D73281301B4000E4321 /* EventProductViewModel.swift */,
 				2D9E0D7A28131699000E4321 /* ProductViewModel.swift */,
-				2D9E0D7C28131D7F000E4321 /* BroadcastViewModel.swift */,
+				2D9E0D8C28133EED000E4321 /* ViewerViewModel.swift */,
 			);
 			path = "Broadcast Presentation";
 			sourceTree = "<group>";
@@ -584,6 +595,14 @@
 				2D9E0D7828131649000E4321 /* ProductCellController.swift */,
 			);
 			path = "Cell Controllers";
+			sourceTree = "<group>";
+		};
+		2D9E0D8528132E5F000E4321 /* Sockets */ = {
+			isa = PBXGroup;
+			children = (
+				2D9E0D8628132EBF000E4321 /* WebSocketConnector.swift */,
+			);
+			path = Sockets;
 			sourceTree = "<group>";
 		};
 		2DBFF5F128118F96006F7E40 /* Auth UI */ = {
@@ -659,17 +678,18 @@
 		2DCAB454280AB5DF00308095 /* ClickmeliveHostCore */ = {
 			isa = PBXGroup;
 			children = (
-				2D9E0CD92812046D000E4321 /* Helpers */,
-				2DCAB4EF280AE65100308095 /* Extensions */,
 				2DCAB4D8280ADC0A00308095 /* Shared Models */,
 				2DCAB4CF280AD9B100308095 /* Shared Features */,
 				2DCAB46F280ABA6F00308095 /* Shared API */,
 				2DCAB470280ABA7900308095 /* Shared API Infra */,
 				2DD398D82810B95500A575DA /* Shared Presentation */,
+				2D9E0D8528132E5F000E4321 /* Sockets */,
 				2D9E0D372812C78E000E4321 /* Alert */,
 				2DBFF5F228118FA7006F7E40 /* Auth */,
 				2DCAB4C6280AD85A00308095 /* List Events */,
 				2D9E0D572812F4F0000E4321 /* Broadcast */,
+				2D9E0CD92812046D000E4321 /* Helpers */,
+				2DCAB4EF280AE65100308095 /* Extensions */,
 			);
 			path = ClickmeliveHostCore;
 			sourceTree = "<group>";
@@ -1173,18 +1193,21 @@
 			buildActionMask = 2147483647;
 			files = (
 				2D9E0D622812F5D9000E4321 /* Double+Extensions.swift in Sources */,
+				2D9E0D8D28133EED000E4321 /* ViewerViewModel.swift in Sources */,
 				2D9E0D6B2812F82A000E4321 /* ProductResponse.swift in Sources */,
 				2DCAB4DB280ADC3700308095 /* EventResponseDTO.swift in Sources */,
 				2DD398DB2810B97A00A575DA /* Date+Helpers.swift in Sources */,
 				2D9E0D27281232FF000E4321 /* ValidateCode.swift in Sources */,
 				2D9E0D7B28131699000E4321 /* ProductViewModel.swift in Sources */,
 				2DCAB557280B679F00308095 /* EventViewModel.swift in Sources */,
+				2D9E0D8728132EBF000E4321 /* WebSocketConnector.swift in Sources */,
 				2D9E0CE028120B3A000E4321 /* CreateCode.swift in Sources */,
 				2D9E0CE828121111000E4321 /* AuthEndpoints.swift in Sources */,
 				2D9E0CFE2812264B000E4321 /* Localized+Error.swift in Sources */,
 				2D9E0D3A2812C7A3000E4321 /* AlertViewModel.swift in Sources */,
 				2D9E0D342812B215000E4321 /* CMLErrorDTO.swift in Sources */,
 				2D9E0CE328120BC8000E4321 /* CreateCodeDTO.swift in Sources */,
+				2D9E0D93281348E5000E4321 /* VirtualViewerDTO.swift in Sources */,
 				2DCAB4DE280ADD0000308095 /* ListEventsViewModel.swift in Sources */,
 				2D9E0D692812F800000E4321 /* ProductResponseDTO.swift in Sources */,
 				2DCAB47F280ABB6000308095 /* AuthenticatedURLRequestBuilderDecorator.swift in Sources */,
@@ -1214,11 +1237,11 @@
 				2DCAB4D3280ADA2500308095 /* User.swift in Sources */,
 				2D9E0D642812F63E000E4321 /* ProductDTO.swift in Sources */,
 				2DCAB4CB280AD94800308095 /* EventLoader.swift in Sources */,
+				2D9E0D8B28133125000E4321 /* ViewerListener.swift in Sources */,
 				2D9E0D2C2812344C000E4321 /* RemoteAuthCodeValidator.swift in Sources */,
 				2D9E0D362812B5E0000E4321 /* CMLError.swift in Sources */,
 				2D9E0D5A2812F508000E4321 /* EventProductLoader.swift in Sources */,
 				2DCAB472280ABAA500308095 /* HTTPClient.swift in Sources */,
-				2D9E0D7D28131D7F000E4321 /* BroadcastViewModel.swift in Sources */,
 				2D9E0D74281301B4000E4321 /* EventProductViewModel.swift in Sources */,
 				2DD398F72810C80400A575DA /* Paginated.swift in Sources */,
 				2DD398F92810CA5400A575DA /* Metadata.swift in Sources */,
@@ -1227,6 +1250,7 @@
 				2DD398DD2810B98E00A575DA /* Localized+Date.swift in Sources */,
 				2DCAB477280ABAEC00308095 /* URLSessionHTTPClient.swift in Sources */,
 				2D9E0CD22811F975000E4321 /* Localized+EnterPhone.swift in Sources */,
+				2D9E0D8928132FE7000E4321 /* RemoteViewerLoader.swift in Sources */,
 				2DCAB4F1280AE66400308095 /* DateFormatter+Extensions.swift in Sources */,
 				2D9E0D25281232DB000E4321 /* AuthCodeValidator.swift in Sources */,
 				2D9E0D672812F6AD000E4321 /* RemoteEventProductLoader.swift in Sources */,
@@ -1505,7 +1529,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
@@ -1536,7 +1560,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
@@ -1615,7 +1639,7 @@
 				INFOPLIST_FILE = ClickmeliveHostCoreIOS/Info.plist;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
@@ -1652,7 +1676,7 @@
 				INFOPLIST_FILE = ClickmeliveHostCoreIOS/Info.plist;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",

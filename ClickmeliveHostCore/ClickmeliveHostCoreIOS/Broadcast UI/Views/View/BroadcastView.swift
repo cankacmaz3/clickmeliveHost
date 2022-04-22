@@ -28,6 +28,10 @@ extension BroadcastView {
         ivProductToggle.showBadge(blink: false, text: "\(count)", badgeColor: Constants.badgeColor)
     }
     
+    func updateViewerCount(_ count: Int) {
+        lblViewer.text = "\(count)"
+    }
+    
     func handleSoundImage(isMuted: Bool) {
         ivSound.image = UIImage(named: isMuted ? Constants.soundOffImage:
                                                  Constants.soundOnImage,
@@ -44,6 +48,8 @@ public final class BroadcastView: UIView, Layoutable {
         static let soundOffImage: String = "img_sound_off"
         static let rotateCameraImage: String = "img_rotate_camera"
         static let eventProductsImage: String = "icon_event_products"
+        static let viewerImage: String = "icon_viewer"
+        
         static let hideEventsProductColor: UIColor = UIColor.rgb(red: 255, green: 0, blue: 27).withAlphaComponent(0.15)
         static let showEventsProductColor: UIColor = .black.withAlphaComponent(0.15)
         static let badgeColor: UIColor = Colors.primary
@@ -54,8 +60,25 @@ public final class BroadcastView: UIView, Layoutable {
     
     private let viewersView: UIView = {
         let view = UIView()
-        view.backgroundColor = .red
+        view.backgroundColor = .black.withAlphaComponent(0.15)
+        view.layer.cornerRadius = 11.5
         return view
+    }()
+    
+    private let ivViewer: UIImageView = {
+        let imageView = UIImageView()
+        imageView.image = UIImage(named: Constants.viewerImage,
+                                  in: Bundle(for: BroadcastView.self),
+                                  compatibleWith: nil)
+        return imageView
+    }()
+    
+    private let lblViewer: UILabel = {
+        let label = UILabel()
+        label.font = UIFont(name: Fonts.semibold, size: 12)
+        label.textColor = .white
+        label.UILabelTextShadow()
+        return label
     }()
     
     let productToggleView: UIView = {
@@ -162,6 +185,10 @@ public final class BroadcastView: UIView, Layoutable {
             controlButtonsView.addSubview($0)
         }
         
+        [ivViewer, lblViewer].forEach {
+            viewersView.addSubview($0)
+        }
+        
         addSubview(viewersView)
         
         productToggleView.addSubview(ivProductToggle)
@@ -173,6 +200,11 @@ public final class BroadcastView: UIView, Layoutable {
         
         viewersView.anchor(safeAreaLayoutGuide.topAnchor, left: nil, bottom: nil, right: nil, topConstant: 8, leftConstant: 0, bottomConstant: 0, rightConstant: 0, widthConstant: 55, heightConstant: 23)
         viewersView.anchorCenterXToSuperview()
+        
+        ivViewer.anchor(nil, left: viewersView.leftAnchor, bottom: nil, right: nil, topConstant: 0, leftConstant: 8, bottomConstant: 0, rightConstant: 0, widthConstant: 13, heightConstant: 10)
+        ivViewer.anchorCenterYToSuperview()
+        
+        lblViewer.anchor(viewersView.topAnchor, left: ivViewer.rightAnchor, bottom: viewersView.bottomAnchor, right: viewersView.rightAnchor, topConstant: 0, leftConstant: 3, bottomConstant: 0, rightConstant: 0, widthConstant: 0, heightConstant: 0)
         
         productToggleView.anchor(nil, left: leftAnchor, bottom: nil, right: nil, topConstant: 0, leftConstant: 16, bottomConstant: 0, rightConstant: 0, widthConstant: 42, heightConstant: 42)
         

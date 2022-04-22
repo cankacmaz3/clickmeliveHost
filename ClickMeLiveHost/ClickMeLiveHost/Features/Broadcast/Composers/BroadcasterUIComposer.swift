@@ -21,7 +21,12 @@ final class BroadcasterUIComposer {
         let eventProductLoader = RemoteEventProductLoader(client: loadingClient, baseURL: AppEnvironment.baseURL, authenticationTokenHeader: authenticationTokenHeader)
         let eventProductViewModel = EventProductViewModel(eventProductLoader: eventProductLoader)
         let broadcastEventProductsController = BroadcastEventProductsController(viewModel: eventProductViewModel)
-        let broadcastViewController = BroadcastViewController(broadcastEventProductsController: broadcastEventProductsController)
+        
+        let socketConnector = WebSocketConnector(withSocketURL: URL(string: "wss://eventstats-prod-api.clickmelive.com?eventId=\(1338)")!)
+        let viewerListener = RemoteViewerListener(socketConnection: socketConnector)
+        let viewerViewModel = ViewerViewModel(viewerListener: viewerListener)
+        let broadcastViewController = BroadcastViewController(viewerViewModel: viewerViewModel,
+                                                              broadcastEventProductsController: broadcastEventProductsController)
         
         eventProductViewModel.onEventProductsLoaded = { products in
             broadcastEventProductsController.display(products.map { product in
