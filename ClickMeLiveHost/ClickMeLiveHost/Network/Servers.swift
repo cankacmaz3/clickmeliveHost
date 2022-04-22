@@ -8,6 +8,6 @@
 import Foundation
 
 struct Servers {
-    static let production = "https://test-azure-broadcaster-api.clickmelive.com"
-    static let development = "https://test-azure-broadcaster-api.clickmelive.com"
+    static let production = "https://dev-azure-mobile-api.clickmelive.com"
+    static let development = "https://dev-azure-mobile-api.clickmelive.com"
 }

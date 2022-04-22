@@ -16,7 +16,7 @@ extension EventEndpoints {
     var path: String {
         switch self {
         case .statusEvents:
-            return "/api/v1/event"
+            return "/api/v1/event/live"
         case let .getProducts(eventId):
             return "/api/v1/event/\(eventId)/product"
         }
@@ -43,8 +43,8 @@ extension EventEndpoints {
     var queryItems: [URLQueryItem]? {
         switch self {
         case let .statusEvents(status, page):
-            return [URLQueryItem(name: "page", value: "\(page)"),
-                    URLQueryItem(name: "status", value: "\(status.rawValue)")]
+            return [URLQueryItem(name: "page", value: "\(page)")]//,
+                   // URLQueryItem(name: "status", value: "\(status.rawValue)")]
         case .getProducts:
             return [URLQueryItem(name: "page", value: "\(1)")]
         }

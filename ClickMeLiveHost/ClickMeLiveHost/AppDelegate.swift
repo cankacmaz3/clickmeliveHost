@@ -22,7 +22,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         setupIQKeyboard()
         
-        print(KeychainHelper.instance.getUserToken() ?? "No token", "Token here")
         window?.rootViewController = AppModuleBuilder.module()
         return true
     }

@@ -1,8 +1,8 @@
 //
-//  ListEventsViewModel.swift
+//  EventListViewModel.swift
 //  ClickmeliveHostCore
 //
-//  Created by Can Kaçmaz on 16.04.2022.
+//  Created by Can Kaçmaz on 23.04.2022.
 //
 
 import Foundation
@@ -11,25 +11,29 @@ public final class ListEventsViewModel {
     public typealias Observer<T> = (T) -> Void
     public typealias Next<T> = (Result<Paginated<T>, Error>) -> Void
     
-    private var events: [Event] = []
-    
     private let eventLoader: EventLoader
    
     public init(eventLoader: EventLoader) {
         self.eventLoader = eventLoader
     }
     
-    private var nextEventResult: ((@escaping Next<EventResponse>) -> ())? = nil
+    // MARK: - State
+    public var selectedStatus: Event.EventStatus?
+    private var events: [Event] = []
     
+    // MARK: - Observers
     public var onEventsLoadingStateChange: Observer<Bool>?
     public var onEventsLoaded: Observer<[Event]>?
     public var onError: (() -> Void)?
     
-    
+    private var nextEventResult: ((@escaping Next<EventResponse>) -> ())? = nil
 }
 
 extension ListEventsViewModel {
-    public func loadEvents(with status: Event.EventStatus) {
+    public func loadEvents() {
+        
+        guard let status = selectedStatus else { return }
+        
         onEventsLoadingStateChange?(true)
         eventLoader.load(with: status, page: 1) { [weak self] result in
             switch result {

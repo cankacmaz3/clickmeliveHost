@@ -18,7 +18,15 @@ public final class ListEventsRefreshController: NSObject {
     }
     
     @objc public func refresh() {
-        viewModel.loadEvents(with: .ENDED)
+        viewModel.loadEvents()
+    }
+    
+    public func setStatus(status: Event.EventStatus) {
+        viewModel.selectedStatus = status
+    }
+    
+    public func currentStatus() -> Event.EventStatus? {
+        return viewModel.selectedStatus
     }
     
     public func onNext() {

@@ -11,10 +11,10 @@ import ClickmeliveHostCore
 
 public final class EventCategoryCellController {
     
-    private let viewModel: EventCategoryCellViewModel
+    private let viewModel: EventCategoryViewModel
     private var cell: EventCategoryCell?
     
-    public init(viewModel: EventCategoryCellViewModel) {
+    public init(viewModel: EventCategoryViewModel) {
         self.viewModel = viewModel
     }
     
@@ -36,8 +36,8 @@ public final class EventCategoryCellController {
         return cell
     }
     
-    func loadEvents(listEventsViewModel: ListEventsViewModel) {
-        listEventsViewModel.loadEvents(with: viewModel.status)
+    func status() -> Event.EventStatus {
+        return viewModel.status
     }
     
     func releaseCellForReuse() {

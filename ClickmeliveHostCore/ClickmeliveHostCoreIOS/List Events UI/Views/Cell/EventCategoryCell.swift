@@ -9,7 +9,7 @@ import UIKit
 import ClickmeliveHostCore
 
 extension EventCategoryCell {
-    func configure(with viewModel: EventCategoryCellViewModel) {
+    func configure(with viewModel: EventCategoryViewModel) {
         lblName.text = viewModel.localizedIndex
     }
     

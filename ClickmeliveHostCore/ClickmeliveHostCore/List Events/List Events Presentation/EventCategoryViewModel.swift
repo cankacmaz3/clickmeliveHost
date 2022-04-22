@@ -1,0 +1,36 @@
+//
+//  ListEventsViewModel.swift
+//  ClickmeliveHostCore
+//
+//  Created by Can Kaçmaz on 16.04.2022.
+//
+
+import Foundation
+
+public final class EventCategoryViewModel {
+    
+    public let status: Event.EventStatus
+    
+    public init(status: Event.EventStatus) {
+        switch status {
+        
+        case .CANCELLED, .UPCOMING, .ENDED:
+            self.status = status
+        default:
+            fatalError("Invalid Status")
+        }
+    }
+    
+    public var localizedIndex: String {
+        switch status {
+        case .UPCOMING:
+            return Localized.ListEvents.statusUpcoming
+        case .ENDED:
+            return Localized.ListEvents.statusEnded
+        case .CANCELLED:
+            return Localized.ListEvents.statusCancelled
+        default:
+            return ""
+        }
+    }
+}

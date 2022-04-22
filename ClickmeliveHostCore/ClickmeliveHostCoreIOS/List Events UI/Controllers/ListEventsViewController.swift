@@ -24,8 +24,12 @@ public final class ListEventsViewController: UIViewController, Layouting {
         
     private var collectionModel = [EventCategoryCellController]() {
         didSet {
-            layoutableView.categoryCollectionView.reloadData()
-            layoutableView.categoryCollectionView.selectItem(at: IndexPath(item: 0, section: 0), animated: false, scrollPosition: .centeredHorizontally)
+            // Set status to first item
+            if collectionModel.count > 0 {
+                layoutableView.categoryCollectionView.reloadData()
+                layoutableView.categoryCollectionView.selectItem(at: IndexPath(item: 0, section: 0), animated: false, scrollPosition: .centeredHorizontally)
+                refreshController?.setStatus(status: collectionModel.first!.status())
+            }
         }
     }
     
@@ -35,9 +39,10 @@ public final class ListEventsViewController: UIViewController, Layouting {
         didSet { layoutableView.listEventsTableView.reloadData() }
     }
     
-    public convenience init(refreshController: ListEventsRefreshController) {
+    public convenience init(categories: [EventCategoryCellController], refreshController: ListEventsRefreshController) {
         self.init()
         self.refreshController = refreshController
+        self.display(categories: categories)
     }
     
     public override func viewDidLoad() {
@@ -49,7 +54,7 @@ public final class ListEventsViewController: UIViewController, Layouting {
     public override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.navigationController?.setNavigationBarHidden(true, animated: animated)
-        refreshController?.refresh()
+        reloadTableView()
     }
     
     public override func viewWillDisappear(_ animated: Bool) {
@@ -71,8 +76,9 @@ public final class ListEventsViewController: UIViewController, Layouting {
         tableModel = cellControllers
     }
     
-    public func observeCategories() {
-        
+    private func reloadTableView() {
+        tableModel = []
+        refreshController?.refresh()
     }
     
     private func setupCollectionView() {
@@ -139,8 +145,19 @@ extension ListEventsViewController: UICollectionViewDelegate, UICollectionViewDa
     }
     
     public func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        
+        // Do nothing if current status is selected status
+        let selectedStatus = collectionModel[indexPath.item].status()
+        let currentStatus = refreshController?.currentStatus()
+       
+        guard currentStatus != selectedStatus else { return }
+        
         collectionView.scrollToItem(at: indexPath, at: .centeredHorizontally, animated: true)
-        refreshController?.refresh()
+        
+        // Update state and reload data
+        refreshController?.setStatus(status: selectedStatus)
+        reloadTableView()
+        
     }
     
     public func collectionView(_ collectionView: UICollectionView, didEndDisplaying cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {

@@ -34,8 +34,8 @@ class KeychainHelper {
         return saved
     }
     
-    func getUserToken() -> String? {
-        return get(forKey: KeychainKeys.accessToken) ?? nil
+    func getAuthenticationTokenHeader() -> [String: String] {
+        return ["Token": get(forKey: KeychainKeys.accessToken) ?? ""]
     }
     
     func setUserToken(token: String) -> Bool {
@@ -43,7 +43,7 @@ class KeychainHelper {
     }
     
     func isUserLoggedIn() -> Bool {
-        return getUserToken() != nil
+        return get(forKey: KeychainKeys.accessToken) != nil
     }
     
     func logout() {
