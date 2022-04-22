@@ -17,5 +17,4 @@ public struct EventResponse {
     public var loadMore: Bool {
         return totalRecordCount > pageSize * pageNumber
     }
-    
 }

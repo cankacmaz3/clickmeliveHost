@@ -16,7 +16,8 @@ final class ListEventsUIComposer {
         let client = URLSessionHTTPClient(session: URLSession(configuration: .default))
         let loadingClient = LoadingViewHTTPClientDecorator(decoratee: client, loadingView: LoadingView.instance)
         
-        let authenticationTokenHeader = ["Token": "eyJ1c2VySWQiOjEwMCwidHlwZSI6MiwiZGV2aWNlSWQiOjIwMSwiZXhwaXJlIjoiMjA5OS0xMi0zMVQwMDowMDowMC4wMDBaIiwidGltZSI6IjIwMjEtMTAtMTdUMTM6NTk6MTEuNzQ3WiJ9.ODlkOWUwMDZmYzQ2ZjlkYTQxZDcyOWU4Mzg4YzJiMDZmZjkwZjU3YWQwZDk1YjliZGQyZTc2MWE5NzBjZWI4ZA=="]
+        let authenticationTokenHeader = ["Token": "eyJ1c2VySWQiOjk1LCJ0eXBlIjoyLCJkZXZpY2VJZCI6MTk1LCJleHBpcmUiOiIyMDk5LTEyLTMxVDAwOjAwOjAwLjAwMFoiLCJ0aW1lIjoiMjAyMi0wNC0yMlQxNDoyNTowNi4zNThaIn0=.NDE1Njg4ZThlYmY1YWQ1ODBhNmY0OWM5MjIyYWJmMGY4MjE1MGQ5MmJmZjhlMjdiYTg2YjRlYzZhOThkZjg3MA=="]
+       
         let eventLoader = RemoteEventLoader(client: loadingClient, baseURL: AppEnvironment.baseURL, authenticationTokenHeader: authenticationTokenHeader)
         let viewModel = ListEventsViewModel(eventLoader: eventLoader)
         let refreshController = ListEventsRefreshController(viewModel: viewModel)

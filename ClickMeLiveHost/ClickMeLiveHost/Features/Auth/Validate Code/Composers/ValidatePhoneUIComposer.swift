@@ -26,19 +26,27 @@ final class ValidateCodeUIComposer {
         let validateCodeViewController = ValidateCodeViewController(viewModel: viewModel)
         router.viewController = validateCodeViewController
         
-        viewModel.onCodeValidated = { validateCode in
+        viewModel.onCodeValidated = saveUserAndRouteToAppModule(router: router)
+        
+        viewModel.onError = errorAlert(router: router)
+        
+        return validateCodeViewController
+    }
+    
+    private static func saveUserAndRouteToAppModule(router: ValidateCodeRouter) -> (ValidateCode) -> Void {
+        { validateCode in
             guard let token = validateCode.token else { return }
             let saveUserToken = KeychainHelper.instance.setUserToken(token: token)
             if saveUserToken {
                 router.openAppModule()
             }
         }
-        
-        viewModel.onError = { message in
+    }
+    
+    private static func errorAlert(router: ValidateCodeRouter) -> (String) -> Void {
+        { message in
             router.openAlertModule(message: message)
         }
-        
-        return validateCodeViewController
     }
 }
 

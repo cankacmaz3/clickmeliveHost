@@ -9,6 +9,7 @@ import Foundation
 
 enum EventEndpoints: URLRequestBuilder {
     case statusEvents(status: Event.EventStatus, page: Int)
+    case getProducts(eventId: Int)
 }
 
 extension EventEndpoints {
@@ -16,6 +17,8 @@ extension EventEndpoints {
         switch self {
         case .statusEvents:
             return "/api/v1/event"
+        case let .getProducts(eventId):
+            return "/api/v1/event/\(eventId)/product"
         }
     }
 }
@@ -29,7 +32,8 @@ extension EventEndpoints {
 extension EventEndpoints {
     var parameters: [String: Any]? {
         switch self {
-        case .statusEvents:
+        case .statusEvents,
+             .getProducts:
             return [:]
         }
     }
@@ -39,8 +43,10 @@ extension EventEndpoints {
     var queryItems: [URLQueryItem]? {
         switch self {
         case let .statusEvents(status, page):
-            return [URLQueryItem(name: "page", value: "\(page)")]//,
-//                    URLQueryItem(name: "status", value: "\(status.rawValue)")]
+            return [URLQueryItem(name: "page", value: "\(page)"),
+                    URLQueryItem(name: "status", value: "\(status.rawValue)")]
+        case .getProducts:
+            return [URLQueryItem(name: "page", value: "\(1)")]
         }
     }
 }
@@ -48,7 +54,8 @@ extension EventEndpoints {
 extension EventEndpoints {
     var method: HTTPMethod {
         switch self {
-        case .statusEvents:
+        case .statusEvents,
+             .getProducts:
             return .get
         }
     }
