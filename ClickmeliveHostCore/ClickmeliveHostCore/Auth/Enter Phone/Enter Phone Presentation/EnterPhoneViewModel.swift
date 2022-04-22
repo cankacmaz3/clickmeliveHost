@@ -9,6 +9,7 @@ import Foundation
 
 public final class EnterPhoneViewModel {
     public typealias Observer<T> = (T) -> Void
+    public typealias ErrorAlert = (String, String)
     
     private let authCodeCreator: AuthCodeCreator
     
@@ -17,7 +18,7 @@ public final class EnterPhoneViewModel {
     }
     
     public var onCodeCreated: Observer<CreateCode>?
-    public var onError: (() -> Void)?
+    public var onError: Observer<ErrorAlert>?
     
     public var title: String {
         Localized.EnterPhone.title
@@ -33,6 +34,14 @@ public final class EnterPhoneViewModel {
     
     public var sendCode: String {
         Localized.EnterPhone.sendCode
+    }
+    
+    private var errorMessage: String {
+        Localized.Error.defaultMessage
+    }
+    
+    private var errorAlertActionButtonTitle: String {
+        Localized.Error.defaultButtonTitle
     }
     
     public func formatPhone(_ phone: String) -> String {
@@ -51,11 +60,12 @@ public final class EnterPhoneViewModel {
     
     public func sendCode(to phone: String) {
         authCodeCreator.perform(phone: phone.phoneUnformat()) { [weak self] result in
+            guard let self = self else { return }
             switch result {
             case let .success(createdCode):
-                self?.onCodeCreated?(createdCode)
+                self.onCodeCreated?(createdCode)
             case .failure:
-                print("failure")
+                self.onError?((self.errorMessage, self.errorAlertActionButtonTitle))
             }
         }
     }

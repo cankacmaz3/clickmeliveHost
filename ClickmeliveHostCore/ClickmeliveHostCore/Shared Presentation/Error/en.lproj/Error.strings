@@ -1,0 +1,10 @@
+/* 
+  Error.strings
+  ClickmeliveHostCore
+
+  Created by Can Kaçmaz on 22.04.2022.
+  
+*/
+
+"ERROR_DEFAULT_MESSAGE" = "Bir hata oluştu. Lütfen tekrar deneyiniz.";
+"ERROR_DEFAULT_BUTTON_TITLE" = "Tamam";

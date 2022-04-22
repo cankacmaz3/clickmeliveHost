@@ -18,6 +18,12 @@
 		2D9E0CB62811EF52000E4321 /* EnterPhoneRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D9E0CB52811EF52000E4321 /* EnterPhoneRoute.swift */; };
 		2D9E0CC32811F5FC000E4321 /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D9E0CC22811F5FC000E4321 /* Image.swift */; };
 		2D9E0CC52811F646000E4321 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D9E0CC42811F646000E4321 /* Colors.swift */; };
+		2D9E0CF328121785000E4321 /* AlertUIComposer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D9E0CF228121785000E4321 /* AlertUIComposer.swift */; };
+		2D9E0CF728121FDB000E4321 /* AlertRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D9E0CF628121FDB000E4321 /* AlertRoute.swift */; };
+		2D9E0CF9281221A7000E4321 /* AlertRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D9E0CF8281221A7000E4321 /* AlertRouter.swift */; };
+		2D9E0CFB281222E4000E4321 /* EnterPhoneRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D9E0CFA281222E4000E4321 /* EnterPhoneRouter.swift */; };
+		2D9E0D0E281227C5000E4321 /* ValidatePhoneRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D9E0D0D281227C5000E4321 /* ValidatePhoneRoute.swift */; };
+		2D9E0D11281227DB000E4321 /* ValidatePhoneUIComposer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D9E0D10281227DB000E4321 /* ValidatePhoneUIComposer.swift */; };
 		2DCAB46C280AB66D00308095 /* ClickmeliveHostCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2DCAB46B280AB66D00308095 /* ClickmeliveHostCore.framework */; };
 		2DCAB46D280AB66D00308095 /* ClickmeliveHostCore.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2DCAB46B280AB66D00308095 /* ClickmeliveHostCore.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		2DCAB49B280ABBE700308095 /* ClickmeliveHostCoreIOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2DCAB49A280ABBE700308095 /* ClickmeliveHostCoreIOS.framework */; };
@@ -75,6 +81,12 @@
 		2D9E0CB52811EF52000E4321 /* EnterPhoneRoute.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterPhoneRoute.swift; sourceTree = "<group>"; };
 		2D9E0CC22811F5FC000E4321 /* Image.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Image.swift; sourceTree = "<group>"; };
 		2D9E0CC42811F646000E4321 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		2D9E0CF228121785000E4321 /* AlertUIComposer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertUIComposer.swift; sourceTree = "<group>"; };
+		2D9E0CF628121FDB000E4321 /* AlertRoute.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertRoute.swift; sourceTree = "<group>"; };
+		2D9E0CF8281221A7000E4321 /* AlertRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertRouter.swift; sourceTree = "<group>"; };
+		2D9E0CFA281222E4000E4321 /* EnterPhoneRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterPhoneRouter.swift; sourceTree = "<group>"; };
+		2D9E0D0D281227C5000E4321 /* ValidatePhoneRoute.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidatePhoneRoute.swift; sourceTree = "<group>"; };
+		2D9E0D10281227DB000E4321 /* ValidatePhoneUIComposer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidatePhoneUIComposer.swift; sourceTree = "<group>"; };
 		2DCAB46B280AB66D00308095 /* ClickmeliveHostCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = ClickmeliveHostCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2DCAB49A280ABBE700308095 /* ClickmeliveHostCoreIOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = ClickmeliveHostCoreIOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2DCAB561280B6BA000308095 /* BroadcasterUIComposer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BroadcasterUIComposer.swift; sourceTree = "<group>"; };
@@ -154,6 +166,7 @@
 			children = (
 				2D9E0C962811D044000E4321 /* Landing */,
 				2D9E0CB12811EEC8000E4321 /* Enter Phone */,
+				2D9E0D0C281227B0000E4321 /* Validate Phone */,
 			);
 			path = Auth;
 			sourceTree = "<group>";
@@ -197,6 +210,7 @@
 			children = (
 				2D9E0CB22811EED7000E4321 /* Composers */,
 				2D9E0CB52811EF52000E4321 /* EnterPhoneRoute.swift */,
+				2D9E0CFA281222E4000E4321 /* EnterPhoneRouter.swift */,
 			);
 			path = "Enter Phone";
 			sourceTree = "<group>";
@@ -218,9 +232,45 @@
 			path = Utility;
 			sourceTree = "<group>";
 		};
+		2D9E0CF028121770000E4321 /* Alert */ = {
+			isa = PBXGroup;
+			children = (
+				2D9E0CF128121778000E4321 /* Composers */,
+				2D9E0CF628121FDB000E4321 /* AlertRoute.swift */,
+				2D9E0CF8281221A7000E4321 /* AlertRouter.swift */,
+			);
+			path = Alert;
+			sourceTree = "<group>";
+		};
+		2D9E0CF128121778000E4321 /* Composers */ = {
+			isa = PBXGroup;
+			children = (
+				2D9E0CF228121785000E4321 /* AlertUIComposer.swift */,
+			);
+			path = Composers;
+			sourceTree = "<group>";
+		};
+		2D9E0D0C281227B0000E4321 /* Validate Phone */ = {
+			isa = PBXGroup;
+			children = (
+				2D9E0D0F281227C9000E4321 /* Composers */,
+				2D9E0D0D281227C5000E4321 /* ValidatePhoneRoute.swift */,
+			);
+			path = "Validate Phone";
+			sourceTree = "<group>";
+		};
+		2D9E0D0F281227C9000E4321 /* Composers */ = {
+			isa = PBXGroup;
+			children = (
+				2D9E0D10281227DB000E4321 /* ValidatePhoneUIComposer.swift */,
+			);
+			path = Composers;
+			sourceTree = "<group>";
+		};
 		2DBFF5FA28119388006F7E40 /* Features */ = {
 			isa = PBXGroup;
 			children = (
+				2D9E0CF028121770000E4321 /* Alert */,
 				2D9E0C862811CEDB000E4321 /* Auth */,
 				2D9E0C952811CFBB000E4321 /* ListEvent */,
 				2DCAB55F280B6B8A00308095 /* Broadcast */,
@@ -405,6 +455,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2D9E0CF728121FDB000E4321 /* AlertRoute.swift in Sources */,
+				2D9E0CF328121785000E4321 /* AlertUIComposer.swift in Sources */,
+				2D9E0CFB281222E4000E4321 /* EnterPhoneRouter.swift in Sources */,
 				2DCAB568280B6D1E00308095 /* Transition.swift in Sources */,
 				2DCAB566280B6C2800308095 /* ModalTransition.swift in Sources */,
 				2D9E0CB42811EEEC000E4321 /* EnterPhoneUIComposer.swift in Sources */,
@@ -413,6 +466,7 @@
 				2D7D87B428017835006FFDE7 /* AppDelegate.swift in Sources */,
 				2D9E0C932811CFB6000E4321 /* ListEventsRouter.swift in Sources */,
 				2DD398F22810C4D200A575DA /* LoadingViewHTTPClientDecorator.swift in Sources */,
+				2D9E0CF9281221A7000E4321 /* AlertRouter.swift in Sources */,
 				2D9E0C942811CFB6000E4321 /* ListEventsUIComposer.swift in Sources */,
 				2DD398D42810B58000A575DA /* Servers.swift in Sources */,
 				2DD398EA2810C1B100A575DA /* LoadingView.swift in Sources */,
@@ -421,9 +475,11 @@
 				2D9E0CC52811F646000E4321 /* Colors.swift in Sources */,
 				2D9E0CC32811F5FC000E4321 /* Image.swift in Sources */,
 				2D9E0CB02811EEAB000E4321 /* LandingRouter.swift in Sources */,
+				2D9E0D0E281227C5000E4321 /* ValidatePhoneRoute.swift in Sources */,
 				2DD398F52810C75800A575DA /* UIColor+Extensions.swift in Sources */,
 				2D9E0CB62811EF52000E4321 /* EnterPhoneRoute.swift in Sources */,
 				2DCAB56A280B6D4400308095 /* PushTransition.swift in Sources */,
+				2D9E0D11281227DB000E4321 /* ValidatePhoneUIComposer.swift in Sources */,
 				2DCAB562280B6BA000308095 /* BroadcasterUIComposer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
