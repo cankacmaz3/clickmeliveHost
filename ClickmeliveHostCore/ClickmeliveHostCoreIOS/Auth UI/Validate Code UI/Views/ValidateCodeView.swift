@@ -1,25 +1,25 @@
 //
-//  EnterPhoneView.swift
+//  ValidateCodeView.swift
 //  ClickmeliveHostCoreIOS
 //
-//  Created by Can Kaçmaz on 21.04.2022.
+//  Created by Can Kaçmaz on 22.04.2022.
 //
 
+import Foundation
 import UIKit
 import ClickmeliveHostCore
 
-extension EnterPhoneView {
-    func setLocalizedTitles(with viewModel: EnterPhoneViewModel) {
+extension ValidateCodeView {
+    func setLocalizedTexts(with viewModel: ValidateCodeViewModel) {
         lblTitle.text = viewModel.title
         lblDetail.text = viewModel.detail
-        tfPhone.setupPlaceholder(placeholder: viewModel.phonePlaceholder,
+        tfValidate.setupPlaceholder(placeholder: viewModel.codePlaceholder,
                                     font: UIFont(name: Fonts.regular, size: 16)!)
-        btnSendCode.setTitle(viewModel.sendCode, for: .normal)
+        btnValidate.setTitle(viewModel.validate, for: .normal)
     }
 }
 
-public final class EnterPhoneView: UIView, Layoutable {
-    
+public final class ValidateCodeView: UIView, Layoutable {
     private enum Constants {
         static let titleColor: UIColor = Colors.primaryText
         static let detailColor: UIColor = Colors.primaryText
@@ -61,7 +61,7 @@ public final class EnterPhoneView: UIView, Layoutable {
         return label
     }()
     
-    let tfPhone: CMLTextField = {
+    let tfValidate: CMLTextField = {
         let tf = CMLTextField(padding: 19,
                               font: UIFont(name: Fonts.regular, size: 16)!,
                               cornerRadius: 4,
@@ -73,20 +73,20 @@ public final class EnterPhoneView: UIView, Layoutable {
         return tf
     }()
     
-    let btnSendCode: CMLButton = {
-        let btn = CMLButton()
-        btn.handleIsEnabled(false)
-        return btn
+    let btnValidate: CMLButton = {
+        let button = CMLButton()
+        button.handleIsEnabled(false)
+        return button
     }()
     
     public func setupViews() {
         backgroundColor = .white
         
-        addSubview(btnSendCode)
+        addSubview(btnValidate)
         
         addSubview(scrollView)
         
-        [lblTitle, lblDetail, tfPhone].forEach {
+        [lblTitle, lblDetail, tfValidate].forEach {
             stackView.addArrangedSubview($0)
         }
         
@@ -94,15 +94,14 @@ public final class EnterPhoneView: UIView, Layoutable {
     }
     
     public func setupLayout() {
-        btnSendCode.anchor(nil, left: leftAnchor, bottom: safeAreaLayoutGuide.bottomAnchor, right: rightAnchor, topConstant: 0, leftConstant: 16, bottomConstant: 24, rightConstant: 16, widthConstant: 0, heightConstant: 50)
+        btnValidate.anchor(nil, left: leftAnchor, bottom: safeAreaLayoutGuide.bottomAnchor, right: rightAnchor, topConstant: 0, leftConstant: 16, bottomConstant: 24, rightConstant: 16, widthConstant: 0, heightConstant: 50)
         
-        scrollView.anchor(safeAreaLayoutGuide.topAnchor, left: leftAnchor, bottom: btnSendCode.topAnchor, right: rightAnchor, topConstant: 0, leftConstant: 0, bottomConstant: 16, rightConstant: 0, widthConstant: 0, heightConstant: 0)
+        scrollView.anchor(safeAreaLayoutGuide.topAnchor, left: leftAnchor, bottom: btnValidate.topAnchor, right: rightAnchor, topConstant: 0, leftConstant: 0, bottomConstant: 16, rightConstant: 0, widthConstant: 0, heightConstant: 0)
         
-        tfPhone.constrainHeight(50)
+        tfValidate.constrainHeight(50)
         
         stackView.anchor(scrollView.topAnchor, left: scrollView.leftAnchor, bottom: scrollView.bottomAnchor, right: scrollView.rightAnchor, topConstant: 80, leftConstant: 16, bottomConstant: 0, rightConstant: 16, widthConstant: 0, heightConstant: 0)
         
         addConstraint(NSLayoutConstraint(item: stackView, attribute: .width, relatedBy: .equal, toItem: self, attribute: .width, multiplier: 1.0, constant: -32))
     }
 }
-

@@ -7,6 +7,7 @@
 
 import Foundation
 import UIKit
+import ClickmeliveHostCore
 
 public final class AlertViewController: UIViewController, Layouting {
     public typealias ViewType = AlertView
@@ -14,9 +15,12 @@ public final class AlertViewController: UIViewController, Layouting {
     public var onActionTapped: (() -> Void)?
     public var onCloseTapped: (() -> Void)?
     
-    public init(messageTitle: String, buttonTitle: String) {
+    private let viewModel: AlertViewModel
+    
+    public init(viewModel: AlertViewModel) {
+        self.viewModel = viewModel
         super.init(nibName: nil, bundle: nil)
-        layoutableView.setTitles(messageTitle: messageTitle, buttonTitle: buttonTitle)
+        layoutableView.setTitles(messageTitle: viewModel.message, buttonTitle: viewModel.actionButtonTitle)
     }
     
     required init?(coder: NSCoder) {

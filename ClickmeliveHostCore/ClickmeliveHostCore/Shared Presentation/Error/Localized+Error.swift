@@ -26,6 +26,36 @@ extension Localized {
                 bundle: bundle,
                 comment: "Default error alert button title")
         }
+        
+        static var verificationCodeNotFound: String {
+            NSLocalizedString(
+                "INVALID_VERIFICATION_CODE",
+                tableName: table,
+                bundle: bundle,
+                comment: "Default error alert button title")
+        }
+        
+        static var userNotFound: String {
+            NSLocalizedString(
+                "USER_NOT_FOUND",
+                tableName: table,
+                bundle: bundle,
+                comment: "Error message")
+        }
     }
 }
 
+extension String {
+    func showLocalizedErrorMessage() -> String {
+        var message = Localized.Error.defaultMessage
+        let localizedCode = NSLocalizedString(self,
+                                              tableName: Localized.Error.table,
+                                              bundle: Bundle(for: Localized.self),
+                                              comment: "")
+        
+        if !localizedCode.elementsEqual(self) {
+            message = localizedCode
+        }
+        return message
+    }
+}

@@ -8,3 +8,6 @@
 
 "ERROR_DEFAULT_MESSAGE" = "Bir hata oluştu. Lütfen tekrar deneyiniz.";
 "ERROR_DEFAULT_BUTTON_TITLE" = "Tamam";
+
+"INVALID_VERIFICATION_CODE" = "Geçersiz kod. Lütfen tekrar deneyiniz.";
+"USER_NOT_FOUND" = "Üyeliğiniz bulunmamaktadır.\nLütfen ClickMeLive ekibi ile\nirtibata geçiniz.";

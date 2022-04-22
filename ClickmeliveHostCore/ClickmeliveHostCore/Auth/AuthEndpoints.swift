@@ -37,7 +37,16 @@ extension AuthEndpoints {
         case .createCode(let phone):
             return ["phone": phone]
         case .verifyCode(_, let phone, let code):
-            return [:]
+            let deviceInfo = DeviceHelper.getDeviceInfo()
+            return ["phone": phone,
+                    "code": code,
+                    "deviceInfo": [
+                        "deviceBrand": deviceInfo.deviceBrand,
+                        "deviceModel": deviceInfo.deviceModel,
+                        "osVersion": deviceInfo.osVersion,
+                        "appVersion": deviceInfo.appVersion,
+                        "uniqueToken": deviceInfo.uniqueToken
+                    ]]
         }
     }
 }

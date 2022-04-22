@@ -34,23 +34,22 @@ public final class EnterPhoneViewController: UIViewController, Layouting {
     }
     
     @objc private func sendCodeTapped() {
-        let phone = layoutableView.tfValidate.text ?? ""
+        let phone = layoutableView.tfPhone.text ?? ""
         viewModel.sendCode(to: phone)
     }
     
     private func registerActions() {
-        layoutableView.btnValidate.addTarget(self, action: #selector(sendCodeTapped), for: .touchUpInside)
+        layoutableView.btnSendCode.addTarget(self, action: #selector(sendCodeTapped), for: .touchUpInside)
     }
     
     @objc private func textFieldDidChange(_ textField: UITextField) {
-        guard let phone = textField.text else { return }
-        layoutableView.btnValidate.handleIsEnabled(viewModel.isValid(phone: phone))
-        textField.text = viewModel.formatPhone(phone)
+        textField.text = viewModel.formatPhone(textField.text ?? "")
+        layoutableView.btnSendCode.handleIsEnabled(viewModel.isValid(phone: textField.text ?? ""))
     }
     
     private func setupTextField() {
-        layoutableView.tfValidate.delegate = self
-        layoutableView.tfValidate.addTarget(self, action: #selector(textFieldDidChange(_:)), for: .editingChanged)
+        layoutableView.tfPhone.delegate = self
+        layoutableView.tfPhone.addTarget(self, action: #selector(textFieldDidChange(_:)), for: .editingChanged)
     }
     
     private func setupLocalizedTitles() {

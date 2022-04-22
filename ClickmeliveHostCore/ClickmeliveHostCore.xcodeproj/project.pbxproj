@@ -31,8 +31,23 @@
 		2D9E0CF528121A2E000E4321 /* Shared.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2D9E0CF428121A2E000E4321 /* Shared.xcassets */; };
 		2D9E0CFE2812264B000E4321 /* Localized+Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D9E0CFD2812264B000E4321 /* Localized+Error.swift */; };
 		2D9E0D0128122658000E4321 /* Error.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2D9E0D0328122658000E4321 /* Error.strings */; };
-		2D9E0D0928122734000E4321 /* ValidatePhoneView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D9E0D0828122734000E4321 /* ValidatePhoneView.swift */; };
+		2D9E0D0928122734000E4321 /* ValidateCodeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D9E0D0828122734000E4321 /* ValidateCodeView.swift */; };
 		2D9E0D0B2812273F000E4321 /* ValidatePhoneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D9E0D0A2812273F000E4321 /* ValidatePhoneViewController.swift */; };
+		2D9E0D1428122A9A000E4321 /* ValidateCodeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D9E0D1328122A9A000E4321 /* ValidateCodeViewModel.swift */; };
+		2D9E0D1628122AA6000E4321 /* Localized+ValidatePhone.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D9E0D1528122AA6000E4321 /* Localized+ValidatePhone.swift */; };
+		2D9E0D1928122AB3000E4321 /* ValidateCode.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2D9E0D1B28122AB3000E4321 /* ValidateCode.strings */; };
+		2D9E0D2128123132000E4321 /* DeviceHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D9E0D2028123132000E4321 /* DeviceHelper.swift */; };
+		2D9E0D25281232DB000E4321 /* AuthCodeValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D9E0D24281232DB000E4321 /* AuthCodeValidator.swift */; };
+		2D9E0D27281232FF000E4321 /* ValidateCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D9E0D26281232FF000E4321 /* ValidateCode.swift */; };
+		2D9E0D2A281233A7000E4321 /* ValidateCodeDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D9E0D29281233A7000E4321 /* ValidateCodeDTO.swift */; };
+		2D9E0D2C2812344C000E4321 /* RemoteAuthCodeValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D9E0D2B2812344C000E4321 /* RemoteAuthCodeValidator.swift */; };
+		2D9E0D322812384D000E4321 /* ValidateCodeRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D9E0D312812384D000E4321 /* ValidateCodeRequest.swift */; };
+		2D9E0D342812B215000E4321 /* CMLErrorDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D9E0D332812B215000E4321 /* CMLErrorDTO.swift */; };
+		2D9E0D362812B5E0000E4321 /* CMLError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D9E0D352812B5E0000E4321 /* CMLError.swift */; };
+		2D9E0D3A2812C7A3000E4321 /* AlertViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D9E0D392812C7A3000E4321 /* AlertViewModel.swift */; };
+		2D9E0D3D2812C7C6000E4321 /* Alert.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2D9E0D3F2812C7C6000E4321 /* Alert.strings */; };
+		2D9E0D422812C7E1000E4321 /* Localized+Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D9E0D412812C7E1000E4321 /* Localized+Alert.swift */; };
+		2D9E0D452812C871000E4321 /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D9E0D442812C871000E4321 /* Alert.swift */; };
 		2DBFF5F728119306006F7E40 /* LandingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DBFF5F628119306006F7E40 /* LandingViewController.swift */; };
 		2DBFF5F92811930F006F7E40 /* LandingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DBFF5F82811930F006F7E40 /* LandingView.swift */; };
 		2DCAB45B280AB5DF00308095 /* ClickmeliveHostCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2DCAB452280AB5DF00308095 /* ClickmeliveHostCore.framework */; };
@@ -153,8 +168,25 @@
 		2D9E0CFD2812264B000E4321 /* Localized+Error.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Localized+Error.swift"; sourceTree = "<group>"; };
 		2D9E0D0228122658000E4321 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Error.strings; sourceTree = "<group>"; };
 		2D9E0D0428122659000E4321 /* tr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = tr; path = tr.lproj/Error.strings; sourceTree = "<group>"; };
-		2D9E0D0828122734000E4321 /* ValidatePhoneView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidatePhoneView.swift; sourceTree = "<group>"; };
+		2D9E0D0828122734000E4321 /* ValidateCodeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidateCodeView.swift; sourceTree = "<group>"; };
 		2D9E0D0A2812273F000E4321 /* ValidatePhoneViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidatePhoneViewController.swift; sourceTree = "<group>"; };
+		2D9E0D1328122A9A000E4321 /* ValidateCodeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidateCodeViewModel.swift; sourceTree = "<group>"; };
+		2D9E0D1528122AA6000E4321 /* Localized+ValidatePhone.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Localized+ValidatePhone.swift"; sourceTree = "<group>"; };
+		2D9E0D1A28122AB3000E4321 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/ValidateCode.strings; sourceTree = "<group>"; };
+		2D9E0D1C28122AB5000E4321 /* tr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = tr; path = tr.lproj/ValidateCode.strings; sourceTree = "<group>"; };
+		2D9E0D2028123132000E4321 /* DeviceHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceHelper.swift; sourceTree = "<group>"; };
+		2D9E0D24281232DB000E4321 /* AuthCodeValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthCodeValidator.swift; sourceTree = "<group>"; };
+		2D9E0D26281232FF000E4321 /* ValidateCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidateCode.swift; sourceTree = "<group>"; };
+		2D9E0D29281233A7000E4321 /* ValidateCodeDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidateCodeDTO.swift; sourceTree = "<group>"; };
+		2D9E0D2B2812344C000E4321 /* RemoteAuthCodeValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteAuthCodeValidator.swift; sourceTree = "<group>"; };
+		2D9E0D312812384D000E4321 /* ValidateCodeRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidateCodeRequest.swift; sourceTree = "<group>"; };
+		2D9E0D332812B215000E4321 /* CMLErrorDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CMLErrorDTO.swift; sourceTree = "<group>"; };
+		2D9E0D352812B5E0000E4321 /* CMLError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CMLError.swift; sourceTree = "<group>"; };
+		2D9E0D392812C7A3000E4321 /* AlertViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertViewModel.swift; sourceTree = "<group>"; };
+		2D9E0D3E2812C7C6000E4321 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Alert.strings; sourceTree = "<group>"; };
+		2D9E0D402812C7C7000E4321 /* tr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = tr; path = tr.lproj/Alert.strings; sourceTree = "<group>"; };
+		2D9E0D412812C7E1000E4321 /* Localized+Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Localized+Alert.swift"; sourceTree = "<group>"; };
+		2D9E0D442812C871000E4321 /* Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
 		2DBFF5F628119306006F7E40 /* LandingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingViewController.swift; sourceTree = "<group>"; };
 		2DBFF5F82811930F006F7E40 /* LandingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingView.swift; sourceTree = "<group>"; };
 		2DCAB452280AB5DF00308095 /* ClickmeliveHostCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ClickmeliveHostCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -314,6 +346,7 @@
 			isa = PBXGroup;
 			children = (
 				2D9E0CDA2812047B000E4321 /* ValidationHandler.swift */,
+				2D9E0D2028123132000E4321 /* DeviceHelper.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -370,13 +403,13 @@
 			path = Error;
 			sourceTree = "<group>";
 		};
-		2D9E0D0528122718000E4321 /* Validate Phone UI */ = {
+		2D9E0D0528122718000E4321 /* Validate Code UI */ = {
 			isa = PBXGroup;
 			children = (
 				2D9E0D0628122723000E4321 /* Controllers */,
 				2D9E0D0728122727000E4321 /* Views */,
 			);
-			path = "Validate Phone UI";
+			path = "Validate Code UI";
 			sourceTree = "<group>";
 		};
 		2D9E0D0628122723000E4321 /* Controllers */ = {
@@ -390,9 +423,75 @@
 		2D9E0D0728122727000E4321 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				2D9E0D0828122734000E4321 /* ValidatePhoneView.swift */,
+				2D9E0D0828122734000E4321 /* ValidateCodeView.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		2D9E0D1228122A7E000E4321 /* Validate Code */ = {
+			isa = PBXGroup;
+			children = (
+				2D9E0D2328123293000E4321 /* Validate Code Feature */,
+				2D9E0D282812338C000E4321 /* Validate Code API */,
+				2D9E0D2228123281000E4321 /* Validate Code Presentation */,
+			);
+			path = "Validate Code";
+			sourceTree = "<group>";
+		};
+		2D9E0D2228123281000E4321 /* Validate Code Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				2D9E0D1328122A9A000E4321 /* ValidateCodeViewModel.swift */,
+				2D9E0D1528122AA6000E4321 /* Localized+ValidatePhone.swift */,
+				2D9E0D1B28122AB3000E4321 /* ValidateCode.strings */,
+			);
+			path = "Validate Code Presentation";
+			sourceTree = "<group>";
+		};
+		2D9E0D2328123293000E4321 /* Validate Code Feature */ = {
+			isa = PBXGroup;
+			children = (
+				2D9E0D24281232DB000E4321 /* AuthCodeValidator.swift */,
+				2D9E0D26281232FF000E4321 /* ValidateCode.swift */,
+			);
+			path = "Validate Code Feature";
+			sourceTree = "<group>";
+		};
+		2D9E0D282812338C000E4321 /* Validate Code API */ = {
+			isa = PBXGroup;
+			children = (
+				2D9E0D29281233A7000E4321 /* ValidateCodeDTO.swift */,
+				2D9E0D2B2812344C000E4321 /* RemoteAuthCodeValidator.swift */,
+				2D9E0D312812384D000E4321 /* ValidateCodeRequest.swift */,
+			);
+			path = "Validate Code API";
+			sourceTree = "<group>";
+		};
+		2D9E0D372812C78E000E4321 /* Alert */ = {
+			isa = PBXGroup;
+			children = (
+				2D9E0D432812C866000E4321 /* Alert Feature */,
+				2D9E0D382812C797000E4321 /* Alert Presentation */,
+			);
+			path = Alert;
+			sourceTree = "<group>";
+		};
+		2D9E0D382812C797000E4321 /* Alert Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				2D9E0D392812C7A3000E4321 /* AlertViewModel.swift */,
+				2D9E0D412812C7E1000E4321 /* Localized+Alert.swift */,
+				2D9E0D3F2812C7C6000E4321 /* Alert.strings */,
+			);
+			path = "Alert Presentation";
+			sourceTree = "<group>";
+		};
+		2D9E0D432812C866000E4321 /* Alert Feature */ = {
+			isa = PBXGroup;
+			children = (
+				2D9E0D442812C871000E4321 /* Alert.swift */,
+			);
+			path = "Alert Feature";
 			sourceTree = "<group>";
 		};
 		2DBFF5F128118F96006F7E40 /* Auth UI */ = {
@@ -400,7 +499,7 @@
 			children = (
 				2DBFF5F3281192C5006F7E40 /* Landing UI */,
 				2D9E0CA82811EA2A000E4321 /* Enter Phone UI */,
-				2D9E0D0528122718000E4321 /* Validate Phone UI */,
+				2D9E0D0528122718000E4321 /* Validate Code UI */,
 				2D9E0C842811CDC0000E4321 /* Auth.xcassets */,
 			);
 			path = "Auth UI";
@@ -412,6 +511,7 @@
 				2D9E0CE728121111000E4321 /* AuthEndpoints.swift */,
 				2D9E0CC62811F83C000E4321 /* Landing */,
 				2D9E0CC72811F844000E4321 /* Enter Phone */,
+				2D9E0D1228122A7E000E4321 /* Validate Code */,
 			);
 			path = Auth;
 			sourceTree = "<group>";
@@ -474,6 +574,7 @@
 				2DCAB46F280ABA6F00308095 /* Shared API */,
 				2DCAB470280ABA7900308095 /* Shared API Infra */,
 				2DD398D82810B95500A575DA /* Shared Presentation */,
+				2D9E0D372812C78E000E4321 /* Alert */,
 				2DBFF5F228118FA7006F7E40 /* Auth */,
 				2DCAB4C6280AD85A00308095 /* List Events */,
 			);
@@ -646,6 +747,7 @@
 				2DCAB4DA280ADC3700308095 /* EventResponseDTO.swift */,
 				2DCAB4CD280AD99600308095 /* EventDTO.swift */,
 				2DCAB4D4280ADA4D00308095 /* UserDTO.swift */,
+				2D9E0D332812B215000E4321 /* CMLErrorDTO.swift */,
 			);
 			path = DTOs;
 			sourceTree = "<group>";
@@ -657,6 +759,7 @@
 				2DCAB4D2280ADA2500308095 /* User.swift */,
 				2DD398F82810CA5400A575DA /* Metadata.swift */,
 				2DD398FA2810CA9900A575DA /* EventResponse.swift */,
+				2D9E0D352812B5E0000E4321 /* CMLError.swift */,
 			);
 			path = "Shared Features";
 			sourceTree = "<group>";
@@ -927,6 +1030,8 @@
 				2D9E0CA12811E7C9000E4321 /* Landing.strings in Resources */,
 				2D9E0CCD2811F8A4000E4321 /* EnterPhone.strings in Resources */,
 				2DD398E02810B9A400A575DA /* Date.strings in Resources */,
+				2D9E0D3D2812C7C6000E4321 /* Alert.strings in Resources */,
+				2D9E0D1928122AB3000E4321 /* ValidateCode.strings in Resources */,
 				2D9E0D0128122658000E4321 /* Error.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -965,20 +1070,27 @@
 			files = (
 				2DCAB4DB280ADC3700308095 /* EventResponseDTO.swift in Sources */,
 				2DD398DB2810B97A00A575DA /* Date+Helpers.swift in Sources */,
+				2D9E0D27281232FF000E4321 /* ValidateCode.swift in Sources */,
 				2DCAB557280B679F00308095 /* EventViewModel.swift in Sources */,
 				2D9E0CE028120B3A000E4321 /* CreateCode.swift in Sources */,
 				2D9E0CE828121111000E4321 /* AuthEndpoints.swift in Sources */,
 				2D9E0CFE2812264B000E4321 /* Localized+Error.swift in Sources */,
+				2D9E0D3A2812C7A3000E4321 /* AlertViewModel.swift in Sources */,
+				2D9E0D342812B215000E4321 /* CMLErrorDTO.swift in Sources */,
 				2D9E0CE328120BC8000E4321 /* CreateCodeDTO.swift in Sources */,
 				2DCAB4DE280ADD0000308095 /* ListEventsViewModel.swift in Sources */,
 				2DCAB47F280ABB6000308095 /* AuthenticatedURLRequestBuilderDecorator.swift in Sources */,
 				2D9E0CDE28120AC8000E4321 /* AuthCodeCreator.swift in Sources */,
+				2D9E0D322812384D000E4321 /* ValidateCodeRequest.swift in Sources */,
 				2DD398E52810B9EF00A575DA /* Localized.swift in Sources */,
+				2D9E0D1628122AA6000E4321 /* Localized+ValidatePhone.swift in Sources */,
+				2D9E0D1428122A9A000E4321 /* ValidateCodeViewModel.swift in Sources */,
 				2DCAB4D7280ADB0500308095 /* RemoteEventLoader.swift in Sources */,
 				2DCAB4D1280AD9BF00308095 /* Event.swift in Sources */,
 				2D9E0CDB2812047B000E4321 /* ValidationHandler.swift in Sources */,
 				2D9E0CD8281202B9000E4321 /* String+Extensions.swift in Sources */,
 				2DCAB4C9280AD89200308095 /* EventEndpoints.swift in Sources */,
+				2D9E0D422812C7E1000E4321 /* Localized+Alert.swift in Sources */,
 				2D9E0C9E2811E7B8000E4321 /* Localized+Landing.swift in Sources */,
 				2DCAB475280ABACF00308095 /* HTTPURLResponse+StatusCode.swift in Sources */,
 				2D9E0CA72811E82B000E4321 /* LandingViewModel.swift in Sources */,
@@ -986,18 +1098,24 @@
 				2DCAB4D5280ADA4D00308095 /* UserDTO.swift in Sources */,
 				2DCAB479280ABAFF00308095 /* URLRequestBuilder.swift in Sources */,
 				2D9E0CE528120C46000E4321 /* RemoteAuthCodeCreator.swift in Sources */,
+				2D9E0D452812C871000E4321 /* Alert.swift in Sources */,
 				2DCAB4CE280AD99600308095 /* EventDTO.swift in Sources */,
 				2DD398BA280F264000A575DA /* EventCategoryCellViewModel.swift in Sources */,
+				2D9E0D2128123132000E4321 /* DeviceHelper.swift in Sources */,
 				2DCAB4D3280ADA2500308095 /* User.swift in Sources */,
 				2DCAB4CB280AD94800308095 /* EventLoader.swift in Sources */,
+				2D9E0D2C2812344C000E4321 /* RemoteAuthCodeValidator.swift in Sources */,
+				2D9E0D362812B5E0000E4321 /* CMLError.swift in Sources */,
 				2DCAB472280ABAA500308095 /* HTTPClient.swift in Sources */,
 				2DD398F72810C80400A575DA /* Paginated.swift in Sources */,
 				2DD398F92810CA5400A575DA /* Metadata.swift in Sources */,
+				2D9E0D2A281233A7000E4321 /* ValidateCodeDTO.swift in Sources */,
 				2DD398FB2810CA9900A575DA /* EventResponse.swift in Sources */,
 				2DD398DD2810B98E00A575DA /* Localized+Date.swift in Sources */,
 				2DCAB477280ABAEC00308095 /* URLSessionHTTPClient.swift in Sources */,
 				2D9E0CD22811F975000E4321 /* Localized+EnterPhone.swift in Sources */,
 				2DCAB4F1280AE66400308095 /* DateFormatter+Extensions.swift in Sources */,
+				2D9E0D25281232DB000E4321 /* AuthCodeValidator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1018,7 +1136,7 @@
 				2DCAB4A0280ABD9800308095 /* Fonts.swift in Sources */,
 				2DCAB4B9280AC34B00308095 /* ListEventsViewController.swift in Sources */,
 				2DCAB4C3280AD6D000308095 /* ListEventCellController.swift in Sources */,
-				2D9E0D0928122734000E4321 /* ValidatePhoneView.swift in Sources */,
+				2D9E0D0928122734000E4321 /* ValidateCodeView.swift in Sources */,
 				2D9E0CED281216FE000E4321 /* AlertView.swift in Sources */,
 				2DBFF5F92811930F006F7E40 /* LandingView.swift in Sources */,
 				2DCAB55E280B6B0F00308095 /* BroadcastView.swift in Sources */,
@@ -1095,6 +1213,24 @@
 				2D9E0D0428122659000E4321 /* tr */,
 			);
 			name = Error.strings;
+			sourceTree = "<group>";
+		};
+		2D9E0D1B28122AB3000E4321 /* ValidateCode.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2D9E0D1A28122AB3000E4321 /* en */,
+				2D9E0D1C28122AB5000E4321 /* tr */,
+			);
+			name = ValidateCode.strings;
+			sourceTree = "<group>";
+		};
+		2D9E0D3F2812C7C6000E4321 /* Alert.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2D9E0D3E2812C7C6000E4321 /* en */,
+				2D9E0D402812C7C7000E4321 /* tr */,
+			);
+			name = Alert.strings;
 			sourceTree = "<group>";
 		};
 		2DD398E22810B9A400A575DA /* Date.strings */ = {

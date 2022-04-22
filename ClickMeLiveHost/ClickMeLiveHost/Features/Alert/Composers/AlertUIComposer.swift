@@ -7,14 +7,18 @@
 
 import Foundation
 import ClickmeliveHostCoreIOS
+import ClickmeliveHostCore
 
 final class AlertUIComposer {
     private init() {}
     
-    static func makeAlertController(messageTitle: String, buttonTitle: String, completion: @escaping () -> Void) -> AlertViewController {
+    static func makeAlertController(message: String, buttonTitle: String?, completion: @escaping () -> Void) -> AlertViewController {
         let router = AlertRouter()
         
-        let alertViewController = AlertViewController(messageTitle: messageTitle, buttonTitle: buttonTitle)
+        let alert = Alert(message: message, buttonTitle: buttonTitle)
+        let viewModel = AlertViewModel(alert: alert)
+        
+        let alertViewController = AlertViewController(viewModel: viewModel)
         router.openTransition = ModalTransition()
         router.viewController = alertViewController
         

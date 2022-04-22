@@ -10,5 +10,3 @@
 "ENTER_PHONE_DETAIL" = "Giriş yapabilmen için sana SMS ile\ndoğrulama kodu göndereceğiz.";
 "ENTER_PHONE_PLACEHOLDER" = "Telefon Numarası";
 "ENTER_PHONE_SEND_CODE" = "Kodu Gönder";
-"ENTER_PHONE_ERROR_MESSAGE" = "Bir hata oluştu. Lütfen tekrar deneyiniz.";
-"ENTER_PHONE_ERROR_ALERT_ACTION_BUTTON_TITLE" = "Tamam";

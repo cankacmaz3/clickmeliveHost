@@ -7,7 +7,7 @@
 
 import Foundation
 
-public struct User {
+public struct User: Encodable {
     public  let id: Int
     public let username: String
     public let image: String?
@@ -18,7 +18,7 @@ public struct User {
     public let followerCount: Int
     public let followingCount: Int
     
-    public enum UserType: Int {
+    public enum UserType: Int, Encodable {
         case BROADCASTER = 2
         case INFLUENCER = 3
         

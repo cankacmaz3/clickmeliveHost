@@ -8,12 +8,12 @@
 import Foundation
 
 protocol AlertRoute {
-    func openAlertModule(messageTitle: String, buttonTitle: String, completion: @escaping () -> Void)
+    func openAlertModule(message: String, buttonTitle: String?, completion: @escaping () -> Void)
 }
 
 extension AlertRoute where Self: RouterProtocol {
-    func openAlertModule(messageTitle: String, buttonTitle: String, completion: @escaping () -> Void = {}) {
-        let module = AlertUIComposer.makeAlertController(messageTitle: messageTitle,
+    func openAlertModule(message: String, buttonTitle: String? = nil, completion: @escaping () -> Void = {}) {
+        let module = AlertUIComposer.makeAlertController(message: message,
                                                          buttonTitle: buttonTitle,
                                                          completion: completion)
         let modelTransition = ModalTransition(isAnimated: false,

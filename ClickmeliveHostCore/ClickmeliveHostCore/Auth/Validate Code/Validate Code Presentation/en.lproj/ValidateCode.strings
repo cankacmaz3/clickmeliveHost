@@ -1,0 +1,12 @@
+/* 
+  ValidateCode.strings
+  ClickmeliveHostCore
+
+  Created by Can Kaçmaz on 22.04.2022.
+  
+*/
+
+"VALIDATE_CODE_TITLE" = "Kimliğini\ndoğrula";
+"VALIDATE_CODE_DETAIL" = "Sana gönderdiğimiz\nSMS kodunu gir.";
+"VALIDATE_CODE_PLACEHOLDER" = "Doğrulama Kodu";
+"VALIDATE_CODE_VALIDATE" = "Doğrula";

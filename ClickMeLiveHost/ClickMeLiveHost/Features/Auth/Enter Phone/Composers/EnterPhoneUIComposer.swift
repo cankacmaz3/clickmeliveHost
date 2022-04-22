@@ -24,13 +24,11 @@ final class EnterPhoneUIComposer {
         router.viewController = enterPhoneViewController
         
         viewModel.onCodeCreated = { code in
-            router.openValidatePhoneModule()
-            print(code.id, code.phone, "created")
+            router.openValidateCodeModule(verificationCodeId: code.id, phone: code.phone)
         }
         
-        viewModel.onError = { (errorAlert) in
-            let (errorMessage, buttonTitle) = errorAlert
-            router.openAlertModule(messageTitle: errorMessage, buttonTitle: buttonTitle)
+        viewModel.onError = { message in
+            router.openAlertModule(message: message)
         }
         
         return enterPhoneViewController

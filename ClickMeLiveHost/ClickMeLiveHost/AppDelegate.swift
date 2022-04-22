@@ -22,8 +22,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         setupIQKeyboard()
         
-        window?.rootViewController = UINavigationController(rootViewController:
-                                                                LandingUIComposer.makeLandingController())
+        window?.rootViewController = AppModuleBuilder.module()
         return true
     }
 
