@@ -27,8 +27,22 @@ public final class ListEventsViewModel {
     public var onError: (() -> Void)?
     
     private var nextEventResult: ((@escaping Next<EventResponse>) -> ())? = nil
+    
+    public var localizedPlaceholderTitles: String? {
+        switch selectedStatus {
+        case .UPCOMING:
+            return Localized.ListEvents.placeholderUpcoming
+        case .ENDED:
+            return Localized.ListEvents.placeholderEnded
+        case .CANCELLED:
+            return Localized.ListEvents.placeholderCancelled
+        default:
+            return nil
+        }
+    }
 }
 
+// MARK: - Network related methods
 extension ListEventsViewModel {
     public func loadEvents() {
         

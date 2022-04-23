@@ -9,3 +9,7 @@
 "LIST_EVENT_STATUS_UPCOMING" = "Gelecek Yayınlar";
 "LIST_EVENT_STATUS_ENDED" = "Geçmiş Yayınlar";
 "LIST_EVENT_STATUS_CANCELLED" = "Reddedilen Yayınlar";
+
+"LIST_EVENT_PLACEHOLDER_UPCOMING" = "Şuanda gelecek yayının yok.";
+"LIST_EVENT_PLACEHOLDER_ENDED" = "Şuanda geçmiş yayının yok.";
+"LIST_EVENT_PLACEHOLDER_CANCELLED" = "Şuanda reddedilen yayının yok.";

@@ -29,6 +29,10 @@ public final class ListEventsRefreshController: NSObject {
         return viewModel.selectedStatus
     }
     
+    public func localizedPlaceholderTitle() -> String? {
+        return viewModel.localizedPlaceholderTitles
+    }
+    
     public func onNext() {
         viewModel.onNextEvent()
     }

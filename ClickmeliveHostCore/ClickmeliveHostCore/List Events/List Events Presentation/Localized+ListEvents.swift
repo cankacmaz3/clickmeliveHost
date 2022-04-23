@@ -34,6 +34,29 @@ extension Localized {
                 bundle: bundle,
                 comment: "Cancelled status title")
         }
+        
+        static var placeholderUpcoming: String {
+            NSLocalizedString(
+                "LIST_EVENT_PLACEHOLDER_UPCOMING",
+                tableName: table,
+                bundle: bundle,
+                comment: "Placeholder text for upcoming status")
+        }
+        
+        static var placeholderEnded: String {
+            NSLocalizedString(
+                "LIST_EVENT_PLACEHOLDER_ENDED",
+                tableName: table,
+                bundle: bundle,
+                comment: "Placeholder text for ended status")
+        }
+        
+        static var placeholderCancelled: String {
+            NSLocalizedString(
+                "LIST_EVENT_PLACEHOLDER_CANCELLED",
+                tableName: table,
+                bundle: bundle,
+                comment: "Placeholder text for cancelled status")
+        }
     }
 }
-

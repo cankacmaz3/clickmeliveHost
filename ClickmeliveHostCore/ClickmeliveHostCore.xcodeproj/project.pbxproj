@@ -71,6 +71,7 @@
 		2D9E0D9528136D07000E4321 /* ListEventsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D9E0D9428136D07000E4321 /* ListEventsViewModel.swift */; };
 		2D9E0D9828136D82000E4321 /* ListEvents.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2D9E0D9A28136D82000E4321 /* ListEvents.strings */; };
 		2D9E0D9D28136D97000E4321 /* Localized+ListEvents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D9E0D9C28136D97000E4321 /* Localized+ListEvents.swift */; };
+		2D9E0D9F28137885000E4321 /* PlaceholderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D9E0D9E28137885000E4321 /* PlaceholderView.swift */; };
 		2DBFF5F728119306006F7E40 /* LandingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DBFF5F628119306006F7E40 /* LandingViewController.swift */; };
 		2DBFF5F92811930F006F7E40 /* LandingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DBFF5F82811930F006F7E40 /* LandingView.swift */; };
 		2DCAB45B280AB5DF00308095 /* ClickmeliveHostCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2DCAB452280AB5DF00308095 /* ClickmeliveHostCore.framework */; };
@@ -233,6 +234,7 @@
 		2D9E0D9928136D82000E4321 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/ListEvents.strings; sourceTree = "<group>"; };
 		2D9E0D9B28136D83000E4321 /* tr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = tr; path = tr.lproj/ListEvents.strings; sourceTree = "<group>"; };
 		2D9E0D9C28136D97000E4321 /* Localized+ListEvents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Localized+ListEvents.swift"; sourceTree = "<group>"; };
+		2D9E0D9E28137885000E4321 /* PlaceholderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceholderView.swift; sourceTree = "<group>"; };
 		2DBFF5F628119306006F7E40 /* LandingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingViewController.swift; sourceTree = "<group>"; };
 		2DBFF5F82811930F006F7E40 /* LandingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingView.swift; sourceTree = "<group>"; };
 		2DCAB452280AB5DF00308095 /* ClickmeliveHostCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ClickmeliveHostCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -802,6 +804,7 @@
 				2D9E0CB72811F377000E4321 /* CMLTextField.swift */,
 				2D9E0CB92811F44B000E4321 /* CMLButton.swift */,
 				2D9E0D82281322A6000E4321 /* BadgeContainer.swift */,
+				2D9E0D9E28137885000E4321 /* PlaceholderView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -1301,6 +1304,7 @@
 				2DCAB4B2280ABED800308095 /* Layoutable.swift in Sources */,
 				2DCAB4AE280ABEB100308095 /* UITableView+Dequeueing.swift in Sources */,
 				2DCAB4A2280ABDA700308095 /* Colors.swift in Sources */,
+				2D9E0D9F28137885000E4321 /* PlaceholderView.swift in Sources */,
 				2D9E0D6E2812FDAC000E4321 /* String+Helpers.swift in Sources */,
 				2D9E0CBA2811F44B000E4321 /* CMLButton.swift in Sources */,
 				2D9E0CAE2811EE11000E4321 /* EnterPhoneView.swift in Sources */,
