@@ -14,6 +14,19 @@ extension EventCell {
         setImage(with: viewModel.image)
         lblTitle.text = viewModel.title
         lblDate.text = viewModel.startingDate
+        ivLive.isHidden = viewModel.isStartBroadcastHidden
+        statusStackView.isHidden = !viewModel.isStartBroadcastHidden
+        startBroadcastView.isHidden = viewModel.isStartBroadcastHidden
+        
+        lblStartBroadcast.text = viewModel.localizedStatus
+        lblStatus.text = viewModel.localizedStatus
+        
+        let statusColor = setStatusColors(viewModel: viewModel)
+        lblStatus.textColor = statusColor
+        statusColorView.backgroundColor = statusColor.withAlphaComponent(0.5)
+        statusColorView.layer.borderColor = statusColor.cgColor
+        
+        
     }
     
     private func setImage(with image: String?) {
@@ -21,9 +34,36 @@ extension EventCell {
         ivEvent.sd_imageTransition = .fade
         ivEvent.sd_setImage(with: URL(string: image), completed: nil)
     }
+    
+    private func setStatusColors(viewModel: EventViewModel) -> UIColor {
+        switch viewModel.status {
+        case .UPCOMING:
+            if viewModel.isStartBroadcastHidden == false {
+                return UIColor.rgb(red: 255, green: 0, blue: 27)
+            } else if viewModel.isStatusSoon == true {
+                return UIColor.rgb(red: 255, green: 0, blue: 27)
+            } else {
+                return UIColor.rgb(red: 16, green: 139, blue: 27)
+            }
+        case .ENDED:
+            return UIColor.rgb(red: 165, green: 171, blue: 175)
+        case .CANCELLED:
+            return UIColor.rgb(red: 179, green: 103, blue: 155)
+        default:
+            return .white
+        }
+    }
+}
+
+extension EventCell {
+    @objc func startBroadcastTapped() {
+        onStartBroadcastTapped?()
+    }
 }
 
 public final class EventCell: UITableViewCell {
+    
+    var onStartBroadcastTapped: (() -> Void)?
     
     private enum Constants {
         static let borderColor: UIColor = UIColor.rgb(red: 221, green: 226, blue: 229)
@@ -94,13 +134,29 @@ public final class EventCell: UITableViewCell {
         let label = UILabel()
         label.textColor = .red
         label.font = UIFont(name: Fonts.semibold, size: 12)
-        label.text = "Yayın Saati Yaklaşıyor"
+        return label
+    }()
+    
+    let startBroadcastView: UIView = {
+        let view = UIView()
+        view.backgroundColor = UIColor.rgb(red: 255, green: 0, blue: 27)
+        view.layer.cornerRadius = 5
+        return view
+    }()
+    
+    private let lblStartBroadcast: UILabel = {
+        let label = UILabel()
+        label.textColor = .white
+        label.font = UIFont(name: Fonts.semibold, size: 12)
         return label
     }()
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         selectionStyle = .none
+        
+        let gesture = UITapGestureRecognizer(target: self, action: #selector(startBroadcastTapped))
+        startBroadcastView.addGestureRecognizer(gesture)
         
         setupViews()
         setupLayout()
@@ -124,6 +180,9 @@ public final class EventCell: UITableViewCell {
         }
         
         contentView.addSubview(statusStackView)
+        
+        startBroadcastView.addSubview(lblStartBroadcast)
+        contentView.addSubview(startBroadcastView)
     }
     
     private func setupLayout() {
@@ -143,5 +202,9 @@ public final class EventCell: UITableViewCell {
         statusColorView.constrainWidth(6)
         
         statusStackView.anchor(nil, left: seperator.rightAnchor, bottom: eventView.bottomAnchor, right: eventView.rightAnchor, topConstant: 0, leftConstant: 11, bottomConstant: 20, rightConstant: 11, widthConstant: 0, heightConstant: 0)
+        
+        startBroadcastView.anchor(nil, left: seperator.rightAnchor, bottom: eventView.bottomAnchor, right: nil, topConstant: 0, leftConstant: 11, bottomConstant: 16, rightConstant: 0, widthConstant: 0, heightConstant: 30)
+        
+        lblStartBroadcast.anchor(startBroadcastView.topAnchor, left: startBroadcastView.leftAnchor, bottom: startBroadcastView.bottomAnchor, right: startBroadcastView.rightAnchor, topConstant: 0, leftConstant: 15, bottomConstant: 0, rightConstant: 15, widthConstant: 0, heightConstant: 0)
     }
 }

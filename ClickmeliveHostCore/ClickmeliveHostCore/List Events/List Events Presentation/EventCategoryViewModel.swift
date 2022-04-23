@@ -24,11 +24,11 @@ public final class EventCategoryViewModel {
     public var localizedIndex: String {
         switch status {
         case .UPCOMING:
-            return Localized.ListEvents.statusUpcoming
+            return Localized.ListEvents.categoryStatusUpcoming
         case .ENDED:
-            return Localized.ListEvents.statusEnded
+            return Localized.ListEvents.categoryStatusEnded
         case .CANCELLED:
-            return Localized.ListEvents.statusCancelled
+            return Localized.ListEvents.categoryStatusCancelled
         default:
             return ""
         }

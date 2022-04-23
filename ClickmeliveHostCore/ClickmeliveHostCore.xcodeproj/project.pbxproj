@@ -104,7 +104,7 @@
 		2DCAB4E0280ADDCF00308095 /* ListEventRefreshController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DCAB4DF280ADDCF00308095 /* ListEventRefreshController.swift */; };
 		2DCAB4E2280ADF2900308095 /* ClickmeliveHostCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2DCAB452280AB5DF00308095 /* ClickmeliveHostCore.framework */; };
 		2DCAB4E3280ADF2900308095 /* ClickmeliveHostCore.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2DCAB452280AB5DF00308095 /* ClickmeliveHostCore.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		2DCAB4F1280AE66400308095 /* DateFormatter+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DCAB4F0280AE66400308095 /* DateFormatter+Extensions.swift */; };
+		2DCAB4F1280AE66400308095 /* Date+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DCAB4F0280AE66400308095 /* Date+Extensions.swift */; };
 		2DCAB557280B679F00308095 /* EventViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DCAB556280B679F00308095 /* EventViewModel.swift */; };
 		2DCAB55C280B6B0600308095 /* BroadcastViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DCAB55B280B6B0600308095 /* BroadcastViewController.swift */; };
 		2DCAB55E280B6B0F00308095 /* BroadcastView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DCAB55D280B6B0F00308095 /* BroadcastView.swift */; };
@@ -268,7 +268,7 @@
 		2DCAB4DA280ADC3700308095 /* EventResponseDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventResponseDTO.swift; sourceTree = "<group>"; };
 		2DCAB4DD280ADD0000308095 /* EventCategoryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventCategoryViewModel.swift; sourceTree = "<group>"; };
 		2DCAB4DF280ADDCF00308095 /* ListEventRefreshController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListEventRefreshController.swift; sourceTree = "<group>"; };
-		2DCAB4F0280AE66400308095 /* DateFormatter+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DateFormatter+Extensions.swift"; sourceTree = "<group>"; };
+		2DCAB4F0280AE66400308095 /* Date+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extensions.swift"; sourceTree = "<group>"; };
 		2DCAB556280B679F00308095 /* EventViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventViewModel.swift; sourceTree = "<group>"; };
 		2DCAB55B280B6B0600308095 /* BroadcastViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BroadcastViewController.swift; sourceTree = "<group>"; };
 		2DCAB55D280B6B0F00308095 /* BroadcastView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BroadcastView.swift; sourceTree = "<group>"; };
@@ -924,7 +924,7 @@
 		2DCAB4EF280AE65100308095 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				2DCAB4F0280AE66400308095 /* DateFormatter+Extensions.swift */,
+				2DCAB4F0280AE66400308095 /* Date+Extensions.swift */,
 				2D9E0CD7281202B9000E4321 /* String+Extensions.swift */,
 				2D9E0D612812F5D9000E4321 /* Double+Extensions.swift */,
 			);
@@ -1263,7 +1263,7 @@
 				2DCAB477280ABAEC00308095 /* URLSessionHTTPClient.swift in Sources */,
 				2D9E0CD22811F975000E4321 /* Localized+EnterPhone.swift in Sources */,
 				2D9E0D8928132FE7000E4321 /* RemoteViewerLoader.swift in Sources */,
-				2DCAB4F1280AE66400308095 /* DateFormatter+Extensions.swift in Sources */,
+				2DCAB4F1280AE66400308095 /* Date+Extensions.swift in Sources */,
 				2D9E0D25281232DB000E4321 /* AuthCodeValidator.swift in Sources */,
 				2D9E0D672812F6AD000E4321 /* RemoteEventProductLoader.swift in Sources */,
 			);

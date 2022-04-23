@@ -68,14 +68,14 @@ final class PlaceholderView: UIView {
         backgroundColor = Constants.backgroundColor
         
         [ivPlaceholder, lblPlaceholder].forEach {
-            stackView.addArrangedSubview($0)
+            addSubview($0)
         }
-        
-        addSubview(stackView)
     }
     
     private func setupLayout() {
-        stackView.anchor(nil, left: leftAnchor, bottom: nil, right: rightAnchor, topConstant: 0, leftConstant: 43, bottomConstant: 0, rightConstant: 43, widthConstant: 0, heightConstant: 0)
-        stackView.anchorCenterYToSuperview(constant: -20)
+        ivPlaceholder.anchorCenterYToSuperview(constant: -50)
+        ivPlaceholder.anchorCenterXToSuperview()
+        
+        lblPlaceholder.anchor(ivPlaceholder.bottomAnchor, left: leftAnchor, bottom: nil, right: rightAnchor, topConstant: 40, leftConstant: 43, bottomConstant: 0, rightConstant: 43, widthConstant: 0, heightConstant: 0)
     }
 }

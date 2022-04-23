@@ -29,6 +29,11 @@ public final class ListEventCellController {
     private func binded(cell: EventCell) -> EventCell {
         self.cell = cell
         cell.configure(with: viewModel)
+        
+        cell.onStartBroadcastTapped = { [weak self] in
+            self?.viewModel.select()
+        }
+        
         return cell
     }
     

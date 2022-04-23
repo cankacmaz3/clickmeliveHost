@@ -13,3 +13,10 @@
 "LIST_EVENT_PLACEHOLDER_UPCOMING" = "Şuanda gelecek yayının yok.";
 "LIST_EVENT_PLACEHOLDER_ENDED" = "Şuanda geçmiş yayının yok.";
 "LIST_EVENT_PLACEHOLDER_CANCELLED" = "Şuanda reddedilen yayının yok.";
+
+"LIST_EVENT_STATUS_START_BROADCAST" = "Yayına Başla";
+"LIST_EVENT_STATUS_SOON" = "Yayın Saati Yaklaşıyor";
+"LIST_EVENT_STATUS_APPROVED" = "Onaylandı";
+"LIST_EVENT_STATUS_CANCELLED" = "Reddedildi";
+"LIST_EVENT_STATUS_ENDED" = "Geçmiş";
+

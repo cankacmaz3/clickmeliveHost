@@ -117,10 +117,6 @@ extension ListEventsViewController: UITableViewDelegate, UITableViewDataSource {
         loadingListCellControllers[indexPath] = nil
     }
     
-    public func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        tableModel[indexPath.row].select()
-    }
-    
     public func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return Constants.tableViewCellHeight
     }

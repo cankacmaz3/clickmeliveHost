@@ -11,7 +11,7 @@ extension Localized {
     enum ListEvents {
         static var table: String { "ListEvents" }
 
-        static var statusUpcoming: String {
+        static var categoryStatusUpcoming: String {
             NSLocalizedString(
                 "LIST_EVENT_STATUS_UPCOMING",
                 tableName: table,
@@ -19,7 +19,7 @@ extension Localized {
                 comment: "Upcoming status title")
         }
         
-        static var statusEnded: String {
+        static var categoryStatusEnded: String {
             NSLocalizedString(
                 "LIST_EVENT_STATUS_ENDED",
                 tableName: table,
@@ -27,7 +27,7 @@ extension Localized {
                 comment: "Ended status title")
         }
         
-        static var statusCancelled: String {
+        static var categoryStatusCancelled: String {
             NSLocalizedString(
                 "LIST_EVENT_STATUS_CANCELLED",
                 tableName: table,
@@ -57,6 +57,46 @@ extension Localized {
                 tableName: table,
                 bundle: bundle,
                 comment: "Placeholder text for cancelled status")
+        }
+        
+        static var statusStartBroadcast: String {
+            NSLocalizedString(
+                "LIST_EVENT_STATUS_START_BROADCAST",
+                tableName: table,
+                bundle: bundle,
+                comment: "Text for start broadcast status")
+        }
+        
+        static var statusSoon: String {
+            NSLocalizedString(
+                "LIST_EVENT_STATUS_SOON",
+                tableName: table,
+                bundle: bundle,
+                comment: "Text for soon status")
+        }
+        
+        static var statusApproved: String {
+            NSLocalizedString(
+                "LIST_EVENT_STATUS_APPROVED",
+                tableName: table,
+                bundle: bundle,
+                comment: "Text for approved status")
+        }
+        
+        static var statusCancelled: String {
+            NSLocalizedString(
+                "LIST_EVENT_STATUS_CANCELLED",
+                tableName: table,
+                bundle: bundle,
+                comment: "Text for cancelled status")
+        }
+        
+        static var statusEnded: String {
+            NSLocalizedString(
+                "LIST_EVENT_STATUS_ENDED",
+                tableName: table,
+                bundle: bundle,
+                comment: "Text for ended status")
         }
     }
 }
