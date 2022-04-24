@@ -7,12 +7,12 @@
 
 protocol BroadcastRoute {
     var broadcastTransition: Transition { get }
-    func openBroadcastModule()
+    func openBroadcastModule(with eventId: Int)
 }
 
 extension BroadcastRoute where Self: RouterProtocol {
-    func openBroadcastModule() {
-        let module = BroadcasterUIComposer.makeBroadcastViewController()
+    func openBroadcastModule(with eventId: Int) {
+        let module = BroadcasterUIComposer.makeBroadcastViewController(eventId: eventId, openTransition: broadcastTransition)
         open(module, transition: broadcastTransition)
     }
 }

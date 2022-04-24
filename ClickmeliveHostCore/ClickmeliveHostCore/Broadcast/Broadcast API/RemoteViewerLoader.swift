@@ -21,6 +21,7 @@ public final class RemoteViewerListener: ViewerListener {
         socketConnection.establishConnection()
         
         socketConnection.didReceiveMessage = { message in
+            print(message, "here message")
             let response = message.parse(to: VirtualViewerDTO.self)
             completion(.success(response?.stats?.viewers?.virtualViewer ?? 0))
         }

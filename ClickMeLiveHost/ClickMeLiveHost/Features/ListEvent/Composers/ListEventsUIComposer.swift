@@ -37,7 +37,7 @@ final class ListEventsUIComposer {
         viewModel.onEventsLoaded = { [weak listEventsViewController] events in
             listEventsViewController?.display(events.map { event in
                 let viewModel = EventViewModel(model: event) {
-                    router.openBroadcastModule()
+                    router.openBroadcastModule(with: event.id)
                 }
                 return ListEventCellController(viewModel: viewModel)
             })

@@ -47,11 +47,15 @@ struct EventDTO: Decodable {
     private struct LiveStreamDTO: Decodable {
         let playbackUrl: String
         let viewers: ViewersDTO?
+        let ingestEndpoint: String
+        let streamKey: String
         
         func toDomain() -> Event.LiveStream {
             return .init(playbackUrl: playbackUrl,
                          realViewer: viewers?.realViewer ?? 0,
-                         virtualViewer: viewers?.virtualViewer ?? 0)
+                         virtualViewer: viewers?.virtualViewer ?? 0,
+                         ingestEndpoint: ingestEndpoint,
+                         streamKey: streamKey)
         }
     }
     

@@ -57,9 +57,11 @@ public struct Event {
     }
     
     public struct LiveStream {
-        let playbackUrl: String
-        let realViewer: Int
-        let virtualViewer: Int
+        public let playbackUrl: String
+        public let realViewer: Int
+        public let virtualViewer: Int
+        public let ingestEndpoint: String
+        public let streamKey: String
     }
     
     public var viewerCount: Int {

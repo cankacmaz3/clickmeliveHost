@@ -32,9 +32,7 @@ extension AppEnvironment {
 extension AppEnvironment {
     static var showLog: Bool {
         switch AppEnvironment.currentState {
-        case .production:
-            return true
-        case .development:
+        default:
             return true
         }
     }

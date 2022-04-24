@@ -13,13 +13,18 @@ public final class BroadcastViewController: UIViewController, Layouting {
     
     public typealias ViewType = BroadcastView
     
+    public var onClose: (() -> Void)?
+    
+    internal let eventId: Int
     internal let broadcastViewModel: BroadcastViewModel
     private let viewerViewModel: ViewerViewModel
     private let broadcastEventProductsController: BroadcastEventProductsController
     
-    public init(broadcastViewModel: BroadcastViewModel,
+    public init(eventId: Int,
+                broadcastViewModel: BroadcastViewModel,
                 viewerViewModel: ViewerViewModel,
                 broadcastEventProductsController: BroadcastEventProductsController) {
+        self.eventId = eventId
         self.broadcastViewModel = broadcastViewModel
         self.viewerViewModel = viewerViewModel
         self.broadcastEventProductsController = broadcastEventProductsController
@@ -69,11 +74,10 @@ extension BroadcastViewController {
         
         observeViewerCount()
         observeProductEventLoad()
-        observeIsRunning()
-        observeTimeElapsed()
+        setupBroadcastObservers()
         
-        viewerViewModel.listenViewerUpdates(eventId: 1338)
-        broadcastEventProductsController.loadEventProducts(eventId: 1338)
+        viewerViewModel.listenViewerUpdates(eventId: eventId)
+        broadcastEventProductsController.loadEventProducts(eventId: eventId)
         
         broadcasterViewDidLoad()
     }
@@ -123,6 +127,9 @@ extension BroadcastViewController {
         
         let rotateGesture = UITapGestureRecognizer(target: self, action: #selector(cameraTapped))
         layoutableView.ivRotateCamera.addGestureRecognizer(rotateGesture)
+        
+        let closeGesture = UITapGestureRecognizer(target: self, action: #selector(closeTapped))
+        layoutableView.closeView.addGestureRecognizer(closeGesture)
     }
 }
 

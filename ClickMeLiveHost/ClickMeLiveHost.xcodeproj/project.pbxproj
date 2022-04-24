@@ -10,6 +10,7 @@
 		2D7D87B428017835006FFDE7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D7D87B328017835006FFDE7 /* AppDelegate.swift */; };
 		2D7D87BD28017836006FFDE7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2D7D87BC28017836006FFDE7 /* Assets.xcassets */; };
 		2D7D87C028017836006FFDE7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2D7D87BE28017836006FFDE7 /* LaunchScreen.storyboard */; };
+		2D8CB3452815ED5600B7F40E /* SocketEnvironment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D8CB3442815ED5600B7F40E /* SocketEnvironment.swift */; };
 		2D9E0C932811CFB6000E4321 /* ListEventsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D9E0C912811CFB6000E4321 /* ListEventsRouter.swift */; };
 		2D9E0C942811CFB6000E4321 /* ListEventsUIComposer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D9E0C922811CFB6000E4321 /* ListEventsUIComposer.swift */; };
 		2D9E0C9A2811D071000E4321 /* LandingUIComposer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D9E0C992811D071000E4321 /* LandingUIComposer.swift */; };
@@ -30,6 +31,8 @@
 		2D9E0D512812DBF4000E4321 /* AppRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D9E0D502812DBF4000E4321 /* AppRoute.swift */; };
 		2D9E0D532812DFFB000E4321 /* UserDefaultsHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D9E0D522812DFFB000E4321 /* UserDefaultsHelper.swift */; };
 		2D9E0D562812E51D000E4321 /* CMLNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D9E0D552812E51D000E4321 /* CMLNavigationController.swift */; };
+		2DC30FE92815DC2400766092 /* ExternalEnvironment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DC30FE82815DC2400766092 /* ExternalEnvironment.swift */; };
+		2DC30FEB2815E64A00766092 /* BroadcasterRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DC30FEA2815E64A00766092 /* BroadcasterRouter.swift */; };
 		2DCAB46C280AB66D00308095 /* ClickmeliveHostCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2DCAB46B280AB66D00308095 /* ClickmeliveHostCore.framework */; };
 		2DCAB46D280AB66D00308095 /* ClickmeliveHostCore.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2DCAB46B280AB66D00308095 /* ClickmeliveHostCore.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		2DCAB49B280ABBE700308095 /* ClickmeliveHostCoreIOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2DCAB49A280ABBE700308095 /* ClickmeliveHostCoreIOS.framework */; };
@@ -79,6 +82,7 @@
 		2D7D87BC28017836006FFDE7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2D7D87BF28017836006FFDE7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2D7D87C128017836006FFDE7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2D8CB3442815ED5600B7F40E /* SocketEnvironment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocketEnvironment.swift; sourceTree = "<group>"; };
 		2D9E0C912811CFB6000E4321 /* ListEventsRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListEventsRouter.swift; sourceTree = "<group>"; };
 		2D9E0C922811CFB6000E4321 /* ListEventsUIComposer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListEventsUIComposer.swift; sourceTree = "<group>"; };
 		2D9E0C992811D071000E4321 /* LandingUIComposer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingUIComposer.swift; sourceTree = "<group>"; };
@@ -98,6 +102,8 @@
 		2D9E0D502812DBF4000E4321 /* AppRoute.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRoute.swift; sourceTree = "<group>"; };
 		2D9E0D522812DFFB000E4321 /* UserDefaultsHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsHelper.swift; sourceTree = "<group>"; };
 		2D9E0D552812E51D000E4321 /* CMLNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CMLNavigationController.swift; sourceTree = "<group>"; };
+		2DC30FE82815DC2400766092 /* ExternalEnvironment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExternalEnvironment.swift; sourceTree = "<group>"; };
+		2DC30FEA2815E64A00766092 /* BroadcasterRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BroadcasterRouter.swift; sourceTree = "<group>"; };
 		2DCAB46B280AB66D00308095 /* ClickmeliveHostCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = ClickmeliveHostCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2DCAB49A280ABBE700308095 /* ClickmeliveHostCoreIOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = ClickmeliveHostCoreIOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2DCAB561280B6BA000308095 /* BroadcasterUIComposer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BroadcasterUIComposer.swift; sourceTree = "<group>"; };
@@ -317,6 +323,7 @@
 			children = (
 				2DCAB560280B6B9300308095 /* Composers */,
 				2DCAB56F280B6E1B00308095 /* BroadcastRoute.swift */,
+				2DC30FEA2815E64A00766092 /* BroadcasterRouter.swift */,
 			);
 			path = Broadcast;
 			sourceTree = "<group>";
@@ -366,6 +373,8 @@
 			isa = PBXGroup;
 			children = (
 				2DD398D12810B58000A575DA /* AppEnvironment.swift */,
+				2DC30FE82815DC2400766092 /* ExternalEnvironment.swift */,
+				2D8CB3442815ED5600B7F40E /* SocketEnvironment.swift */,
 				2DD398D22810B58000A575DA /* Servers.swift */,
 			);
 			path = Network;
@@ -490,10 +499,13 @@
 				2DCAB568280B6D1E00308095 /* Transition.swift in Sources */,
 				2DCAB566280B6C2800308095 /* ModalTransition.swift in Sources */,
 				2D9E0D562812E51D000E4321 /* CMLNavigationController.swift in Sources */,
+				2D8CB3452815ED5600B7F40E /* SocketEnvironment.swift in Sources */,
 				2D9E0CB42811EEEC000E4321 /* EnterPhoneUIComposer.swift in Sources */,
 				2DCAB570280B6E1B00308095 /* BroadcastRoute.swift in Sources */,
 				2D9E0C9A2811D071000E4321 /* LandingUIComposer.swift in Sources */,
 				2D7D87B428017835006FFDE7 /* AppDelegate.swift in Sources */,
+				2DC30FE92815DC2400766092 /* ExternalEnvironment.swift in Sources */,
+				2DC30FEB2815E64A00766092 /* BroadcasterRouter.swift in Sources */,
 				2D9E0C932811CFB6000E4321 /* ListEventsRouter.swift in Sources */,
 				2DD398F22810C4D200A575DA /* LoadingViewHTTPClientDecorator.swift in Sources */,
 				2D9E0D302812365B000E4321 /* ValidateCodeRouter.swift in Sources */,

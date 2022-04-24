@@ -66,6 +66,7 @@ public final class BroadcastView: UIView, Layoutable {
         static let rotateCameraImage: String = "img_rotate_camera"
         static let eventProductsImage: String = "icon_event_products"
         static let viewerImage: String = "icon_viewer"
+        static let closeImage: String = "img_back"
         
         static let hideEventsProductColor: UIColor = UIColor.rgb(red: 255, green: 0, blue: 27).withAlphaComponent(0.15)
         static let showEventsProductColor: UIColor = .black.withAlphaComponent(0.15)
@@ -74,6 +75,17 @@ public final class BroadcastView: UIView, Layoutable {
         static let streamStatusStartColor: UIColor = UIColor.rgb(red: 42, green: 185, blue: 48)
         static let streamStatusStopColor: UIColor = UIColor.rgb(red: 255, green: 0, blue: 27)
     }
+    
+    let closeView: UIView = {
+        let view = UIView()
+        return view
+    }()
+    
+    private let ivClose: UIImageView = {
+        let iv = UIImageView()
+        iv.image = UIImage(named: Constants.closeImage, in: Bundle(for: BroadcastView.self), compatibleWith: nil)
+        return iv
+    }()
     
     let viewersView: UIView = {
         let view = UIView()
@@ -222,9 +234,16 @@ public final class BroadcastView: UIView, Layoutable {
         productToggleView.addSubview(ivProductToggle)
         addSubview(productToggleView)
         addSubview(collectionView)
+        
+        closeView.addSubview(ivClose)
+        addSubview(closeView)
     }
     
     public func setupLayout() {
+        
+        closeView.anchor(safeAreaLayoutGuide.topAnchor, left: leftAnchor, bottom: nil, right: nil, topConstant: 0, leftConstant: 0, bottomConstant: 0, rightConstant: 0, widthConstant: 56, heightConstant: 56)
+        
+        ivClose.anchor(closeView.topAnchor, left: closeView.leftAnchor, bottom: nil, right: nil, topConstant: 16, leftConstant: 29, bottomConstant: 0, rightConstant: 0, widthConstant: 10, heightConstant: 19)
         
         viewersView.anchor(safeAreaLayoutGuide.topAnchor, left: nil, bottom: nil, right: nil, topConstant: 8, leftConstant: 0, bottomConstant: 0, rightConstant: 0, widthConstant: 0, heightConstant: 23)
         viewersView.anchorCenterXToSuperview()

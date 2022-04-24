@@ -12,29 +12,46 @@ import ClickmeliveHostCoreIOS
 final class BroadcasterUIComposer {
     private init() {}
     
-    static func makeBroadcastViewController() -> BroadcastViewController {
-        let client = URLSessionHTTPClient(session: URLSession(configuration: .default))
+    static func makeBroadcastViewController(eventId: Int, openTransition: Transition) -> BroadcastViewController {
+        let router = BroadcasterRouter()
+        
+        let sessionConfig = URLSessionConfiguration.default
+        sessionConfig.timeoutIntervalForRequest = 20.0
+        sessionConfig.timeoutIntervalForResource = 60.0
+        
+        let client = URLSessionHTTPClient(session: URLSession(configuration: sessionConfig))
         let loadingClient = LoadingViewHTTPClientDecorator(decoratee: client, loadingView: LoadingView.instance)
         
         let authenticationTokenHeader = ["Token": "eyJ1c2VySWQiOjk2LCJ0eXBlIjoyLCJkZXZpY2VJZCI6MTk1LCJleHBpcmUiOiIyMDk5LTEyLTMxVDAwOjAwOjAwLjAwMFoiLCJ0aW1lIjoiMjAyMi0wNC0yMFQxOTo0NDoyMy41NTJaIn0=.MTk1MzcxZjJmNjE3Yjg1OTUxMWNiMGY0MGMyZWRkOWMxZjlkYTM5ZTEzZmY4ODQwODgyMDZkMDA1NTk0NzlkMQ=="]
         
-        let eventProductLoader = RemoteEventProductLoader(client: loadingClient, baseURL: AppEnvironment.baseURL, authenticationTokenHeader: authenticationTokenHeader)
+        let eventProductLoader = RemoteEventProductLoader(client: client, baseURL: AppEnvironment.baseURL, authenticationTokenHeader: authenticationTokenHeader)
         let eventProductViewModel = EventProductViewModel(eventProductLoader: eventProductLoader)
         let broadcastEventProductsController = BroadcastEventProductsController(viewModel: eventProductViewModel)
         
-        let socketConnector = WebSocketConnector(withSocketURL: URL(string: "wss://eventstats-prod-api.clickmelive.com?eventId=\(1338)")!)
+        let socketConnector = WebSocketConnector(withSocketURL: URL(string: "\(SocketEnvironment.baseURL)\(eventId)")!)
         let viewerListener = RemoteViewerListener(socketConnection: socketConnector)
-        let broadcasterViewModel = BroadcastViewModel()
+        
+        let eventDetailLoader = RemoteEventDetailLoader(client: loadingClient, baseURL: ExternalEnvironment.baseURL)
+        
+        let broadcasterViewModel = BroadcastViewModel(eventDetailLoader: eventDetailLoader)
         let viewerViewModel = ViewerViewModel(viewerListener: viewerListener)
-        let broadcastViewController = BroadcastViewController(broadcastViewModel: broadcasterViewModel,
+        let broadcastViewController = BroadcastViewController(eventId: eventId,
+                                                              broadcastViewModel: broadcasterViewModel,
                                                               viewerViewModel: viewerViewModel,
                                                               broadcastEventProductsController: broadcastEventProductsController)
+        
+        router.viewController = broadcastViewController
+        router.openTransition = openTransition
         
         eventProductViewModel.onEventProductsLoaded = { products in
             broadcastEventProductsController.display(products.map { product in
                 let viewModel = ProductViewModel(model: product)
                 return ProductCellController(viewModel: viewModel)
             })
+        }
+        
+        broadcastViewController.onClose = {
+            router.close()
         }
         
         return broadcastViewController

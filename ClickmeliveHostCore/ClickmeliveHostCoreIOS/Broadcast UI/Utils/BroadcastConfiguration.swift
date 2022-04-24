@@ -40,8 +40,8 @@ class BroadcastConfiguration {
         do {
             try activeVideoConfiguration.setSize(CGSize(width: 480, height: 852))
             try activeVideoConfiguration.setMaxBitrate(1_500_000)
-            try activeVideoConfiguration.setInitialBitrate(1_500_000)
-            try activeVideoConfiguration.setMinBitrate(1_500_000)
+            try activeVideoConfiguration.setInitialBitrate(500_000)
+            try activeVideoConfiguration.setMinBitrate(500_000)
             try activeVideoConfiguration.setTargetFramerate(30)
         } catch {
             print(error, "setting up session")

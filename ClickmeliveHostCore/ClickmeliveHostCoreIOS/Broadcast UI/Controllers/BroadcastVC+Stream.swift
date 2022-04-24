@@ -11,6 +11,13 @@ import UIKit
 // MARK: - Broadcaster Lifecycle
 extension BroadcastViewController {
     
+    internal func setupBroadcastObservers() {
+        observeIsRunning()
+        observeTimeElapsed()
+        observeMute()
+        observeUpdateStatuses()
+    }
+    
     func broadcasterViewDidLoad() {
         broadcastViewModel.isMuted = false
     }
@@ -38,46 +45,73 @@ extension BroadcastViewController {
 
 // MARK: - Broadcaster Observers
 extension BroadcastViewController {
-    internal func observeIsRunning() {
+    private func observeIsRunning() {
         broadcastViewModel.isRunningValueChanged = { [weak self] isRunning in
             guard let self = self else { return }
             self.layoutableView.updateStreamStatus(broadcastViewModel: self.broadcastViewModel)
         }
     }
     
-    internal func observeMute() {
+    private func observeMute() {
         broadcastViewModel.isMutedValueChanged = { [weak self] in
             self?.applyMute()
         }
     }
     
-    internal func observeTimeElapsed() {
+    private func observeTimeElapsed() {
         broadcastViewModel.timer.onTimeElapsed = { [weak self] time in
             self?.layoutableView.lblTimer.text = time
         }
+    }
+    
+    private func observeUpdateStatuses() {
+        broadcastViewModel.onStatusUpdatedToLive = { [weak self] event in
+            guard let self = self else { return }
+            let endpointPath = event.liveStream?.ingestEndpoint
+            let key = event.liveStream?.streamKey
+            
+            guard let endpointPath = endpointPath, let key = key else { return }
+            let url = URL(string: endpointPath)!
+            
+            do {
+                try self.broadcastSession?.start(with: url, streamKey: key)
+                self.broadcastViewModel.timer.start()
+                self.broadcastViewModel.isRunning = true
+            } catch {
+                self.displayErrorAlert(error, "starting session")
+            }
+        }
+        
+        broadcastViewModel.onStatusUpdatedToEnded = { [weak self] in
+            self?.showStopBroadcastAlert()
+        }
+    }
+    
+    private func showStopBroadcastAlert() {
+        let alert = UIAlertController(title: nil,
+                                      message: nil,
+                                      preferredStyle: .actionSheet)
+        
+        alert.addAction(UIAlertAction(title: "Yayını Sonlandır", style: .destructive, handler: { [weak self] _ in
+            // Stop the session if we're running
+            self?.broadcastSession?.stop()
+            self?.broadcastViewModel.timer.stop()
+            self?.broadcastViewModel.isRunning = false
+            self?.onClose?()
+        }))
+        
+        alert.addAction(UIAlertAction(title: "Vazgeç", style: .cancel))
+        present(alert, animated: true)
     }
 }
 
 // MARK: - Broadcaster Actions
 extension BroadcastViewController {
     @objc func startTapped() {
-        if broadcastViewModel.isRunning {
-            // Stop the session if we're running
-            broadcastSession?.stop()
-            broadcastViewModel.timer.stop()
-            broadcastViewModel.isRunning = false
+        if self.broadcastViewModel.isRunning {
+            broadcastViewModel.updateStatus(eventId: eventId, with: .ENDED)
         } else {
-            let endpointPath = "rtmps://90844767ab44.global-contribute.live-video.net:443/app/"
-            let key = "sk_eu-west-1_cKWK6UkLaTnW_mL05Y8RFLqdFSVESY0L5K6AnwCD1ZP"
-            let url = URL(string: endpointPath)!
-            
-            do {
-                try broadcastSession?.start(with: url, streamKey: key)
-                broadcastViewModel.timer.start()
-                broadcastViewModel.isRunning = true
-            } catch {
-                displayErrorAlert(error, "starting session")
-            }
+            broadcastViewModel.updateStatus(eventId: eventId, with: .LIVE)
         }
     }
     
@@ -88,6 +122,14 @@ extension BroadcastViewController {
     
     @objc func muteTapped() {
         broadcastViewModel.isMuted.toggle()
+    }
+    
+    @objc func closeTapped() {
+        if self.broadcastViewModel.isRunning {
+            showStopBroadcastAlert()
+        } else {
+            onClose?()
+        }
     }
 }
 
@@ -201,6 +243,7 @@ extension BroadcastViewController : IVSBroadcastSession.Delegate {
     public func broadcastSession(_ session: IVSBroadcastSession, didEmitError error: Error) {
         DispatchQueue.main.async {
             self.displayErrorAlert(error, "in SDK")
+            self.broadcastViewModel.timer.stop()
         }
     }
 
