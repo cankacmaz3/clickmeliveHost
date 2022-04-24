@@ -42,7 +42,7 @@ public final class EventViewModel {
             return true
         }
 
-        return (Date() - startingDate) < broadcastableTimeInterval
+        return (Date() - startingDate) > broadcastableTimeInterval
     }
     
     public var isStatusSoon: Bool {
