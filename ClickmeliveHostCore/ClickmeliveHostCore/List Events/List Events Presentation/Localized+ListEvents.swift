@@ -13,7 +13,7 @@ extension Localized {
 
         static var categoryStatusUpcoming: String {
             NSLocalizedString(
-                "LIST_EVENT_STATUS_UPCOMING",
+                "LIST_EVENT_CATEGORY_STATUS_UPCOMING",
                 tableName: table,
                 bundle: bundle,
                 comment: "Upcoming status title")
@@ -21,7 +21,7 @@ extension Localized {
         
         static var categoryStatusEnded: String {
             NSLocalizedString(
-                "LIST_EVENT_STATUS_ENDED",
+                "LIST_EVENT_CATEGORY_STATUS_ENDED",
                 tableName: table,
                 bundle: bundle,
                 comment: "Ended status title")
@@ -29,7 +29,7 @@ extension Localized {
         
         static var categoryStatusCancelled: String {
             NSLocalizedString(
-                "LIST_EVENT_STATUS_CANCELLED",
+                "LIST_EVENT_CATEGORY_STATUS_CANCELLED",
                 tableName: table,
                 bundle: bundle,
                 comment: "Cancelled status title")

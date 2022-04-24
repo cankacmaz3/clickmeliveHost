@@ -14,6 +14,7 @@ extension EventCell {
         setImage(with: viewModel.image)
         lblTitle.text = viewModel.title
         lblDate.text = viewModel.startingDate
+        
         ivLive.isHidden = viewModel.isStartBroadcastHidden
         statusStackView.isHidden = !viewModel.isStartBroadcastHidden
         startBroadcastView.isHidden = viewModel.isStartBroadcastHidden

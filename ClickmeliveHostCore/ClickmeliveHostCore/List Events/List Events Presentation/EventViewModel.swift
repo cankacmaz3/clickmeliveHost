@@ -38,11 +38,11 @@ public final class EventViewModel {
     private var soonStatusTimeInterval: Double { return 60 * 10 * 6 } // 60 minutes
    
     public var isStartBroadcastHidden: Bool {
-        guard let startingDate = model.startingDate else {
+        guard let startingDate = model.startingDate, status != .UPCOMING else {
             return true
         }
 
-        return (Date() - startingDate) > broadcastableTimeInterval
+        return (Date() - startingDate) < broadcastableTimeInterval
     }
     
     public var isStatusSoon: Bool {

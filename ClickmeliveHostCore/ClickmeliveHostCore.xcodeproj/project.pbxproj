@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2D33E43228159C2E00638293 /* ElapsedTimeAndDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D33E43128159C2E00638293 /* ElapsedTimeAndDataManager.swift */; };
+		2D33E43428159D0300638293 /* Int+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D33E43328159D0300638293 /* Int+Extensions.swift */; };
+		2D33E4362815A35000638293 /* BroadcastConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D33E4352815A35000638293 /* BroadcastConfiguration.swift */; };
 		2D9E0C852811CDC0000E4321 /* Auth.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2D9E0C842811CDC0000E4321 /* Auth.xcassets */; };
 		2D9E0C9E2811E7B8000E4321 /* Localized+Landing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D9E0C9D2811E7B8000E4321 /* Localized+Landing.swift */; };
 		2D9E0CA12811E7C9000E4321 /* Landing.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2D9E0CA32811E7C9000E4321 /* Landing.strings */; };
@@ -72,6 +75,11 @@
 		2D9E0D9828136D82000E4321 /* ListEvents.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2D9E0D9A28136D82000E4321 /* ListEvents.strings */; };
 		2D9E0D9D28136D97000E4321 /* Localized+ListEvents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D9E0D9C28136D97000E4321 /* Localized+ListEvents.swift */; };
 		2D9E0D9F28137885000E4321 /* PlaceholderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D9E0D9E28137885000E4321 /* PlaceholderView.swift */; };
+		2D9E0DA128139E7E000E4321 /* BroadcastVC+Stream.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D9E0DA028139E7E000E4321 /* BroadcastVC+Stream.swift */; };
+		2D9E0DA52813A191000E4321 /* BroadcastUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D9E0DA42813A191000E4321 /* BroadcastUtils.swift */; };
+		2D9E0DA72813F4A8000E4321 /* BroadcastViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D9E0DA62813F4A8000E4321 /* BroadcastViewModel.swift */; };
+		2D9E0DAA2814021D000E4321 /* Broadcast.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2D9E0DAC2814021D000E4321 /* Broadcast.strings */; };
+		2D9E0DAF28140237000E4321 /* Localized+Broadcast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D9E0DAE28140237000E4321 /* Localized+Broadcast.swift */; };
 		2DBFF5F728119306006F7E40 /* LandingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DBFF5F628119306006F7E40 /* LandingViewController.swift */; };
 		2DBFF5F92811930F006F7E40 /* LandingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DBFF5F82811930F006F7E40 /* LandingView.swift */; };
 		2DCAB45B280AB5DF00308095 /* ClickmeliveHostCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2DCAB452280AB5DF00308095 /* ClickmeliveHostCore.framework */; };
@@ -165,6 +173,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		2D33E43128159C2E00638293 /* ElapsedTimeAndDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElapsedTimeAndDataManager.swift; sourceTree = "<group>"; };
+		2D33E43328159D0300638293 /* Int+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Int+Extensions.swift"; sourceTree = "<group>"; };
+		2D33E4352815A35000638293 /* BroadcastConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BroadcastConfiguration.swift; sourceTree = "<group>"; };
 		2D9E0C842811CDC0000E4321 /* Auth.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Auth.xcassets; sourceTree = "<group>"; };
 		2D9E0C9D2811E7B8000E4321 /* Localized+Landing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Localized+Landing.swift"; sourceTree = "<group>"; };
 		2D9E0CA22811E7C9000E4321 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Landing.strings; sourceTree = "<group>"; };
@@ -235,6 +246,12 @@
 		2D9E0D9B28136D83000E4321 /* tr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = tr; path = tr.lproj/ListEvents.strings; sourceTree = "<group>"; };
 		2D9E0D9C28136D97000E4321 /* Localized+ListEvents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Localized+ListEvents.swift"; sourceTree = "<group>"; };
 		2D9E0D9E28137885000E4321 /* PlaceholderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceholderView.swift; sourceTree = "<group>"; };
+		2D9E0DA028139E7E000E4321 /* BroadcastVC+Stream.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BroadcastVC+Stream.swift"; sourceTree = "<group>"; };
+		2D9E0DA42813A191000E4321 /* BroadcastUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BroadcastUtils.swift; sourceTree = "<group>"; };
+		2D9E0DA62813F4A8000E4321 /* BroadcastViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BroadcastViewModel.swift; sourceTree = "<group>"; };
+		2D9E0DAB2814021D000E4321 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Broadcast.strings; sourceTree = "<group>"; };
+		2D9E0DAD28140221000E4321 /* tr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = tr; path = tr.lproj/Broadcast.strings; sourceTree = "<group>"; };
+		2D9E0DAE28140237000E4321 /* Localized+Broadcast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Localized+Broadcast.swift"; sourceTree = "<group>"; };
 		2DBFF5F628119306006F7E40 /* LandingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingViewController.swift; sourceTree = "<group>"; };
 		2DBFF5F82811930F006F7E40 /* LandingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingView.swift; sourceTree = "<group>"; };
 		2DCAB452280AB5DF00308095 /* ClickmeliveHostCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ClickmeliveHostCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -394,6 +411,7 @@
 			children = (
 				2D9E0CDA2812047B000E4321 /* ValidationHandler.swift */,
 				2D9E0D2028123132000E4321 /* DeviceHelper.swift */,
+				2D33E43128159C2E00638293 /* ElapsedTimeAndDataManager.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -576,6 +594,9 @@
 				2D9E0D73281301B4000E4321 /* EventProductViewModel.swift */,
 				2D9E0D7A28131699000E4321 /* ProductViewModel.swift */,
 				2D9E0D8C28133EED000E4321 /* ViewerViewModel.swift */,
+				2D9E0DA62813F4A8000E4321 /* BroadcastViewModel.swift */,
+				2D9E0DAE28140237000E4321 /* Localized+Broadcast.swift */,
+				2D9E0DAC2814021D000E4321 /* Broadcast.strings */,
 			);
 			path = "Broadcast Presentation";
 			sourceTree = "<group>";
@@ -610,6 +631,15 @@
 				2D9E0D8628132EBF000E4321 /* WebSocketConnector.swift */,
 			);
 			path = Sockets;
+			sourceTree = "<group>";
+		};
+		2D9E0DA32813A187000E4321 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				2D9E0DA42813A191000E4321 /* BroadcastUtils.swift */,
+				2D33E4352815A35000638293 /* BroadcastConfiguration.swift */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 		2DBFF5F128118F96006F7E40 /* Auth UI */ = {
@@ -927,6 +957,7 @@
 				2DCAB4F0280AE66400308095 /* Date+Extensions.swift */,
 				2D9E0CD7281202B9000E4321 /* String+Extensions.swift */,
 				2D9E0D612812F5D9000E4321 /* Double+Extensions.swift */,
+				2D33E43328159D0300638293 /* Int+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -934,6 +965,7 @@
 		2DCAB558280B6A2500308095 /* Broadcast UI */ = {
 			isa = PBXGroup;
 			children = (
+				2D9E0DA32813A187000E4321 /* Utils */,
 				2DCAB559280B6AEA00308095 /* Controllers */,
 				2DCAB55A280B6AEF00308095 /* Views */,
 				2DD398FC2810D1AF00A575DA /* Broadcast.xcassets */,
@@ -946,6 +978,7 @@
 			children = (
 				2D9E0D772813163B000E4321 /* Cell Controllers */,
 				2DCAB55B280B6B0600308095 /* BroadcastViewController.swift */,
+				2D9E0DA028139E7E000E4321 /* BroadcastVC+Stream.swift */,
 				2D9E0D752813025F000E4321 /* BroadcastEventProductsController.swift */,
 			);
 			path = Controllers;
@@ -1165,6 +1198,7 @@
 				2D9E0D9828136D82000E4321 /* ListEvents.strings in Resources */,
 				2D9E0CCD2811F8A4000E4321 /* EnterPhone.strings in Resources */,
 				2DD398E02810B9A400A575DA /* Date.strings in Resources */,
+				2D9E0DAA2814021D000E4321 /* Broadcast.strings in Resources */,
 				2D9E0D3D2812C7C6000E4321 /* Alert.strings in Resources */,
 				2D9E0D1928122AB3000E4321 /* ValidateCode.strings in Resources */,
 				2D9E0D0128122658000E4321 /* Error.strings in Resources */,
@@ -1221,8 +1255,10 @@
 				2D9E0CE328120BC8000E4321 /* CreateCodeDTO.swift in Sources */,
 				2D9E0D93281348E5000E4321 /* VirtualViewerDTO.swift in Sources */,
 				2DCAB4DE280ADD0000308095 /* EventCategoryViewModel.swift in Sources */,
+				2D9E0DA72813F4A8000E4321 /* BroadcastViewModel.swift in Sources */,
 				2D9E0D692812F800000E4321 /* ProductResponseDTO.swift in Sources */,
 				2DCAB47F280ABB6000308095 /* AuthenticatedURLRequestBuilderDecorator.swift in Sources */,
+				2D9E0DAF28140237000E4321 /* Localized+Broadcast.swift in Sources */,
 				2D9E0CDE28120AC8000E4321 /* AuthCodeCreator.swift in Sources */,
 				2D9E0D322812384D000E4321 /* ValidateCodeRequest.swift in Sources */,
 				2DD398E52810B9EF00A575DA /* Localized.swift in Sources */,
@@ -1250,6 +1286,8 @@
 				2DCAB4CB280AD94800308095 /* EventLoader.swift in Sources */,
 				2D9E0D8B28133125000E4321 /* ViewerListener.swift in Sources */,
 				2D9E0D2C2812344C000E4321 /* RemoteAuthCodeValidator.swift in Sources */,
+				2D33E43228159C2E00638293 /* ElapsedTimeAndDataManager.swift in Sources */,
+				2D33E43428159D0300638293 /* Int+Extensions.swift in Sources */,
 				2D9E0D362812B5E0000E4321 /* CMLError.swift in Sources */,
 				2D9E0D5A2812F508000E4321 /* EventProductLoader.swift in Sources */,
 				2DCAB472280ABAA500308095 /* HTTPClient.swift in Sources */,
@@ -1296,12 +1334,15 @@
 				2D9E0D83281322A6000E4321 /* BadgeContainer.swift in Sources */,
 				2D9E0CB82811F377000E4321 /* CMLTextField.swift in Sources */,
 				2DCAB4C1280AC8EA00308095 /* EventCell.swift in Sources */,
+				2D9E0DA128139E7E000E4321 /* BroadcastVC+Stream.swift in Sources */,
 				2DD398C3280FF70E00A575DA /* UICollectionView+Dequeueing.swift in Sources */,
 				2DCAB4A5280ABDC400308095 /* UIColor+Helpers.swift in Sources */,
+				2D9E0DA52813A191000E4321 /* BroadcastUtils.swift in Sources */,
 				2DCAB4A7280ABDCD00308095 /* UIView+Helpers.swift in Sources */,
 				2DCAB4BB280AC55800308095 /* ListEventsView.swift in Sources */,
 				2D9E0D722813017E000E4321 /* ProductCell.swift in Sources */,
 				2DCAB4B2280ABED800308095 /* Layoutable.swift in Sources */,
+				2D33E4362815A35000638293 /* BroadcastConfiguration.swift in Sources */,
 				2DCAB4AE280ABEB100308095 /* UITableView+Dequeueing.swift in Sources */,
 				2DCAB4A2280ABDA700308095 /* Colors.swift in Sources */,
 				2D9E0D9F28137885000E4321 /* PlaceholderView.swift in Sources */,
@@ -1397,6 +1438,15 @@
 				2D9E0D9B28136D83000E4321 /* tr */,
 			);
 			name = ListEvents.strings;
+			sourceTree = "<group>";
+		};
+		2D9E0DAC2814021D000E4321 /* Broadcast.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2D9E0DAB2814021D000E4321 /* en */,
+				2D9E0DAD28140221000E4321 /* tr */,
+			);
+			name = Broadcast.strings;
 			sourceTree = "<group>";
 		};
 		2DD398E22810B9A400A575DA /* Date.strings */ = {

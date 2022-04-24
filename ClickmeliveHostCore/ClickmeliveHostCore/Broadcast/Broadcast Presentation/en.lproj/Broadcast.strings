@@ -1,0 +1,10 @@
+/* 
+  Broadcast.strings
+  ClickmeliveHostCore
+
+  Created by Can Kaçmaz on 23.04.2022.
+  
+*/
+
+"BROADCAST_START" = "Canlı yayın başlat";
+"BROADCAST_STOP" = "Yayını durdur";

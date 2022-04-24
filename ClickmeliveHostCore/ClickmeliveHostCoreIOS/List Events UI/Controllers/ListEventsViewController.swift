@@ -72,7 +72,6 @@ public final class ListEventsViewController: UIViewController, Layouting {
     }
     
     public func display(_ cellControllers: [ListEventCellController]) {
-        print(cellControllers.count, "here")
         layoutableView.placeholderView.isHidden = cellControllers.count > 0
         layoutableView.setPlaceholderContent(title: refreshController?.localizedPlaceholderTitle(),
                                              status: refreshController?.currentStatus())
