@@ -7,11 +7,11 @@
 
 import Foundation
 
-enum Fonts {
-    static let light = "Montserrat-Light"
-    static let regular = "Montserrat-Regular"
-    static let medium = "Montserrat-Medium"
-    static let bold = "Montserrat-Bold"
-    static let semibold = "Montserrat-SemiBold"
-    static let extraBold = "Montserrat-ExtraBold"
+public enum Fonts {
+    public static let light = "Montserrat-Light"
+    public static let regular = "Montserrat-Regular"
+    public static let medium = "Montserrat-Medium"
+    public static let bold = "Montserrat-Bold"
+    public static let semibold = "Montserrat-SemiBold"
+    public static let extraBold = "Montserrat-ExtraBold"
 }

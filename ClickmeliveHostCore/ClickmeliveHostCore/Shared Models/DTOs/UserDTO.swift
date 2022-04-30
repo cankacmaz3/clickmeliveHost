@@ -8,7 +8,7 @@
 import Foundation
 
 extension UserDTO {
-    func toDomain() -> User {
+    public func toDomain() -> User {
         return .init(id: userId ?? -1,
                      username: username ?? "",
                      image: image,
@@ -21,7 +21,7 @@ extension UserDTO {
     }
 }
 
-struct UserDTO: Decodable {
+public struct UserDTO: Decodable {
     private let userId: Int?
     private let username: String?
     private let image: String?

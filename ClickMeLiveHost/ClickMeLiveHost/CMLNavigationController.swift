@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import ClickmeliveHostCoreIOS
 
 class CMLNavigationController: UINavigationController, UINavigationControllerDelegate {
     
@@ -14,6 +15,14 @@ class CMLNavigationController: UINavigationController, UINavigationControllerDel
         super.viewDidLoad()
         
         self.delegate = self
+        
+        let appearance = UINavigationBarAppearance()
+        appearance.backgroundColor = .white
+        appearance.titleTextAttributes = [.foregroundColor: Colors.primaryText,
+                                          .font: UIFont(name: Fonts.semibold, size: 16)!]
+        
+        self.navigationBar.standardAppearance = appearance
+        self.navigationBar.scrollEdgeAppearance = appearance
         
         // Setup interactivePopGestureRecognizer
         if let interactivePopGestureRecognizer = self.interactivePopGestureRecognizer {

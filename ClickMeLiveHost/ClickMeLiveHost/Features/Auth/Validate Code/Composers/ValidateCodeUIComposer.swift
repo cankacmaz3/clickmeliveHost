@@ -36,6 +36,9 @@ final class ValidateCodeUIComposer {
     private static func saveUserAndRouteToAppModule(router: ValidateCodeRouter) -> (ValidateCode) -> Void {
         { validateCode in
             guard let token = validateCode.token else { return }
+            
+            ClickMeUserDefaults.init().saveLoggedInUser(user: validateCode.user)
+            
             let saveUserToken = KeychainHelper.instance.setUserToken(token: token)
             if saveUserToken {
                 router.openAppModule()
