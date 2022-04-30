@@ -10,5 +10,5 @@ import ClickmeliveHostCoreIOS
 
 final class ListEventsRouter: Router<ListEventsViewController>, ListEventsRouter.Routes {
     typealias Routes = BroadcastRoute & AlertRoute
-    var broadcastTransition: Transition = PushTransition(isAnimated: true)
+    var broadcastTransition: Transition = PushTransition(isAnimated: true, hidesBottomBarWhenPushed: true)
 }

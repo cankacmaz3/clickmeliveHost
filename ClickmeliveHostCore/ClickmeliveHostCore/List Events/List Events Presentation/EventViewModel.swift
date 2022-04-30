@@ -38,6 +38,7 @@ public final class EventViewModel {
     private var soonStatusTimeInterval: Double { return 60 * 10 * 6 } // 60 minutes
    
     public var isStatusStartBroadcast: Bool {
+        return true
         guard let startingDate = model.startingDate, status == .UPCOMING else {
             return false
         }

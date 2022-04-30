@@ -21,28 +21,19 @@ final class CMLTabBarController: UITabBarController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.setupTabBarUI()
-        self.addCustomTabBarView()
     }
     
     private func setupTabBarUI() {
         self.tabBar.backgroundColor = .white
+        self.tabBar.barTintColor = .white
         self.tabBar.tintColor = Constants.tabbarSelectedColor
         self.tabBar.unselectedItemTintColor = Constants.tabbarUnselectedColor
-    }
-    
-    private func addCustomTabBarView() {
-        self.customTabBarView.frame = tabBar.frame
         
-        self.customTabBarView.backgroundColor = .white
-     
-        self.customTabBarView.layer.masksToBounds = false
-        self.customTabBarView.layer.shadowColor = UIColor.black.withAlphaComponent(0.1).cgColor
-        self.customTabBarView.layer.shadowOffset = .zero
-        self.customTabBarView.layer.shadowOpacity = 0.5
-        self.customTabBarView.layer.shadowRadius = 10
-        
-        self.view.addSubview(customTabBarView)
-        self.view.bringSubviewToFront(self.tabBar)
+        self.tabBar.layer.shadowColor = UIColor.lightGray.cgColor
+        self.tabBar.layer.shadowOffset = CGSize(width: 0.0, height: 4.0)
+        self.tabBar.layer.shadowRadius = 5
+        self.tabBar.layer.shadowOpacity = 0.5
+        self.tabBar.layer.masksToBounds = false
     }
 }
 

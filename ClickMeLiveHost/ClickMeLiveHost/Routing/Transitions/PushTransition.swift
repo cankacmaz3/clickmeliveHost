@@ -14,12 +14,14 @@ class PushTransition: NSObject {
     }
     
     var isAnimated: Bool = true
-    var completionHandler: (() -> Void)?
-
+    var hidesBottomBarWhenPushed: Bool = false
+    
     weak var viewController: UIViewController?
 
-    init(isAnimated: Bool = true) {
+    init(isAnimated: Bool = true,
+         hidesBottomBarWhenPushed: Bool = false) {
         self.isAnimated = isAnimated
+        self.hidesBottomBarWhenPushed = hidesBottomBarWhenPushed
     }
 }
 
@@ -28,6 +30,7 @@ extension PushTransition: Transition {
 
     func open(_ viewController: UIViewController) {
         viewController.navigationItem.leftBarButtonItem = UIBarButtonItem.init(image: UIImage(named: Constants.backImage), style: .done, target: self, action: #selector(close))
+        viewController.hidesBottomBarWhenPushed = hidesBottomBarWhenPushed
         self.viewController?.navigationController?.pushViewController(viewController, animated: isAnimated)
     }
 
