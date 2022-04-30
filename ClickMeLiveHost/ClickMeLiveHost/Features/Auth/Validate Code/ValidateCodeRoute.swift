@@ -12,7 +12,8 @@ protocol ValidateCodeRoute {
 
 extension ValidateCodeRoute where Self: RouterProtocol {
     func openValidateCodeModule(verificationCodeId: Int, phone: String) {
-        let module = ValidateCodeUIComposer.makeValidateCodeController(verificationCodeId: verificationCodeId, phone: phone)
+        let module = ValidateCodeUIComposer.makeValidateCodeController(verificationCodeId: verificationCodeId,
+                                                                       phone: phone)
         open(module, transition: validateCodeTransition)
     }
 }

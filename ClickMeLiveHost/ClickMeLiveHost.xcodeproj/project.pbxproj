@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2D48E98F281D8BF300171E81 /* CMLTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D48E98E281D8BF300171E81 /* CMLTabBarController.swift */; };
+		2D48E993281D8ECF00171E81 /* ProfileUIComposer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D48E992281D8ECF00171E81 /* ProfileUIComposer.swift */; };
 		2D7D87B428017835006FFDE7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D7D87B328017835006FFDE7 /* AppDelegate.swift */; };
 		2D7D87BD28017836006FFDE7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2D7D87BC28017836006FFDE7 /* Assets.xcassets */; };
 		2D7D87C028017836006FFDE7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2D7D87BE28017836006FFDE7 /* LaunchScreen.storyboard */; };
@@ -25,8 +27,8 @@
 		2D9E0CF728121FDB000E4321 /* AlertRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D9E0CF628121FDB000E4321 /* AlertRoute.swift */; };
 		2D9E0CF9281221A7000E4321 /* AlertRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D9E0CF8281221A7000E4321 /* AlertRouter.swift */; };
 		2D9E0CFB281222E4000E4321 /* EnterPhoneRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D9E0CFA281222E4000E4321 /* EnterPhoneRouter.swift */; };
-		2D9E0D0E281227C5000E4321 /* ValidatePhoneRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D9E0D0D281227C5000E4321 /* ValidatePhoneRoute.swift */; };
-		2D9E0D11281227DB000E4321 /* ValidatePhoneUIComposer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D9E0D10281227DB000E4321 /* ValidatePhoneUIComposer.swift */; };
+		2D9E0D0E281227C5000E4321 /* ValidateCodeRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D9E0D0D281227C5000E4321 /* ValidateCodeRoute.swift */; };
+		2D9E0D11281227DB000E4321 /* ValidateCodeUIComposer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D9E0D10281227DB000E4321 /* ValidateCodeUIComposer.swift */; };
 		2D9E0D302812365B000E4321 /* ValidateCodeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D9E0D2F2812365B000E4321 /* ValidateCodeRouter.swift */; };
 		2D9E0D4B2812D407000E4321 /* KeychainHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D9E0D4A2812D407000E4321 /* KeychainHelper.swift */; };
 		2D9E0D4F2812D611000E4321 /* KeychainSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 2D9E0D4E2812D611000E4321 /* KeychainSwift */; };
@@ -77,6 +79,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		2D48E98E281D8BF300171E81 /* CMLTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CMLTabBarController.swift; sourceTree = "<group>"; };
+		2D48E992281D8ECF00171E81 /* ProfileUIComposer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileUIComposer.swift; sourceTree = "<group>"; };
 		2D7D87B028017835006FFDE7 /* ClickMeLiveHost.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ClickMeLiveHost.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D7D87B328017835006FFDE7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2D7D87BC28017836006FFDE7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -95,8 +99,8 @@
 		2D9E0CF628121FDB000E4321 /* AlertRoute.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertRoute.swift; sourceTree = "<group>"; };
 		2D9E0CF8281221A7000E4321 /* AlertRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertRouter.swift; sourceTree = "<group>"; };
 		2D9E0CFA281222E4000E4321 /* EnterPhoneRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterPhoneRouter.swift; sourceTree = "<group>"; };
-		2D9E0D0D281227C5000E4321 /* ValidatePhoneRoute.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidatePhoneRoute.swift; sourceTree = "<group>"; };
-		2D9E0D10281227DB000E4321 /* ValidatePhoneUIComposer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidatePhoneUIComposer.swift; sourceTree = "<group>"; };
+		2D9E0D0D281227C5000E4321 /* ValidateCodeRoute.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidateCodeRoute.swift; sourceTree = "<group>"; };
+		2D9E0D10281227DB000E4321 /* ValidateCodeUIComposer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidateCodeUIComposer.swift; sourceTree = "<group>"; };
 		2D9E0D2F2812365B000E4321 /* ValidateCodeRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidateCodeRouter.swift; sourceTree = "<group>"; };
 		2D9E0D4A2812D407000E4321 /* KeychainHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainHelper.swift; sourceTree = "<group>"; };
 		2D9E0D502812DBF4000E4321 /* AppRoute.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRoute.swift; sourceTree = "<group>"; };
@@ -143,6 +147,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2D48E990281D8EA600171E81 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				2D48E991281D8EB600171E81 /* Composers */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		2D48E991281D8EB600171E81 /* Composers */ = {
+			isa = PBXGroup;
+			children = (
+				2D48E992281D8ECF00171E81 /* ProfileUIComposer.swift */,
+			);
+			path = Composers;
+			sourceTree = "<group>";
+		};
 		2D7D87A728017835006FFDE7 = {
 			isa = PBXGroup;
 			children = (
@@ -173,6 +193,8 @@
 				2DCAB58A280B7B8300308095 /* Fonts */,
 				2DCAB563280B6C0A00308095 /* Routing */,
 				2D7D87B328017835006FFDE7 /* AppDelegate.swift */,
+				2D9E0D552812E51D000E4321 /* CMLNavigationController.swift */,
+				2D48E98E281D8BF300171E81 /* CMLTabBarController.swift */,
 				2D7D87BC28017836006FFDE7 /* Assets.xcassets */,
 				2D7D87BE28017836006FFDE7 /* LaunchScreen.storyboard */,
 				2D7D87C128017836006FFDE7 /* Info.plist */,
@@ -273,7 +295,7 @@
 			isa = PBXGroup;
 			children = (
 				2D9E0D0F281227C9000E4321 /* Composers */,
-				2D9E0D0D281227C5000E4321 /* ValidatePhoneRoute.swift */,
+				2D9E0D0D281227C5000E4321 /* ValidateCodeRoute.swift */,
 				2D9E0D2F2812365B000E4321 /* ValidateCodeRouter.swift */,
 			);
 			path = "Validate Code";
@@ -282,7 +304,7 @@
 		2D9E0D0F281227C9000E4321 /* Composers */ = {
 			isa = PBXGroup;
 			children = (
-				2D9E0D10281227DB000E4321 /* ValidatePhoneUIComposer.swift */,
+				2D9E0D10281227DB000E4321 /* ValidateCodeUIComposer.swift */,
 			);
 			path = Composers;
 			sourceTree = "<group>";
@@ -304,6 +326,7 @@
 				2D9E0CF028121770000E4321 /* Alert */,
 				2D9E0C952811CFBB000E4321 /* ListEvent */,
 				2DCAB55F280B6B8A00308095 /* Broadcast */,
+				2D48E990281D8EA600171E81 /* Profile */,
 			);
 			path = Features;
 			sourceTree = "<group>";
@@ -341,7 +364,6 @@
 			children = (
 				2DCAB564280B6C1600308095 /* Transitions */,
 				2DCAB56B280B6D9E00308095 /* Router.swift */,
-				2D9E0D552812E51D000E4321 /* CMLNavigationController.swift */,
 			);
 			path = Routing;
 			sourceTree = "<group>";
@@ -496,12 +518,14 @@
 				2D9E0CF328121785000E4321 /* AlertUIComposer.swift in Sources */,
 				2D9E0D4B2812D407000E4321 /* KeychainHelper.swift in Sources */,
 				2D9E0CFB281222E4000E4321 /* EnterPhoneRouter.swift in Sources */,
+				2D48E993281D8ECF00171E81 /* ProfileUIComposer.swift in Sources */,
 				2DCAB568280B6D1E00308095 /* Transition.swift in Sources */,
 				2DCAB566280B6C2800308095 /* ModalTransition.swift in Sources */,
 				2D9E0D562812E51D000E4321 /* CMLNavigationController.swift in Sources */,
 				2D8CB3452815ED5600B7F40E /* SocketEnvironment.swift in Sources */,
 				2D9E0CB42811EEEC000E4321 /* EnterPhoneUIComposer.swift in Sources */,
 				2DCAB570280B6E1B00308095 /* BroadcastRoute.swift in Sources */,
+				2D48E98F281D8BF300171E81 /* CMLTabBarController.swift in Sources */,
 				2D9E0C9A2811D071000E4321 /* LandingUIComposer.swift in Sources */,
 				2D7D87B428017835006FFDE7 /* AppDelegate.swift in Sources */,
 				2DC30FE92815DC2400766092 /* ExternalEnvironment.swift in Sources */,
@@ -519,11 +543,11 @@
 				2D9E0CC52811F646000E4321 /* Colors.swift in Sources */,
 				2D9E0CC32811F5FC000E4321 /* Image.swift in Sources */,
 				2D9E0CB02811EEAB000E4321 /* LandingRouter.swift in Sources */,
-				2D9E0D0E281227C5000E4321 /* ValidatePhoneRoute.swift in Sources */,
+				2D9E0D0E281227C5000E4321 /* ValidateCodeRoute.swift in Sources */,
 				2DD398F52810C75800A575DA /* UIColor+Extensions.swift in Sources */,
 				2D9E0CB62811EF52000E4321 /* EnterPhoneRoute.swift in Sources */,
 				2DCAB56A280B6D4400308095 /* PushTransition.swift in Sources */,
-				2D9E0D11281227DB000E4321 /* ValidatePhoneUIComposer.swift in Sources */,
+				2D9E0D11281227DB000E4321 /* ValidateCodeUIComposer.swift in Sources */,
 				2DCAB562280B6BA000308095 /* BroadcasterUIComposer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

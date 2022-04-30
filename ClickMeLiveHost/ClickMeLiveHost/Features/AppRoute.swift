@@ -20,6 +20,12 @@ extension AppRoute where Self: RouterProtocol {
 }
 
 final class AppModuleBuilder {
+    
+    private enum Constants {
+        static let homeTabImage: String = "icon_home"
+        static let profileTabImage: String = "icon_profile"
+    }
+   
     static func module() -> UIViewController {
         let userDefaults = ClickMeUserDefaults.init()
         
@@ -29,8 +35,27 @@ final class AppModuleBuilder {
         }
         
         return KeychainHelper.instance.isUserLoggedIn() == true ?
-            CMLNavigationController(rootViewController: ListEventsUIComposer.makeListEventsController()) :
+            makeRootViewController():
             CMLNavigationController(rootViewController: LandingUIComposer.makeLandingController())
     
+    }
+    
+    private static func makeRootViewController() -> UIViewController {
+        let tabBarController = CMLTabBarController()
+        
+        tabBarController.viewControllers = [listEventsViewController(), profileViewController()]
+        return tabBarController
+    }
+    
+    private static func listEventsViewController() -> UIViewController {
+        let view = CMLNavigationController(rootViewController: ListEventsUIComposer.makeListEventsController())
+        view.tabBarItem.image = UIImage(named: Constants.homeTabImage)
+        return view
+    }
+    
+    private static func profileViewController() -> UIViewController {
+        let view = CMLNavigationController(rootViewController: ProfileUIComposer.makeProfileViewController())
+        view.tabBarItem.image = UIImage(named: Constants.profileTabImage)
+        return view
     }
 }

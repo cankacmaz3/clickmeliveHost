@@ -29,6 +29,11 @@ public final class EnterPhoneViewController: UIViewController, Layouting {
         registerActions()
     }
     
+    public override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        layoutableView.tfPhone.text = nil
+    }
+    
     public override func loadView() {
         view = ViewType.create()
     }
