@@ -15,9 +15,9 @@ extension EventCell {
         lblTitle.text = viewModel.title
         lblDate.text = viewModel.startingDate
         
-        ivLive.isHidden = viewModel.isStartBroadcastHidden
-        statusStackView.isHidden = !viewModel.isStartBroadcastHidden
-        startBroadcastView.isHidden = viewModel.isStartBroadcastHidden
+        ivLive.isHidden = !viewModel.isStatusStartBroadcast
+        statusStackView.isHidden = viewModel.isStatusStartBroadcast
+        startBroadcastView.isHidden = !viewModel.isStatusStartBroadcast
         
         lblStartBroadcast.text = viewModel.localizedStatus
         lblStatus.text = viewModel.localizedStatus
@@ -39,7 +39,7 @@ extension EventCell {
     private func setStatusColors(viewModel: EventViewModel) -> UIColor {
         switch viewModel.status {
         case .UPCOMING:
-            if viewModel.isStartBroadcastHidden == false {
+            if viewModel.isStatusStartBroadcast == true {
                 return UIColor.rgb(red: 255, green: 0, blue: 27)
             } else if viewModel.isStatusSoon == true {
                 return UIColor.rgb(red: 255, green: 0, blue: 27)
@@ -123,6 +123,11 @@ public final class EventCell: UITableViewCell {
         return stackView
     }()
     
+    private let statusColorContainer: UIView = {
+        let view = UIView()
+        return view
+    }()
+    
     private let statusColorView: UIView = {
         let view = UIView()
         view.layer.borderColor = UIColor.yellow.cgColor
@@ -175,8 +180,9 @@ public final class EventCell: UITableViewCell {
         }
         
         contentView.addSubview(eventView)
+        statusColorContainer.addSubview(statusColorView)
         
-        [statusColorView, lblStatus].forEach {
+        [statusColorContainer, lblStatus].forEach {
             statusStackView.addArrangedSubview($0)
         }
         
@@ -199,8 +205,13 @@ public final class EventCell: UITableViewCell {
         
         lblDate.anchor(lblTitle.bottomAnchor, left: seperator.rightAnchor, bottom: nil, right: eventView.rightAnchor, topConstant: 14, leftConstant: 11, bottomConstant: 0, rightConstant: 11, widthConstant: 0, heightConstant: 0)
         
+        addConstraint(NSLayoutConstraint(item: statusColorContainer, attribute: .height, relatedBy: .equal, toItem: lblStatus, attribute: .height, multiplier: 1.0, constant: 0))
+        
+        statusColorContainer.constrainWidth(6)
+        
         statusColorView.constrainHeight(6)
         statusColorView.constrainWidth(6)
+        statusColorView.anchorCenterSuperview()
         
         statusStackView.anchor(nil, left: seperator.rightAnchor, bottom: eventView.bottomAnchor, right: eventView.rightAnchor, topConstant: 0, leftConstant: 11, bottomConstant: 20, rightConstant: 11, widthConstant: 0, heightConstant: 0)
         

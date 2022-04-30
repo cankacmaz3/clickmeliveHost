@@ -52,6 +52,10 @@ public final class ValidateCodeViewController: UIViewController, Layouting {
         guard let code = textField.text else { return }
         layoutableView.btnValidate.handleIsEnabled(viewModel.isValid(code: code))
         textField.text = code
+        
+        if code.count == Constants.codeMaxLength {
+            validateTapped()
+        }
     }
     
     private func setupTextField() {
@@ -79,6 +83,7 @@ extension ValidateCodeViewController: UITextFieldDelegate {
         let currentString: NSString = (textField.text ?? "") as NSString
         let newString: NSString =
             currentString.replacingCharacters(in: range, with: string) as NSString
+        
         return newString.length <= maxLength
     }
 }

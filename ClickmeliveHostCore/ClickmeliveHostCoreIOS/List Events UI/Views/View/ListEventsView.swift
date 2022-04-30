@@ -58,7 +58,7 @@ final public class ListEventsView: UIView, Layoutable {
     
     let placeholderView: PlaceholderView = {
         let view = PlaceholderView()
-        view.setImageConstraints(imageWidth: 145, imageHeight: 153)
+        view.setImageConstraints(imageWidth: 186, imageHeight: 188)
         view.isHidden = true
         return view
     }()

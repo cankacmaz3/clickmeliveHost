@@ -11,6 +11,8 @@
 		2D7D87BD28017836006FFDE7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2D7D87BC28017836006FFDE7 /* Assets.xcassets */; };
 		2D7D87C028017836006FFDE7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2D7D87BE28017836006FFDE7 /* LaunchScreen.storyboard */; };
 		2D8CB3452815ED5600B7F40E /* SocketEnvironment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D8CB3442815ED5600B7F40E /* SocketEnvironment.swift */; };
+		2D8CB34A2816AEFA00B7F40E /* AmazonIVSBroadcast.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2DD3988A280C148C00A575DA /* AmazonIVSBroadcast.xcframework */; };
+		2D8CB34B2816AEFA00B7F40E /* AmazonIVSBroadcast.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2DD3988A280C148C00A575DA /* AmazonIVSBroadcast.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		2D9E0C932811CFB6000E4321 /* ListEventsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D9E0C912811CFB6000E4321 /* ListEventsRouter.swift */; };
 		2D9E0C942811CFB6000E4321 /* ListEventsUIComposer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D9E0C922811CFB6000E4321 /* ListEventsUIComposer.swift */; };
 		2D9E0C9A2811D071000E4321 /* LandingUIComposer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D9E0C992811D071000E4321 /* LandingUIComposer.swift */; };
@@ -49,8 +51,6 @@
 		2DCAB59A280B7BEA00308095 /* Montserrat-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2DCAB594280B7BEA00308095 /* Montserrat-ExtraBold.ttf */; };
 		2DCAB59B280B7BEA00308095 /* Montserrat-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2DCAB595280B7BEA00308095 /* Montserrat-Light.ttf */; };
 		2DCAB59C280B7BEA00308095 /* Montserrat-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2DCAB596280B7BEA00308095 /* Montserrat-Medium.ttf */; };
-		2DD3988F280C1A6600A575DA /* AmazonIVSBroadcast.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2DD3988A280C148C00A575DA /* AmazonIVSBroadcast.xcframework */; };
-		2DD39890280C1A6600A575DA /* AmazonIVSBroadcast.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2DD3988A280C148C00A575DA /* AmazonIVSBroadcast.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		2DD398D32810B58000A575DA /* AppEnvironment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DD398D12810B58000A575DA /* AppEnvironment.swift */; };
 		2DD398D42810B58000A575DA /* Servers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DD398D22810B58000A575DA /* Servers.swift */; };
 		2DD398EA2810C1B100A575DA /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DD398E92810C1B100A575DA /* LoadingView.swift */; };
@@ -69,7 +69,7 @@
 			files = (
 				2DCAB49C280ABBE700308095 /* ClickmeliveHostCoreIOS.framework in Embed Frameworks */,
 				2DCAB46D280AB66D00308095 /* ClickmeliveHostCore.framework in Embed Frameworks */,
-				2DD39890280C1A6600A575DA /* AmazonIVSBroadcast.xcframework in Embed Frameworks */,
+				2D8CB34B2816AEFA00B7F40E /* AmazonIVSBroadcast.xcframework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -134,8 +134,8 @@
 			files = (
 				2DCAB49B280ABBE700308095 /* ClickmeliveHostCoreIOS.framework in Frameworks */,
 				2DCAB46C280AB66D00308095 /* ClickmeliveHostCore.framework in Frameworks */,
+				2D8CB34A2816AEFA00B7F40E /* AmazonIVSBroadcast.xcframework in Frameworks */,
 				2D9E0D4F2812D611000E4321 /* KeychainSwift in Frameworks */,
-				2DD3988F280C1A6600A575DA /* AmazonIVSBroadcast.xcframework in Frameworks */,
 				2DD398F02810C47900A575DA /* Lottie in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -664,7 +664,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = P624PPMU63;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = ClickMeLiveHost/Info.plist;
@@ -695,7 +695,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = P624PPMU63;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = ClickMeLiveHost/Info.plist;

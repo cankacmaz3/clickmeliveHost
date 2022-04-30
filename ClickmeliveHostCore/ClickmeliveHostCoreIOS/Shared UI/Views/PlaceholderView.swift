@@ -76,6 +76,6 @@ final class PlaceholderView: UIView {
         ivPlaceholder.anchorCenterYToSuperview(constant: -50)
         ivPlaceholder.anchorCenterXToSuperview()
         
-        lblPlaceholder.anchor(ivPlaceholder.bottomAnchor, left: leftAnchor, bottom: nil, right: rightAnchor, topConstant: 40, leftConstant: 43, bottomConstant: 0, rightConstant: 43, widthConstant: 0, heightConstant: 0)
+        lblPlaceholder.anchor(ivPlaceholder.bottomAnchor, left: leftAnchor, bottom: nil, right: rightAnchor, topConstant: 15, leftConstant: 43, bottomConstant: 0, rightConstant: 43, widthConstant: 0, heightConstant: 0)
     }
 }

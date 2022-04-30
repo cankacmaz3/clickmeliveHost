@@ -24,7 +24,7 @@ public final class ListEventsViewModel {
     // MARK: - Observers
     public var onEventsLoadingStateChange: Observer<Bool>?
     public var onEventsLoaded: Observer<[Event]>?
-    public var onError: (() -> Void)?
+    public var onError: ((String) -> Void)?
     
     private var nextEventResult: ((@escaping Next<EventResponse>) -> ())? = nil
     
@@ -40,6 +40,10 @@ public final class ListEventsViewModel {
             return nil
         }
     }
+    
+    private var errorMessage: String {
+        Localized.Error.defaultMessage
+    }
 }
 
 // MARK: - Network related methods
@@ -50,14 +54,15 @@ extension ListEventsViewModel {
         
         onEventsLoadingStateChange?(true)
         eventLoader.load(with: status, page: 1) { [weak self] result in
+            guard let self = self else { return }
             switch result {
             case let .success(eventResponse):
-                self?.events = []
-                self?.newEventsHandling(result: eventResponse, error: nil)
+                self.events = []
+                self.newEventsHandling(result: eventResponse, error: nil)
             case .failure:
-                self?.onError?()
+                self.onError?(self.errorMessage)
             }
-            self?.onEventsLoadingStateChange?(false)
+            self.onEventsLoadingStateChange?(false)
         }
     }
     

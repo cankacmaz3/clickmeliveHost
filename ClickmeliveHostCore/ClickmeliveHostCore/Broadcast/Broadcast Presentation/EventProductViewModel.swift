@@ -19,6 +19,7 @@ public final class EventProductViewModel {
     public var onEventProductsLoaded: Observer<[Product]>?
     
     public func loadEventProducts(eventId: Int) {
+        print(eventId)
         eventProductLoader.load(eventId: eventId) { [weak self] result in
             switch result {
             case let .success(products):

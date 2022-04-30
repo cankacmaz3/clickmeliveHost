@@ -113,13 +113,11 @@
 		2DCAB4DE280ADD0000308095 /* EventCategoryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DCAB4DD280ADD0000308095 /* EventCategoryViewModel.swift */; };
 		2DCAB4E0280ADDCF00308095 /* ListEventRefreshController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DCAB4DF280ADDCF00308095 /* ListEventRefreshController.swift */; };
 		2DCAB4E2280ADF2900308095 /* ClickmeliveHostCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2DCAB452280AB5DF00308095 /* ClickmeliveHostCore.framework */; };
-		2DCAB4E3280ADF2900308095 /* ClickmeliveHostCore.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2DCAB452280AB5DF00308095 /* ClickmeliveHostCore.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		2DCAB4F1280AE66400308095 /* Date+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DCAB4F0280AE66400308095 /* Date+Extensions.swift */; };
 		2DCAB557280B679F00308095 /* EventViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DCAB556280B679F00308095 /* EventViewModel.swift */; };
 		2DCAB55C280B6B0600308095 /* BroadcastViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DCAB55B280B6B0600308095 /* BroadcastViewController.swift */; };
 		2DCAB55E280B6B0F00308095 /* BroadcastView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DCAB55D280B6B0F00308095 /* BroadcastView.swift */; };
 		2DD39888280C12E400A575DA /* AmazonIVSBroadcast.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2DD39885280C128000A575DA /* AmazonIVSBroadcast.xcframework */; };
-		2DD39889280C12E400A575DA /* AmazonIVSBroadcast.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2DD39885280C128000A575DA /* AmazonIVSBroadcast.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		2DD398BE280F7F7A00A575DA /* EventCategoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DD398BD280F7F7A00A575DA /* EventCategoryCell.swift */; };
 		2DD398C1280FF65200A575DA /* EventCategoryCellController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DD398C0280FF65200A575DA /* EventCategoryCellController.swift */; };
 		2DD398C3280FF70E00A575DA /* UICollectionView+Dequeueing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DD398C2280FF70E00A575DA /* UICollectionView+Dequeueing.swift */; };
@@ -158,21 +156,6 @@
 			remoteInfo = ClickmeliveHostCore;
 		};
 /* End PBXContainerItemProxy section */
-
-/* Begin PBXCopyFilesBuildPhase section */
-		2DCAB4E6280ADF2900308095 /* Embed Frameworks */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-				2DD39889280C12E400A575DA /* AmazonIVSBroadcast.xcframework in Embed Frameworks */,
-				2DCAB4E3280ADF2900308095 /* ClickmeliveHostCore.framework in Embed Frameworks */,
-			);
-			name = "Embed Frameworks";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		2D33E43128159C2E00638293 /* ElapsedTimeAndDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElapsedTimeAndDataManager.swift; sourceTree = "<group>"; };
@@ -1113,7 +1096,6 @@
 				2DCAB481280ABBB600308095 /* Sources */,
 				2DCAB482280ABBB600308095 /* Frameworks */,
 				2DCAB483280ABBB600308095 /* Resources */,
-				2DCAB4E6280ADF2900308095 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);

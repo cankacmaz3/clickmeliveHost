@@ -3,4 +3,54 @@
    uuid = "5A6416D2-4D53-4DED-BF23-FEAE0097EBDF"
    type = "0"
    version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "A59A7C96-0F94-4908-88B7-E00C2BD7345E"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ClickmeliveHostCore/ClickmeliveHostCore/Broadcast/Broadcast API/RemoteEventProductLoader.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "52"
+            endingLineNumber = "52"
+            landmarkName = "map(_:from:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "A59A7C96-0F94-4908-88B7-E00C2BD7345E - ee5f5e2ebce4d395"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "static ClickmeliveHostCore.RemoteEventProductLoader.map(_: Foundation.Data, from: __C.NSHTTPURLResponse) -&gt; Swift.Result&lt;Swift.Array&lt;ClickmeliveHostCore.Product&gt;, Swift.Error&gt;"
+                  moduleName = "ClickmeliveHostCore"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/cankacmaz/Documents/IOS/clickmelivehost/ClickmeliveHostCore/ClickmeliveHostCore/Broadcast/Broadcast%20API/RemoteEventProductLoader.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "52"
+                  endingLineNumber = "52"
+                  offsetFromSymbolStart = "436">
+               </Location>
+               <Location
+                  uuid = "A59A7C96-0F94-4908-88B7-E00C2BD7345E - ee5f5e2ebce4d395"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "static ClickmeliveHostCore.RemoteEventProductLoader.map(_: Foundation.Data, from: __C.NSHTTPURLResponse) -&gt; Swift.Result&lt;Swift.Array&lt;ClickmeliveHostCore.Product&gt;, Swift.Error&gt;"
+                  moduleName = "ClickmeliveHostCore"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/cankacmaz/Documents/IOS/clickmelivehost/ClickmeliveHostCore/ClickmeliveHostCore/Broadcast/Broadcast%20API/RemoteEventProductLoader.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "52"
+                  endingLineNumber = "52"
+                  offsetFromSymbolStart = "300">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
 </Bucket>

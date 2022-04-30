@@ -43,8 +43,8 @@ final class ListEventsUIComposer {
             })
         }
         
-        viewModel.onError = {
-            print("failure")
+        viewModel.onError = { message in
+            router.openAlertModule(message: message)
         }
         
         return listEventsViewController

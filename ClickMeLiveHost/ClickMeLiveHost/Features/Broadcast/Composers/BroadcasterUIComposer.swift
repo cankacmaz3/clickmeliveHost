@@ -22,9 +22,7 @@ final class BroadcasterUIComposer {
         let client = URLSessionHTTPClient(session: URLSession(configuration: sessionConfig))
         let loadingClient = LoadingViewHTTPClientDecorator(decoratee: client, loadingView: LoadingView.instance)
         
-        let authenticationTokenHeader = ["Token": "eyJ1c2VySWQiOjk2LCJ0eXBlIjoyLCJkZXZpY2VJZCI6MTk1LCJleHBpcmUiOiIyMDk5LTEyLTMxVDAwOjAwOjAwLjAwMFoiLCJ0aW1lIjoiMjAyMi0wNC0yMFQxOTo0NDoyMy41NTJaIn0=.MTk1MzcxZjJmNjE3Yjg1OTUxMWNiMGY0MGMyZWRkOWMxZjlkYTM5ZTEzZmY4ODQwODgyMDZkMDA1NTk0NzlkMQ=="]
-        
-        let eventProductLoader = RemoteEventProductLoader(client: client, baseURL: AppEnvironment.baseURL, authenticationTokenHeader: authenticationTokenHeader)
+        let eventProductLoader = RemoteEventProductLoader(client: client, baseURL: AppEnvironment.baseURL, authenticationTokenHeader: KeychainHelper.instance.getAuthenticationTokenHeader())
         let eventProductViewModel = EventProductViewModel(eventProductLoader: eventProductLoader)
         let broadcastEventProductsController = BroadcastEventProductsController(viewModel: eventProductViewModel)
         
