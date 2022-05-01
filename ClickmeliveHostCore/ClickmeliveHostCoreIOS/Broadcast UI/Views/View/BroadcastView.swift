@@ -23,24 +23,23 @@ extension BroadcastView {
     func updateStreamStatus(broadcastViewModel: BroadcastViewModel) {
         lblStreamStatus.text = broadcastViewModel.streamStatus
         
-        streamStatusView.layer.borderColor = broadcastViewModel.isRunning ?
-        Constants.streamStatusStopColor.cgColor:
-        Constants.streamStatusStartColor.cgColor
+        ivStream.image = UIImage(named: broadcastViewModel.isRunning ?
+                                 Constants.streamStopImage:
+                                 Constants.streamStartImage,
+                                 in: Bundle(for: BroadcastView.self),
+                                 compatibleWith: nil)
         
-        lblStreamStatus.textColor = broadcastViewModel.isRunning ?
-        Constants.streamStatusStopColor:
-        Constants.streamStatusStartColor
     }
     
     func toggleEventProductsVisibility(itemCount: Int) {
         collectionView.isHidden.toggle()
-        productToggleView.backgroundColor = collectionView.isHidden == true ?
+        productsToggleView.backgroundColor = collectionView.isHidden == true ?
                                             Constants.showEventsProductColor :
                                             Constants.hideEventsProductColor
     }
     
     func showProductToggleView(count: Int) {
-        productToggleView.isHidden = false
+        productsToggleView.isHidden = false
         collectionView.isHidden = false
         ivProductToggle.showBadge(blink: false, text: "\(count)", badgeColor: Constants.badgeColor)
     }
@@ -50,8 +49,8 @@ extension BroadcastView {
     }
     
     func handleSoundImage(isMuted: Bool) {
-        ivSound.image = UIImage(named: isMuted ? Constants.soundOffImage:
-                                                 Constants.soundOnImage,
+        ivSound.image = UIImage(named: isMuted ? Constants.soundDisabledImage:
+                                                 Constants.soundEnabledImage,
                                   in: Bundle(for: BroadcastView.self),
                                   compatibleWith: nil)
     }
@@ -61,21 +60,23 @@ public final class BroadcastView: UIView, Layoutable {
     
     private enum Constants {
         static let bgColor: UIColor = .black.withAlphaComponent(0.8)
-        static let soundOnImage: String = "img_sound_on"
-        static let soundOffImage: String = "img_sound_off"
-        static let rotateCameraImage: String = "img_rotate_camera"
+        static let soundEnabledImage: String = "img_sound_enabled"
+        static let soundDisabledImage: String = "img_sound_disabled"
+        static let rotateImage: String = "img_rotate"
+        static let cameraImage: String = "img_camera"
+        static let streamStartImage: String = "img_stream_start"
+        static let streamStopImage: String = "img_stream_stop"
         static let eventProductsImage: String = "icon_event_products"
         static let viewerImage: String = "icon_viewer"
         static let closeImage: String = "img_back"
         
-        static let hideEventsProductColor: UIColor = UIColor.rgb(red: 255, green: 0, blue: 27).withAlphaComponent(0.15)
-        static let showEventsProductColor: UIColor = .black.withAlphaComponent(0.15)
+        static let hideEventsProductColor: UIColor = UIColor.rgb(red: 255, green: 0, blue: 27).withAlphaComponent(0.3)
+        static let showEventsProductColor: UIColor = UIColor.rgb(red: 16, green: 139, blue: 0).withAlphaComponent(0.3)
         static let badgeColor: UIColor = Colors.primary
         static let streamStatusBgColor: UIColor = UIColor.rgb(red: 73, green: 80, blue: 87)
-        static let streamStatusStartColor: UIColor = UIColor.rgb(red: 42, green: 185, blue: 48)
-        static let streamStatusStopColor: UIColor = UIColor.rgb(red: 255, green: 0, blue: 27)
     }
     
+    // MARK: - Back
     let closeView: UIView = {
         let view = UIView()
         return view
@@ -87,6 +88,7 @@ public final class BroadcastView: UIView, Layoutable {
         return iv
     }()
     
+    // MARK: - Viewers
     let viewersView: UIView = {
         let view = UIView()
         view.backgroundColor = .black.withAlphaComponent(0.15)
@@ -111,9 +113,10 @@ public final class BroadcastView: UIView, Layoutable {
         return label
     }()
     
-    let productToggleView: UIView = {
+    // MARK: - Products Toggle
+    let productsToggleView: UIView = {
         let view = UIView()
-        view.layer.cornerRadius = 21
+        view.layer.cornerRadius = 28
         view.backgroundColor = Constants.hideEventsProductColor
         view.isHidden = true
         return view
@@ -127,6 +130,7 @@ public final class BroadcastView: UIView, Layoutable {
         return imageView
     }()
     
+    // MARK: - Products Collection View
     let collectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .horizontal
@@ -138,63 +142,143 @@ public final class BroadcastView: UIView, Layoutable {
         return cv
     }()
 
-    
+    // MARK: - Camera Preview
     let previewView: UIView = {
         let view = UIView()
-        view.backgroundColor = .white
+        view.backgroundColor = .black
         return view
     }()
     
+    // MARK: - Control Buttons
     private let controlButtonsView: UIView = {
         let view = UIView()
         view.backgroundColor = Constants.bgColor
         return view
     }()
     
-    let ivSound: UIImageView = {
-        let imageView = UIImageView()
-        imageView.image = UIImage(named: Constants.soundOnImage,
-                                  in: Bundle(for: BroadcastView.self),
-                                  compatibleWith: nil)
-        imageView.isUserInteractionEnabled = true
-        return imageView
+    private let controlButtonsStackView: UIStackView = {
+        let stackView = UIStackView()
+        stackView.axis = .horizontal
+        stackView.distribution = .equalSpacing
+        return stackView
     }()
     
-    let ivRotateCamera: UIImageView = {
-        let imageView = UIImageView()
-        imageView.image = UIImage(named: Constants.rotateCameraImage,
-                                  in: Bundle(for: BroadcastView.self),
-                                  compatibleWith: nil)
-        imageView.isUserInteractionEnabled = true
-        return imageView
-    }()
-    
-    private let stackView: UIStackView = {
+    private let soundStackView: UIStackView = {
         let stackView = UIStackView()
         stackView.axis = .vertical
-        stackView.spacing = 6
+        stackView.spacing = 8
         stackView.distribution = .fill
         return stackView
     }()
     
-    private let streamStatusContainer: UIView = {
+    let soundImageContainer: UIView = {
         let view = UIView()
         return view
     }()
     
-    let streamStatusView: UIView = {
+    private let ivSound: UIImageView = {
+        let imageView = UIImageView()
+        imageView.image = UIImage(named: Constants.soundEnabledImage,
+                                  in: Bundle(for: BroadcastView.self),
+                                  compatibleWith: nil)
+        imageView.isUserInteractionEnabled = true
+        return imageView
+    }()
+    
+    private let lblSound: UILabel = {
+        let label = UILabel()
+        label.font = UIFont(name: Fonts.medium, size: 12)
+        label.textColor = .white
+        label.text = "Mikrofon"
+        return label
+    }()
+    
+    private let cameraStackView: UIStackView = {
+        let stackView = UIStackView()
+        stackView.axis = .vertical
+        stackView.spacing = 8
+        stackView.distribution = .fill
+        return stackView
+    }()
+    
+    let cameraImageContainer: UIView = {
         let view = UIView()
-        view.backgroundColor = Constants.streamStatusBgColor
-        view.layer.borderColor = Constants.streamStatusStartColor.cgColor
-        view.layer.borderWidth = 1.0
-        view.layer.cornerRadius = 23
         return view
+    }()
+    
+    private let ivCamera: UIImageView = {
+        let imageView = UIImageView()
+        imageView.image = UIImage(named: Constants.cameraImage,
+                                  in: Bundle(for: BroadcastView.self),
+                                  compatibleWith: nil)
+        imageView.isUserInteractionEnabled = true
+        return imageView
+    }()
+    
+    private let lblCamera: UILabel = {
+        let label = UILabel()
+        label.font = UIFont(name: Fonts.medium, size: 12)
+        label.textColor = .white
+        label.text = "Kamera"
+        return label
+    }()
+    
+    private let rotateStackView: UIStackView = {
+        let stackView = UIStackView()
+        stackView.axis = .vertical
+        stackView.spacing = 8
+        stackView.distribution = .fill
+        return stackView
+    }()
+    
+    let rotateImageContainer: UIView = {
+        let view = UIView()
+        return view
+    }()
+    
+    private let ivRotate: UIImageView = {
+        let imageView = UIImageView()
+        imageView.image = UIImage(named: Constants.rotateImage,
+                                  in: Bundle(for: BroadcastView.self),
+                                  compatibleWith: nil)
+        imageView.isUserInteractionEnabled = true
+        return imageView
+    }()
+    
+    private let lblRotate: UILabel = {
+        let label = UILabel()
+        label.font = UIFont(name: Fonts.medium, size: 12)
+        label.textColor = .white
+        label.text = "Döndür"
+        return label
+    }()
+    
+    private let streamStackView: UIStackView = {
+        let stackView = UIStackView()
+        stackView.axis = .vertical
+        stackView.spacing = 8
+        stackView.distribution = .fill
+        return stackView
+    }()
+    
+    let streamImageContainer: UIView = {
+        let view = UIView()
+        return view
+    }()
+    
+    private let ivStream: UIImageView = {
+        let imageView = UIImageView()
+        imageView.image = UIImage(named: Constants.streamStartImage,
+                                  in: Bundle(for: BroadcastView.self),
+                                  compatibleWith: nil)
+        imageView.isUserInteractionEnabled = true
+        return imageView
     }()
     
     let lblStreamStatus: UILabel = {
         let label = UILabel()
         label.font = UIFont(name: Fonts.medium, size: 12)
-        label.textColor = Constants.streamStatusStartColor
+        label.textColor = .white
         
         return label
     }()
@@ -214,16 +298,32 @@ public final class BroadcastView: UIView, Layoutable {
         
         addSubview(controlButtonsView)
         
-        streamStatusView.addSubview(lblTimer)
-        streamStatusContainer.addSubview(streamStatusView)
-        
-        [streamStatusContainer, lblStreamStatus].forEach {
-            stackView.addArrangedSubview($0)
+        soundImageContainer.addSubview(ivSound)
+        [soundImageContainer, lblSound].forEach {
+            soundStackView.addArrangedSubview($0)
         }
         
-        [ivSound, stackView, ivRotateCamera].forEach {
-            controlButtonsView.addSubview($0)
+        cameraImageContainer.addSubview(ivCamera)
+        [cameraImageContainer, lblCamera].forEach {
+            cameraStackView.addArrangedSubview($0)
         }
+        
+        rotateImageContainer.addSubview(ivRotate)
+        [rotateImageContainer, lblRotate].forEach {
+            rotateStackView.addArrangedSubview($0)
+        }
+        
+        ivStream.addSubview(lblTimer)
+        streamImageContainer.addSubview(ivStream)
+        [streamImageContainer, lblStreamStatus].forEach {
+            streamStackView.addArrangedSubview($0)
+        }
+        
+        [soundStackView, cameraStackView, rotateStackView, streamStackView].forEach {
+            controlButtonsStackView.addArrangedSubview($0)
+        }
+        
+        controlButtonsView.addSubview(controlButtonsStackView)
         
         [ivViewer, lblViewer].forEach {
             viewersView.addSubview($0)
@@ -231,8 +331,8 @@ public final class BroadcastView: UIView, Layoutable {
         
         addSubview(viewersView)
         
-        productToggleView.addSubview(ivProductToggle)
-        addSubview(productToggleView)
+        productsToggleView.addSubview(ivProductToggle)
+        addSubview(productsToggleView)
         addSubview(collectionView)
         
         closeView.addSubview(ivClose)
@@ -253,34 +353,39 @@ public final class BroadcastView: UIView, Layoutable {
         
         lblViewer.anchor(viewersView.topAnchor, left: ivViewer.rightAnchor, bottom: viewersView.bottomAnchor, right: viewersView.rightAnchor, topConstant: 0, leftConstant: 3, bottomConstant: 0, rightConstant: 8, widthConstant: 0, heightConstant: 0)
         
-        productToggleView.anchor(nil, left: leftAnchor, bottom: nil, right: nil, topConstant: 0, leftConstant: 16, bottomConstant: 0, rightConstant: 0, widthConstant: 42, heightConstant: 42)
+        productsToggleView.anchor(nil, left: leftAnchor, bottom: nil, right: nil, topConstant: 0, leftConstant: 16, bottomConstant: 0, rightConstant: 0, widthConstant: 56, heightConstant: 56)
         
-        addConstraint(NSLayoutConstraint(item: productToggleView, attribute: .centerY, relatedBy: .equal, toItem: collectionView, attribute: .centerY, multiplier: 1.0, constant: 0))
+        addConstraint(NSLayoutConstraint(item: productsToggleView, attribute: .centerY, relatedBy: .equal, toItem: collectionView, attribute: .centerY, multiplier: 1.0, constant: 0))
         
         ivProductToggle.anchorCenterSuperview()
-        ivProductToggle.constrainWidth(13.35)
-        ivProductToggle.constrainHeight(21.45)
+        ivProductToggle.constrainWidth(27)
+        ivProductToggle.constrainHeight(27)
         
-        collectionView.anchor(viewersView.bottomAnchor, left: productToggleView.rightAnchor, bottom: nil, right: rightAnchor, topConstant: 10, leftConstant: 10, bottomConstant: 0, rightConstant: 0, widthConstant: 0, heightConstant: 138)
+        collectionView.anchor(viewersView.bottomAnchor, left: productsToggleView.rightAnchor, bottom: nil, right: rightAnchor, topConstant: 10, leftConstant: 10, bottomConstant: 0, rightConstant: 0, widthConstant: 0, heightConstant: 138)
         
         previewView.anchor(topAnchor, left: leftAnchor, bottom: safeAreaLayoutGuide.bottomAnchor, right: rightAnchor, topConstant: 0, leftConstant: 0, bottomConstant: 2, rightConstant: 0, widthConstant: 0, heightConstant: 0)
         
-        controlButtonsView.anchor(nil, left: leftAnchor, bottom: safeAreaLayoutGuide.bottomAnchor, right: rightAnchor, topConstant: 0, leftConstant: 0, bottomConstant: 0, rightConstant: 0, widthConstant: 0, heightConstant: 101)
+        controlButtonsView.anchor(nil, left: leftAnchor, bottom: safeAreaLayoutGuide.bottomAnchor, right: rightAnchor, topConstant: 0, leftConstant: 0, bottomConstant: 0, rightConstant: 0, widthConstant: 0, heightConstant: 130)
         
-        lblTimer.anchor(streamStatusView.topAnchor, left: streamStatusView.leftAnchor, bottom: streamStatusView.bottomAnchor, right: streamStatusView.rightAnchor, topConstant: 0, leftConstant: 3, bottomConstant: 0, rightConstant: 3, widthConstant: 0, heightConstant: 0)
+        ivSound.anchorCenterXToSuperview()
+        ivSound.constrainHeight(56)
+        ivSound.constrainWidth(56)
         
-        streamStatusView.anchorCenterSuperview()
-        streamStatusView.constrainWidth(46)
-        streamStatusView.constrainHeight(46)
+        ivCamera.anchorCenterXToSuperview()
+        ivCamera.constrainHeight(56)
+        ivCamera.constrainWidth(56)
         
-        ivSound.anchor(nil, left: controlButtonsView.leftAnchor, bottom: nil, right: nil, topConstant: 0, leftConstant: 16, bottomConstant: 0, rightConstant: 0, widthConstant: 40, heightConstant: 40)
-        ivSound.anchorCenterYToSuperview()
+        ivRotate.anchorCenterXToSuperview()
+        ivRotate.constrainHeight(56)
+        ivRotate.constrainWidth(56)
         
-        ivRotateCamera.anchor(nil, left: nil, bottom: nil, right: rightAnchor, topConstant: 0, leftConstant: 0, bottomConstant: 0, rightConstant: 16, widthConstant: 40, heightConstant: 40)
-        ivRotateCamera.anchorCenterYToSuperview()
+        ivStream.anchorCenterXToSuperview()
+        ivStream.constrainHeight(56)
+        ivStream.constrainWidth(56)
         
-        streamStatusContainer.constrainHeight(48)
+        lblTimer.fillSuperview()
         
-        stackView.anchorCenterSuperview()
+        controlButtonsStackView.anchor(controlButtonsView.topAnchor, left: controlButtonsView.leftAnchor, bottom: nil, right: controlButtonsView.rightAnchor, topConstant: 27, leftConstant: 27, bottomConstant: 0, rightConstant: 27, widthConstant: 0, heightConstant: 79)
+        
     }
 }

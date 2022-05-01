@@ -14,7 +14,7 @@ extension ProductCell {
         lblProductName.text = viewModel.name
         lblPrice.text = viewModel.price
         lblDiscountedPrice.attributedText = viewModel.discountedPrice?.strikeThrough()
-        lblIndex.text = "\(index)"
+        lblIndex.text = "\(index + 1)"
     }
     
     private func setProductImage(image: String?) {
@@ -27,7 +27,7 @@ extension ProductCell {
 final class ProductCell: UICollectionViewCell {
     
     private enum Constants {
-        static let itemIndexViewColor: UIColor = UIColor.rgb(red: 221, green: 226, blue: 229)
+        static let itemIndexViewColor: UIColor = UIColor.rgb(red: 245, green: 245, blue: 245)
     }
     
     private let lblProductName: UILabel = {
@@ -80,9 +80,8 @@ final class ProductCell: UICollectionViewCell {
     private let lblIndex: UILabel = {
         let label = UILabel()
         label.font = UIFont(name: Fonts.semibold, size: 10)
-        label.textColor = .white
+        label.textColor = Colors.primaryText
         label.textAlignment = .center
-        label.UILabelTextShadow()
         return label
     }()
     

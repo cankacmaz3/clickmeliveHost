@@ -84,12 +84,12 @@ extension BroadcastViewController {
     
     public override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        self.navigationController?.setNavigationBarHidden(true, animated: animated)
+        self.navigationController?.setNavigationBarHidden(true, animated: false)
     }
     
     public override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
-        self.navigationController?.setNavigationBarHidden(false, animated: animated)
+        self.navigationController?.setNavigationBarHidden(false, animated: false)
         viewerViewModel.removeViewerListener()
     }
     
@@ -116,17 +116,17 @@ extension BroadcastViewController {
     }
     
     private func registerActions() {
-        let gesture = UITapGestureRecognizer(target: self, action: #selector(toggleEventProducts))
-        layoutableView.productToggleView.addGestureRecognizer(gesture)
-        
-        let startStreamGesture = UITapGestureRecognizer(target: self, action: #selector(startTapped))
-        layoutableView.streamStatusView.addGestureRecognizer(startStreamGesture)
+        let productsToggleGesture = UITapGestureRecognizer(target: self, action: #selector(toggleEventProducts))
+        layoutableView.productsToggleView.addGestureRecognizer(productsToggleGesture)
         
         let soundGesture = UITapGestureRecognizer(target: self, action: #selector(muteTapped))
-        layoutableView.ivSound.addGestureRecognizer(soundGesture)
+        layoutableView.soundImageContainer.addGestureRecognizer(soundGesture)
         
         let rotateGesture = UITapGestureRecognizer(target: self, action: #selector(cameraTapped))
-        layoutableView.ivRotateCamera.addGestureRecognizer(rotateGesture)
+        layoutableView.rotateImageContainer.addGestureRecognizer(rotateGesture)
+        
+        let streamGesture = UITapGestureRecognizer(target: self, action: #selector(streamTapped))
+        layoutableView.streamImageContainer.addGestureRecognizer(streamGesture)
         
         let closeGesture = UITapGestureRecognizer(target: self, action: #selector(closeTapped))
         layoutableView.closeView.addGestureRecognizer(closeGesture)

@@ -38,8 +38,7 @@ public final class EventViewModel {
     private var soonStatusTimeInterval: Double { return 60 * 10 * 6 } // 60 minutes
    
     public var isStatusStartBroadcast: Bool {
-        return true
-        guard let startingDate = model.startingDate, status == .UPCOMING else {
+        guard let startingDate = model.startingDate, status == .UPCOMING || status == .LIVE else {
             return false
         }
         
@@ -56,7 +55,7 @@ public final class EventViewModel {
     
     public var localizedStatus: String? {
         switch model.status {
-        case .UPCOMING:
+        case .UPCOMING, .LIVE:
             if isStatusStartBroadcast == true {
                 return Localized.ListEvents.statusStartBroadcast
             } else if isStatusSoon == true {

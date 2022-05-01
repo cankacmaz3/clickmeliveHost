@@ -107,7 +107,7 @@ extension BroadcastViewController {
 
 // MARK: - Broadcaster Actions
 extension BroadcastViewController {
-    @objc func startTapped() {
+    @objc func streamTapped() {
         if self.broadcastViewModel.isRunning {
             broadcastViewModel.updateStatus(eventId: eventId, with: .ENDED)
         } else {

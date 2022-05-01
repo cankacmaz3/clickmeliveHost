@@ -1,4 +1,4 @@
-/* 
+/*
   Broadcast.strings
   ClickmeliveHostCore
 
@@ -6,5 +6,5 @@
   
 */
 
-"BROADCAST_START" = "Canlı yayın başlat";
-"BROADCAST_STOP" = "Yayını durdur";
+"BROADCAST_START" = "Başlat";
+"BROADCAST_STOP" = "Kapat";
