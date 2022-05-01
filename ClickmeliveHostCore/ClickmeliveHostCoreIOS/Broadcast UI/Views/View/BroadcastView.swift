@@ -141,7 +141,7 @@ public final class BroadcastView: UIView, Layoutable {
     
     let previewView: UIView = {
         let view = UIView()
-        view.backgroundColor = .black
+        view.backgroundColor = .white
         return view
     }()
     

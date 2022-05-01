@@ -51,7 +51,7 @@ final public class ListEventsView: UIView, Layoutable {
         
         tv.separatorStyle = .none
         tv.showsVerticalScrollIndicator = false
-        tv.backgroundColor = .white
+        tv.backgroundColor = .clear
         
         return tv
     }()
@@ -67,8 +67,8 @@ final public class ListEventsView: UIView, Layoutable {
         backgroundColor = .white
         
         addSubview(categoryCollectionView)
-        addSubview(listEventsTableView)
         addSubview(placeholderView)
+        addSubview(listEventsTableView)
     }
     
     public func setupLayout() {

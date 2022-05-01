@@ -55,8 +55,14 @@ extension EventEndpoints {
     var queryItems: [URLQueryItem]? {
         switch self {
         case let .statusEvents(status, page):
-            return [URLQueryItem(name: "page", value: "\(page)"),
-                    URLQueryItem(name: "status", value: "\(status.rawValue)")]
+            var queryItems = [URLQueryItem(name: "page", value: "\(page)"),
+                              URLQueryItem(name: "status[]", value: "\(status.rawValue)")]
+            
+            if status == .UPCOMING {
+                queryItems.append(URLQueryItem(name: "status[]", value: "\(Event.EventStatus.LIVE.rawValue)"))
+            }
+            
+            return queryItems
         case .getProducts:
             return [URLQueryItem(name: "page", value: "\(1)")]
         case .updateStatus:
