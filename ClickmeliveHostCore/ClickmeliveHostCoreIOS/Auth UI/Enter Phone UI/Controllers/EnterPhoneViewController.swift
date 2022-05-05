@@ -11,6 +11,8 @@ import ClickmeliveHostCore
 public final class EnterPhoneViewController: UIViewController, Layouting {
     public typealias ViewType = EnterPhoneView
     
+    public var onUsePasswordTapped: (() -> Void)?
+    
     private let viewModel: EnterPhoneViewModel
     
     public init(viewModel: EnterPhoneViewModel) {
@@ -29,11 +31,6 @@ public final class EnterPhoneViewController: UIViewController, Layouting {
         registerActions()
     }
     
-    public override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        layoutableView.tfPhone.text = nil
-    }
-    
     public override func loadView() {
         view = ViewType.create()
     }
@@ -43,8 +40,13 @@ public final class EnterPhoneViewController: UIViewController, Layouting {
         viewModel.sendCode(to: phone)
     }
     
+    @objc private func usePasswordTapped() {
+        onUsePasswordTapped?()
+    }
+    
     private func registerActions() {
         layoutableView.btnSendCode.addTarget(self, action: #selector(sendCodeTapped), for: .touchUpInside)
+        layoutableView.btnUsePassword.addTarget(self, action: #selector(usePasswordTapped), for: .touchUpInside)
     }
     
     @objc private func textFieldDidChange(_ textField: UITextField) {

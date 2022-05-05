@@ -8,3 +8,7 @@
 
 "BROADCAST_START" = "Başlat";
 "BROADCAST_STOP" = "Kapat";
+"BROADCAST_SOUND" = "Mikrofon";
+"BROADCAST_ROTATE" = "Döndür";
+"BROADCAST_CAMERA" = "Kamera";
+"BROADCAST_STARTING_DATE_ERROR" = "Yayın saatiniz gelmeden canlı\nyayın başlatamazsınız!\nYayın saatiniz %@";

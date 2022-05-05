@@ -86,6 +86,17 @@
 		2D9E0DA72813F4A8000E4321 /* BroadcastViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D9E0DA62813F4A8000E4321 /* BroadcastViewModel.swift */; };
 		2D9E0DAA2814021D000E4321 /* Broadcast.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2D9E0DAC2814021D000E4321 /* Broadcast.strings */; };
 		2D9E0DAF28140237000E4321 /* Localized+Broadcast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D9E0DAE28140237000E4321 /* Localized+Broadcast.swift */; };
+		2DA4D92E28244FD0008EFAF1 /* UIStackView+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DA4D92D28244FD0008EFAF1 /* UIStackView+Helpers.swift */; };
+		2DA4D9332824524B008EFAF1 /* UsePasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DA4D9322824524B008EFAF1 /* UsePasswordViewController.swift */; };
+		2DA4D93528245255008EFAF1 /* UsePasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DA4D93428245255008EFAF1 /* UsePasswordView.swift */; };
+		2DA4D939282452CC008EFAF1 /* UsePasswordViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DA4D938282452CC008EFAF1 /* UsePasswordViewModel.swift */; };
+		2DA4D93C282452FA008EFAF1 /* UsePassword.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2DA4D93E282452FA008EFAF1 /* UsePassword.strings */; };
+		2DA4D94128245377008EFAF1 /* Localized+UsePassword.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DA4D94028245377008EFAF1 /* Localized+UsePassword.swift */; };
+		2DA4D94C28246C57008EFAF1 /* PasswordAutheticator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DA4D94B28246C57008EFAF1 /* PasswordAutheticator.swift */; };
+		2DA4D94F28246CAB008EFAF1 /* LoginDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DA4D94E28246CAB008EFAF1 /* LoginDTO.swift */; };
+		2DA4D95128246D0A008EFAF1 /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DA4D95028246D0A008EFAF1 /* Login.swift */; };
+		2DA4D95328246D75008EFAF1 /* RemotePasswordAuthenticator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DA4D95228246D75008EFAF1 /* RemotePasswordAuthenticator.swift */; };
+		2DA4D95528246DBA008EFAF1 /* PasswordAuthenticationRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DA4D95428246DBA008EFAF1 /* PasswordAuthenticationRequest.swift */; };
 		2DBFF5F728119306006F7E40 /* LandingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DBFF5F628119306006F7E40 /* LandingViewController.swift */; };
 		2DBFF5F92811930F006F7E40 /* LandingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DBFF5F82811930F006F7E40 /* LandingView.swift */; };
 		2DC30FE42815D84E00766092 /* EventDetailLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DC30FE32815D84E00766092 /* EventDetailLoader.swift */; };
@@ -137,6 +148,11 @@
 		2DD398F92810CA5400A575DA /* Metadata.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DD398F82810CA5400A575DA /* Metadata.swift */; };
 		2DD398FB2810CA9900A575DA /* EventResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DD398FA2810CA9900A575DA /* EventResponse.swift */; };
 		2DD398FD2810D1AF00A575DA /* Broadcast.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2DD398FC2810D1AF00A575DA /* Broadcast.xcassets */; };
+		2DD6E291282196360087C61E /* BroadcastChatController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DD6E290282196360087C61E /* BroadcastChatController.swift */; };
+		2DD6E293282196C30087C61E /* ChatCellController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DD6E292282196C30087C61E /* ChatCellController.swift */; };
+		2DD6E295282196F60087C61E /* ChatCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DD6E294282196F60087C61E /* ChatCell.swift */; };
+		2DD6E29728219A850087C61E /* ChatViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DD6E29628219A850087C61E /* ChatViewModel.swift */; };
+		2DD6E29928219AC20087C61E /* ChatMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DD6E29828219AC20087C61E /* ChatMessage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -250,6 +266,18 @@
 		2D9E0DAB2814021D000E4321 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Broadcast.strings; sourceTree = "<group>"; };
 		2D9E0DAD28140221000E4321 /* tr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = tr; path = tr.lproj/Broadcast.strings; sourceTree = "<group>"; };
 		2D9E0DAE28140237000E4321 /* Localized+Broadcast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Localized+Broadcast.swift"; sourceTree = "<group>"; };
+		2DA4D92D28244FD0008EFAF1 /* UIStackView+Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStackView+Helpers.swift"; sourceTree = "<group>"; };
+		2DA4D9322824524B008EFAF1 /* UsePasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsePasswordViewController.swift; sourceTree = "<group>"; };
+		2DA4D93428245255008EFAF1 /* UsePasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsePasswordView.swift; sourceTree = "<group>"; };
+		2DA4D938282452CC008EFAF1 /* UsePasswordViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsePasswordViewModel.swift; sourceTree = "<group>"; };
+		2DA4D93D282452FA008EFAF1 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/UsePassword.strings; sourceTree = "<group>"; };
+		2DA4D93F282452FC008EFAF1 /* tr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = tr; path = tr.lproj/UsePassword.strings; sourceTree = "<group>"; };
+		2DA4D94028245377008EFAF1 /* Localized+UsePassword.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Localized+UsePassword.swift"; sourceTree = "<group>"; };
+		2DA4D94B28246C57008EFAF1 /* PasswordAutheticator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordAutheticator.swift; sourceTree = "<group>"; };
+		2DA4D94E28246CAB008EFAF1 /* LoginDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginDTO.swift; sourceTree = "<group>"; };
+		2DA4D95028246D0A008EFAF1 /* Login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Login.swift; sourceTree = "<group>"; };
+		2DA4D95228246D75008EFAF1 /* RemotePasswordAuthenticator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemotePasswordAuthenticator.swift; sourceTree = "<group>"; };
+		2DA4D95428246DBA008EFAF1 /* PasswordAuthenticationRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordAuthenticationRequest.swift; sourceTree = "<group>"; };
 		2DBFF5F628119306006F7E40 /* LandingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingViewController.swift; sourceTree = "<group>"; };
 		2DBFF5F82811930F006F7E40 /* LandingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingView.swift; sourceTree = "<group>"; };
 		2DC30FE32815D84E00766092 /* EventDetailLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventDetailLoader.swift; sourceTree = "<group>"; };
@@ -303,6 +331,11 @@
 		2DD398F82810CA5400A575DA /* Metadata.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Metadata.swift; sourceTree = "<group>"; };
 		2DD398FA2810CA9900A575DA /* EventResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventResponse.swift; sourceTree = "<group>"; };
 		2DD398FC2810D1AF00A575DA /* Broadcast.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Broadcast.xcassets; sourceTree = "<group>"; };
+		2DD6E290282196360087C61E /* BroadcastChatController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BroadcastChatController.swift; sourceTree = "<group>"; };
+		2DD6E292282196C30087C61E /* ChatCellController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatCellController.swift; sourceTree = "<group>"; };
+		2DD6E294282196F60087C61E /* ChatCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatCell.swift; sourceTree = "<group>"; };
+		2DD6E29628219A850087C61E /* ChatViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewModel.swift; sourceTree = "<group>"; };
+		2DD6E29828219AC20087C61E /* ChatMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatMessage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -619,6 +652,7 @@
 				2D9E0D592812F508000E4321 /* EventProductLoader.swift */,
 				2DC30FE32815D84E00766092 /* EventDetailLoader.swift */,
 				2D9E0D8A28133125000E4321 /* ViewerListener.swift */,
+				2DD6E29828219AC20087C61E /* ChatMessage.swift */,
 			);
 			path = "Broadcast Features";
 			sourceTree = "<group>";
@@ -641,6 +675,7 @@
 				2D9E0D7A28131699000E4321 /* ProductViewModel.swift */,
 				2D9E0D8C28133EED000E4321 /* ViewerViewModel.swift */,
 				2D9E0DA62813F4A8000E4321 /* BroadcastViewModel.swift */,
+				2DD6E29628219A850087C61E /* ChatViewModel.swift */,
 				2D9E0DAE28140237000E4321 /* Localized+Broadcast.swift */,
 				2D9E0DAC2814021D000E4321 /* Broadcast.strings */,
 			);
@@ -651,6 +686,7 @@
 			isa = PBXGroup;
 			children = (
 				2D9E0D712813017E000E4321 /* ProductCell.swift */,
+				2DD6E294282196F60087C61E /* ChatCell.swift */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -667,6 +703,7 @@
 			isa = PBXGroup;
 			children = (
 				2D9E0D7828131649000E4321 /* ProductCellController.swift */,
+				2DD6E292282196C30087C61E /* ChatCellController.swift */,
 			);
 			path = "Cell Controllers";
 			sourceTree = "<group>";
@@ -688,12 +725,77 @@
 			path = Utils;
 			sourceTree = "<group>";
 		};
+		2DA4D92F282451EB008EFAF1 /* Use Password UI */ = {
+			isa = PBXGroup;
+			children = (
+				2DA4D93028245235008EFAF1 /* Controllers */,
+				2DA4D9312824523A008EFAF1 /* Views */,
+			);
+			path = "Use Password UI";
+			sourceTree = "<group>";
+		};
+		2DA4D93028245235008EFAF1 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				2DA4D9322824524B008EFAF1 /* UsePasswordViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		2DA4D9312824523A008EFAF1 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				2DA4D93428245255008EFAF1 /* UsePasswordView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		2DA4D9362824528E008EFAF1 /* Use Password */ = {
+			isa = PBXGroup;
+			children = (
+				2DA4D94A28246C3A008EFAF1 /* Use Password Feature */,
+				2DA4D94D28246C92008EFAF1 /* Use Password API */,
+				2DA4D937282452B0008EFAF1 /* Use Password Presentation */,
+			);
+			path = "Use Password";
+			sourceTree = "<group>";
+		};
+		2DA4D937282452B0008EFAF1 /* Use Password Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				2DA4D938282452CC008EFAF1 /* UsePasswordViewModel.swift */,
+				2DA4D94028245377008EFAF1 /* Localized+UsePassword.swift */,
+				2DA4D93E282452FA008EFAF1 /* UsePassword.strings */,
+			);
+			path = "Use Password Presentation";
+			sourceTree = "<group>";
+		};
+		2DA4D94A28246C3A008EFAF1 /* Use Password Feature */ = {
+			isa = PBXGroup;
+			children = (
+				2DA4D94B28246C57008EFAF1 /* PasswordAutheticator.swift */,
+				2DA4D95028246D0A008EFAF1 /* Login.swift */,
+			);
+			path = "Use Password Feature";
+			sourceTree = "<group>";
+		};
+		2DA4D94D28246C92008EFAF1 /* Use Password API */ = {
+			isa = PBXGroup;
+			children = (
+				2DA4D95228246D75008EFAF1 /* RemotePasswordAuthenticator.swift */,
+				2DA4D94E28246CAB008EFAF1 /* LoginDTO.swift */,
+				2DA4D95428246DBA008EFAF1 /* PasswordAuthenticationRequest.swift */,
+			);
+			path = "Use Password API";
+			sourceTree = "<group>";
+		};
 		2DBFF5F128118F96006F7E40 /* Auth UI */ = {
 			isa = PBXGroup;
 			children = (
 				2DBFF5F3281192C5006F7E40 /* Landing UI */,
 				2D9E0CA82811EA2A000E4321 /* Enter Phone UI */,
 				2D9E0D0528122718000E4321 /* Validate Code UI */,
+				2DA4D92F282451EB008EFAF1 /* Use Password UI */,
 				2D9E0C842811CDC0000E4321 /* Auth.xcassets */,
 			);
 			path = "Auth UI";
@@ -705,6 +807,7 @@
 				2D9E0CE728121111000E4321 /* AuthEndpoints.swift */,
 				2D9E0CC62811F83C000E4321 /* Landing */,
 				2D9E0CC72811F844000E4321 /* Enter Phone */,
+				2DA4D9362824528E008EFAF1 /* Use Password */,
 				2D9E0D1228122A7E000E4321 /* Validate Code */,
 			);
 			path = Auth;
@@ -852,6 +955,7 @@
 				2DCAB4A6280ABDCD00308095 /* UIView+Helpers.swift */,
 				2D9E0D6D2812FDAC000E4321 /* String+Helpers.swift */,
 				2D9E0D802813215C000E4321 /* UILabel+Helpers.swift */,
+				2DA4D92D28244FD0008EFAF1 /* UIStackView+Helpers.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -1028,6 +1132,7 @@
 				2DCAB55B280B6B0600308095 /* BroadcastViewController.swift */,
 				2D9E0DA028139E7E000E4321 /* BroadcastVC+Stream.swift */,
 				2D9E0D752813025F000E4321 /* BroadcastEventProductsController.swift */,
+				2DD6E290282196360087C61E /* BroadcastChatController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -1248,6 +1353,7 @@
 				2D9E0DAA2814021D000E4321 /* Broadcast.strings in Resources */,
 				2D9E0D3D2812C7C6000E4321 /* Alert.strings in Resources */,
 				2D73B4F2281DE79A00C2F031 /* Profile.strings in Resources */,
+				2DA4D93C282452FA008EFAF1 /* UsePassword.strings in Resources */,
 				2D9E0D1928122AB3000E4321 /* ValidateCode.strings in Resources */,
 				2D9E0D0128122658000E4321 /* Error.strings in Resources */,
 			);
@@ -1301,6 +1407,7 @@
 				2DC30FE62815D8A500766092 /* RemoteEventDetailLoader.swift in Sources */,
 				2D9E0D3A2812C7A3000E4321 /* AlertViewModel.swift in Sources */,
 				2D9E0D9D28136D97000E4321 /* Localized+ListEvents.swift in Sources */,
+				2DA4D95128246D0A008EFAF1 /* Login.swift in Sources */,
 				2D9E0D342812B215000E4321 /* CMLErrorDTO.swift in Sources */,
 				2D9E0CE328120BC8000E4321 /* CreateCodeDTO.swift in Sources */,
 				2D73B4F5281DE7BB00C2F031 /* Localized+Profile.swift in Sources */,
@@ -1317,13 +1424,18 @@
 				2DC30FE42815D84E00766092 /* EventDetailLoader.swift in Sources */,
 				2D9E0D1428122A9A000E4321 /* ValidateCodeViewModel.swift in Sources */,
 				2DCAB4D7280ADB0500308095 /* RemoteEventLoader.swift in Sources */,
+				2DA4D939282452CC008EFAF1 /* UsePasswordViewModel.swift in Sources */,
+				2DD6E29928219AC20087C61E /* ChatMessage.swift in Sources */,
+				2DA4D94128245377008EFAF1 /* Localized+UsePassword.swift in Sources */,
 				2DCAB4D1280AD9BF00308095 /* Event.swift in Sources */,
 				2D9E0CDB2812047B000E4321 /* ValidationHandler.swift in Sources */,
 				2D9E0CD8281202B9000E4321 /* String+Extensions.swift in Sources */,
+				2DD6E29728219A850087C61E /* ChatViewModel.swift in Sources */,
 				2DCAB4C9280AD89200308095 /* EventEndpoints.swift in Sources */,
 				2D9E0D422812C7E1000E4321 /* Localized+Alert.swift in Sources */,
 				2D9E0C9E2811E7B8000E4321 /* Localized+Landing.swift in Sources */,
 				2DCAB475280ABACF00308095 /* HTTPURLResponse+StatusCode.swift in Sources */,
+				2DA4D94F28246CAB008EFAF1 /* LoginDTO.swift in Sources */,
 				2D9E0D602812F5A9000E4321 /* Product.swift in Sources */,
 				2D9E0CA72811E82B000E4321 /* LandingViewModel.swift in Sources */,
 				2D9E0CCA2811F866000E4321 /* EnterPhoneViewModel.swift in Sources */,
@@ -1337,6 +1449,8 @@
 				2D9E0D642812F63E000E4321 /* ProductDTO.swift in Sources */,
 				2DCAB4CB280AD94800308095 /* EventLoader.swift in Sources */,
 				2D9E0D8B28133125000E4321 /* ViewerListener.swift in Sources */,
+				2DA4D95328246D75008EFAF1 /* RemotePasswordAuthenticator.swift in Sources */,
+				2DA4D95528246DBA008EFAF1 /* PasswordAuthenticationRequest.swift in Sources */,
 				2D9E0D2C2812344C000E4321 /* RemoteAuthCodeValidator.swift in Sources */,
 				2D33E43228159C2E00638293 /* ElapsedTimeAndDataManager.swift in Sources */,
 				2D33E43428159D0300638293 /* Int+Extensions.swift in Sources */,
@@ -1347,6 +1461,7 @@
 				2DD398F72810C80400A575DA /* Paginated.swift in Sources */,
 				2DD398F92810CA5400A575DA /* Metadata.swift in Sources */,
 				2D9E0D2A281233A7000E4321 /* ValidateCodeDTO.swift in Sources */,
+				2DA4D94C28246C57008EFAF1 /* PasswordAutheticator.swift in Sources */,
 				2D9E0D9528136D07000E4321 /* ListEventsViewModel.swift in Sources */,
 				2DD398FB2810CA9900A575DA /* EventResponse.swift in Sources */,
 				2DD398DD2810B98E00A575DA /* Localized+Date.swift in Sources */,
@@ -1372,15 +1487,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				2DD398C1280FF65200A575DA /* EventCategoryCellController.swift in Sources */,
+				2DA4D9332824524B008EFAF1 /* UsePasswordViewController.swift in Sources */,
 				2D48E99A281D8F3C00171E81 /* ProfileView.swift in Sources */,
 				2DCAB4E0280ADDCF00308095 /* ListEventRefreshController.swift in Sources */,
 				2D9E0D0B2812273F000E4321 /* ValidateCodeViewController.swift in Sources */,
+				2DD6E293282196C30087C61E /* ChatCellController.swift in Sources */,
 				2DCAB4A0280ABD9800308095 /* Fonts.swift in Sources */,
 				2DCAB4B9280AC34B00308095 /* ListEventsViewController.swift in Sources */,
 				2DCAB4C3280AD6D000308095 /* ListEventCellController.swift in Sources */,
 				2D9E0D0928122734000E4321 /* ValidateCodeView.swift in Sources */,
 				2D9E0CED281216FE000E4321 /* AlertView.swift in Sources */,
 				2DBFF5F92811930F006F7E40 /* LandingView.swift in Sources */,
+				2DD6E295282196F60087C61E /* ChatCell.swift in Sources */,
 				2D9E0D7928131649000E4321 /* ProductCellController.swift in Sources */,
 				2DCAB55E280B6B0F00308095 /* BroadcastView.swift in Sources */,
 				2DCAB55C280B6B0600308095 /* BroadcastViewController.swift in Sources */,
@@ -1402,11 +1520,14 @@
 				2D9E0D9F28137885000E4321 /* PlaceholderView.swift in Sources */,
 				2D48E998281D8F3200171E81 /* ProfileViewController.swift in Sources */,
 				2D9E0D6E2812FDAC000E4321 /* String+Helpers.swift in Sources */,
+				2DD6E291282196360087C61E /* BroadcastChatController.swift in Sources */,
 				2D9E0CBA2811F44B000E4321 /* CMLButton.swift in Sources */,
 				2D9E0CAE2811EE11000E4321 /* EnterPhoneView.swift in Sources */,
 				2D9E0D762813025F000E4321 /* BroadcastEventProductsController.swift in Sources */,
+				2DA4D92E28244FD0008EFAF1 /* UIStackView+Helpers.swift in Sources */,
 				2D9E0CAC2811EE09000E4321 /* EnterPhoneViewController.swift in Sources */,
 				2DCAB4B4280ABEEB00308095 /* Layouting.swift in Sources */,
+				2DA4D93528245255008EFAF1 /* UsePasswordView.swift in Sources */,
 				2DBFF5F728119306006F7E40 /* LandingViewController.swift in Sources */,
 				2D9E0CEF28121707000E4321 /* AlertViewController.swift in Sources */,
 				2DD398BE280F7F7A00A575DA /* EventCategoryCell.swift in Sources */,
@@ -1511,6 +1632,15 @@
 				2D9E0DAD28140221000E4321 /* tr */,
 			);
 			name = Broadcast.strings;
+			sourceTree = "<group>";
+		};
+		2DA4D93E282452FA008EFAF1 /* UsePassword.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2DA4D93D282452FA008EFAF1 /* en */,
+				2DA4D93F282452FC008EFAF1 /* tr */,
+			);
+			name = UsePassword.strings;
 			sourceTree = "<group>";
 		};
 		2DD398E22810B9A400A575DA /* Date.strings */ = {

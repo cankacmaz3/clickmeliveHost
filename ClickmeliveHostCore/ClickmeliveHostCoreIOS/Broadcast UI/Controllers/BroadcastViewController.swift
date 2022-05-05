@@ -15,19 +15,23 @@ public final class BroadcastViewController: UIViewController, Layouting {
     
     public var onClose: (() -> Void)?
     
-    internal let eventId: Int
+    internal let event: Event
     internal let broadcastViewModel: BroadcastViewModel
     private let viewerViewModel: ViewerViewModel
     private let broadcastEventProductsController: BroadcastEventProductsController
+    private let broadcastChatController: BroadcastChatController
     
-    public init(eventId: Int,
+    public init(event: Event,
                 broadcastViewModel: BroadcastViewModel,
                 viewerViewModel: ViewerViewModel,
-                broadcastEventProductsController: BroadcastEventProductsController) {
-        self.eventId = eventId
+                broadcastEventProductsController: BroadcastEventProductsController,
+                broadcastChatController: BroadcastChatController) {
+        self.event = event
         self.broadcastViewModel = broadcastViewModel
         self.viewerViewModel = viewerViewModel
         self.broadcastEventProductsController = broadcastEventProductsController
+        self.broadcastChatController = broadcastChatController
+        
         super.init(nibName: nil, bundle: nil)
     }
     
@@ -69,6 +73,8 @@ extension BroadcastViewController {
         super.viewDidLoad()
         
         setupCollectionView()
+        setupChatTableView()
+        
         setupLocalizedTexts()
         registerActions()
         
@@ -76,8 +82,8 @@ extension BroadcastViewController {
         observeProductEventLoad()
         setupBroadcastObservers()
         
-        viewerViewModel.listenViewerUpdates(eventId: eventId)
-        broadcastEventProductsController.loadEventProducts(eventId: eventId)
+        viewerViewModel.listenViewerUpdates(eventId: event.id)
+        broadcastEventProductsController.loadEventProducts(eventId: event.id)
         
         broadcasterViewDidLoad()
     }
@@ -113,6 +119,10 @@ extension BroadcastViewController {
     
     public func setupCollectionView() {
         broadcastEventProductsController.bind(collectionView: layoutableView.collectionView)
+    }
+    
+    public func setupChatTableView() {
+        broadcastChatController.bind(tableView: layoutableView.chatTableView)
     }
     
     private func registerActions() {

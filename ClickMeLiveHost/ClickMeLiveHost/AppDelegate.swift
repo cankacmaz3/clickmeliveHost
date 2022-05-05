@@ -8,6 +8,7 @@
 import UIKit
 import IQKeyboardManagerSwift
 import ClickmeliveHostCoreIOS
+import Firebase
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -21,6 +22,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window?.makeKeyAndVisible()
         
         setupIQKeyboard()
+        FirebaseApp.configure()
         
         window?.rootViewController = AppModuleBuilder.module()
         return true

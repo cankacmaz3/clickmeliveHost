@@ -31,6 +31,10 @@ final class EnterPhoneUIComposer {
             router.openAlertModule(message: message)
         }
         
+        enterPhoneViewController.onUsePasswordTapped = {
+            router.openUsePasswordModule()
+        }
+        
         return enterPhoneViewController
     }
 }

@@ -16,6 +16,7 @@ extension BroadcastViewController {
         observeTimeElapsed()
         observeMute()
         observeUpdateStatuses()
+        observeStartBroadcast()
     }
     
     func broadcasterViewDidLoad() {
@@ -83,7 +84,18 @@ extension BroadcastViewController {
         }
         
         broadcastViewModel.onStatusUpdatedToEnded = { [weak self] in
-            self?.showStopBroadcastAlert()
+            // Stop the session if we're running
+            self?.broadcastSession?.stop()
+            self?.broadcastViewModel.timer.stop()
+            self?.broadcastViewModel.isRunning = false
+            self?.onClose?()
+        }
+    }
+    
+    private func observeStartBroadcast() {
+        let eventId = event.id
+        broadcastViewModel.onStartBroadcast = { [weak self] in
+            self?.broadcastViewModel.updateStatus(eventId: eventId, with: .LIVE)
         }
     }
     
@@ -91,13 +103,9 @@ extension BroadcastViewController {
         let alert = UIAlertController(title: nil,
                                       message: nil,
                                       preferredStyle: .actionSheet)
-        
+        let eventId = event.id
         alert.addAction(UIAlertAction(title: "Yayını Sonlandır", style: .destructive, handler: { [weak self] _ in
-            // Stop the session if we're running
-            self?.broadcastSession?.stop()
-            self?.broadcastViewModel.timer.stop()
-            self?.broadcastViewModel.isRunning = false
-            self?.onClose?()
+            self?.broadcastViewModel.updateStatus(eventId: eventId, with: .ENDED)
         }))
         
         alert.addAction(UIAlertAction(title: "Vazgeç", style: .cancel))
@@ -109,9 +117,9 @@ extension BroadcastViewController {
 extension BroadcastViewController {
     @objc func streamTapped() {
         if self.broadcastViewModel.isRunning {
-            broadcastViewModel.updateStatus(eventId: eventId, with: .ENDED)
+            showStopBroadcastAlert()
         } else {
-            broadcastViewModel.updateStatus(eventId: eventId, with: .LIVE)
+            broadcastViewModel.checkIfUserCanStartBroadcast(event: event)
         }
     }
     
@@ -174,7 +182,7 @@ extension BroadcastViewController {
     
     private func setupSession() {
         do {
-            let config = BroadcastConfiguration.shared.activeConfiguration
+            let config = BroadcastConfiguration.init(with: event.liveStream?.resolution).activeConfiguration
             IVSBroadcastSession.applicationAudioSessionStrategy = .playAndRecord
             let broadcastSession = try IVSBroadcastSession(configuration: config,
                                                            descriptors: IVSPresets.devices().frontCamera(),

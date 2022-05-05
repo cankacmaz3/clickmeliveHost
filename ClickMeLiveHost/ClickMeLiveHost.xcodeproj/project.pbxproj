@@ -35,6 +35,9 @@
 		2D9E0D512812DBF4000E4321 /* AppRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D9E0D502812DBF4000E4321 /* AppRoute.swift */; };
 		2D9E0D532812DFFB000E4321 /* UserDefaultsHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D9E0D522812DFFB000E4321 /* UserDefaultsHelper.swift */; };
 		2D9E0D562812E51D000E4321 /* CMLNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D9E0D552812E51D000E4321 /* CMLNavigationController.swift */; };
+		2DA4D94528245731008EFAF1 /* UsePasswordRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DA4D94428245731008EFAF1 /* UsePasswordRoute.swift */; };
+		2DA4D9472824573D008EFAF1 /* UsePasswordRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DA4D9462824573D008EFAF1 /* UsePasswordRouter.swift */; };
+		2DA4D9492824592A008EFAF1 /* UsePasswordUIComposer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DA4D9482824592A008EFAF1 /* UsePasswordUIComposer.swift */; };
 		2DC30FE92815DC2400766092 /* ExternalEnvironment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DC30FE82815DC2400766092 /* ExternalEnvironment.swift */; };
 		2DC30FEB2815E64A00766092 /* BroadcasterRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DC30FEA2815E64A00766092 /* BroadcasterRouter.swift */; };
 		2DCAB46C280AB66D00308095 /* ClickmeliveHostCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2DCAB46B280AB66D00308095 /* ClickmeliveHostCore.framework */; };
@@ -60,6 +63,9 @@
 		2DD398F02810C47900A575DA /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = 2DD398EF2810C47900A575DA /* Lottie */; };
 		2DD398F22810C4D200A575DA /* LoadingViewHTTPClientDecorator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DD398F12810C4D200A575DA /* LoadingViewHTTPClientDecorator.swift */; };
 		2DD398F52810C75800A575DA /* UIColor+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DD398F42810C75800A575DA /* UIColor+Extensions.swift */; };
+		2DD6E28D282148B80087C61E /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = 2DD6E28C282148B80087C61E /* FirebaseDatabase */; };
+		2DD6E28F282148CC0087C61E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2DD6E28E282148CB0087C61E /* GoogleService-Info.plist */; };
+		2DD6E29B2821A87E0087C61E /* UIViewController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DD6E29A2821A87E0087C61E /* UIViewController+Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -106,6 +112,9 @@
 		2D9E0D502812DBF4000E4321 /* AppRoute.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRoute.swift; sourceTree = "<group>"; };
 		2D9E0D522812DFFB000E4321 /* UserDefaultsHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsHelper.swift; sourceTree = "<group>"; };
 		2D9E0D552812E51D000E4321 /* CMLNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CMLNavigationController.swift; sourceTree = "<group>"; };
+		2DA4D94428245731008EFAF1 /* UsePasswordRoute.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsePasswordRoute.swift; sourceTree = "<group>"; };
+		2DA4D9462824573D008EFAF1 /* UsePasswordRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsePasswordRouter.swift; sourceTree = "<group>"; };
+		2DA4D9482824592A008EFAF1 /* UsePasswordUIComposer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsePasswordUIComposer.swift; sourceTree = "<group>"; };
 		2DC30FE82815DC2400766092 /* ExternalEnvironment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExternalEnvironment.swift; sourceTree = "<group>"; };
 		2DC30FEA2815E64A00766092 /* BroadcasterRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BroadcasterRouter.swift; sourceTree = "<group>"; };
 		2DCAB46B280AB66D00308095 /* ClickmeliveHostCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = ClickmeliveHostCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -129,6 +138,8 @@
 		2DD398EC2810C1F400A575DA /* Loading.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Loading.json; sourceTree = "<group>"; };
 		2DD398F12810C4D200A575DA /* LoadingViewHTTPClientDecorator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingViewHTTPClientDecorator.swift; sourceTree = "<group>"; };
 		2DD398F42810C75800A575DA /* UIColor+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extensions.swift"; sourceTree = "<group>"; };
+		2DD6E28E282148CB0087C61E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		2DD6E29A2821A87E0087C61E /* UIViewController+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -136,6 +147,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2DD6E28D282148B80087C61E /* FirebaseDatabase in Frameworks */,
 				2DCAB49B280ABBE700308095 /* ClickmeliveHostCoreIOS.framework in Frameworks */,
 				2DCAB46C280AB66D00308095 /* ClickmeliveHostCore.framework in Frameworks */,
 				2D8CB34A2816AEFA00B7F40E /* AmazonIVSBroadcast.xcframework in Frameworks */,
@@ -198,6 +210,7 @@
 				2D48E98E281D8BF300171E81 /* CMLTabBarController.swift */,
 				2D7D87BC28017836006FFDE7 /* Assets.xcassets */,
 				2D7D87BE28017836006FFDE7 /* LaunchScreen.storyboard */,
+				2DD6E28E282148CB0087C61E /* GoogleService-Info.plist */,
 				2D7D87C128017836006FFDE7 /* Info.plist */,
 			);
 			path = ClickMeLiveHost;
@@ -208,6 +221,7 @@
 			children = (
 				2D9E0C962811D044000E4321 /* Landing */,
 				2D9E0CB12811EEC8000E4321 /* Enter Phone */,
+				2DA4D9422824570D008EFAF1 /* Use Password */,
 				2D9E0D0C281227B0000E4321 /* Validate Code */,
 			);
 			path = Auth;
@@ -318,6 +332,24 @@
 			path = Data;
 			sourceTree = "<group>";
 		};
+		2DA4D9422824570D008EFAF1 /* Use Password */ = {
+			isa = PBXGroup;
+			children = (
+				2DA4D9432824571B008EFAF1 /* Composers */,
+				2DA4D94428245731008EFAF1 /* UsePasswordRoute.swift */,
+				2DA4D9462824573D008EFAF1 /* UsePasswordRouter.swift */,
+			);
+			path = "Use Password";
+			sourceTree = "<group>";
+		};
+		2DA4D9432824571B008EFAF1 /* Composers */ = {
+			isa = PBXGroup;
+			children = (
+				2DA4D9482824592A008EFAF1 /* UsePasswordUIComposer.swift */,
+			);
+			path = Composers;
+			sourceTree = "<group>";
+		};
 		2DBFF5FA28119388006F7E40 /* Features */ = {
 			isa = PBXGroup;
 			children = (
@@ -423,6 +455,7 @@
 			isa = PBXGroup;
 			children = (
 				2DD398F42810C75800A575DA /* UIColor+Extensions.swift */,
+				2DD6E29A2821A87E0087C61E /* UIViewController+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -447,6 +480,7 @@
 			packageProductDependencies = (
 				2DD398EF2810C47900A575DA /* Lottie */,
 				2D9E0D4E2812D611000E4321 /* KeychainSwift */,
+				2DD6E28C282148B80087C61E /* FirebaseDatabase */,
 			);
 			productName = ClickMeLiveHost;
 			productReference = 2D7D87B028017835006FFDE7 /* ClickMeLiveHost.app */;
@@ -479,6 +513,7 @@
 			packageReferences = (
 				2DD398EE2810C47900A575DA /* XCRemoteSwiftPackageReference "lottie-ios" */,
 				2D9E0D4D2812D611000E4321 /* XCRemoteSwiftPackageReference "keychain-swift" */,
+				2DD6E28B282148B80087C61E /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 			);
 			productRefGroup = 2D7D87B128017835006FFDE7 /* Products */;
 			projectDirPath = "";
@@ -501,6 +536,7 @@
 				2DCAB597280B7BEA00308095 /* Montserrat-Regular.ttf in Resources */,
 				2D7D87C028017836006FFDE7 /* LaunchScreen.storyboard in Resources */,
 				2DCAB598280B7BEA00308095 /* Montserrat-SemiBold.ttf in Resources */,
+				2DD6E28F282148CC0087C61E /* GoogleService-Info.plist in Resources */,
 				2DCAB59C280B7BEA00308095 /* Montserrat-Medium.ttf in Resources */,
 				2D7D87BD28017836006FFDE7 /* Assets.xcassets in Resources */,
 			);
@@ -515,11 +551,14 @@
 			files = (
 				2D9E0D532812DFFB000E4321 /* UserDefaultsHelper.swift in Sources */,
 				2D9E0CF728121FDB000E4321 /* AlertRoute.swift in Sources */,
+				2DA4D94528245731008EFAF1 /* UsePasswordRoute.swift in Sources */,
 				2D9E0CF328121785000E4321 /* AlertUIComposer.swift in Sources */,
+				2DA4D9492824592A008EFAF1 /* UsePasswordUIComposer.swift in Sources */,
 				2D9E0D4B2812D407000E4321 /* KeychainHelper.swift in Sources */,
 				2D9E0CFB281222E4000E4321 /* EnterPhoneRouter.swift in Sources */,
 				2D48E993281D8ECF00171E81 /* ProfileUIComposer.swift in Sources */,
 				2DCAB568280B6D1E00308095 /* Transition.swift in Sources */,
+				2DD6E29B2821A87E0087C61E /* UIViewController+Extensions.swift in Sources */,
 				2DCAB566280B6C2800308095 /* ModalTransition.swift in Sources */,
 				2D9E0D562812E51D000E4321 /* CMLNavigationController.swift in Sources */,
 				2D8CB3452815ED5600B7F40E /* SocketEnvironment.swift in Sources */,
@@ -541,6 +580,7 @@
 				2DD398EA2810C1B100A575DA /* LoadingView.swift in Sources */,
 				2DD398D32810B58000A575DA /* AppEnvironment.swift in Sources */,
 				2DCAB56C280B6D9E00308095 /* Router.swift in Sources */,
+				2DA4D9472824573D008EFAF1 /* UsePasswordRouter.swift in Sources */,
 				2D9E0CC32811F5FC000E4321 /* Image.swift in Sources */,
 				2D9E0CB02811EEAB000E4321 /* LandingRouter.swift in Sources */,
 				2D9E0D0E281227C5000E4321 /* ValidateCodeRoute.swift in Sources */,
@@ -688,7 +728,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 6;
 				DEVELOPMENT_TEAM = P624PPMU63;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = ClickMeLiveHost/Info.plist;
@@ -719,7 +759,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 6;
 				DEVELOPMENT_TEAM = P624PPMU63;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = ClickMeLiveHost/Info.plist;
@@ -784,6 +824,14 @@
 				minimumVersion = 3.0.0;
 			};
 		};
+		2DD6E28B282148B80087C61E /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 8.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -796,6 +844,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 2DD398EE2810C47900A575DA /* XCRemoteSwiftPackageReference "lottie-ios" */;
 			productName = Lottie;
+		};
+		2DD6E28C282148B80087C61E /* FirebaseDatabase */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2DD6E28B282148B80087C61E /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseDatabase;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

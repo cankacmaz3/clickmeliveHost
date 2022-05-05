@@ -9,6 +9,7 @@ import Foundation
 import ClickmeliveHostCoreIOS
 
 final class EnterPhoneRouter: Router<EnterPhoneViewController>, EnterPhoneRouter.Routes {
-    typealias Routes = AlertRoute & ValidateCodeRoute
+    typealias Routes = AlertRoute & ValidateCodeRoute & UsePasswordRoute
     var validateCodeTransition: Transition = PushTransition(isAnimated: true)
+    var usePasswordTransition: Transition = PushTransition(isAnimated: true)
 }

@@ -12,6 +12,8 @@ enum AuthEndpoints: URLRequestBuilder {
     case verifyCode(verificationCodeId: Int,
                     phone: String,
                     code: String)
+    case login(phone: String,
+               password: String)
 }
 
 extension AuthEndpoints {
@@ -21,6 +23,8 @@ extension AuthEndpoints {
             return "/api/v1/authorization/code"
         case .verifyCode(let verificationCodeId, _,_):
             return "/api/v1/authorization/code/\(verificationCodeId)/verify"
+        case .login:
+            return "/api/v1/authorization/login"
         }
     }
 }
@@ -33,11 +37,13 @@ extension AuthEndpoints {
 
 extension AuthEndpoints {
     var parameters: [String: Any]? {
+        let deviceInfo = DeviceHelper.getDeviceInfo()
+       
         switch self {
         case .createCode(let phone):
             return ["phone": phone]
         case .verifyCode(_, let phone, let code):
-            let deviceInfo = DeviceHelper.getDeviceInfo()
+            
             return ["phone": phone,
                     "code": code,
                     "deviceInfo": [
@@ -47,6 +53,16 @@ extension AuthEndpoints {
                         "appVersion": deviceInfo.appVersion,
                         "uniqueToken": deviceInfo.uniqueToken
                     ]]
+        case .login(let phone, let password):
+            return ["phone": phone,
+                    "password": password,
+                    "deviceInfo": [
+                        "deviceBrand": deviceInfo.deviceBrand,
+                         "deviceModel": deviceInfo.deviceModel,
+                         "osVersion": deviceInfo.osVersion,
+                         "appVersion": deviceInfo.appVersion,
+                         "uniqueToken": deviceInfo.uniqueToken
+                     ]]
         }
     }
 }
@@ -55,7 +71,8 @@ extension AuthEndpoints {
     var queryItems: [URLQueryItem]? {
         switch self {
         case .createCode,
-             .verifyCode:
+             .verifyCode,
+             .login:
             return []
         }
     }
@@ -65,7 +82,8 @@ extension AuthEndpoints {
     var method: HTTPMethod {
         switch self {
         case .createCode,
-             .verifyCode:
+             .verifyCode,
+             .login:
             return .post
         }
     }

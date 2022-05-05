@@ -42,5 +42,13 @@ extension Localized {
                 bundle: bundle,
                 comment: "Send code button title")
         }
+        
+        static var usePassword: String {
+            NSLocalizedString(
+                "ENTER_PHONE_USE_PASSWORD",
+                tableName: table,
+                bundle: bundle,
+                comment: "Use password button title")
+        }
     }
 }

@@ -35,6 +35,10 @@ public final class EnterPhoneViewModel {
         Localized.EnterPhone.sendCode
     }
     
+    public var usePassword: String {
+        Localized.EnterPhone.usePassword
+    }
+    
     private var errorMessage: String {
         Localized.Error.defaultMessage
     }

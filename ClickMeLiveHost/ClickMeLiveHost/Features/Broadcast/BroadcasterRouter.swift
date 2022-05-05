@@ -8,4 +8,6 @@
 import Foundation
 import ClickmeliveHostCoreIOS
 
-final class BroadcasterRouter: Router<BroadcastViewController> {}
+final class BroadcasterRouter: Router<BroadcastViewController>,  BroadcasterRouter.Routes {
+    typealias Routes = AlertRoute
+}

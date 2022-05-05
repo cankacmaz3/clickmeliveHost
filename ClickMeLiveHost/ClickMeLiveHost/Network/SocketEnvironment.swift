@@ -8,19 +8,8 @@
 import Foundation
 
 enum SocketEnvironment {
-    case production
-    case development
-}
-
-extension SocketEnvironment {
-    static var currentState: SocketEnvironment {
-        return .development
-    }
-}
-
-extension SocketEnvironment {
     static var baseURL: URL {
-        switch SocketEnvironment.currentState {
+        switch AppEnvironment.currentState {
         case .production:
             return URL(string: Servers.socketProduction)!
         case .development:
@@ -28,13 +17,3 @@ extension SocketEnvironment {
         }
     }
 }
-
-extension SocketEnvironment {
-    static var showLog: Bool {
-        switch SocketEnvironment.currentState {
-        default:
-            return true
-        }
-    }
-}
-

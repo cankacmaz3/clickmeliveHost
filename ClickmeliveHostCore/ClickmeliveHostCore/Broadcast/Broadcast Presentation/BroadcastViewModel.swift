@@ -37,8 +37,23 @@ public final class BroadcastViewModel {
     public var onStatusUpdatedToLive: Observer<Event>?
     public var onStatusUpdatedToEnded: (() -> Void)?
     
+    public var onStartBroadcastError: Observer<String>?
+    public var onStartBroadcast: (() -> Void)?
+    
     public var streamStatus: String {
         isRunning ? Localized.Broadcast.stopBroadcast: Localized.Broadcast.startBroadcast
+    }
+    
+    public var soundTitle: String {
+        Localized.Broadcast.soundTitle
+    }
+    
+    public var rotateTitle: String {
+        Localized.Broadcast.rotateTitle
+    }
+    
+    public var cameraTitle: String {
+        Localized.Broadcast.cameraTitle
     }
     
     public func updateStatus(eventId: Int, with status: Event.EventStatus) {
@@ -51,6 +66,19 @@ public final class BroadcastViewModel {
             case .failure:
                 print("error")
             }
+        }
+    }
+    
+    public func checkIfUserCanStartBroadcast(event: Event) {
+        guard let startingDate = event.startingDate else {
+            return
+        }
+        
+        if Date() - startingDate < 0 {
+            let message = String(format: Localized.Broadcast.startingDateErrorMessage, startingDate.convertDateToString(returnFormat: .upcomingFormat))
+            onStartBroadcastError?(message)
+        } else {
+            onStartBroadcast?()
         }
     }
 }

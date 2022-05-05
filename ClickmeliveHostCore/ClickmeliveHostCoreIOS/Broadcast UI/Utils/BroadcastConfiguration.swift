@@ -6,18 +6,22 @@
 //
 
 import AmazonIVSBroadcast
+import ClickmeliveHostCore
 
 class BroadcastConfiguration {
-    static let shared = BroadcastConfiguration()
+    static let shared = BroadcastConfiguration(with: .SD)
 
     private var cameraSlotName: String { return "camera" }
     
     var activeConfiguration: IVSBroadcastConfiguration = IVSPresets.configurations().basicPortrait()
     var activeVideoConfiguration = IVSVideoConfiguration()
     
-    init() {
+    init(with resolution: Event.LiveStream.Resolution?) {
         
-        loadVideoConfiguration()
+        resolution == .HD ?
+        loadHDVideoConfiguration():
+        loadSDVideoConfiguration()
+        
         setupSlots()
         activeConfiguration.video = activeVideoConfiguration
     }
@@ -36,12 +40,26 @@ class BroadcastConfiguration {
         activeConfiguration.mixer.slots = [cameraSlot]
     }
 
-    func loadVideoConfiguration() {
+    func loadSDVideoConfiguration() {
+        print("SD VİDEO CONFIG")
         do {
             try activeVideoConfiguration.setSize(CGSize(width: 480, height: 852))
             try activeVideoConfiguration.setMaxBitrate(1_500_000)
             try activeVideoConfiguration.setInitialBitrate(500_000)
             try activeVideoConfiguration.setMinBitrate(500_000)
+            try activeVideoConfiguration.setTargetFramerate(30)
+        } catch {
+            print(error, "setting up session")
+        }
+    }
+    
+    func loadHDVideoConfiguration() {
+        print("HD VİDEO CONFIG")
+        do {
+            try activeVideoConfiguration.setSize(CGSize(width: 720, height: 1280))
+            try activeVideoConfiguration.setMaxBitrate(4_500_000)
+            try activeVideoConfiguration.setInitialBitrate(1_500_000)
+            try activeVideoConfiguration.setMinBitrate(1_500_000)
             try activeVideoConfiguration.setTargetFramerate(30)
         } catch {
             print(error, "setting up session")

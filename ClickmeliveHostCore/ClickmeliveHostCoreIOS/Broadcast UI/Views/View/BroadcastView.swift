@@ -18,6 +18,9 @@ extension BroadcastView {
     
     func setLocalizedTexts(broadcastViewModel: BroadcastViewModel) {
         lblStreamStatus.text = broadcastViewModel.streamStatus
+        lblSound.text = broadcastViewModel.soundTitle
+        lblRotate.text = broadcastViewModel.rotateTitle
+        lblCamera.text = broadcastViewModel.cameraTitle
     }
     
     func updateStreamStatus(broadcastViewModel: BroadcastViewModel) {
@@ -141,6 +144,18 @@ public final class BroadcastView: UIView, Layoutable {
         cv.isHidden = true
         return cv
     }()
+    
+    // MARK: - Chat TableView
+    let chatTableView: UITableView = {
+        let tv = UITableView(frame: .zero)
+        
+        tv.separatorStyle = .none
+        tv.showsVerticalScrollIndicator = false
+        tv.backgroundColor = .clear
+        tv.transform = CGAffineTransform(scaleX: 1, y: -1)
+        
+        return tv
+    }()
 
     // MARK: - Camera Preview
     let previewView: UIView = {
@@ -189,7 +204,6 @@ public final class BroadcastView: UIView, Layoutable {
         let label = UILabel()
         label.font = UIFont(name: Fonts.medium, size: 12)
         label.textColor = .white
-        label.text = "Mikrofon"
         return label
     }()
     
@@ -219,7 +233,6 @@ public final class BroadcastView: UIView, Layoutable {
         let label = UILabel()
         label.font = UIFont(name: Fonts.medium, size: 12)
         label.textColor = .white
-        label.text = "Kamera"
         return label
     }()
     
@@ -249,7 +262,6 @@ public final class BroadcastView: UIView, Layoutable {
         let label = UILabel()
         label.font = UIFont(name: Fonts.medium, size: 12)
         label.textColor = .white
-        label.text = "Döndür"
         return label
     }()
     
@@ -295,6 +307,7 @@ public final class BroadcastView: UIView, Layoutable {
         backgroundColor = .black
         
         addSubview(previewView)
+        addSubview(chatTableView)
         
         addSubview(controlButtonsView)
         
@@ -364,6 +377,8 @@ public final class BroadcastView: UIView, Layoutable {
         collectionView.anchor(viewersView.bottomAnchor, left: productsToggleView.rightAnchor, bottom: nil, right: rightAnchor, topConstant: 10, leftConstant: 10, bottomConstant: 0, rightConstant: 0, widthConstant: 0, heightConstant: 138)
         
         previewView.anchor(topAnchor, left: leftAnchor, bottom: safeAreaLayoutGuide.bottomAnchor, right: rightAnchor, topConstant: 0, leftConstant: 0, bottomConstant: 2, rightConstant: 0, widthConstant: 0, heightConstant: 0)
+        
+        chatTableView.anchor(collectionView.bottomAnchor, left: leftAnchor, bottom: controlButtonsView.topAnchor, right: rightAnchor, topConstant: 8, leftConstant: 0, bottomConstant: 8, rightConstant: 0, widthConstant: 0, heightConstant: 0)
         
         controlButtonsView.anchor(nil, left: leftAnchor, bottom: safeAreaLayoutGuide.bottomAnchor, right: rightAnchor, topConstant: 0, leftConstant: 0, bottomConstant: 0, rightConstant: 0, widthConstant: 0, heightConstant: 130)
         

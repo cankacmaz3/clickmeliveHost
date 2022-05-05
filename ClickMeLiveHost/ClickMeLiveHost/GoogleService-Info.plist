@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>285315032317-5njpk92r1sqn05grrfqoihk0f9qjpv6v.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.285315032317-5njpk92r1sqn05grrfqoihk0f9qjpv6v</string>
+	<key>ANDROID_CLIENT_ID</key>
+	<string>285315032317-cto657mf28heic49sonquffe2gfs7udo.apps.googleusercontent.com</string>
+	<key>API_KEY</key>
+	<string>AIzaSyAomqIY8ZDobug2C9KmiiTvhGroBfQTtEM</string>
+	<key>GCM_SENDER_ID</key>
+	<string>285315032317</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.clickme.host.clickmelive</string>
+	<key>PROJECT_ID</key>
+	<string>clickmelive-400e3</string>
+	<key>STORAGE_BUCKET</key>
+	<string>clickmelive-400e3.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:285315032317:ios:750f0bf6fec0fb4eab8a94</string>
+	<key>DATABASE_URL</key>
+	<string>https://clickmelive-400e3-default-rtdb.europe-west1.firebasedatabase.app</string>
+</dict>
+</plist>

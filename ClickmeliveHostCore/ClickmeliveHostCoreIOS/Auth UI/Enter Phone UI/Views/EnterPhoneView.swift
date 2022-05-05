@@ -15,6 +15,7 @@ extension EnterPhoneView {
         tfPhone.setupPlaceholder(placeholder: viewModel.phonePlaceholder,
                                     font: UIFont(name: Fonts.regular, size: 16)!)
         btnSendCode.setTitle(viewModel.sendCode, for: .normal)
+        btnUsePassword.setTitle(viewModel.usePassword, for: .normal)
     }
 }
 
@@ -37,7 +38,7 @@ public final class EnterPhoneView: UIView, Layoutable {
     private let stackView: UIStackView = {
         let stackView = UIStackView()
         stackView.distribution = .fill
-        stackView.spacing = 38
+        stackView.spacing = 25
         stackView.axis = .vertical
         return stackView
     }()
@@ -79,6 +80,13 @@ public final class EnterPhoneView: UIView, Layoutable {
         return btn
     }()
     
+    let btnUsePassword: UIButton = {
+        let btn = UIButton()
+        btn.titleLabel?.font = UIFont(name: Fonts.medium, size: 16)
+        btn.setTitleColor(Colors.primaryText, for: .normal)
+        return btn
+    }()
+    
     public func setupViews() {
         backgroundColor = .white
         
@@ -86,10 +94,11 @@ public final class EnterPhoneView: UIView, Layoutable {
         
         addSubview(scrollView)
         
-        [lblTitle, lblDetail, tfPhone].forEach {
+        
+        [lblTitle, lblDetail, tfPhone, btnUsePassword].forEach {
             stackView.addArrangedSubview($0)
         }
-        
+       
         scrollView.addSubview(stackView)
     }
     

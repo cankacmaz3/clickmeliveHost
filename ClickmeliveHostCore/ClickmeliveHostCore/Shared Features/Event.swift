@@ -62,6 +62,23 @@ public struct Event {
         public let virtualViewer: Int
         public let ingestEndpoint: String
         public let streamKey: String
+        public let resolution: Resolution
+        
+        public enum Resolution {
+            case SD
+            case HD
+            
+            static func get(resolution: String?) -> Resolution {
+                switch resolution {
+                case "SD":
+                    return .SD
+                case "HD":
+                    return .HD
+                default:
+                    return .SD
+                }
+            }
+        }
     }
     
     public var viewerCount: Int {
