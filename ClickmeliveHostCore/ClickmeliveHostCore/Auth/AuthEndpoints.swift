@@ -14,6 +14,8 @@ enum AuthEndpoints: URLRequestBuilder {
                     code: String)
     case login(phone: String,
                password: String)
+    case adminLogin(email: String,
+                    password: String)
 }
 
 extension AuthEndpoints {
@@ -23,7 +25,8 @@ extension AuthEndpoints {
             return "/api/v1/authorization/code"
         case .verifyCode(let verificationCodeId, _,_):
             return "/api/v1/authorization/code/\(verificationCodeId)/verify"
-        case .login:
+        case .login,
+             .adminLogin:
             return "/api/v1/authorization/login"
         }
     }
@@ -31,7 +34,12 @@ extension AuthEndpoints {
 
 extension AuthEndpoints {
     var withHeader: [String: String]? {
-        return ["Authorization" : "apiKey 617196fc65dc0778fb59e97660856d1921bef5a092bb4071f3c071704e5ca4cc"]
+        switch self {
+        case .adminLogin:
+            return ["Authorization": "apiKey 2c0242ea9e950890296e8f16b3381d39c3e2d11449b690e65b4292c35a5a0884"]
+        default:
+            return ["Authorization" : "apiKey 617196fc65dc0778fb59e97660856d1921bef5a092bb4071f3c071704e5ca4cc"]
+        }
     }
 }
 
@@ -63,6 +71,9 @@ extension AuthEndpoints {
                          "appVersion": deviceInfo.appVersion,
                          "uniqueToken": deviceInfo.uniqueToken
                      ]]
+        case .adminLogin(let email, let password):
+            return ["email": email,
+                    "password": password]
         }
     }
 }
@@ -72,7 +83,8 @@ extension AuthEndpoints {
         switch self {
         case .createCode,
              .verifyCode,
-             .login:
+             .login,
+             .adminLogin:
             return []
         }
     }
@@ -83,7 +95,8 @@ extension AuthEndpoints {
         switch self {
         case .createCode,
              .verifyCode,
-             .login:
+             .login,
+             .adminLogin:
             return .post
         }
     }

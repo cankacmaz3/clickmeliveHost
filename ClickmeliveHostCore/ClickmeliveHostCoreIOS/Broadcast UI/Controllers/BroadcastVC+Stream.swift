@@ -123,7 +123,7 @@ extension BroadcastViewController {
         }
     }
     
-    @objc func cameraTapped() {
+    @objc func rotateTapped() {
         guard let device = getCameraDescriptor(for: attachedCamera?.descriptor().position == .back ? .front : .back) else { return }
         setCamera(device)
     }

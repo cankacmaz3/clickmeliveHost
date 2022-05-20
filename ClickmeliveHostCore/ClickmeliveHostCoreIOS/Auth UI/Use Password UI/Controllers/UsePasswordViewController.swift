@@ -49,8 +49,6 @@ public final class UsePasswordViewController: UIViewController, Layouting {
         let phone = layoutableView.tfPhone.text ?? ""
         let password = layoutableView.tfPassword.text ?? ""
         viewModel.login(phone: phone, password: password)
-        
-        viewModel.login(phone: phone, password: password)
     }
     
     @objc private func useSmsTapped() {

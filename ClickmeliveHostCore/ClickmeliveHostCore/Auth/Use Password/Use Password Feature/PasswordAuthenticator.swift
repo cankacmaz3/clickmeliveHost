@@ -7,7 +7,7 @@
 
 import Foundation
 
-public protocol PasswordAutheticator {
+public protocol PasswordAuthenticator {
     typealias Result = Swift.Result<Login, CMLError>
     
     func perform(passwordAuthenticationRequest: PasswordAuthenticationRequest, completion: @escaping (Result) -> Void)

@@ -132,7 +132,7 @@ extension BroadcastViewController {
         let soundGesture = UITapGestureRecognizer(target: self, action: #selector(muteTapped))
         layoutableView.soundImageContainer.addGestureRecognizer(soundGesture)
         
-        let rotateGesture = UITapGestureRecognizer(target: self, action: #selector(cameraTapped))
+        let rotateGesture = UITapGestureRecognizer(target: self, action: #selector(rotateTapped))
         layoutableView.rotateImageContainer.addGestureRecognizer(rotateGesture)
         
         let streamGesture = UITapGestureRecognizer(target: self, action: #selector(streamTapped))

@@ -1,0 +1,36 @@
+/* 
+  Date.strings
+  ClickmeliveHostCore
+
+  Created by Can Kaçmaz on 21.04.2022.
+  
+*/
+
+"JANUARY" = "Ocak";
+"FEBRUARY" = "Şubat";
+"MARCH" = "Mart";
+"APRIL" = "Nisan";
+"MAY" = "Mayıs";
+"JUNE" = "Haziran";
+"JULY" = "Temmuz";
+"AUGUST" = "Ağustos";
+"SEPTEMBER" = "Eylül";
+"OCTOBER" = "Ekim";
+"NOVEMBER" = "Kasım";
+"DECEMBER" = "Aralık";
+
+"SHORT_JANUARY" = "Oca";
+"SHORT_FEBRUARY" = "Şub";
+"SHORT_MARCH" = "Mar";
+"SHORT_APRIL" = "Nis";
+"SHORT_MAY" = "May";
+"SHORT_JUNE" = "Haz";
+"SHORT_JULY" = "Tem";
+"SHORT_AUGUST" = "Ağu";
+"SHORT_SEPTEMBER" = "Eyl";
+"SHORT_OCTOBER" = "Eki";
+"SHORT_NOVEMBER" = "Kas";
+"SHORT_DECEMBER" = "Ara";
+
+"TODAY" = "Bugün";
+"TOMORROW" = "Yarın";
