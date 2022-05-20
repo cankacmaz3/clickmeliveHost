@@ -1,18 +1,18 @@
 //
-//  RemotePasswordAuthenticator.swift
+//  RemoteAdminAuthenticator.swift
 //  ClickmeliveHostCore
 //
-//  Created by Can Kaçmaz on 5.05.2022.
+//  Created by Can Kaçmaz on 20.05.2022.
 //
 
 import Foundation
 
-public final class RemotePasswordAuthenticator: PasswordAuthenticator {
+public final class RemoteAdminAuthenticator: AdminAuthenticator {
     
     private let client: HTTPClient
     private let baseURL: URL
     
-    public typealias Result = PasswordAuthenticator.Result
+    public typealias Result = AdminAuthenticator.Result
     
     public init(client: HTTPClient,
                 baseURL: URL) {
@@ -20,13 +20,15 @@ public final class RemotePasswordAuthenticator: PasswordAuthenticator {
         self.baseURL = baseURL
     }
     
-    public func perform(passwordAuthenticationRequest: PasswordAuthenticationRequest, completion: @escaping (Result) -> Void) {
-        let endpoint = AuthEndpoints.login(phone: passwordAuthenticationRequest.phone,
-                                           password: passwordAuthenticationRequest.password)
+    public func perform(adminAuthenticationRequest: AdminAuthenticationRequest, completion: @escaping (Result) -> Void) {
+        let endpoint = AuthEndpoints.adminLogin(
+            email: adminAuthenticationRequest.email,
+            password: adminAuthenticationRequest.password)
+        
         client.execute(with: endpoint.urlRequest(baseURL: baseURL)) { result in
             switch result {
             case let .success((data, response)):
-                completion(RemotePasswordAuthenticator.map(data, from: response))
+                completion(RemoteAdminAuthenticator.map(data, from: response))
             case .failure:
                 completion(.failure(.init(message: Localized.Error.defaultMessage)))
             }
@@ -47,4 +49,5 @@ public final class RemotePasswordAuthenticator: PasswordAuthenticator {
         return .success(root.toDomain())
     }
 }
+
 

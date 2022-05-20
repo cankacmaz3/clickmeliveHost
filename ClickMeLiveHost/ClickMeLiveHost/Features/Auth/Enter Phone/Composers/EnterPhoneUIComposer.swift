@@ -32,7 +32,8 @@ final class EnterPhoneUIComposer {
         }
         
         enterPhoneViewController.onUsePasswordTapped = {
-            router.openUsePasswordModule()
+            router.openAdminLoginModule()
+            //router.openUsePasswordModule()
         }
         
         return enterPhoneViewController

@@ -56,7 +56,9 @@
 		2DCAB59A280B7BEA00308095 /* Montserrat-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2DCAB594280B7BEA00308095 /* Montserrat-ExtraBold.ttf */; };
 		2DCAB59B280B7BEA00308095 /* Montserrat-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2DCAB595280B7BEA00308095 /* Montserrat-Light.ttf */; };
 		2DCAB59C280B7BEA00308095 /* Montserrat-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2DCAB596280B7BEA00308095 /* Montserrat-Medium.ttf */; };
-		2DD206D52837F27D00EDA434 /* AdminEnvironment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DD206D42837F27D00EDA434 /* AdminEnvironment.swift */; };
+		2DD206F72837F96500EDA434 /* AdminLoginUIComposer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DD206F62837F96500EDA434 /* AdminLoginUIComposer.swift */; };
+		2DD206F92837F97300EDA434 /* AdminLoginRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DD206F82837F97300EDA434 /* AdminLoginRoute.swift */; };
+		2DD206FB2837F97A00EDA434 /* AdminLoginRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DD206FA2837F97A00EDA434 /* AdminLoginRouter.swift */; };
 		2DD398D32810B58000A575DA /* AppEnvironment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DD398D12810B58000A575DA /* AppEnvironment.swift */; };
 		2DD398D42810B58000A575DA /* Servers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DD398D22810B58000A575DA /* Servers.swift */; };
 		2DD398EA2810C1B100A575DA /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DD398E92810C1B100A575DA /* LoadingView.swift */; };
@@ -132,7 +134,9 @@
 		2DCAB594280B7BEA00308095 /* Montserrat-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-ExtraBold.ttf"; sourceTree = "<group>"; };
 		2DCAB595280B7BEA00308095 /* Montserrat-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Light.ttf"; sourceTree = "<group>"; };
 		2DCAB596280B7BEA00308095 /* Montserrat-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Medium.ttf"; sourceTree = "<group>"; };
-		2DD206D42837F27D00EDA434 /* AdminEnvironment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminEnvironment.swift; sourceTree = "<group>"; };
+		2DD206F62837F96500EDA434 /* AdminLoginUIComposer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminLoginUIComposer.swift; sourceTree = "<group>"; };
+		2DD206F82837F97300EDA434 /* AdminLoginRoute.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminLoginRoute.swift; sourceTree = "<group>"; };
+		2DD206FA2837F97A00EDA434 /* AdminLoginRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminLoginRouter.swift; sourceTree = "<group>"; };
 		2DD3988A280C148C00A575DA /* AmazonIVSBroadcast.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = AmazonIVSBroadcast.xcframework; path = /Users/cankacmaz/Documents/IOS/clickmelivehost/ClickmeliveHostCore/../AmazonIVSBroadcast.xcframework; sourceTree = "<absolute>"; };
 		2DD398D12810B58000A575DA /* AppEnvironment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppEnvironment.swift; sourceTree = "<group>"; };
 		2DD398D22810B58000A575DA /* Servers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Servers.swift; sourceTree = "<group>"; };
@@ -225,6 +229,7 @@
 				2D9E0CB12811EEC8000E4321 /* Enter Phone */,
 				2DA4D9422824570D008EFAF1 /* Use Password */,
 				2D9E0D0C281227B0000E4321 /* Validate Code */,
+				2DD206F52837F95900EDA434 /* AdminLogin */,
 			);
 			path = Auth;
 			sourceTree = "<group>";
@@ -425,13 +430,22 @@
 			path = Fonts;
 			sourceTree = "<group>";
 		};
+		2DD206F52837F95900EDA434 /* AdminLogin */ = {
+			isa = PBXGroup;
+			children = (
+				2DD206F62837F96500EDA434 /* AdminLoginUIComposer.swift */,
+				2DD206F82837F97300EDA434 /* AdminLoginRoute.swift */,
+				2DD206FA2837F97A00EDA434 /* AdminLoginRouter.swift */,
+			);
+			path = AdminLogin;
+			sourceTree = "<group>";
+		};
 		2DD398CE2810B55F00A575DA /* Network */ = {
 			isa = PBXGroup;
 			children = (
 				2DD398D12810B58000A575DA /* AppEnvironment.swift */,
 				2DC30FE82815DC2400766092 /* ExternalEnvironment.swift */,
 				2D8CB3442815ED5600B7F40E /* SocketEnvironment.swift */,
-				2DD206D42837F27D00EDA434 /* AdminEnvironment.swift */,
 				2DD398D22810B58000A575DA /* Servers.swift */,
 			);
 			path = Network;
@@ -553,13 +567,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				2D9E0D532812DFFB000E4321 /* UserDefaultsHelper.swift in Sources */,
+				2DD206F72837F96500EDA434 /* AdminLoginUIComposer.swift in Sources */,
 				2D9E0CF728121FDB000E4321 /* AlertRoute.swift in Sources */,
 				2DA4D94528245731008EFAF1 /* UsePasswordRoute.swift in Sources */,
 				2D9E0CF328121785000E4321 /* AlertUIComposer.swift in Sources */,
 				2DA4D9492824592A008EFAF1 /* UsePasswordUIComposer.swift in Sources */,
 				2D9E0D4B2812D407000E4321 /* KeychainHelper.swift in Sources */,
 				2D9E0CFB281222E4000E4321 /* EnterPhoneRouter.swift in Sources */,
-				2DD206D52837F27D00EDA434 /* AdminEnvironment.swift in Sources */,
 				2D48E993281D8ECF00171E81 /* ProfileUIComposer.swift in Sources */,
 				2DCAB568280B6D1E00308095 /* Transition.swift in Sources */,
 				2DD6E29B2821A87E0087C61E /* UIViewController+Extensions.swift in Sources */,
@@ -579,6 +593,7 @@
 				2D9E0D302812365B000E4321 /* ValidateCodeRouter.swift in Sources */,
 				2D9E0CF9281221A7000E4321 /* AlertRouter.swift in Sources */,
 				2D9E0C942811CFB6000E4321 /* ListEventsUIComposer.swift in Sources */,
+				2DD206F92837F97300EDA434 /* AdminLoginRoute.swift in Sources */,
 				2DD398D42810B58000A575DA /* Servers.swift in Sources */,
 				2D9E0D512812DBF4000E4321 /* AppRoute.swift in Sources */,
 				2DD398EA2810C1B100A575DA /* LoadingView.swift in Sources */,
@@ -590,6 +605,7 @@
 				2D9E0D0E281227C5000E4321 /* ValidateCodeRoute.swift in Sources */,
 				2DD398F52810C75800A575DA /* UIColor+Extensions.swift in Sources */,
 				2D9E0CB62811EF52000E4321 /* EnterPhoneRoute.swift in Sources */,
+				2DD206FB2837F97A00EDA434 /* AdminLoginRouter.swift in Sources */,
 				2DCAB56A280B6D4400308095 /* PushTransition.swift in Sources */,
 				2D9E0D11281227DB000E4321 /* ValidateCodeUIComposer.swift in Sources */,
 				2DCAB562280B6BA000308095 /* BroadcasterUIComposer.swift in Sources */,
@@ -732,7 +748,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 7;
+				CURRENT_PROJECT_VERSION = 8;
 				DEVELOPMENT_TEAM = P624PPMU63;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = ClickMeLiveHost/Info.plist;
@@ -763,7 +779,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 7;
+				CURRENT_PROJECT_VERSION = 8;
 				DEVELOPMENT_TEAM = P624PPMU63;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = ClickMeLiveHost/Info.plist;

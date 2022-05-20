@@ -14,7 +14,7 @@ enum AppEnvironment {
 
 extension AppEnvironment {
     static var currentState: AppEnvironment {
-        return .development
+        return .production
     }
 }
 

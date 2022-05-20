@@ -5,6 +5,7 @@
 //  Created by Can Kaçmaz on 22.04.2022.
 //
 
+import Foundation
 
 class ValidationError: Error {
     var message: String
@@ -21,6 +22,7 @@ protocol ValidatorConvertible {
 enum ValidatorType {
     case phone
     case code
+    case email
 }
 
 enum VaildatorFactory {
@@ -28,6 +30,7 @@ enum VaildatorFactory {
         switch type {
         case .phone: return PhoneValidator()
         case .code: return CodeValidator()
+        case .email: return EmailValidator()
         }
     }
 }
@@ -45,6 +48,19 @@ struct PhoneValidator: ValidatorConvertible {
 struct CodeValidator: ValidatorConvertible {
     func validated(_ value: String, errorMessage: String) throws -> String {
         guard value.count == 6 else {
+            throw ValidationError(errorMessage)
+        }
+        return value
+    }
+}
+
+struct EmailValidator: ValidatorConvertible {
+    func validated(_ value: String, errorMessage: String) throws -> String {
+        do {
+            if try NSRegularExpression(pattern: "^[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,4}$", options: .caseInsensitive).firstMatch(in: value, options: [], range: NSRange(location: 0, length: value.count)) == nil {
+                throw ValidationError(errorMessage)
+            }
+        } catch {
             throw ValidationError(errorMessage)
         }
         return value

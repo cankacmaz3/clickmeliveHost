@@ -1,0 +1,13 @@
+/* 
+  AdminLogin.strings
+  ClickmeliveHostCore
+
+  Created by Can Kaçmaz on 20.05.2022.
+  
+*/
+
+"ADMIN_TITLE" = "Telefon\nnumaranı ve\nşifreni gir";
+"ADMIN_EMAIL_PLACEHOLDER" = "Email";
+"ADMIN_PASSWORD_PLACEHOLDER" = "Şifre";
+"ADMIN_LOGIN" = "Giriş Yap";
+"ADMIN_USE_SMS" = "Sms ile giriş yap";

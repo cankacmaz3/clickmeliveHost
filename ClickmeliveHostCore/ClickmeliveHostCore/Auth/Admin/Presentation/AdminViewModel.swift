@@ -1,42 +1,42 @@
 //
-//  UsePasswordViewModel.swift
+//  AdminViewModel.swift
 //  ClickmeliveHostCore
 //
-//  Created by Can Kaçmaz on 5.05.2022.
+//  Created by Can Kaçmaz on 20.05.2022.
 //
 
 import Foundation
 
-public final class UsePasswordViewModel {
+public final class AdminViewModel {
     public typealias Observer<T> = (T) -> Void
     
-    private let passwordAuthenticator: PasswordAuthenticator
+    private let adminAuthenticator: AdminAuthenticator
     
-    public init(passwordAuthenticator: PasswordAuthenticator) {
-        self.passwordAuthenticator = passwordAuthenticator
+    public init(adminAuthenticator: AdminAuthenticator) {
+        self.adminAuthenticator = adminAuthenticator
     }
     
     public var onLogin: Observer<Login>?
     public var onError: Observer<String>?
     
     public var title: String {
-        Localized.UsePassword.title
+        Localized.AdminLogin.title
     }
     
-    public var phonePlaceholder: String {
-        Localized.UsePassword.phonePlaceholder
+    public var emailPlaceholder: String {
+        Localized.AdminLogin.emailPlaceholder
     }
     
     public var passwordPlaceholder: String {
-        Localized.UsePassword.passwordPlaceholder
+        Localized.AdminLogin.passwordPlaceholder
     }
     
     public var login: String {
-        Localized.UsePassword.login
+        Localized.AdminLogin.login
     }
     
     public var useSMS: String {
-        Localized.UsePassword.useSMS
+        Localized.AdminLogin.useSMS
     }
     
     private var errorAlertActionButtonTitle: String {
@@ -47,14 +47,9 @@ public final class UsePasswordViewModel {
         Localized.Error.userNotFound
     }
     
-    public func formatPhone(_ phone: String) -> String {
-        return phone.phoneFormat()
-    }
-    
-    public func isValid(phone: String, password: String) -> Bool {
+    public func isValid(email: String, password: String) -> Bool {
         do{
-            try phone.validate(validationType: .phone)
-            try password.validate(validationType: .code)
+            try email.validate(validationType: .email)
             return true
         } catch(let error) {
             print(error.validationError())
@@ -62,9 +57,10 @@ public final class UsePasswordViewModel {
         }
     }
     
-    public func login(phone: String, password: String) {
-        passwordAuthenticator.perform(passwordAuthenticationRequest: .init(phone: phone.phoneUnformat(),
-                                                                           password: password),
+    public func login(email: String, password: String) {
+        adminAuthenticator.perform(adminAuthenticationRequest: .init(
+            email: email,
+            password: password),
                                       completion: { [weak self] result in
             guard let self = self else { return }
             switch result {
@@ -76,4 +72,5 @@ public final class UsePasswordViewModel {
         })
     }
 }
+
 

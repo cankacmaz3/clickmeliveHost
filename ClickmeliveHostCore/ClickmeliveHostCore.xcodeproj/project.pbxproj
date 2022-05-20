@@ -137,6 +137,14 @@
 		2DD206C42837829700EDA434 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DD206C12837829700EDA434 /* Product.swift */; };
 		2DD206C52837829700EDA434 /* ProductResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DD206C22837829700EDA434 /* ProductResponse.swift */; };
 		2DD206C92837EF1200EDA434 /* PasswordAuthenticator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DD206C82837EF1200EDA434 /* PasswordAuthenticator.swift */; };
+		2DD206D82837F61B00EDA434 /* AdminAuthenticator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DD206D72837F61B00EDA434 /* AdminAuthenticator.swift */; };
+		2DD206DC2837F64B00EDA434 /* RemoteAdminAuthenticator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DD206DB2837F64B00EDA434 /* RemoteAdminAuthenticator.swift */; };
+		2DD206DE2837F66300EDA434 /* AdminAuthenticationRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DD206DD2837F66300EDA434 /* AdminAuthenticationRequest.swift */; };
+		2DD206E12837F6B700EDA434 /* AdminViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DD206E02837F6B700EDA434 /* AdminViewModel.swift */; };
+		2DD206E32837F6CA00EDA434 /* Localized+AdminLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DD206E22837F6CA00EDA434 /* Localized+AdminLogin.swift */; };
+		2DD206E62837F71F00EDA434 /* AdminLogin.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2DD206E82837F71F00EDA434 /* AdminLogin.strings */; };
+		2DD206EE2837F84400EDA434 /* AdminLoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DD206ED2837F84400EDA434 /* AdminLoginView.swift */; };
+		2DD206F02837F85100EDA434 /* AdminLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DD206EF2837F85100EDA434 /* AdminLoginViewController.swift */; };
 		2DD39888280C12E400A575DA /* AmazonIVSBroadcast.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2DD39885280C128000A575DA /* AmazonIVSBroadcast.xcframework */; };
 		2DD398BE280F7F7A00A575DA /* EventCategoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DD398BD280F7F7A00A575DA /* EventCategoryCell.swift */; };
 		2DD398C1280FF65200A575DA /* EventCategoryCellController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DD398C0280FF65200A575DA /* EventCategoryCellController.swift */; };
@@ -321,6 +329,15 @@
 		2DD206C12837829700EDA434 /* Product.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
 		2DD206C22837829700EDA434 /* ProductResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductResponse.swift; sourceTree = "<group>"; };
 		2DD206C82837EF1200EDA434 /* PasswordAuthenticator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PasswordAuthenticator.swift; sourceTree = "<group>"; };
+		2DD206D72837F61B00EDA434 /* AdminAuthenticator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminAuthenticator.swift; sourceTree = "<group>"; };
+		2DD206DB2837F64B00EDA434 /* RemoteAdminAuthenticator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteAdminAuthenticator.swift; sourceTree = "<group>"; };
+		2DD206DD2837F66300EDA434 /* AdminAuthenticationRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminAuthenticationRequest.swift; sourceTree = "<group>"; };
+		2DD206E02837F6B700EDA434 /* AdminViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminViewModel.swift; sourceTree = "<group>"; };
+		2DD206E22837F6CA00EDA434 /* Localized+AdminLogin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Localized+AdminLogin.swift"; sourceTree = "<group>"; };
+		2DD206E72837F71F00EDA434 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/AdminLogin.strings; sourceTree = "<group>"; };
+		2DD206E92837F72000EDA434 /* tr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = tr; path = tr.lproj/AdminLogin.strings; sourceTree = "<group>"; };
+		2DD206ED2837F84400EDA434 /* AdminLoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminLoginView.swift; sourceTree = "<group>"; };
+		2DD206EF2837F85100EDA434 /* AdminLoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminLoginViewController.swift; sourceTree = "<group>"; };
 		2DD39885280C128000A575DA /* AmazonIVSBroadcast.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = AmazonIVSBroadcast.xcframework; path = ../AmazonIVSBroadcast.xcframework; sourceTree = "<group>"; };
 		2DD398BD280F7F7A00A575DA /* EventCategoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventCategoryCell.swift; sourceTree = "<group>"; };
 		2DD398C0280FF65200A575DA /* EventCategoryCellController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventCategoryCellController.swift; sourceTree = "<group>"; };
@@ -787,6 +804,7 @@
 				2D9E0CA82811EA2A000E4321 /* Enter Phone UI */,
 				2D9E0D0528122718000E4321 /* Validate Code UI */,
 				2DA4D92F282451EB008EFAF1 /* Use Password UI */,
+				2DD206EA2837F82000EDA434 /* Admin UI */,
 				2D9E0C842811CDC0000E4321 /* Auth.xcassets */,
 			);
 			path = "Auth UI";
@@ -799,6 +817,7 @@
 				2D9E0CC62811F83C000E4321 /* Landing */,
 				2D9E0CC72811F844000E4321 /* Enter Phone */,
 				2DA4D9362824528E008EFAF1 /* Use Password */,
+				2DD206D62837F60600EDA434 /* Admin */,
 				2D9E0D1228122A7E000E4321 /* Validate Code */,
 			);
 			path = Auth;
@@ -1166,6 +1185,68 @@
 			path = Date;
 			sourceTree = "<group>";
 		};
+		2DD206D62837F60600EDA434 /* Admin */ = {
+			isa = PBXGroup;
+			children = (
+				2DD206D92837F62D00EDA434 /* Feature */,
+				2DD206DA2837F63800EDA434 /* API */,
+				2DD206DF2837F6A300EDA434 /* Presentation */,
+			);
+			path = Admin;
+			sourceTree = "<group>";
+		};
+		2DD206D92837F62D00EDA434 /* Feature */ = {
+			isa = PBXGroup;
+			children = (
+				2DD206D72837F61B00EDA434 /* AdminAuthenticator.swift */,
+			);
+			path = Feature;
+			sourceTree = "<group>";
+		};
+		2DD206DA2837F63800EDA434 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				2DD206DB2837F64B00EDA434 /* RemoteAdminAuthenticator.swift */,
+				2DD206DD2837F66300EDA434 /* AdminAuthenticationRequest.swift */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		2DD206DF2837F6A300EDA434 /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				2DD206E02837F6B700EDA434 /* AdminViewModel.swift */,
+				2DD206E22837F6CA00EDA434 /* Localized+AdminLogin.swift */,
+				2DD206E82837F71F00EDA434 /* AdminLogin.strings */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		2DD206EA2837F82000EDA434 /* Admin UI */ = {
+			isa = PBXGroup;
+			children = (
+				2DD206EB2837F83700EDA434 /* Controllers */,
+				2DD206EC2837F83B00EDA434 /* Views */,
+			);
+			path = "Admin UI";
+			sourceTree = "<group>";
+		};
+		2DD206EB2837F83700EDA434 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				2DD206EF2837F85100EDA434 /* AdminLoginViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		2DD206EC2837F83B00EDA434 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				2DD206ED2837F84400EDA434 /* AdminLoginView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		2DD398BB280F7F6900A575DA /* Cell */ = {
 			isa = PBXGroup;
 			children = (
@@ -1346,6 +1427,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2DD206E62837F71F00EDA434 /* AdminLogin.strings in Resources */,
 				2D9E0CA12811E7C9000E4321 /* Landing.strings in Resources */,
 				2D9E0D9828136D82000E4321 /* ListEvents.strings in Resources */,
 				2D9E0CCD2811F8A4000E4321 /* EnterPhone.strings in Resources */,
@@ -1404,11 +1486,13 @@
 				2DD206BD2837820F00EDA434 /* Date+Helpers.swift in Sources */,
 				2D9E0CFE2812264B000E4321 /* Localized+Error.swift in Sources */,
 				2DC30FE62815D8A500766092 /* RemoteEventDetailLoader.swift in Sources */,
+				2DD206E12837F6B700EDA434 /* AdminViewModel.swift in Sources */,
 				2D9E0D3A2812C7A3000E4321 /* AlertViewModel.swift in Sources */,
 				2D9E0D9D28136D97000E4321 /* Localized+ListEvents.swift in Sources */,
 				2DA4D95128246D0A008EFAF1 /* Login.swift in Sources */,
 				2D9E0CE328120BC8000E4321 /* CreateCodeDTO.swift in Sources */,
 				2D73B4F5281DE7BB00C2F031 /* Localized+Profile.swift in Sources */,
+				2DD206E32837F6CA00EDA434 /* Localized+AdminLogin.swift in Sources */,
 				2DD206C52837829700EDA434 /* ProductResponse.swift in Sources */,
 				2D9E0D93281348E5000E4321 /* VirtualViewerDTO.swift in Sources */,
 				2DCAB4DE280ADD0000308095 /* EventCategoryViewModel.swift in Sources */,
@@ -1438,6 +1522,7 @@
 				2D9E0D422812C7E1000E4321 /* Localized+Alert.swift in Sources */,
 				2D9E0C9E2811E7B8000E4321 /* Localized+Landing.swift in Sources */,
 				2DCAB475280ABACF00308095 /* HTTPURLResponse+StatusCode.swift in Sources */,
+				2DD206D82837F61B00EDA434 /* AdminAuthenticator.swift in Sources */,
 				2DD206B3283780D000EDA434 /* CMLErrorDTO.swift in Sources */,
 				2DA4D94F28246CAB008EFAF1 /* LoginDTO.swift in Sources */,
 				2D9E0CA72811E82B000E4321 /* LandingViewModel.swift in Sources */,
@@ -1460,6 +1545,7 @@
 				2D9E0D74281301B4000E4321 /* EventProductViewModel.swift in Sources */,
 				2DD398F72810C80400A575DA /* Paginated.swift in Sources */,
 				2DD206C32837829700EDA434 /* Event.swift in Sources */,
+				2DD206DC2837F64B00EDA434 /* RemoteAdminAuthenticator.swift in Sources */,
 				2DD398F92810CA5400A575DA /* Metadata.swift in Sources */,
 				2D9E0D2A281233A7000E4321 /* ValidateCodeDTO.swift in Sources */,
 				2D9E0D9528136D07000E4321 /* ListEventsViewModel.swift in Sources */,
@@ -1469,6 +1555,7 @@
 				2D9E0D8928132FE7000E4321 /* RemoteViewerLoader.swift in Sources */,
 				2DCAB4F1280AE66400308095 /* Date+Extensions.swift in Sources */,
 				2D9E0D25281232DB000E4321 /* AuthCodeValidator.swift in Sources */,
+				2DD206DE2837F66300EDA434 /* AdminAuthenticationRequest.swift in Sources */,
 				2D9E0D672812F6AD000E4321 /* RemoteEventProductLoader.swift in Sources */,
 				2DD206B4283780D000EDA434 /* UserDTO.swift in Sources */,
 				2D73B4F7281DE7DA00C2F031 /* ProfileViewModel.swift in Sources */,
@@ -1504,6 +1591,7 @@
 				2DCAB55C280B6B0600308095 /* BroadcastViewController.swift in Sources */,
 				2D9E0D812813215C000E4321 /* UILabel+Helpers.swift in Sources */,
 				2D9E0D83281322A6000E4321 /* BadgeContainer.swift in Sources */,
+				2DD206EE2837F84400EDA434 /* AdminLoginView.swift in Sources */,
 				2D9E0CB82811F377000E4321 /* CMLTextField.swift in Sources */,
 				2DCAB4C1280AC8EA00308095 /* EventCell.swift in Sources */,
 				2D9E0DA128139E7E000E4321 /* BroadcastVC+Stream.swift in Sources */,
@@ -1522,6 +1610,7 @@
 				2D9E0D6E2812FDAC000E4321 /* String+Helpers.swift in Sources */,
 				2DD6E291282196360087C61E /* BroadcastChatController.swift in Sources */,
 				2D9E0CBA2811F44B000E4321 /* CMLButton.swift in Sources */,
+				2DD206F02837F85100EDA434 /* AdminLoginViewController.swift in Sources */,
 				2D9E0CAE2811EE11000E4321 /* EnterPhoneView.swift in Sources */,
 				2D9E0D762813025F000E4321 /* BroadcastEventProductsController.swift in Sources */,
 				2DA4D92E28244FD0008EFAF1 /* UIStackView+Helpers.swift in Sources */,
@@ -1641,6 +1730,15 @@
 				2DA4D93F282452FC008EFAF1 /* tr */,
 			);
 			name = UsePassword.strings;
+			sourceTree = "<group>";
+		};
+		2DD206E82837F71F00EDA434 /* AdminLogin.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2DD206E72837F71F00EDA434 /* en */,
+				2DD206E92837F72000EDA434 /* tr */,
+			);
+			name = AdminLogin.strings;
 			sourceTree = "<group>";
 		};
 		2DD398E22810B9A400A575DA /* Date.strings */ = {

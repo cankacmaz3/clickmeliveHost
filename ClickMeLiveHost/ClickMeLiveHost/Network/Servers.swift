@@ -16,6 +16,4 @@ struct Servers {
     
     static let socketProduction = "wss://eventstats-prod-api.clickmelive.com/?eventId="
     static let socketDevelopment = "wss://eventstats-test-api.clickmelive.com/?eventId="
-    
-    static let adminProduction = "https://admin-svc.clickmelive.com"
 }
