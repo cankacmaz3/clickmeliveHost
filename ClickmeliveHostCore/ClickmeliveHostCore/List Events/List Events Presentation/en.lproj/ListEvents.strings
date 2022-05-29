@@ -23,3 +23,5 @@
 "LIST_EVENT_DELETE_MESSAGE" = "Videoyu silmek istediğinden emin misin?";
 "LIST_EVENT_DELETE_ALERT_YES" = "Evet";
 "LIST_EVENT_DELETE_ALERT_CANCEL" = "Vazgeç";
+
+"LIST_EVENT_EMPTY_VIDEOS" = "Henüz eklenmiş bir video yok";

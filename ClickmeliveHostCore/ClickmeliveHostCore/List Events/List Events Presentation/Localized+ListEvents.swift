@@ -122,6 +122,14 @@ extension Localized {
                 bundle: bundle,
                 comment: "Text for ended status")
         }
+        
+        static var emptyVideos: String {
+            NSLocalizedString(
+                "LIST_EVENT_EMPTY_VIDEOS",
+                tableName: table,
+                bundle: bundle,
+                comment: "Text for ended status")
+        }
     }
 }
 

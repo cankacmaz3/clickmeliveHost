@@ -35,6 +35,10 @@ public final class ListVideosViewModel {
     private var errorMessage: String {
         Localized.Error.defaultMessage
     }
+    
+    public var placeholderTitle: String {
+        Localized.ListEvents.emptyVideos
+    }
 }
 
 // MARK: - Network related methods

@@ -31,6 +31,7 @@ public final class ListVideosViewController: UIViewController, Layouting {
     
     public override func viewDidLoad() {
         super.viewDidLoad()
+        layoutableView.setLocalizedTitles(viewModel: refreshController?.viewModel)
         setupCollectionView()
     }
     
@@ -44,6 +45,8 @@ public final class ListVideosViewController: UIViewController, Layouting {
     }
     
     public func display(_ controllers: [ListVideosCellController]) {
+        layoutableView.placeholderView.isHidden = !controllers.isEmpty
+        
         loadingControllers = [:]
         collectionModel = controllers
     }
@@ -52,7 +55,7 @@ public final class ListVideosViewController: UIViewController, Layouting {
         refreshController?.deleteEvent(eventId: eventId)
     }
     
-    public func reloadCollectionView() {
+    private func reloadCollectionView() {
         collectionModel = []
         refreshController?.refresh()
     }
@@ -64,6 +67,7 @@ public final class ListVideosViewController: UIViewController, Layouting {
         layoutableView.collectionView.register(ListVideoCell.self, forCellWithReuseIdentifier: Constants.listVideoCellId)
         layoutableView.collectionView.contentInset = UIEdgeInsets(top: 0, left: 16, bottom: 16, right: 16)
     }
+
 }
 
 // MARK: - CollectionView related methods

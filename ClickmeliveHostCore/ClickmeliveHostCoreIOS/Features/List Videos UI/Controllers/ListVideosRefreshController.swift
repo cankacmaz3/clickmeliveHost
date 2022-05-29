@@ -11,7 +11,7 @@ import ClickmeliveHostCore
 public final class ListVideosRefreshController: NSObject {
     private(set) lazy var view = binded(UIRefreshControl())
       
-    private let viewModel: ListVideosViewModel
+    public let viewModel: ListVideosViewModel
     
     public init(viewModel: ListVideosViewModel) {
         self.viewModel = viewModel
