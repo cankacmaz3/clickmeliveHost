@@ -14,13 +14,16 @@ public final class ListVideosCellController {
     private let imageLoader: ImageLoader
     
     public let selection: () -> Void
+    public let deleteTapped: () -> Void
     
     public init(viewModel: EventViewModel,
                 imageLoader: ImageLoader,
-                selection: @escaping () -> Void) {
+                selection: @escaping () -> Void,
+                deleteTapped: @escaping () -> Void) {
         self.viewModel = viewModel
         self.imageLoader = imageLoader
         self.selection = selection
+        self.deleteTapped = deleteTapped
     }
     
     private var cell: ListVideoCell?
@@ -32,6 +35,11 @@ public final class ListVideosCellController {
     private func binded(cell: ListVideoCell) -> ListVideoCell {
         self.cell = cell
         cell.configure(with: viewModel, imageLoader: imageLoader)
+        
+        cell.onDeleteTapped = { [weak self] in
+            self?.deleteTapped()
+        }
+        
         return cell
     }
     

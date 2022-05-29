@@ -21,7 +21,9 @@ final class ListVideoUIComposer {
         
         let eventLoader = RemoteEventLoader(client: loadingClient, baseURL: AppEnvironment.baseURL, authenticationTokenHeader: authenticationTokenHeader)
         
-        let listVideosViewModel = ListVideosViewModel(eventLoader: eventLoader)
+        let authTokenLoader = AuthTokenLoader(store: AuthTokenStore())
+        let eventRemover = RemoteEventRemover(client: loadingClient, baseURL: AppEnvironment.baseURL, authTokenLoader: authTokenLoader)
+        let listVideosViewModel = ListVideosViewModel(eventLoader: eventLoader, eventRemover: eventRemover)
         let refreshController = ListVideosRefreshController(viewModel: listVideosViewModel)
         let controller = ListVideosViewController(refreshController: refreshController)
         
@@ -33,6 +35,13 @@ final class ListVideoUIComposer {
                                                               selection: {
                     guard let url = viewModel.videoURL else { return }
                     router.openVideoModule(url: url)
+                },
+                                                              deleteTapped: {
+                    router.openAlertModule(message: viewModel.deleteMessage,
+                                           buttonTitle: viewModel.approveDelete,
+                                           cancelButtonTitle: viewModel.cancelDelete) {
+                        controller?.deleteTapped(eventId: event.id)
+                    }
                 })
                 return cellController
             })

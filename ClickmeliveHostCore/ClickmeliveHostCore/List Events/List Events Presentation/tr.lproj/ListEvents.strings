@@ -20,3 +20,6 @@
 "LIST_EVENT_STATUS_CANCELLED" = "Reddedildi";
 "LIST_EVENT_STATUS_ENDED" = "Geçmiş";
 
+"LIST_EVENT_DELETE_MESSAGE" = "Videoyu silmek istediğinden emin misin?";
+"LIST_EVENT_DELETE_ALERT_YES" = "Evet";
+"LIST_EVENT_DELETE_ALERT_CANCEL" = "Vazgeç";

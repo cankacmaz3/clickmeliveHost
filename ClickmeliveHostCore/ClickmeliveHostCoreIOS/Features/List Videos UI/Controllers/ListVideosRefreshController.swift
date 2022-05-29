@@ -25,6 +25,10 @@ public final class ListVideosRefreshController: NSObject {
         viewModel.onNextEvent()
     }
     
+    public func deleteEvent(eventId: Int) {
+        viewModel.deleteEvent(eventId: eventId)
+    }
+    
     private func binded(_ view: UIRefreshControl) -> UIRefreshControl {
         viewModel.onEventsLoadingStateChange = { [weak view] isLoading in
             if !isLoading {

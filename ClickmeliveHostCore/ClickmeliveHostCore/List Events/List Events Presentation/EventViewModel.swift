@@ -82,5 +82,17 @@ public final class EventViewModel {
             return nil
         }
     }
+    
+    public var deleteMessage: String {
+        Localized.ListEvents.deleteMessage
+    }
+    
+    public var approveDelete: String {
+        Localized.ListEvents.approveDelete
+    }
+    
+    public var cancelDelete: String {
+        Localized.ListEvents.cancelDelete
+    }
 }
 

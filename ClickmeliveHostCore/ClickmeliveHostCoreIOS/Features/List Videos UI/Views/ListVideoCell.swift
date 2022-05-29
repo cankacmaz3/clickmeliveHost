@@ -14,13 +14,20 @@ extension ListVideoCell {
         
         lblTitle.text = viewModel.title
     }
+    
+    @objc func deleteTapped() {
+        onDeleteTapped?()
+    }
 }
 
 final class ListVideoCell: UICollectionViewCell {
     
+    var onDeleteTapped: (() -> Void)?
+    
     private enum Constants {
         static let dimBgImage: String = "img_dim_bg"
         static let playImage: String = "icon_play"
+        static let deleteImage: String = "icon_delete"
     }
     
     private let ivEvent: UIImageView = {
@@ -52,6 +59,16 @@ final class ListVideoCell: UICollectionViewCell {
         return iv
     }()
     
+    private let ivDelete: UIImageView = {
+        let iv = UIImageView()
+        
+        iv.image = UIImage(named: Constants.deleteImage,
+                           in: Bundle(for: ListVideoCell.self),
+                           compatibleWith: nil)
+        iv.isUserInteractionEnabled = true
+        return iv
+    }()
+    
     private let lblTitle: UILabel = {
         let label = UILabel()
         label.textColor = .white
@@ -62,6 +79,9 @@ final class ListVideoCell: UICollectionViewCell {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
+        
+        let gesture = UITapGestureRecognizer(target: self, action: #selector(deleteTapped))
+        ivDelete.addGestureRecognizer(gesture)
         
         setupViews()
         setupLayout()
@@ -80,6 +100,7 @@ final class ListVideoCell: UICollectionViewCell {
         addSubview(ivEvent)
         addSubview(ivDimBg)
         addSubview(ivPlay)
+        addSubview(ivDelete)
         addSubview(lblTitle)
     }
     
@@ -90,5 +111,7 @@ final class ListVideoCell: UICollectionViewCell {
         ivPlay.constrainWidth(20)
         ivPlay.constrainHeight(24)
         ivPlay.anchorCenterSuperview()
+        
+        ivDelete.anchor(contentView.topAnchor, left: nil, bottom: nil, right: contentView.rightAnchor, topConstant: 8, leftConstant: 0, bottomConstant: 0, rightConstant: 8, widthConstant: 28, heightConstant: 28)
     }
 }

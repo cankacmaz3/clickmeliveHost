@@ -1,8 +1,8 @@
 //
 //  Localized+Alert.swift
-//  ClickmeliveHostCore
+//  Clickmelive
 //
-//  Created by Can Kaçmaz on 22.04.2022.
+//  Created by Can Kaçmaz on 23.05.2022.
 //
 
 import Foundation

@@ -6,15 +6,21 @@
 //
 
 import Foundation
+import Combine
 
 public final class ListVideosViewModel {
+    private var disposables = Set<AnyCancellable>()
+    
     public typealias Observer<T> = (T) -> Void
     public typealias Next<T> = (Result<Paginated<T>, Error>) -> Void
     
     private let eventLoader: EventLoader
+    private let eventRemover: EventRemover
    
-    public init(eventLoader: EventLoader) {
+    public init(eventLoader: EventLoader,
+                eventRemover: EventRemover) {
         self.eventLoader = eventLoader
+        self.eventRemover = eventRemover
     }
     
     private var events: [Event] = []
@@ -70,5 +76,22 @@ extension ListVideosViewModel {
         self.events = self.events + newItems
         
         onEventsLoaded?(self.events)
+    }
+}
+
+extension ListVideosViewModel {
+    public func deleteEvent(eventId: Int) {
+        eventRemover.remove(eventId: eventId).sink(
+            receiveCompletion: { [weak self] completion in
+                guard let self = self else { return }
+                switch completion {
+                case .finished: break
+                    
+                case let .failure(error):
+                    self.onError?(error.localizedDescription)
+                }
+        }, receiveValue: { [weak self] _ in
+            self?.loadVideos(status: [.SHORT_VIDEO, .LONG_VIDEO])
+        }).store(in: &disposables)
     }
 }

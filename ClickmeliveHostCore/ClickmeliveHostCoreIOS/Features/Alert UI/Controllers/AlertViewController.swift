@@ -1,9 +1,10 @@
 //
 //  AlertViewController.swift
-//  ClickmeliveHostCoreIOS
+//  ClickmeliveIOS
 //
-//  Created by Can Kaçmaz on 22.04.2022.
+//  Created by Can Kaçmaz on 23.05.2022.
 //
+
 
 import Foundation
 import UIKit
@@ -20,7 +21,7 @@ public final class AlertViewController: UIViewController, Layouting {
     public init(viewModel: AlertViewModel) {
         self.viewModel = viewModel
         super.init(nibName: nil, bundle: nil)
-        layoutableView.setTitles(messageTitle: viewModel.message, buttonTitle: viewModel.actionButtonTitle)
+        layoutableView.setTitles(viewModel: viewModel)
     }
     
     required init?(coder: NSCoder) {
@@ -30,6 +31,10 @@ public final class AlertViewController: UIViewController, Layouting {
     public override func viewDidLoad() {
         super.viewDidLoad()
         registerActions()
+    }
+    
+    deinit {
+        print("deinit AlertViewController")
     }
     
     public override func loadView() {
@@ -47,8 +52,11 @@ public final class AlertViewController: UIViewController, Layouting {
     
     private func registerActions() {
         layoutableView.btnAction.addTarget(self, action: #selector(actionTapped), for: .touchUpInside)
+        layoutableView.btnCancel.addTarget(self, action: #selector(closeTapped), for: .touchUpInside)
         
         let closeGesture = UITapGestureRecognizer(target: self, action: #selector(closeTapped))
         layoutableView.closeView.addGestureRecognizer(closeGesture)
+        
     }
 }
+

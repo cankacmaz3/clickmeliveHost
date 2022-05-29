@@ -7,15 +7,16 @@
 
 import Foundation
 
-protocol AlertRoute {
-    func openAlertModule(message: String, buttonTitle: String?, completion: @escaping () -> Void)
+public protocol AlertRoute {
+    func openAlertModule(message: String, buttonTitle: String?, cancelButtonTitle: String?, completion: @escaping () -> Void)
 }
 
 extension AlertRoute where Self: RouterProtocol {
-    func openAlertModule(message: String, buttonTitle: String? = nil, completion: @escaping () -> Void = {}) {
-        let module = AlertUIComposer.makeAlertController(message: message,
-                                                         buttonTitle: buttonTitle,
-                                                         completion: completion)
+    func openAlertModule(message: String, buttonTitle: String? = nil, cancelButtonTitle: String? = nil, completion: @escaping () -> Void = {}) {
+        let module = AlertUIComposer.makeAlertViewController(message: message,
+                                                             buttonTitle: buttonTitle,
+                                                             cancelButtonTitle: cancelButtonTitle,
+                                                             completion: completion)
         let modelTransition = ModalTransition(isAnimated: false,
                                               modalTransitionStyle: .crossDissolve,
                                               modalPresentationStyle: .overFullScreen)

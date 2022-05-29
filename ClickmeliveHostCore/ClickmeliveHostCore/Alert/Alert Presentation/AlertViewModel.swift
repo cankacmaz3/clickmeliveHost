@@ -1,8 +1,8 @@
 //
 //  AlertViewModel.swift
-//  ClickmeliveHostCore
+//  Clickmelive
 //
-//  Created by Can Kaçmaz on 22.04.2022.
+//  Created by Can Kaçmaz on 23.05.2022.
 //
 
 import Foundation
@@ -21,6 +21,14 @@ public final class AlertViewModel {
     
     public var actionButtonTitle: String {
         return alert.buttonTitle ?? Localized.Alert.defaultActionButtonTitle
+    }
+    
+    public var actionCancelTitle: String {
+        return alert.cancelButtonTitle ?? ""
+    }
+    
+    public var isCancelButtonHidden: Bool {
+        return alert.cancelButtonTitle == nil
     }
 }
 

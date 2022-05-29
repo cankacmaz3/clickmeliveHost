@@ -12,10 +12,10 @@ import ClickmeliveHostCore
 final class AlertUIComposer {
     private init() {}
     
-    static func makeAlertController(message: String, buttonTitle: String?, completion: @escaping () -> Void) -> AlertViewController {
+    static func makeAlertViewController(message: String, buttonTitle: String?, cancelButtonTitle: String?, completion: @escaping () -> Void) -> AlertViewController {
         let router = AlertRouter()
         
-        let alert = Alert(message: message, buttonTitle: buttonTitle)
+        let alert = Alert(message: message, buttonTitle: buttonTitle, cancelButtonTitle: cancelButtonTitle)
         let viewModel = AlertViewModel(alert: alert)
         
         let alertViewController = AlertViewController(viewModel: viewModel)

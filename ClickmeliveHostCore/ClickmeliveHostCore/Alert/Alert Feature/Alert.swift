@@ -10,9 +10,11 @@ import Foundation
 public struct Alert {
     public let message: String
     public let buttonTitle: String?
+    public let cancelButtonTitle: String?
     
-    public init(message: String, buttonTitle: String?) {
+    public init(message: String, buttonTitle: String?, cancelButtonTitle: String?) {
         self.message = message
         self.buttonTitle = buttonTitle
+        self.cancelButtonTitle = cancelButtonTitle
     }
 }

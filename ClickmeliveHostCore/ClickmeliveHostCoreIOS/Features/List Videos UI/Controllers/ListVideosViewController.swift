@@ -48,7 +48,11 @@ public final class ListVideosViewController: UIViewController, Layouting {
         collectionModel = controllers
     }
     
-    private func reloadCollectionView() {
+    public func deleteTapped(eventId: Int) {
+        refreshController?.deleteEvent(eventId: eventId)
+    }
+    
+    public func reloadCollectionView() {
         collectionModel = []
         refreshController?.refresh()
     }

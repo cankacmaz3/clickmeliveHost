@@ -57,8 +57,13 @@
 		2D8C4F322843B166001C13B2 /* ImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D8C4F312843B166001C13B2 /* ImageLoader.swift */; };
 		2D8C4F372843B930001C13B2 /* ListVideosCellController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D8C4F362843B930001C13B2 /* ListVideosCellController.swift */; };
 		2D8C4F392843B9A0001C13B2 /* ListVideoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D8C4F382843B9A0001C13B2 /* ListVideoCell.swift */; };
-		2D8C4F3C2843BBCE001C13B2 /* ListVideosViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D8C4F3B2843BBCE001C13B2 /* ListVideosViewModel.swift */; };
 		2D8C4F3E2843BC18001C13B2 /* ListVideosRefreshController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D8C4F3D2843BC18001C13B2 /* ListVideosRefreshController.swift */; };
+		2D8C4F472843EEAC001C13B2 /* RemoteClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D8C4F462843EEAC001C13B2 /* RemoteClient.swift */; };
+		2D8C4F492843EEC9001C13B2 /* ErrorMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D8C4F482843EEC9001C13B2 /* ErrorMapper.swift */; };
+		2D8C4F532843F2DE001C13B2 /* ListVideosViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D8C4F4F2843F2DE001C13B2 /* ListVideosViewModel.swift */; };
+		2D8C4F542843F2DE001C13B2 /* EventRemover.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D8C4F502843F2DE001C13B2 /* EventRemover.swift */; };
+		2D8C4F552843F2DE001C13B2 /* RemoteEventRemover.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D8C4F512843F2DE001C13B2 /* RemoteEventRemover.swift */; };
+		2D8C4F562843F2DE001C13B2 /* EventRemoveMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D8C4F522843F2DE001C13B2 /* EventRemoveMapper.swift */; };
 		2D9E0C9E2811E7B8000E4321 /* Localized+Landing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D9E0C9D2811E7B8000E4321 /* Localized+Landing.swift */; };
 		2D9E0CA12811E7C9000E4321 /* Landing.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2D9E0CA32811E7C9000E4321 /* Landing.strings */; };
 		2D9E0CA72811E82B000E4321 /* LandingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D9E0CA62811E82B000E4321 /* LandingViewModel.swift */; };
@@ -256,8 +261,13 @@
 		2D8C4F312843B166001C13B2 /* ImageLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLoader.swift; sourceTree = "<group>"; };
 		2D8C4F362843B930001C13B2 /* ListVideosCellController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListVideosCellController.swift; sourceTree = "<group>"; };
 		2D8C4F382843B9A0001C13B2 /* ListVideoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListVideoCell.swift; sourceTree = "<group>"; };
-		2D8C4F3B2843BBCE001C13B2 /* ListVideosViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListVideosViewModel.swift; sourceTree = "<group>"; };
 		2D8C4F3D2843BC18001C13B2 /* ListVideosRefreshController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListVideosRefreshController.swift; sourceTree = "<group>"; };
+		2D8C4F462843EEAC001C13B2 /* RemoteClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteClient.swift; sourceTree = "<group>"; };
+		2D8C4F482843EEC9001C13B2 /* ErrorMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorMapper.swift; sourceTree = "<group>"; };
+		2D8C4F4F2843F2DE001C13B2 /* ListVideosViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListVideosViewModel.swift; sourceTree = "<group>"; };
+		2D8C4F502843F2DE001C13B2 /* EventRemover.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventRemover.swift; sourceTree = "<group>"; };
+		2D8C4F512843F2DE001C13B2 /* RemoteEventRemover.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RemoteEventRemover.swift; sourceTree = "<group>"; };
+		2D8C4F522843F2DE001C13B2 /* EventRemoveMapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventRemoveMapper.swift; sourceTree = "<group>"; };
 		2D9E0C9D2811E7B8000E4321 /* Localized+Landing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Localized+Landing.swift"; sourceTree = "<group>"; };
 		2D9E0CA22811E7C9000E4321 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Landing.strings; sourceTree = "<group>"; };
 		2D9E0CA42811E7CA000E4321 /* tr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = tr; path = tr.lproj/Landing.strings; sourceTree = "<group>"; };
@@ -805,12 +815,15 @@
 			path = Features;
 			sourceTree = "<group>";
 		};
-		2D8C4F3A2843BBBB001C13B2 /* ListVideos */ = {
+		2D8C4F4E2843F2DE001C13B2 /* List Videos */ = {
 			isa = PBXGroup;
 			children = (
-				2D8C4F3B2843BBCE001C13B2 /* ListVideosViewModel.swift */,
+				2D8C4F4F2843F2DE001C13B2 /* ListVideosViewModel.swift */,
+				2D8C4F502843F2DE001C13B2 /* EventRemover.swift */,
+				2D8C4F512843F2DE001C13B2 /* RemoteEventRemover.swift */,
+				2D8C4F522843F2DE001C13B2 /* EventRemoveMapper.swift */,
 			);
-			path = ListVideos;
+			path = "List Videos";
 			sourceTree = "<group>";
 		};
 		2D9E0C9C2811E798000E4321 /* Landing Presentation */ = {
@@ -1147,7 +1160,7 @@
 				2DBFF5F228118FA7006F7E40 /* Auth */,
 				2D2E6FC9283C41B000A795AF /* Home */,
 				2DCAB4C6280AD85A00308095 /* List Events */,
-				2D8C4F3A2843BBBB001C13B2 /* ListVideos */,
+				2D8C4F4E2843F2DE001C13B2 /* List Videos */,
 				2D9E0D572812F4F0000E4321 /* Broadcast */,
 				2D73B4F0281DE70900C2F031 /* Profile */,
 				2D9E0CD92812046D000E4321 /* Helpers */,
@@ -1326,6 +1339,7 @@
 				2DD398F82810CA5400A575DA /* Metadata.swift */,
 				2DD398FA2810CA9900A575DA /* EventResponse.swift */,
 				2D9E0D352812B5E0000E4321 /* CMLError.swift */,
+				2D8C4F462843EEAC001C13B2 /* RemoteClient.swift */,
 			);
 			path = Features;
 			sourceTree = "<group>";
@@ -1335,6 +1349,7 @@
 			children = (
 				2DCAB471280ABAA500308095 /* HTTPClient.swift */,
 				2DCAB474280ABACF00308095 /* HTTPURLResponse+StatusCode.swift */,
+				2D8C4F482843EEC9001C13B2 /* ErrorMapper.swift */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -1630,8 +1645,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				2DD206C92837EF1200EDA434 /* PasswordAuthenticator.swift in Sources */,
+				2D8C4F552843F2DE001C13B2 /* RemoteEventRemover.swift in Sources */,
 				2D9E0D622812F5D9000E4321 /* Double+Extensions.swift in Sources */,
 				2D9E0D8D28133EED000E4321 /* ViewerViewModel.swift in Sources */,
+				2D8C4F542843F2DE001C13B2 /* EventRemover.swift in Sources */,
 				2D9E0D27281232FF000E4321 /* ValidateCode.swift in Sources */,
 				2D9E0D7B28131699000E4321 /* ProductViewModel.swift in Sources */,
 				2DCAB557280B679F00308095 /* EventViewModel.swift in Sources */,
@@ -1639,6 +1656,7 @@
 				2D9E0CE028120B3A000E4321 /* CreateCode.swift in Sources */,
 				2D9E0CE828121111000E4321 /* AuthEndpoints.swift in Sources */,
 				2DD206BD2837820F00EDA434 /* Date+Helpers.swift in Sources */,
+				2D8C4F472843EEAC001C13B2 /* RemoteClient.swift in Sources */,
 				2D9E0CFE2812264B000E4321 /* Localized+Error.swift in Sources */,
 				2DC30FE62815D8A500766092 /* RemoteEventDetailLoader.swift in Sources */,
 				2DD206E12837F6B700EDA434 /* AdminViewModel.swift in Sources */,
@@ -1686,16 +1704,17 @@
 				2D9E0CA72811E82B000E4321 /* LandingViewModel.swift in Sources */,
 				2D9E0CCA2811F866000E4321 /* EnterPhoneViewModel.swift in Sources */,
 				2DCAB479280ABAFF00308095 /* URLRequestBuilder.swift in Sources */,
+				2D8C4F532843F2DE001C13B2 /* ListVideosViewModel.swift in Sources */,
 				2D9E0CE528120C46000E4321 /* RemoteAuthCodeCreator.swift in Sources */,
 				2D9E0D452812C871000E4321 /* Alert.swift in Sources */,
 				2D9E0D2128123132000E4321 /* DeviceHelper.swift in Sources */,
+				2D8C4F492843EEC9001C13B2 /* ErrorMapper.swift in Sources */,
 				2DCAB4D3280ADA2500308095 /* User.swift in Sources */,
 				2DCAB4CB280AD94800308095 /* EventLoader.swift in Sources */,
 				2D9E0D8B28133125000E4321 /* ViewerListener.swift in Sources */,
 				2DA4D95328246D75008EFAF1 /* RemotePasswordAuthenticator.swift in Sources */,
 				2DA4D95528246DBA008EFAF1 /* PasswordAuthenticationRequest.swift in Sources */,
 				2D9E0D2C2812344C000E4321 /* RemoteAuthCodeValidator.swift in Sources */,
-				2D8C4F3C2843BBCE001C13B2 /* ListVideosViewModel.swift in Sources */,
 				2D33E43228159C2E00638293 /* ElapsedTimeAndDataManager.swift in Sources */,
 				2D8C4F2F2843B114001C13B2 /* DefaultsStore.swift in Sources */,
 				2D33E43428159D0300638293 /* Int+Extensions.swift in Sources */,
@@ -1710,6 +1729,7 @@
 				2DD398F92810CA5400A575DA /* Metadata.swift in Sources */,
 				2D9E0D2A281233A7000E4321 /* ValidateCodeDTO.swift in Sources */,
 				2D9E0D9528136D07000E4321 /* ListEventsViewModel.swift in Sources */,
+				2D8C4F562843F2DE001C13B2 /* EventRemoveMapper.swift in Sources */,
 				2DD398FB2810CA9900A575DA /* EventResponse.swift in Sources */,
 				2D2E6FCF283C424600A795AF /* ContentType.swift in Sources */,
 				2DCAB477280ABAEC00308095 /* URLSessionHTTPClient.swift in Sources */,

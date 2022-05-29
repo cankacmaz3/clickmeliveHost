@@ -98,5 +98,30 @@ extension Localized {
                 bundle: bundle,
                 comment: "Text for ended status")
         }
+        
+        static var deleteMessage: String {
+            NSLocalizedString(
+                "LIST_EVENT_DELETE_MESSAGE",
+                tableName: table,
+                bundle: bundle,
+                comment: "Text for ended status")
+        }
+        
+        static var approveDelete: String {
+            NSLocalizedString(
+                "LIST_EVENT_DELETE_ALERT_YES",
+                tableName: table,
+                bundle: bundle,
+                comment: "Text for ended status")
+        }
+        
+        static var cancelDelete: String {
+            NSLocalizedString(
+                "LIST_EVENT_DELETE_ALERT_CANCEL",
+                tableName: table,
+                bundle: bundle,
+                comment: "Text for ended status")
+        }
     }
 }
+
