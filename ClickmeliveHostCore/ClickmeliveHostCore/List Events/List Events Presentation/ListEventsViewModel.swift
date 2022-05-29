@@ -53,7 +53,7 @@ extension ListEventsViewModel {
         guard let status = selectedStatus else { return }
         
         onEventsLoadingStateChange?(true)
-        eventLoader.load(with: status, page: 1) { [weak self] result in
+        eventLoader.load(with: [status], page: 1) { [weak self] result in
             guard let self = self else { return }
             switch result {
             case let .success(eventResponse):

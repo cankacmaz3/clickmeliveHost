@@ -8,7 +8,7 @@
 import Foundation
 
 enum EventEndpoints: URLRequestBuilder {
-    case statusEvents(status: Event.EventStatus, page: Int)
+    case statusEvents(status: [Event.EventStatus], page: Int)
     case getProducts(eventId: Int)
     case updateStatus(eventId: Int, status: Event.EventStatus)
 }
@@ -54,12 +54,15 @@ extension EventEndpoints {
 extension EventEndpoints {
     var queryItems: [URLQueryItem]? {
         switch self {
-        case let .statusEvents(status, page):
-            var queryItems = [URLQueryItem(name: "page", value: "\(page)"),
-                              URLQueryItem(name: "status[]", value: "\(status.rawValue)")]
+        case let .statusEvents(statuses, page):
+            var queryItems = [URLQueryItem(name: "page", value: "\(page)")]
             
-            if status == .UPCOMING {
-                queryItems.append(URLQueryItem(name: "status[]", value: "\(Event.EventStatus.LIVE.rawValue)"))
+            statuses.forEach { status in
+                queryItems.append(URLQueryItem(name: "status[]", value: "\(status.rawValue)"))
+                
+                if status == .UPCOMING {
+                    queryItems.append(URLQueryItem(name: "status[]", value: "\(Event.EventStatus.LIVE.rawValue)"))
+                }
             }
             
             return queryItems

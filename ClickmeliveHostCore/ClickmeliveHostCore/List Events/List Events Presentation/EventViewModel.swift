@@ -10,12 +10,10 @@ import Foundation
 public final class EventViewModel {
     public typealias Observer<T> = (T) -> Void
     
-    public let select: () -> Void
     private let model: Event
    
-    public init(model: Event, selection: @escaping () -> Void) {
+    public init(model: Event) {
         self.model = model
-        self.select = selection
     }
         
     public var title: String {
@@ -24,6 +22,19 @@ public final class EventViewModel {
     
     public var image: String? {
         model.image
+    }
+    
+    public var imageURL: URL? {
+        guard let image = model.image else {
+            return nil
+        }
+        return URL(string: image)
+    }
+    public var videoURL: URL? {
+        guard let video = model.video else {
+            return nil
+        }
+        return URL(string: video)
     }
     
     public var startingDate: String? {

@@ -28,7 +28,7 @@ public final class RemoteEventLoader: EventLoader {
         self.authenticationTokenHeader = authenticationTokenHeader
     }
     
-    public func load(with status: Event.EventStatus, page: Int, completion: @escaping (EventResult) -> Void) {
+    public func load(with status: [Event.EventStatus], page: Int, completion: @escaping (EventResult) -> Void) {
         let endpoint = EventEndpoints.statusEvents(status: status, page: page)
                                        
         let authenticatedEndpoint = AuthenticatedURLRequestBuilderDecorator(decoratee: endpoint,
@@ -45,7 +45,7 @@ public final class RemoteEventLoader: EventLoader {
         }
     }
     
-    private func map(_ data: Data, from response: HTTPURLResponse, status: Event.EventStatus, page: Int) -> EventResult {
+    private func map(_ data: Data, from response: HTTPURLResponse, status: [Event.EventStatus], page: Int) -> EventResult {
         let decoder = JSONDecoder()
         decoder.dateDecodingStrategy = .formatted(DateFormatter.yyyyMMddTHHmmssSSSZ)
         

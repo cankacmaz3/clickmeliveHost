@@ -12,7 +12,7 @@ import ClickmeliveHostCoreIOS
 final class ListEventsUIComposer {
     private init() {}
     
-    static func makeListEventsController() -> ListEventsViewController {
+    static func makeListEventsController(router: HomeRouter) -> ListEventsViewController {
         let client = URLSessionHTTPClient(session: URLSession(configuration: .default))
         let loadingClient = LoadingViewHTTPClientDecorator(decoratee: client, loadingView: LoadingView.instance)
         
@@ -29,17 +29,13 @@ final class ListEventsUIComposer {
                          EventCategoryCellController(viewModel: EventCategoryViewModel(status: .CANCELLED))],
                                                                 refreshController: refreshController)
         
-        let router = ListEventsRouter()
-        router.viewController = listEventsViewController
-        
-        
-        
         viewModel.onEventsLoaded = { [weak listEventsViewController] events in
             listEventsViewController?.display(events.map { event in
-                let viewModel = EventViewModel(model: event) {
+                let viewModel = EventViewModel(model: event)
+                let listEventCellController = ListEventCellController(viewModel: viewModel, selection: {
                     router.openBroadcastModule(with: event)
-                }
-                return ListEventCellController(viewModel: viewModel)
+                })
+                return listEventCellController
             })
         }
         

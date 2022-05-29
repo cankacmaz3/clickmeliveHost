@@ -7,16 +7,22 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2D2E6FC4283C338000A795AF /* HomeUIComposer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D2E6FC3283C338000A795AF /* HomeUIComposer.swift */; };
 		2D48E98F281D8BF300171E81 /* CMLTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D48E98E281D8BF300171E81 /* CMLTabBarController.swift */; };
 		2D48E993281D8ECF00171E81 /* ProfileUIComposer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D48E992281D8ECF00171E81 /* ProfileUIComposer.swift */; };
 		2D73B4F9281DE9C700C2F031 /* ProfileRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D73B4F8281DE9C700C2F031 /* ProfileRouter.swift */; };
 		2D7D87B428017835006FFDE7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D7D87B328017835006FFDE7 /* AppDelegate.swift */; };
 		2D7D87BD28017836006FFDE7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2D7D87BC28017836006FFDE7 /* Assets.xcassets */; };
 		2D7D87C028017836006FFDE7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2D7D87BE28017836006FFDE7 /* LaunchScreen.storyboard */; };
+		2D8C4F212843AE9E001C13B2 /* ListVideoUIComposer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D8C4F202843AE9E001C13B2 /* ListVideoUIComposer.swift */; };
+		2D8C4F262843AFF1001C13B2 /* AuthTokenStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D8C4F252843AFF1001C13B2 /* AuthTokenStore.swift */; };
+		2D8C4F282843B003001C13B2 /* SDImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D8C4F272843B003001C13B2 /* SDImageLoader.swift */; };
+		2D8C4F2A2843B040001C13B2 /* UserDefaultsStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D8C4F292843B040001C13B2 /* UserDefaultsStore.swift */; };
+		2D8C4F352843B656001C13B2 /* HomeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D8C4F342843B656001C13B2 /* HomeRouter.swift */; };
+		2D8C4F402843E958001C13B2 /* VideoRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D8C4F3F2843E958001C13B2 /* VideoRoute.swift */; };
 		2D8CB3452815ED5600B7F40E /* SocketEnvironment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D8CB3442815ED5600B7F40E /* SocketEnvironment.swift */; };
 		2D8CB34A2816AEFA00B7F40E /* AmazonIVSBroadcast.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2DD3988A280C148C00A575DA /* AmazonIVSBroadcast.xcframework */; };
 		2D8CB34B2816AEFA00B7F40E /* AmazonIVSBroadcast.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2DD3988A280C148C00A575DA /* AmazonIVSBroadcast.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		2D9E0C932811CFB6000E4321 /* ListEventsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D9E0C912811CFB6000E4321 /* ListEventsRouter.swift */; };
 		2D9E0C942811CFB6000E4321 /* ListEventsUIComposer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D9E0C922811CFB6000E4321 /* ListEventsUIComposer.swift */; };
 		2D9E0C9A2811D071000E4321 /* LandingUIComposer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D9E0C992811D071000E4321 /* LandingUIComposer.swift */; };
 		2D9E0CB02811EEAB000E4321 /* LandingRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D9E0CAF2811EEAB000E4321 /* LandingRouter.swift */; };
@@ -88,6 +94,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		2D2E6FC3283C338000A795AF /* HomeUIComposer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeUIComposer.swift; sourceTree = "<group>"; };
 		2D48E98E281D8BF300171E81 /* CMLTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CMLTabBarController.swift; sourceTree = "<group>"; };
 		2D48E992281D8ECF00171E81 /* ProfileUIComposer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileUIComposer.swift; sourceTree = "<group>"; };
 		2D73B4F8281DE9C700C2F031 /* ProfileRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileRouter.swift; sourceTree = "<group>"; };
@@ -96,8 +103,13 @@
 		2D7D87BC28017836006FFDE7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2D7D87BF28017836006FFDE7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2D7D87C128017836006FFDE7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2D8C4F202843AE9E001C13B2 /* ListVideoUIComposer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListVideoUIComposer.swift; sourceTree = "<group>"; };
+		2D8C4F252843AFF1001C13B2 /* AuthTokenStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthTokenStore.swift; sourceTree = "<group>"; };
+		2D8C4F272843B003001C13B2 /* SDImageLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SDImageLoader.swift; sourceTree = "<group>"; };
+		2D8C4F292843B040001C13B2 /* UserDefaultsStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsStore.swift; sourceTree = "<group>"; };
+		2D8C4F342843B656001C13B2 /* HomeRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRouter.swift; sourceTree = "<group>"; };
+		2D8C4F3F2843E958001C13B2 /* VideoRoute.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoRoute.swift; sourceTree = "<group>"; };
 		2D8CB3442815ED5600B7F40E /* SocketEnvironment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocketEnvironment.swift; sourceTree = "<group>"; };
-		2D9E0C912811CFB6000E4321 /* ListEventsRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListEventsRouter.swift; sourceTree = "<group>"; };
 		2D9E0C922811CFB6000E4321 /* ListEventsUIComposer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListEventsUIComposer.swift; sourceTree = "<group>"; };
 		2D9E0C992811D071000E4321 /* LandingUIComposer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingUIComposer.swift; sourceTree = "<group>"; };
 		2D9E0CAF2811EEAB000E4321 /* LandingRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingRouter.swift; sourceTree = "<group>"; };
@@ -165,6 +177,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2D2E6FC2283C337600A795AF /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				2D2E6FC3283C338000A795AF /* HomeUIComposer.swift */,
+				2D8C4F342843B656001C13B2 /* HomeRouter.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
 		2D48E990281D8EA600171E81 /* Profile */ = {
 			isa = PBXGroup;
 			children = (
@@ -208,6 +229,7 @@
 				2DD398F32810C74400A575DA /* Extensions */,
 				2DD398EB2810C1E900A575DA /* Animations */,
 				2DD398E82810C19F00A575DA /* Loading */,
+				2D8C4F242843AFD5001C13B2 /* Cache */,
 				2DD398CE2810B55F00A575DA /* Network */,
 				2DCAB58A280B7B8300308095 /* Fonts */,
 				2DCAB563280B6C0A00308095 /* Routing */,
@@ -220,6 +242,24 @@
 				2D7D87C128017836006FFDE7 /* Info.plist */,
 			);
 			path = ClickMeLiveHost;
+			sourceTree = "<group>";
+		};
+		2D8C4F1F2843AE79001C13B2 /* ListVideo */ = {
+			isa = PBXGroup;
+			children = (
+				2D8C4F202843AE9E001C13B2 /* ListVideoUIComposer.swift */,
+			);
+			path = ListVideo;
+			sourceTree = "<group>";
+		};
+		2D8C4F242843AFD5001C13B2 /* Cache */ = {
+			isa = PBXGroup;
+			children = (
+				2D8C4F252843AFF1001C13B2 /* AuthTokenStore.swift */,
+				2D8C4F272843B003001C13B2 /* SDImageLoader.swift */,
+				2D8C4F292843B040001C13B2 /* UserDefaultsStore.swift */,
+			);
+			path = Cache;
 			sourceTree = "<group>";
 		};
 		2D9E0C862811CEDB000E4321 /* Auth */ = {
@@ -238,7 +278,6 @@
 			isa = PBXGroup;
 			children = (
 				2D9E0C9B2811D07E000E4321 /* Composers */,
-				2D9E0C912811CFB6000E4321 /* ListEventsRouter.swift */,
 			);
 			path = ListEvent;
 			sourceTree = "<group>";
@@ -361,9 +400,12 @@
 			isa = PBXGroup;
 			children = (
 				2D9E0D502812DBF4000E4321 /* AppRoute.swift */,
+				2D8C4F3F2843E958001C13B2 /* VideoRoute.swift */,
 				2D9E0C862811CEDB000E4321 /* Auth */,
 				2D9E0CF028121770000E4321 /* Alert */,
+				2D2E6FC2283C337600A795AF /* Home */,
 				2D9E0C952811CFBB000E4321 /* ListEvent */,
+				2D8C4F1F2843AE79001C13B2 /* ListVideo */,
 				2DCAB55F280B6B8A00308095 /* Broadcast */,
 				2D48E990281D8EA600171E81 /* Profile */,
 			);
@@ -575,6 +617,8 @@
 				2D9E0D4B2812D407000E4321 /* KeychainHelper.swift in Sources */,
 				2D9E0CFB281222E4000E4321 /* EnterPhoneRouter.swift in Sources */,
 				2D48E993281D8ECF00171E81 /* ProfileUIComposer.swift in Sources */,
+				2D8C4F352843B656001C13B2 /* HomeRouter.swift in Sources */,
+				2D8C4F282843B003001C13B2 /* SDImageLoader.swift in Sources */,
 				2DCAB568280B6D1E00308095 /* Transition.swift in Sources */,
 				2DD6E29B2821A87E0087C61E /* UIViewController+Extensions.swift in Sources */,
 				2DCAB566280B6C2800308095 /* ModalTransition.swift in Sources */,
@@ -588,8 +632,8 @@
 				2D7D87B428017835006FFDE7 /* AppDelegate.swift in Sources */,
 				2DC30FE92815DC2400766092 /* ExternalEnvironment.swift in Sources */,
 				2DC30FEB2815E64A00766092 /* BroadcasterRouter.swift in Sources */,
-				2D9E0C932811CFB6000E4321 /* ListEventsRouter.swift in Sources */,
 				2DD398F22810C4D200A575DA /* LoadingViewHTTPClientDecorator.swift in Sources */,
+				2D8C4F212843AE9E001C13B2 /* ListVideoUIComposer.swift in Sources */,
 				2D9E0D302812365B000E4321 /* ValidateCodeRouter.swift in Sources */,
 				2D9E0CF9281221A7000E4321 /* AlertRouter.swift in Sources */,
 				2D9E0C942811CFB6000E4321 /* ListEventsUIComposer.swift in Sources */,
@@ -598,15 +642,19 @@
 				2D9E0D512812DBF4000E4321 /* AppRoute.swift in Sources */,
 				2DD398EA2810C1B100A575DA /* LoadingView.swift in Sources */,
 				2DD398D32810B58000A575DA /* AppEnvironment.swift in Sources */,
+				2D8C4F402843E958001C13B2 /* VideoRoute.swift in Sources */,
 				2DCAB56C280B6D9E00308095 /* Router.swift in Sources */,
 				2DA4D9472824573D008EFAF1 /* UsePasswordRouter.swift in Sources */,
+				2D2E6FC4283C338000A795AF /* HomeUIComposer.swift in Sources */,
 				2D9E0CC32811F5FC000E4321 /* Image.swift in Sources */,
+				2D8C4F2A2843B040001C13B2 /* UserDefaultsStore.swift in Sources */,
 				2D9E0CB02811EEAB000E4321 /* LandingRouter.swift in Sources */,
 				2D9E0D0E281227C5000E4321 /* ValidateCodeRoute.swift in Sources */,
 				2DD398F52810C75800A575DA /* UIColor+Extensions.swift in Sources */,
 				2D9E0CB62811EF52000E4321 /* EnterPhoneRoute.swift in Sources */,
 				2DD206FB2837F97A00EDA434 /* AdminLoginRouter.swift in Sources */,
 				2DCAB56A280B6D4400308095 /* PushTransition.swift in Sources */,
+				2D8C4F262843AFF1001C13B2 /* AuthTokenStore.swift in Sources */,
 				2D9E0D11281227DB000E4321 /* ValidateCodeUIComposer.swift in Sources */,
 				2DCAB562280B6BA000308095 /* BroadcasterUIComposer.swift in Sources */,
 			);
@@ -748,7 +796,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 8;
+				CURRENT_PROJECT_VERSION = 9;
 				DEVELOPMENT_TEAM = P624PPMU63;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = ClickMeLiveHost/Info.plist;
@@ -779,7 +827,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 8;
+				CURRENT_PROJECT_VERSION = 9;
 				DEVELOPMENT_TEAM = P624PPMU63;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = ClickMeLiveHost/Info.plist;

@@ -28,7 +28,7 @@ extension PlaceholderView {
 final class PlaceholderView: UIView {
     
     private enum Constants {
-        static let backgroundColor: UIColor = Colors.primaryBg
+        static let backgroundColor: UIColor = .white
     }
     
     private let stackView: UIStackView = {

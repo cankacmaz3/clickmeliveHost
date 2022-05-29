@@ -10,5 +10,5 @@ import Foundation
 public protocol EventLoader {
     typealias Result = Swift.Result<Paginated<EventResponse>, Error>
     
-    func load(with status: Event.EventStatus, page: Int, completion: @escaping (Result) -> Void)
+    func load(with status: [Event.EventStatus], page: Int, completion: @escaping (Result) -> Void)
 }

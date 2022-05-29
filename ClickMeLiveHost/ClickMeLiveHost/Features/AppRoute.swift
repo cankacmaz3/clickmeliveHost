@@ -24,6 +24,7 @@ final class AppModuleBuilder {
     private enum Constants {
         static let homeTabImage: String = "icon_home"
         static let profileTabImage: String = "icon_profile"
+        static let createContentTabImage: String = "icon_create"
     }
    
     static func module() -> UIViewController {
@@ -43,13 +44,20 @@ final class AppModuleBuilder {
     private static func makeRootViewController() -> UIViewController {
         let tabBarController = CMLTabBarController()
         
-        tabBarController.viewControllers = [listEventsViewController(), profileViewController()]
+        tabBarController.viewControllers = [homeViewController(), createContentViewController(), profileViewController()]
         return tabBarController
     }
     
-    private static func listEventsViewController() -> UIViewController {
-        let view = CMLNavigationController(rootViewController: ListEventsUIComposer.makeListEventsController())
+    
+    private static func homeViewController() -> UIViewController {
+        let view = CMLNavigationController(rootViewController: HomeUIComposer.makeHomeViewController())
         view.tabBarItem.image = UIImage(named: Constants.homeTabImage)
+        return view
+    }
+    
+    private static func createContentViewController() -> UIViewController {
+        let view = CMLNavigationController(rootViewController: UIViewController())
+        view.tabBarItem.image = UIImage(named: Constants.createContentTabImage)
         return view
     }
     
