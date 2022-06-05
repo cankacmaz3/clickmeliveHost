@@ -15,5 +15,11 @@
 	<string>UIStatusBarStyleDarkContent</string>
 	<key>UIViewControllerBasedStatusBarAppearance</key>
 	<false/>
+	<key>NSCameraUsageDescription</key>
+	<string>Yükleme yapmak için kamera iznine ihtiyacımız var</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>Yükleme yapmak için galeri iznine ihtiyacımız var</string>
+	<key>NSMicrophoneUsageDescription</key>
+	<string>Yükleme yapmak için mikrofon iznine ihtiyacımız var</string>
 </dict>
 </plist>

@@ -7,14 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2D0D20D228494E4600DA949E /* ListVideoUIComposer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D0D20D128494E4600DA949E /* ListVideoUIComposer.swift */; };
+		2D0D21D9284C993E00DA949E /* CreateContentRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D0D21D7284C993E00DA949E /* CreateContentRouter.swift */; };
+		2D0D21DA284C993E00DA949E /* CreateContentUIComposer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D0D21D8284C993E00DA949E /* CreateContentUIComposer.swift */; };
 		2D2E6FC4283C338000A795AF /* HomeUIComposer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D2E6FC3283C338000A795AF /* HomeUIComposer.swift */; };
+		2D36C65F2846D6C1001E21F1 /* YPImagePicker in Frameworks */ = {isa = PBXBuildFile; productRef = 2D36C65E2846D6C1001E21F1 /* YPImagePicker */; };
 		2D48E98F281D8BF300171E81 /* CMLTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D48E98E281D8BF300171E81 /* CMLTabBarController.swift */; };
 		2D48E993281D8ECF00171E81 /* ProfileUIComposer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D48E992281D8ECF00171E81 /* ProfileUIComposer.swift */; };
 		2D73B4F9281DE9C700C2F031 /* ProfileRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D73B4F8281DE9C700C2F031 /* ProfileRouter.swift */; };
 		2D7D87B428017835006FFDE7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D7D87B328017835006FFDE7 /* AppDelegate.swift */; };
 		2D7D87BD28017836006FFDE7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2D7D87BC28017836006FFDE7 /* Assets.xcassets */; };
 		2D7D87C028017836006FFDE7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2D7D87BE28017836006FFDE7 /* LaunchScreen.storyboard */; };
-		2D8C4F212843AE9E001C13B2 /* ListVideoUIComposer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D8C4F202843AE9E001C13B2 /* ListVideoUIComposer.swift */; };
 		2D8C4F262843AFF1001C13B2 /* AuthTokenStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D8C4F252843AFF1001C13B2 /* AuthTokenStore.swift */; };
 		2D8C4F282843B003001C13B2 /* SDImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D8C4F272843B003001C13B2 /* SDImageLoader.swift */; };
 		2D8C4F2A2843B040001C13B2 /* UserDefaultsStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D8C4F292843B040001C13B2 /* UserDefaultsStore.swift */; };
@@ -46,6 +49,10 @@
 		2DA4D9492824592A008EFAF1 /* UsePasswordUIComposer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DA4D9482824592A008EFAF1 /* UsePasswordUIComposer.swift */; };
 		2DC30FE92815DC2400766092 /* ExternalEnvironment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DC30FE82815DC2400766092 /* ExternalEnvironment.swift */; };
 		2DC30FEB2815E64A00766092 /* BroadcasterRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DC30FEA2815E64A00766092 /* BroadcasterRouter.swift */; };
+		2DC54317284CADDC00078A3C /* VideoContentUIComposer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DC54316284CADDC00078A3C /* VideoContentUIComposer.swift */; };
+		2DC54319284CADEF00078A3C /* LivestreamContentUIComposer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DC54318284CADEF00078A3C /* LivestreamContentUIComposer.swift */; };
+		2DC5431B284CAE3D00078A3C /* VideoContentRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DC5431A284CAE3D00078A3C /* VideoContentRoute.swift */; };
+		2DC5431D284CAE8A00078A3C /* LivestreamContentRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DC5431C284CAE8A00078A3C /* LivestreamContentRoute.swift */; };
 		2DCAB46C280AB66D00308095 /* ClickmeliveHostCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2DCAB46B280AB66D00308095 /* ClickmeliveHostCore.framework */; };
 		2DCAB46D280AB66D00308095 /* ClickmeliveHostCore.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2DCAB46B280AB66D00308095 /* ClickmeliveHostCore.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		2DCAB49B280ABBE700308095 /* ClickmeliveHostCoreIOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2DCAB49A280ABBE700308095 /* ClickmeliveHostCoreIOS.framework */; };
@@ -94,6 +101,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		2D0D20D128494E4600DA949E /* ListVideoUIComposer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListVideoUIComposer.swift; sourceTree = "<group>"; };
+		2D0D21D7284C993E00DA949E /* CreateContentRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateContentRouter.swift; sourceTree = "<group>"; };
+		2D0D21D8284C993E00DA949E /* CreateContentUIComposer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateContentUIComposer.swift; sourceTree = "<group>"; };
 		2D2E6FC3283C338000A795AF /* HomeUIComposer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeUIComposer.swift; sourceTree = "<group>"; };
 		2D48E98E281D8BF300171E81 /* CMLTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CMLTabBarController.swift; sourceTree = "<group>"; };
 		2D48E992281D8ECF00171E81 /* ProfileUIComposer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileUIComposer.swift; sourceTree = "<group>"; };
@@ -103,7 +113,6 @@
 		2D7D87BC28017836006FFDE7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2D7D87BF28017836006FFDE7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2D7D87C128017836006FFDE7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		2D8C4F202843AE9E001C13B2 /* ListVideoUIComposer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListVideoUIComposer.swift; sourceTree = "<group>"; };
 		2D8C4F252843AFF1001C13B2 /* AuthTokenStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthTokenStore.swift; sourceTree = "<group>"; };
 		2D8C4F272843B003001C13B2 /* SDImageLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SDImageLoader.swift; sourceTree = "<group>"; };
 		2D8C4F292843B040001C13B2 /* UserDefaultsStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsStore.swift; sourceTree = "<group>"; };
@@ -132,6 +141,10 @@
 		2DA4D9482824592A008EFAF1 /* UsePasswordUIComposer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsePasswordUIComposer.swift; sourceTree = "<group>"; };
 		2DC30FE82815DC2400766092 /* ExternalEnvironment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExternalEnvironment.swift; sourceTree = "<group>"; };
 		2DC30FEA2815E64A00766092 /* BroadcasterRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BroadcasterRouter.swift; sourceTree = "<group>"; };
+		2DC54316284CADDC00078A3C /* VideoContentUIComposer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoContentUIComposer.swift; sourceTree = "<group>"; };
+		2DC54318284CADEF00078A3C /* LivestreamContentUIComposer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LivestreamContentUIComposer.swift; sourceTree = "<group>"; };
+		2DC5431A284CAE3D00078A3C /* VideoContentRoute.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoContentRoute.swift; sourceTree = "<group>"; };
+		2DC5431C284CAE8A00078A3C /* LivestreamContentRoute.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LivestreamContentRoute.swift; sourceTree = "<group>"; };
 		2DCAB46B280AB66D00308095 /* ClickmeliveHostCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = ClickmeliveHostCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2DCAB49A280ABBE700308095 /* ClickmeliveHostCoreIOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = ClickmeliveHostCoreIOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2DCAB561280B6BA000308095 /* BroadcasterUIComposer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BroadcasterUIComposer.swift; sourceTree = "<group>"; };
@@ -169,6 +182,7 @@
 				2DCAB49B280ABBE700308095 /* ClickmeliveHostCoreIOS.framework in Frameworks */,
 				2DCAB46C280AB66D00308095 /* ClickmeliveHostCore.framework in Frameworks */,
 				2D8CB34A2816AEFA00B7F40E /* AmazonIVSBroadcast.xcframework in Frameworks */,
+				2D36C65F2846D6C1001E21F1 /* YPImagePicker in Frameworks */,
 				2D9E0D4F2812D611000E4321 /* KeychainSwift in Frameworks */,
 				2DD398F02810C47900A575DA /* Lottie in Frameworks */,
 			);
@@ -177,6 +191,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2D0D20D028494E4600DA949E /* List Video */ = {
+			isa = PBXGroup;
+			children = (
+				2D0D20D128494E4600DA949E /* ListVideoUIComposer.swift */,
+			);
+			path = "List Video";
+			sourceTree = "<group>";
+		};
+		2D0D21D6284C993E00DA949E /* Create Content */ = {
+			isa = PBXGroup;
+			children = (
+				2D0D21D7284C993E00DA949E /* CreateContentRouter.swift */,
+				2D0D21D8284C993E00DA949E /* CreateContentUIComposer.swift */,
+			);
+			path = "Create Content";
+			sourceTree = "<group>";
+		};
 		2D2E6FC2283C337600A795AF /* Home */ = {
 			isa = PBXGroup;
 			children = (
@@ -244,14 +275,6 @@
 			path = ClickMeLiveHost;
 			sourceTree = "<group>";
 		};
-		2D8C4F1F2843AE79001C13B2 /* ListVideo */ = {
-			isa = PBXGroup;
-			children = (
-				2D8C4F202843AE9E001C13B2 /* ListVideoUIComposer.swift */,
-			);
-			path = ListVideo;
-			sourceTree = "<group>";
-		};
 		2D8C4F242843AFD5001C13B2 /* Cache */ = {
 			isa = PBXGroup;
 			children = (
@@ -274,12 +297,12 @@
 			path = Auth;
 			sourceTree = "<group>";
 		};
-		2D9E0C952811CFBB000E4321 /* ListEvent */ = {
+		2D9E0C952811CFBB000E4321 /* List Event */ = {
 			isa = PBXGroup;
 			children = (
 				2D9E0C9B2811D07E000E4321 /* Composers */,
 			);
-			path = ListEvent;
+			path = "List Event";
 			sourceTree = "<group>";
 		};
 		2D9E0C962811D044000E4321 /* Landing */ = {
@@ -404,12 +427,33 @@
 				2D9E0C862811CEDB000E4321 /* Auth */,
 				2D9E0CF028121770000E4321 /* Alert */,
 				2D2E6FC2283C337600A795AF /* Home */,
-				2D9E0C952811CFBB000E4321 /* ListEvent */,
-				2D8C4F1F2843AE79001C13B2 /* ListVideo */,
+				2D9E0C952811CFBB000E4321 /* List Event */,
+				2D0D20D028494E4600DA949E /* List Video */,
 				2DCAB55F280B6B8A00308095 /* Broadcast */,
+				2D0D21D6284C993E00DA949E /* Create Content */,
+				2DC54314284CADC100078A3C /* Video Content */,
+				2DC54315284CADCA00078A3C /* Livestream Content */,
 				2D48E990281D8EA600171E81 /* Profile */,
 			);
 			path = Features;
+			sourceTree = "<group>";
+		};
+		2DC54314284CADC100078A3C /* Video Content */ = {
+			isa = PBXGroup;
+			children = (
+				2DC54316284CADDC00078A3C /* VideoContentUIComposer.swift */,
+				2DC5431A284CAE3D00078A3C /* VideoContentRoute.swift */,
+			);
+			path = "Video Content";
+			sourceTree = "<group>";
+		};
+		2DC54315284CADCA00078A3C /* Livestream Content */ = {
+			isa = PBXGroup;
+			children = (
+				2DC54318284CADEF00078A3C /* LivestreamContentUIComposer.swift */,
+				2DC5431C284CAE8A00078A3C /* LivestreamContentRoute.swift */,
+			);
+			path = "Livestream Content";
 			sourceTree = "<group>";
 		};
 		2DCAB46A280AB66D00308095 /* Frameworks */ = {
@@ -540,6 +584,7 @@
 				2DD398EF2810C47900A575DA /* Lottie */,
 				2D9E0D4E2812D611000E4321 /* KeychainSwift */,
 				2DD6E28C282148B80087C61E /* FirebaseDatabase */,
+				2D36C65E2846D6C1001E21F1 /* YPImagePicker */,
 			);
 			productName = ClickMeLiveHost;
 			productReference = 2D7D87B028017835006FFDE7 /* ClickMeLiveHost.app */;
@@ -573,6 +618,7 @@
 				2DD398EE2810C47900A575DA /* XCRemoteSwiftPackageReference "lottie-ios" */,
 				2D9E0D4D2812D611000E4321 /* XCRemoteSwiftPackageReference "keychain-swift" */,
 				2DD6E28B282148B80087C61E /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				2D36C65D2846D6C1001E21F1 /* XCRemoteSwiftPackageReference "YPImagePicker" */,
 			);
 			productRefGroup = 2D7D87B128017835006FFDE7 /* Products */;
 			projectDirPath = "";
@@ -612,7 +658,10 @@
 				2DD206F72837F96500EDA434 /* AdminLoginUIComposer.swift in Sources */,
 				2D9E0CF728121FDB000E4321 /* AlertRoute.swift in Sources */,
 				2DA4D94528245731008EFAF1 /* UsePasswordRoute.swift in Sources */,
+				2D0D21D9284C993E00DA949E /* CreateContentRouter.swift in Sources */,
+				2DC54319284CADEF00078A3C /* LivestreamContentUIComposer.swift in Sources */,
 				2D9E0CF328121785000E4321 /* AlertUIComposer.swift in Sources */,
+				2DC5431D284CAE8A00078A3C /* LivestreamContentRoute.swift in Sources */,
 				2DA4D9492824592A008EFAF1 /* UsePasswordUIComposer.swift in Sources */,
 				2D9E0D4B2812D407000E4321 /* KeychainHelper.swift in Sources */,
 				2D9E0CFB281222E4000E4321 /* EnterPhoneRouter.swift in Sources */,
@@ -630,13 +679,14 @@
 				2D48E98F281D8BF300171E81 /* CMLTabBarController.swift in Sources */,
 				2D9E0C9A2811D071000E4321 /* LandingUIComposer.swift in Sources */,
 				2D7D87B428017835006FFDE7 /* AppDelegate.swift in Sources */,
+				2DC54317284CADDC00078A3C /* VideoContentUIComposer.swift in Sources */,
 				2DC30FE92815DC2400766092 /* ExternalEnvironment.swift in Sources */,
 				2DC30FEB2815E64A00766092 /* BroadcasterRouter.swift in Sources */,
 				2DD398F22810C4D200A575DA /* LoadingViewHTTPClientDecorator.swift in Sources */,
-				2D8C4F212843AE9E001C13B2 /* ListVideoUIComposer.swift in Sources */,
 				2D9E0D302812365B000E4321 /* ValidateCodeRouter.swift in Sources */,
 				2D9E0CF9281221A7000E4321 /* AlertRouter.swift in Sources */,
 				2D9E0C942811CFB6000E4321 /* ListEventsUIComposer.swift in Sources */,
+				2D0D20D228494E4600DA949E /* ListVideoUIComposer.swift in Sources */,
 				2DD206F92837F97300EDA434 /* AdminLoginRoute.swift in Sources */,
 				2DD398D42810B58000A575DA /* Servers.swift in Sources */,
 				2D9E0D512812DBF4000E4321 /* AppRoute.swift in Sources */,
@@ -646,6 +696,7 @@
 				2DCAB56C280B6D9E00308095 /* Router.swift in Sources */,
 				2DA4D9472824573D008EFAF1 /* UsePasswordRouter.swift in Sources */,
 				2D2E6FC4283C338000A795AF /* HomeUIComposer.swift in Sources */,
+				2DC5431B284CAE3D00078A3C /* VideoContentRoute.swift in Sources */,
 				2D9E0CC32811F5FC000E4321 /* Image.swift in Sources */,
 				2D8C4F2A2843B040001C13B2 /* UserDefaultsStore.swift in Sources */,
 				2D9E0CB02811EEAB000E4321 /* LandingRouter.swift in Sources */,
@@ -654,6 +705,7 @@
 				2D9E0CB62811EF52000E4321 /* EnterPhoneRoute.swift in Sources */,
 				2DD206FB2837F97A00EDA434 /* AdminLoginRouter.swift in Sources */,
 				2DCAB56A280B6D4400308095 /* PushTransition.swift in Sources */,
+				2D0D21DA284C993E00DA949E /* CreateContentUIComposer.swift in Sources */,
 				2D8C4F262843AFF1001C13B2 /* AuthTokenStore.swift in Sources */,
 				2D9E0D11281227DB000E4321 /* ValidateCodeUIComposer.swift in Sources */,
 				2DCAB562280B6BA000308095 /* BroadcasterUIComposer.swift in Sources */,
@@ -876,6 +928,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		2D36C65D2846D6C1001E21F1 /* XCRemoteSwiftPackageReference "YPImagePicker" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Yummypets/YPImagePicker.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
 		2D9E0D4D2812D611000E4321 /* XCRemoteSwiftPackageReference "keychain-swift" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/evgenyneu/keychain-swift.git";
@@ -903,6 +963,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		2D36C65E2846D6C1001E21F1 /* YPImagePicker */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2D36C65D2846D6C1001E21F1 /* XCRemoteSwiftPackageReference "YPImagePicker" */;
+			productName = YPImagePicker;
+		};
 		2D9E0D4E2812D611000E4321 /* KeychainSwift */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 2D9E0D4D2812D611000E4321 /* XCRemoteSwiftPackageReference "keychain-swift" */;

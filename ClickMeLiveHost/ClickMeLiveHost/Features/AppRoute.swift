@@ -56,7 +56,7 @@ final class AppModuleBuilder {
     }
     
     private static func createContentViewController() -> UIViewController {
-        let view = CMLNavigationController(rootViewController: UIViewController())
+        let view = CMLNavigationController(rootViewController: CreateContentUIComposer.makeCreateContentViewController())
         view.tabBarItem.image = UIImage(named: Constants.createContentTabImage)
         return view
     }

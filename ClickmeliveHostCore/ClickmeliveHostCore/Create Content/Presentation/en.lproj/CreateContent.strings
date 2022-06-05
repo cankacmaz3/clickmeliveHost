@@ -1,0 +1,11 @@
+/* 
+  CreateContent.strings
+  ClickmeliveHostCore
+
+  Created by Can Kaçmaz on 5.06.2022.
+  
+*/
+
+"CREATE_CONTENT_TITLE" = "İçerik Ekle";
+"CREATE_CONTENT_LIVESTREAM" = "Canlı Yayında Sat";
+"CREATE_CONTENT_VIDEO" = "Video İle Sat";
