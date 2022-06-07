@@ -15,6 +15,10 @@ public final class ProductViewModel {
         self.model = model
     }
     
+    public var id: Int {
+        model.id
+    }
+    
     public var name: String {
         model.name
     }
@@ -23,11 +27,31 @@ public final class ProductViewModel {
         model.image
     }
     
+    public var imageURL: URL? {
+        guard let image = model.image else { return nil }
+        return URL(string: image)
+    }
+    
     public var price: String {
         model.showPrice()
     }
     
     public var discountedPrice: String? {
         model.showDiscountedPrice()
+    }
+    
+    public var stockQuantity: String? {
+        let message = String(format: Localized.Stock.count, model.stockQuantity)
+        return message
+    }
+}
+
+extension ProductViewModel: Hashable {
+    public static func == (lhs: ProductViewModel, rhs: ProductViewModel) -> Bool {
+        lhs.id == rhs.id
+    }
+    
+    public func hash(into hasher: inout Hasher) {
+        hasher.combine(id)
     }
 }

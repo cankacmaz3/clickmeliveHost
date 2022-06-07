@@ -18,6 +18,7 @@
 		2D7D87B428017835006FFDE7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D7D87B328017835006FFDE7 /* AppDelegate.swift */; };
 		2D7D87BD28017836006FFDE7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2D7D87BC28017836006FFDE7 /* Assets.xcassets */; };
 		2D7D87C028017836006FFDE7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2D7D87BE28017836006FFDE7 /* LaunchScreen.storyboard */; };
+		2D8BA706284F684600C28E93 /* ListProductRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D8BA705284F684600C28E93 /* ListProductRouter.swift */; };
 		2D8C4F262843AFF1001C13B2 /* AuthTokenStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D8C4F252843AFF1001C13B2 /* AuthTokenStore.swift */; };
 		2D8C4F282843B003001C13B2 /* SDImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D8C4F272843B003001C13B2 /* SDImageLoader.swift */; };
 		2D8C4F2A2843B040001C13B2 /* UserDefaultsStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D8C4F292843B040001C13B2 /* UserDefaultsStore.swift */; };
@@ -53,6 +54,9 @@
 		2DC54319284CADEF00078A3C /* LivestreamContentUIComposer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DC54318284CADEF00078A3C /* LivestreamContentUIComposer.swift */; };
 		2DC5431B284CAE3D00078A3C /* VideoContentRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DC5431A284CAE3D00078A3C /* VideoContentRoute.swift */; };
 		2DC5431D284CAE8A00078A3C /* LivestreamContentRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DC5431C284CAE8A00078A3C /* LivestreamContentRoute.swift */; };
+		2DC5432A284CBE6000078A3C /* ListProductUIComposer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DC54329284CBE6000078A3C /* ListProductUIComposer.swift */; };
+		2DC5432C284CBE8900078A3C /* ListProductRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DC5432B284CBE8900078A3C /* ListProductRoute.swift */; };
+		2DC5432E284CBEBF00078A3C /* VideoContentRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DC5432D284CBEBF00078A3C /* VideoContentRouter.swift */; };
 		2DCAB46C280AB66D00308095 /* ClickmeliveHostCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2DCAB46B280AB66D00308095 /* ClickmeliveHostCore.framework */; };
 		2DCAB46D280AB66D00308095 /* ClickmeliveHostCore.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2DCAB46B280AB66D00308095 /* ClickmeliveHostCore.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		2DCAB49B280ABBE700308095 /* ClickmeliveHostCoreIOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2DCAB49A280ABBE700308095 /* ClickmeliveHostCoreIOS.framework */; };
@@ -113,6 +117,7 @@
 		2D7D87BC28017836006FFDE7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2D7D87BF28017836006FFDE7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2D7D87C128017836006FFDE7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2D8BA705284F684600C28E93 /* ListProductRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListProductRouter.swift; sourceTree = "<group>"; };
 		2D8C4F252843AFF1001C13B2 /* AuthTokenStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthTokenStore.swift; sourceTree = "<group>"; };
 		2D8C4F272843B003001C13B2 /* SDImageLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SDImageLoader.swift; sourceTree = "<group>"; };
 		2D8C4F292843B040001C13B2 /* UserDefaultsStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsStore.swift; sourceTree = "<group>"; };
@@ -145,6 +150,9 @@
 		2DC54318284CADEF00078A3C /* LivestreamContentUIComposer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LivestreamContentUIComposer.swift; sourceTree = "<group>"; };
 		2DC5431A284CAE3D00078A3C /* VideoContentRoute.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoContentRoute.swift; sourceTree = "<group>"; };
 		2DC5431C284CAE8A00078A3C /* LivestreamContentRoute.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LivestreamContentRoute.swift; sourceTree = "<group>"; };
+		2DC54329284CBE6000078A3C /* ListProductUIComposer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListProductUIComposer.swift; sourceTree = "<group>"; };
+		2DC5432B284CBE8900078A3C /* ListProductRoute.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListProductRoute.swift; sourceTree = "<group>"; };
+		2DC5432D284CBEBF00078A3C /* VideoContentRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoContentRouter.swift; sourceTree = "<group>"; };
 		2DCAB46B280AB66D00308095 /* ClickmeliveHostCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = ClickmeliveHostCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2DCAB49A280ABBE700308095 /* ClickmeliveHostCoreIOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = ClickmeliveHostCoreIOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2DCAB561280B6BA000308095 /* BroadcasterUIComposer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BroadcasterUIComposer.swift; sourceTree = "<group>"; };
@@ -429,6 +437,7 @@
 				2D2E6FC2283C337600A795AF /* Home */,
 				2D9E0C952811CFBB000E4321 /* List Event */,
 				2D0D20D028494E4600DA949E /* List Video */,
+				2DC54328284CBE4A00078A3C /* List Product */,
 				2DCAB55F280B6B8A00308095 /* Broadcast */,
 				2D0D21D6284C993E00DA949E /* Create Content */,
 				2DC54314284CADC100078A3C /* Video Content */,
@@ -443,6 +452,7 @@
 			children = (
 				2DC54316284CADDC00078A3C /* VideoContentUIComposer.swift */,
 				2DC5431A284CAE3D00078A3C /* VideoContentRoute.swift */,
+				2DC5432D284CBEBF00078A3C /* VideoContentRouter.swift */,
 			);
 			path = "Video Content";
 			sourceTree = "<group>";
@@ -454,6 +464,16 @@
 				2DC5431C284CAE8A00078A3C /* LivestreamContentRoute.swift */,
 			);
 			path = "Livestream Content";
+			sourceTree = "<group>";
+		};
+		2DC54328284CBE4A00078A3C /* List Product */ = {
+			isa = PBXGroup;
+			children = (
+				2DC54329284CBE6000078A3C /* ListProductUIComposer.swift */,
+				2DC5432B284CBE8900078A3C /* ListProductRoute.swift */,
+				2D8BA705284F684600C28E93 /* ListProductRouter.swift */,
+			);
+			path = "List Product";
 			sourceTree = "<group>";
 		};
 		2DCAB46A280AB66D00308095 /* Frameworks */ = {
@@ -655,6 +675,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2D9E0D532812DFFB000E4321 /* UserDefaultsHelper.swift in Sources */,
+				2DC5432A284CBE6000078A3C /* ListProductUIComposer.swift in Sources */,
 				2DD206F72837F96500EDA434 /* AdminLoginUIComposer.swift in Sources */,
 				2D9E0CF728121FDB000E4321 /* AlertRoute.swift in Sources */,
 				2DA4D94528245731008EFAF1 /* UsePasswordRoute.swift in Sources */,
@@ -669,11 +690,13 @@
 				2D8C4F352843B656001C13B2 /* HomeRouter.swift in Sources */,
 				2D8C4F282843B003001C13B2 /* SDImageLoader.swift in Sources */,
 				2DCAB568280B6D1E00308095 /* Transition.swift in Sources */,
+				2D8BA706284F684600C28E93 /* ListProductRouter.swift in Sources */,
 				2DD6E29B2821A87E0087C61E /* UIViewController+Extensions.swift in Sources */,
 				2DCAB566280B6C2800308095 /* ModalTransition.swift in Sources */,
 				2D9E0D562812E51D000E4321 /* CMLNavigationController.swift in Sources */,
 				2D8CB3452815ED5600B7F40E /* SocketEnvironment.swift in Sources */,
 				2D9E0CB42811EEEC000E4321 /* EnterPhoneUIComposer.swift in Sources */,
+				2DC5432C284CBE8900078A3C /* ListProductRoute.swift in Sources */,
 				2DCAB570280B6E1B00308095 /* BroadcastRoute.swift in Sources */,
 				2D73B4F9281DE9C700C2F031 /* ProfileRouter.swift in Sources */,
 				2D48E98F281D8BF300171E81 /* CMLTabBarController.swift in Sources */,
@@ -694,6 +717,7 @@
 				2DD398D32810B58000A575DA /* AppEnvironment.swift in Sources */,
 				2D8C4F402843E958001C13B2 /* VideoRoute.swift in Sources */,
 				2DCAB56C280B6D9E00308095 /* Router.swift in Sources */,
+				2DC5432E284CBEBF00078A3C /* VideoContentRouter.swift in Sources */,
 				2DA4D9472824573D008EFAF1 /* UsePasswordRouter.swift in Sources */,
 				2D2E6FC4283C338000A795AF /* HomeUIComposer.swift in Sources */,
 				2DC5431B284CAE3D00078A3C /* VideoContentRoute.swift in Sources */,

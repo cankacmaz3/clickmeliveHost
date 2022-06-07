@@ -1,0 +1,11 @@
+/* 
+  Stock.strings
+  ClickmeliveHostCore
+
+  Created by Can Kaçmaz on 5.06.2022.
+  
+*/
+
+"STOCK_ITEM_REMAINING_STOCK" = "Son %d Ürün";
+"STOCK_ITEM_SOLD_OUT" = "Tükendi";
+"STOCK_COUNT" = "Stok Adedi: %d";

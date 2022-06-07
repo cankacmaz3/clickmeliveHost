@@ -1,0 +1,12 @@
+/*
+  ListProducts.strings
+  ClickmeliveHostCore
+
+  Created by Can Kaçmaz on 7.06.2022.
+  
+*/
+
+"LIST_PRODUCTS_SELECTION_COUNT" = "Ürün Seç (%d/25)";
+"LIST_PRODUCTS_SAVE" = "Kaydet";
+"LIST_PRODUCTS_SEARCH_PLACEHOLDER" = "Ürün adı gir";
+"LIST_PRODUCTS_MAXIMUM_PRODUCT_EXCEEDED_ALERT" = "En fazla 25 adet ürün seçebilirsin.";
