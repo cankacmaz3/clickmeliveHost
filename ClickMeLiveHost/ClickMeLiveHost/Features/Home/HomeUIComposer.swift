@@ -23,6 +23,11 @@ final class HomeUIComposer {
                                             listVideosViewController: listVideosViewController)
         homeRouter.viewController = controller
         
+        controller.onViewWillAppear {
+            listEventsViewController.reloadTableView()
+            listVideosViewController.reloadCollectionView()
+        }
+        
         return controller
     }
 }

@@ -35,11 +35,6 @@ public final class ListVideosViewController: UIViewController, Layouting {
         setupCollectionView()
     }
     
-    public override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        reloadCollectionView()
-    }
-    
     public override func loadView() {
         view = ViewType.create()
     }
@@ -55,7 +50,7 @@ public final class ListVideosViewController: UIViewController, Layouting {
         refreshController?.deleteEvent(eventId: eventId)
     }
     
-    private func reloadCollectionView() {
+    public func reloadCollectionView() {
         collectionModel = []
         refreshController?.refresh()
     }

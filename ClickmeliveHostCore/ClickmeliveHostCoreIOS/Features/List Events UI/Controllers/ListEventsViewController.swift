@@ -51,11 +51,6 @@ public final class ListEventsViewController: UIViewController, Layouting {
         setupTableView()
     }
     
-    public override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        reloadTableView()
-    }
-    
     public override func loadView() {
         view = ViewType.create()
     }
@@ -73,7 +68,7 @@ public final class ListEventsViewController: UIViewController, Layouting {
         tableModel = cellControllers
     }
     
-    private func reloadTableView() {
+    public func reloadTableView() {
         tableModel = []
         refreshController?.refresh()
     }

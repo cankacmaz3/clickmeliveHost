@@ -17,6 +17,7 @@ extension VideoRoute where Self: RouterProtocol {
         let player = AVPlayer(url: url)
         let playerViewController = AVPlayerViewController()
         playerViewController.player = player
+        playerViewController.modalPresentationStyle = .formSheet
         UIApplication.shared.windows.first?.rootViewController?.present(playerViewController, animated: true) {
             playerViewController.player!.play()
         }
