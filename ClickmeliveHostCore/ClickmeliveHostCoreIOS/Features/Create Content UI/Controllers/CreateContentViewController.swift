@@ -24,7 +24,7 @@ public final class CreateContentViewController: UIViewController, Layouting {
         super.init(nibName: nil, bundle: nil)
     }
     
-    private var tableModel = [ContentViewModel]() {
+    private var tableModel = [SelectContentViewModel]() {
         didSet { layoutableView.tableView.reloadData() }
     }
     
@@ -46,7 +46,7 @@ public final class CreateContentViewController: UIViewController, Layouting {
         view = ViewType.create()
     }
     
-    public func display(contents: [ContentViewModel]) {
+    public func display(contents: [SelectContentViewModel]) {
         tableModel = contents
     }
     

@@ -9,7 +9,7 @@ import Foundation
 import ClickmeliveHostCoreIOS
 
 final class HomeRouter: Router<HomeViewController>, HomeRouter.Routes {
-    typealias Routes = BroadcastRoute & AlertRoute & VideoRoute & VideoContentRoute
+    typealias Routes = BroadcastRoute & AlertRoute & VideoRoute & ContentRoute
     var broadcastTransition: Transition = PushTransition(isAnimated: true, hidesBottomBarWhenPushed: true)
-    var videoContentTransition: Transition = PushTransition(isAnimated: true, hidesBottomBarWhenPushed: true)
+    var contentTransition: Transition = PushTransition(isAnimated: true, hidesBottomBarWhenPushed: true)
 }

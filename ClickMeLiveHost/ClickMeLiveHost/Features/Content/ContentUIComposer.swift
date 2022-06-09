@@ -1,5 +1,5 @@
 //
-//  VideoContentUIComposer.swift
+//  ContentUIComposer.swift
 //  ClickMeLiveHost
 //
 //  Created by Can Kaçmaz on 5.06.2022.
@@ -12,13 +12,13 @@ import YPImagePicker
 import ClickmeliveHostCore
 import ClickmeliveHostCoreIOS
 
-final class VideoContentUIComposer {
+final class ContentUIComposer {
     private init() {}
     
     private static var disposables = Set<AnyCancellable>()
     
-    static func makeVideoContentViewController(event: Event?) -> VideoContentViewController {
-        let router = VideoContentRouter()
+    static func makeContentViewController(eventViewModel: EventViewModel?, contentType: CMLContentType) -> ContentViewController {
+        let router = ContentRouter()
         
         let client = URLSessionHTTPClient(session: URLSession(configuration: .default))
         let loadingClient = LoadingViewHTTPClientDecorator(decoratee: client, loadingView: LoadingView.instance)
@@ -26,25 +26,31 @@ final class VideoContentUIComposer {
         let authTokenLoader = AuthTokenLoader(store: AuthTokenStore())
         
         let eventCategoryLoader = RemoteEventCategoryLoader(client: loadingClient, baseURL: AppEnvironment.baseURL, authTokenLoader: authTokenLoader)
+        let eventGroupLoader = RemoteEventGroupLoader(client: loadingClient, baseURL: AppEnvironment.baseURL, authTokenLoader: authTokenLoader)
         let eventCreator = RemoteEventCreator(client: loadingClient, baseURL: AppEnvironment.baseURL, authTokenLoader: authTokenLoader)
         let imageURLCreator = RemoteImageURLCreator(client: client, baseURL: AppEnvironment.baseURL, authTokenLoader: authTokenLoader)
         let videoURLCreator = RemoteVideoURLCreator(client: loadingClient, baseURL: AppEnvironment.baseURL, authTokenLoader: authTokenLoader)
         
-        let viewModel = VideoContentViewModel(eventCategoryLoader: eventCategoryLoader, eventCreator: eventCreator, imageURLCreator: imageURLCreator, videoURLCreator: videoURLCreator)
-        let controller = VideoContentViewController(viewModel: viewModel)
+        let viewModel = ContentViewModel(eventCategoryLoader: eventCategoryLoader, eventGroupLoader: eventGroupLoader, eventCreator: eventCreator, imageURLCreator: imageURLCreator, videoURLCreator: videoURLCreator)
+        
+        let controller = ContentViewController(editingEvent: eventViewModel ,viewModel: viewModel, contentType: contentType)
         router.viewController = controller
         
         viewModel.onError.sink(receiveValue: { message in
             router.openAlertModule(message: message)
         }).store(in: &disposables)
         
-        viewModel.onEventCreated.sink(receiveValue: { [weak controller] in
+        viewModel.onEventCreated.sink(receiveValue: {
             FileManager.default.clearTmpDirectory()
-            controller?.tabBarController?.changeTab(to: .home)
+            router.openAppModule()
         }).store(in: &disposables)
         
         viewModel.onCategoriesLoaded.sink(receiveValue: { [weak controller] categories in
             controller?.loadCategories(categories: categories)
+        }).store(in: &disposables)
+        
+        viewModel.onGroupsLoaded.sink(receiveValue: { [weak controller] groups in
+            controller?.loadGroups(groups: groups)
         }).store(in: &disposables)
         
         controller.onAddProductSelected.sink(receiveValue: { [weak controller] productViewModels in

@@ -19,14 +19,14 @@ final class CreateContentUIComposer {
         router.viewController = controller
         
         controller.display(contents: [
-            ContentViewModel(contentType: .livestream,
+            SelectContentViewModel(contentType: .livestream,
                              selection: {
-                                 router.openLivestreamContentModule()
+                                 router.openContentModule(contentType: .livestream)
                             }
             ),
-            ContentViewModel(contentType: .video,
+            SelectContentViewModel(contentType: .video,
                              selection: {
-                                 router.openVideoContentModule()
+                                 router.openContentModule(contentType: .video)
                              }
             )
         ])

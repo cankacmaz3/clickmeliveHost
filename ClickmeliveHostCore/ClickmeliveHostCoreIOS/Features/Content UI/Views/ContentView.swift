@@ -1,5 +1,5 @@
 //
-//  VideoContentView.swift
+//  ContentView.swift
 //  ClickmeliveHostCoreIOS
 //
 //  Created by Can Kaçmaz on 5.06.2022.
@@ -9,31 +9,83 @@ import UIKit
 import WSTagsField
 import ClickmeliveHostCore
 
-extension VideoContentView {
-    func setLocalizedTitles(viewModel: VideoContentViewModel) {
+extension ContentView {
+    func populate(with viewModel: EventViewModel) {
+        tfVideoName.text = viewModel.title
+    }
+    
+    func setLocalizedTitles(viewModel: ContentViewModel) {
         listProductsView.setTitle(viewModel.addPhoto)
         lblVideoName.text = viewModel.videoName
         tfVideoName.attributedPlaceholder = NSAttributedString(
             string: viewModel.videoNamePlaceholder,
             attributes: [NSAttributedString.Key.foregroundColor: Colors.primaryPlaceholderText,
                          NSAttributedString.Key.font: UIFont(name: Fonts.regular, size: 14)!])
+        
+        lblLivestreamTitle.text = viewModel.streamTitle
+        tfLivestreamTitle.attributedPlaceholder = NSAttributedString(
+            string: viewModel.streamTitlePlaceholder,
+            attributes: [NSAttributedString.Key.foregroundColor: Colors.primaryPlaceholderText,
+                         NSAttributedString.Key.font: UIFont(name: Fonts.regular, size: 14)!])
+        
         lblTags.text = viewModel.tags
         tfTags.placeholder = viewModel.tagsPlaceholder
         
-        lblCategories.text = viewModel.category
-        tfCategories.attributedPlaceholder = NSAttributedString(
+        groupsPickerView.lblGroups.text = viewModel.group
+        groupsPickerView.tfGroups.attributedPlaceholder = NSAttributedString(
+            string: viewModel.groupPlaceholder,
+            attributes: [NSAttributedString.Key.foregroundColor: Colors.primaryPlaceholderText,
+                         NSAttributedString.Key.font: UIFont(name: Fonts.regular, size: 14)!])
+        
+        categoriesPickerView.lblCategories.text = viewModel.category
+        categoriesPickerView.tfCategories.attributedPlaceholder = NSAttributedString(
             string: viewModel.categoryPlaceholder,
             attributes: [NSAttributedString.Key.foregroundColor: Colors.primaryPlaceholderText,
                          NSAttributedString.Key.font: UIFont(name: Fonts.regular, size: 14)!])
-        tfCategories.inputView = pickerView
         
         btnApprove.setTitle(viewModel.approve, for: .normal)
     }
     
+    func setupContent(type: CMLContentType) {
+        switch type {
+        case .video:
+            [lblVideoName, tfVideoName].forEach {
+                videoNameStackView.addArrangedSubview($0)
+            }
+            
+            [videoNameStackView, categoriesPickerView].forEach {
+                stackView.addArrangedSubview($0, withMargin: UIEdgeInsets(top: 0, left: 16, bottom: 0, right: -16))
+            }
+            
+            tfVideoName.constrainHeight(50)
+            
+        case .livestream:
+            [lblLivestreamTitle, tfLivestreamTitle].forEach {
+                livestreamTitleStackView.addArrangedSubview($0)
+            }
+            
+            [livestreamTitleStackView, groupsPickerView, startingDateView].forEach {
+                stackView.addArrangedSubview($0, withMargin: UIEdgeInsets(top: 0, left: 16, bottom: 0, right: -16))
+            }
+            
+            tfLivestreamTitle.constrainHeight(50)
+        }
+        
+        [lblTags, tfTags].forEach {
+            tagsStackView.addArrangedSubview($0)
+        }
+        
+        stackView.addArrangedSubview(tagsStackView, withMargin: UIEdgeInsets(top: 0, left: 16, bottom: 0, right: -16))
+        stackView.addArrangedSubview(addVideoView)
+        stackView.addArrangedSubview(listProductsView)
+        
+        stackView.addArrangedSubview(btnApprove, withMargin: UIEdgeInsets(top: 0, left: 16, bottom: -16, right: -16))
+        btnApprove.constrainHeight(50)
+    }
     
 }
 
-public final class VideoContentView: UIView, Layoutable {
+public final class ContentView: UIView, Layoutable {
     
     private let scrollView: UIScrollView = {
         let sv = UIScrollView()
@@ -73,7 +125,7 @@ public final class VideoContentView: UIView, Layoutable {
         return tf
     }()
     
-    private let categoriesStackView: UIStackView = {
+    private let livestreamTitleStackView: UIStackView = {
         let stackView = UIStackView()
         stackView.axis = .vertical
         stackView.distribution = .fill
@@ -81,27 +133,34 @@ public final class VideoContentView: UIView, Layoutable {
         return stackView
     }()
     
-    private let lblCategories: UILabel = {
+    private let lblLivestreamTitle: UILabel = {
         let label = UILabel()
         label.font = UIFont(name: Fonts.semibold, size: 12)
         label.textColor = Colors.primaryText
         return label
     }()
     
-    let tfCategories: UITextField = {
+    let tfLivestreamTitle: UITextField = {
         let tf = CMLTextField(padding: 15,
                               font: UIFont(name: Fonts.regular, size: 14)!,
                               cornerRadius: 4)
-        tf.keyboardToolbar.doneBarButton.tintColor = Colors.primary
-        tf.keyboardToolbar.doneBarButton.setTitleTextAttributes([NSAttributedString.Key.foregroundColor: Colors.primary,
-                                                                        NSAttributedString.Key.font: UIFont(name: Fonts.medium, size: 14)!], for: UIControl.State.normal)
+        
         return tf
     }()
     
-    lazy var pickerView: UIPickerView = {
-        let pickerView = UIPickerView()
-        pickerView.backgroundColor = .white
-        return pickerView
+    let categoriesPickerView: CategoryPickerView = {
+        let view = CategoryPickerView()
+        return view
+    }()
+    
+    let groupsPickerView: GroupPickerView = {
+        let view = GroupPickerView()
+        return view
+    }()
+    
+    let startingDateView: StartingDateView = {
+        let view = StartingDateView()
+        return view
     }()
     
     private let tagsStackView: UIStackView = {
@@ -154,24 +213,6 @@ public final class VideoContentView: UIView, Layoutable {
         backgroundColor = .white
         addSubview(scrollView)
         
-        [lblVideoName, tfVideoName].forEach {
-            videoNameStackView.addArrangedSubview($0, withMargin: UIEdgeInsets(top: 0, left: 16, bottom: 0, right: -16))
-        }
-        
-        [lblCategories, tfCategories].forEach {
-            categoriesStackView.addArrangedSubview($0, withMargin: UIEdgeInsets(top: 0, left: 16, bottom: 0, right: -16))
-        }
-        
-        [lblTags, tfTags].forEach {
-            tagsStackView.addArrangedSubview($0, withMargin: UIEdgeInsets(top: 0, left: 16, bottom: 0, right: -16))
-        }
-        
-        [videoNameStackView, categoriesStackView, tagsStackView, addVideoView, listProductsView].forEach {
-            stackView.addArrangedSubview($0)
-        }
-        
-        stackView.addArrangedSubview(btnApprove, withMargin: UIEdgeInsets(top: 0, left: 16, bottom: -16, right: -16))
-        
         scrollView.addSubview(stackView)
     }
     
@@ -181,11 +222,5 @@ public final class VideoContentView: UIView, Layoutable {
         stackView.anchor(scrollView.topAnchor, left: scrollView.leftAnchor, bottom: scrollView.bottomAnchor, right: scrollView.rightAnchor, topConstant: 10, leftConstant: 0, bottomConstant: 0, rightConstant: 0, widthConstant: 0, heightConstant: 0)
         
         addConstraint(NSLayoutConstraint(item: stackView, attribute: .width, relatedBy: .equal, toItem: self, attribute: .width, multiplier: 1.0, constant: 0))
-        
-        tfVideoName.constrainHeight(50)
-        tfCategories.constrainHeight(50)
-        
-        btnApprove.constrainHeight(50)
     }
 }
-

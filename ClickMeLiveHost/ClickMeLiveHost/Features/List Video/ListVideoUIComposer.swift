@@ -46,7 +46,8 @@ final class ListVideoUIComposer {
                 }
                 
                 cellController.onEditTapped = {
-                    router.openVideoContentModule(event: event)
+                    let eventViewModel = EventViewModel(model: event)
+                    router.openContentModule(eventViewModel: eventViewModel, contentType: .video)
                 }
                 
                 return cellController

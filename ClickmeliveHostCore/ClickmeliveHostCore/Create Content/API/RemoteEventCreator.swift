@@ -9,8 +9,8 @@ import Foundation
 import Combine
 
 public final class RemoteEventCreator: RemoteClient<Event>, EventCreator {
-    public func createVideo(isActive: Bool, status: Event.EventStatus, title: String, categoryId: Int, image: String, video: String, products: [Int], tags: [String]) -> AnyPublisher<Event, Error> {
-        let endPoint = EventEndpoints.createVideo(isActive: isActive, status: status, title: title, categoryId: categoryId, image: image, video: video, products: products, tags: tags)
+    public func createVideo(isActive: Bool, status: Event.EventStatus, title: String, contentId: Int, image: String, video: String, products: [Int], tags: [String], startingDate: String?) -> AnyPublisher<Event, Error> {
+        let endPoint = EventEndpoints.create(isActive: isActive, status: status, title: title, contentId: contentId, image: image, video: video, products: products, tags: tags, startingDate: startingDate)
         let urlRequest = endPoint.urlRequest(baseURL: baseURL)
         return loadPublisher(urlRequest: urlRequest, mapper: EventMapper.map)
     }

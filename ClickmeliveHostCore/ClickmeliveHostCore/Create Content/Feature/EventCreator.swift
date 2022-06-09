@@ -8,5 +8,5 @@
 import Combine
 
 public protocol EventCreator {
-    func createVideo(isActive: Bool, status: Event.EventStatus, title: String, categoryId: Int, image: String, video: String, products: [Int], tags: [String]) -> AnyPublisher<Event, Error>
+    func createVideo(isActive: Bool, status: Event.EventStatus, title: String, contentId: Int, image: String, video: String, products: [Int], tags: [String], startingDate: String?) -> AnyPublisher<Event, Error>
 }

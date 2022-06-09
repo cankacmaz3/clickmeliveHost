@@ -1,5 +1,5 @@
 //
-//  Localized+VideoContent.swift
+//  Localized+Content.swift
 //  ClickmeliveHostCore
 //
 //  Created by Can Kaçmaz on 7.06.2022.
@@ -8,10 +8,10 @@
 import Foundation
 
 extension Localized {
-    enum VideoContent {
-        static var table: String { "VideoContent" }
+    enum Content {
+        static var table: String { "Content" }
 
-        static var navigationTitle: String {
+        static var videoNavigationTitle: String {
             NSLocalizedString(
                 "VIDEO_CONTENT_TITLE",
                 tableName: table,
@@ -51,9 +51,49 @@ extension Localized {
                 comment: "Title for category placeholder")
         }
         
+        static var livestreamNavigationTitle: String {
+            NSLocalizedString(
+                "LIVESTREAM_CONTENT_TITLE",
+                tableName: table,
+                bundle: bundle,
+                comment: "Title for livestream navigation title")
+        }
+        
+        static var streamTitle: String {
+            NSLocalizedString(
+                "LIVESTREAM_CONTENT_STREAM_TITLE",
+                tableName: table,
+                bundle: bundle,
+                comment: "Title for livestream title")
+        }
+        
+        static var streamTitlePlaceholder: String {
+            NSLocalizedString(
+                "LIVESTREAM_CONTENT_STREAM_TITLE_PLACEHOLDER",
+                tableName: table,
+                bundle: bundle,
+                comment: "itle for livestream title placeholder")
+        }
+        
+        static var group: String {
+            NSLocalizedString(
+                "LIVESTREAM_CONTENT_GROUP",
+                tableName: table,
+                bundle: bundle,
+                comment: "Title for content group")
+        }
+        
+        static var groupPlaceholder: String {
+            NSLocalizedString(
+                "LIVESTREAM_CONTENT_GROUP_PLACEHOLDER",
+                tableName: table,
+                bundle: bundle,
+                comment: "Title for content group placeholder")
+        }
+       
         static var tags: String {
             NSLocalizedString(
-                "VIDEO_CONTENT_TAGS",
+                "CONTENT_TAGS",
                 tableName: table,
                 bundle: bundle,
                 comment: "Title for tags")
@@ -61,7 +101,7 @@ extension Localized {
         
         static var tagsPlaceholder: String {
             NSLocalizedString(
-                "VIDEO_CONTENT_TAGS_PLACEHOLDER",
+                "CONTENT_TAGS_PLACEHOLDER",
                 tableName: table,
                 bundle: bundle,
                 comment: "Title for navigation")
@@ -69,7 +109,7 @@ extension Localized {
         
         static var addVideos: String {
             NSLocalizedString(
-                "VIDEO_CONTENT_ADD_VIDEO",
+                "CONTENT_ADD_VIDEO",
                 tableName: table,
                 bundle: bundle,
                 comment: "Title for add video")
@@ -77,7 +117,7 @@ extension Localized {
         
         static var addVideoMessage: String {
             NSLocalizedString(
-                "VIDEO_CONTENT_VIDEO_MESSAGE",
+                "CONTENT_VIDEO_MESSAGE",
                 tableName: table,
                 bundle: bundle,
                 comment: "Title for add video message")
@@ -85,7 +125,7 @@ extension Localized {
         
         static var coverPhoto: String {
             NSLocalizedString(
-                "VIDEO_CONTENT_COVER_PHOTO",
+                "CONTENT_COVER_PHOTO",
                 tableName: table,
                 bundle: bundle,
                 comment: "Title for cover photo")
@@ -93,7 +133,7 @@ extension Localized {
         
         static var addPhoto: String {
             NSLocalizedString(
-                "VIDEO_CONTENT_ADD_PHOTO",
+                "CONTENT_ADD_PHOTO",
                 tableName: table,
                 bundle: bundle,
                 comment: "Title for add photo")
@@ -101,7 +141,7 @@ extension Localized {
         
         static var maxMBAlert: String {
             NSLocalizedString(
-                "VIDEO_CONTENT_MAX_MB_ALERT",
+                "CONTENT_MAX_MB_ALERT",
                 tableName: table,
                 bundle: bundle,
                 comment: "Title for max mb alert")
@@ -109,7 +149,7 @@ extension Localized {
         
         static var ratioAlert: String {
             NSLocalizedString(
-                "VIDEO_CONTENT_RATIO_ALERT",
+                "CONTENT_RATIO_ALERT",
                 tableName: table,
                 bundle: bundle,
                 comment: "Title for ratio alert")
@@ -117,7 +157,7 @@ extension Localized {
         
         static var imageAlert: String {
             NSLocalizedString(
-                "VIDEO_CONTENT_IMAGE_ALERT",
+                "CONTENT_IMAGE_ALERT",
                 tableName: table,
                 bundle: bundle,
                 comment: "Title for ratio alert")
@@ -125,7 +165,7 @@ extension Localized {
         
         static var categorySelect: String {
             NSLocalizedString(
-                "VIDEO_CONTENT_CATEGORY_SELECT",
+                "CONTENT_CATEGORY_SELECT",
                 tableName: table,
                 bundle: bundle,
                 comment: "Title for category selection button")
@@ -133,7 +173,7 @@ extension Localized {
         
         static var approve: String {
             NSLocalizedString(
-                "VIDEO_CONTENT_APPROVE",
+                "CONTENT_APPROVE",
                 tableName: table,
                 bundle: bundle,
                 comment: "Title for approve button")

@@ -7,7 +7,7 @@
 
 import Foundation
 
-public final class ContentViewModel {
+public final class SelectContentViewModel {
     
     public let contentType: CMLContentType
     public let select: () -> Void

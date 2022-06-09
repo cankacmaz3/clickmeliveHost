@@ -13,21 +13,23 @@ enum EventEndpoints: URLRequestBuilder {
     case updateStatus(eventId: Int, status: Event.EventStatus)
     case deleteEvent(eventId: Int)
     case getCategories
-    case createVideo(isActive: Bool,
-                     status: Event.EventStatus,
-                     title: String,
-                     categoryId: Int,
-                     image: String,
-                     video: String,
-                     products: [Int],
-                     tags: [String])
+    case getGroups
+    case create(isActive: Bool,
+                status: Event.EventStatus,
+                title: String,
+                contentId: Int,
+                image: String,
+                video: String,
+                products: [Int],
+                tags: [String],
+                startingDate: String?)
 }
 
 extension EventEndpoints {
     var path: String {
         switch self {
         case .statusEvents,
-             .createVideo:
+             .create:
             return "/api/v1/event"
         case let .getProducts(eventId):
             return "/api/v1/event/\(eventId)/product"
@@ -37,6 +39,8 @@ extension EventEndpoints {
             return "/api/v1/event/\(eventId)"
         case .getCategories:
             return "/api/v1/event/category"
+        case .getGroups:
+            return "/api/v1/event/group"
         }
     }
 }
@@ -59,22 +63,24 @@ extension EventEndpoints {
         case .statusEvents,
              .getProducts,
              .deleteEvent,
-             .getCategories:
+             .getCategories,
+             .getGroups:
             return [:]
         case .updateStatus(_, let status):
             return ["status": status.rawValue]
-        case let .createVideo(isActive, status, title, categoryId, image, video, products, tags):
+        case let .create(isActive, status, title, contentId, image, video, products, tags, startingDate):
             return [
                 "isActive": isActive,
                 "status": status.rawValue,
                 "title": title,
-                "categoryId": categoryId,
-                "groupId": categoryId,
+                "categoryId": contentId,
+                "groupId": contentId,
                 "description": title,
                 "image": image,
                 "video": video,
                 "products": products,
-                "tags": tags
+                "tags": tags,
+                "startingDate": startingDate ?? NSNull()
             ]
         }
     }
@@ -101,7 +107,8 @@ extension EventEndpoints {
             return [URLQueryItem(name: "isActive", value: "true")]
         case .updateStatus,
              .deleteEvent,
-             .createVideo:
+             .create,
+             .getGroups:
             return []
         }
     }
@@ -112,13 +119,14 @@ extension EventEndpoints {
         switch self {
         case .statusEvents,
              .getProducts,
-             .getCategories:
+             .getCategories,
+             .getGroups:
             return .get
         case .updateStatus:
             return .patch
         case .deleteEvent:
             return .delete
-        case .createVideo:
+        case .create:
             return .post
         }
     }

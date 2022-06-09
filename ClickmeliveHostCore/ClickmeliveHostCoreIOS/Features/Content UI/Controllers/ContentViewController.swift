@@ -1,5 +1,5 @@
 //
-//  VideoContentViewController.swift
+//  ContentViewController.swift
 //  ClickmeliveHostCoreIOS
 //
 //  Created by Can Kaçmaz on 5.06.2022.
@@ -11,21 +11,25 @@ import AVFoundation
 import ClickmeliveHostCore
 import IQKeyboardManagerSwift
 
-public final class VideoContentViewController: UIViewController, Layouting {
+public final class ContentViewController: UIViewController, Layouting {
     
-    public typealias ViewType = VideoContentView
+    public typealias ViewType = ContentView
     
     public var onAddProductSelected = PassthroughSubject<[ProductViewModel], Never>()
     public var onAddVideoSelected = PassthroughSubject<Void, Never>()
     public var onPlayVideoSelected = PassthroughSubject<URL, Never>()
     public var onAddCoverPhotoSelected = PassthroughSubject<Void, Never>()
     
-    private var categories: [EventCategory] = []
+    private let editingEvent: EventViewModel?
+    private let viewModel: ContentViewModel
+    private let contentType: CMLContentType
     
-    private let viewModel: VideoContentViewModel
-    
-    public init(viewModel: VideoContentViewModel) {
+    public init(editingEvent: EventViewModel?,
+                viewModel: ContentViewModel,
+                contentType: CMLContentType) {
+        self.editingEvent = editingEvent
         self.viewModel = viewModel
+        self.contentType = contentType
         super.init(nibName: nil, bundle: nil)
     }
     
@@ -35,11 +39,20 @@ public final class VideoContentViewController: UIViewController, Layouting {
     
     public override func viewDidLoad() {
         super.viewDidLoad()
+        layoutableView.setupContent(type: contentType)
+        
         setLocalizedTitles()
         registerActions()
-        setupCategories()
+       
+        initializations()
         
-        viewModel.loadCategories()
+        switch contentType {
+        case .livestream:
+            viewModel.loadgroups()
+        case .video:
+            viewModel.loadCategories()
+        }
+        
     }
     
     deinit {
@@ -48,6 +61,14 @@ public final class VideoContentViewController: UIViewController, Layouting {
     
     public override func loadView() {
         view = ViewType.create()
+    }
+    
+    private func initializations() {
+        guard let editingEvent = editingEvent else {
+            return
+        }
+        
+        layoutableView.populate(with: editingEvent)
     }
     
     public func validateVideo(fileURL: URL, coverImage: UIImage?) {
@@ -70,33 +91,24 @@ public final class VideoContentViewController: UIViewController, Layouting {
     }
     
     public func loadCategories(categories: [EventCategory]) {
-        self.categories = categories
+        layoutableView.categoriesPickerView.populate(with: categories)
+    }
+    
+    public func loadGroups(groups: [EventGroup]) {
+        layoutableView.groupsPickerView.populate(with: groups)
     }
     
     @objc private func approveTapped() {
-        let title = layoutableView.tfVideoName.text ?? ""
-        let categoryId = getSelectedCategoryId()
+        let title = contentType == .video ? layoutableView.tfVideoName.text ?? "": layoutableView.tfLivestreamTitle.text ?? ""
+        let contentId = contentType == .video ? layoutableView.categoriesPickerView.getSelectedCategoryId() : layoutableView.groupsPickerView.getSelectedGroupId()
         let tags = layoutableView.tfTags.tags.map { $0.text }
         let videoURL = layoutableView.addVideoView.fileURL
         let coverImage = layoutableView.addVideoView.image
         let addedProducts = layoutableView.listProductsView.selectedProductIds()
+        let status: Event.EventStatus = contentType == .video ? .LONG_VIDEO: .UPCOMING
+        let startingDate = contentType == .video ? nil : layoutableView.startingDateView.getSelectedDate()
         
-        viewModel.createVideoEvent(title: title, categoryId: categoryId, products: addedProducts, tags: tags, uploadImageData: coverImage?.pngData(), uploadVideoURL: videoURL)
-    }
-    
-    private func getSelectedCategoryId() -> Int? {
-        guard !categories.isEmpty else { return nil }
-        let selectedCategory = categories[layoutableView.pickerView.selectedRow(inComponent: 0)]
-        return selectedCategory.id
-    }
-    
-    @objc private func categorySelected() {
-        layoutableView.tfCategories.resignFirstResponder()
-        
-        guard !categories.isEmpty else { return }
-        
-        let selectedCategory = categories[layoutableView.pickerView.selectedRow(inComponent: 0)]
-        layoutableView.tfCategories.text = selectedCategory.name
+        viewModel.createEvent(status: status ,title: title, contentId: contentId, products: addedProducts, tags: tags, uploadImageData: coverImage?.pngData(), uploadVideoURL: videoURL, startingDate: startingDate)
     }
     
     private func registerActions() {
@@ -117,15 +129,10 @@ public final class VideoContentViewController: UIViewController, Layouting {
         }
         
         layoutableView.btnApprove.addTarget(self, action: #selector(approveTapped), for: .touchUpInside)
-        layoutableView.tfCategories.addRightButtonOnKeyboardWithText(viewModel.categorySelect, target: self, action: #selector(categorySelected))
-    }
-    
-    private func setupCategories() {
-        layoutableView.pickerView.delegate = self
-        layoutableView.pickerView.dataSource = self
     }
     
     private func setLocalizedTitles() {
+        
         navigationItem.title = viewModel.navigationTitle
         layoutableView.setLocalizedTitles(viewModel: viewModel)
     }
@@ -138,22 +145,8 @@ public final class VideoContentViewController: UIViewController, Layouting {
     }
 }
 
-extension VideoContentViewController: ListProductsDelegate {
+extension ContentViewController: ListProductsDelegate {
     public func selectedProducts(products: [ProductViewModel]) {
         layoutableView.listProductsView.display(products: products)
-    }
-}
-
-extension VideoContentViewController: UIPickerViewDelegate, UIPickerViewDataSource {
-    public func numberOfComponents(in pickerView: UIPickerView) -> Int {
-        return 1
-    }
-
-    public func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        return categories.count
-    }
-
-    public func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        return categories[row].name
     }
 }
