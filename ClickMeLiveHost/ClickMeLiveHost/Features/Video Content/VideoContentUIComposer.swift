@@ -17,9 +17,10 @@ final class VideoContentUIComposer {
     
     private static var disposables = Set<AnyCancellable>()
     
-    static func makeVideoContentViewController() -> VideoContentViewController {
+    static func makeVideoContentViewController(event: Event?) -> VideoContentViewController {
         let router = VideoContentRouter()
         
+        print(event, "here event")
         let client = URLSessionHTTPClient(session: URLSession(configuration: .default))
         let loadingClient = LoadingViewHTTPClientDecorator(decoratee: client, loadingView: LoadingView.instance)
         

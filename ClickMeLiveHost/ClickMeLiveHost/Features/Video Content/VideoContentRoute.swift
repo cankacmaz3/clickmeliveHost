@@ -9,12 +9,12 @@ import ClickmeliveHostCore
 
 protocol VideoContentRoute {
     var videoContentTransition: Transition { get }
-    func openVideoContentModule()
+    func openVideoContentModule(event: Event?)
 }
 
 extension VideoContentRoute where Self: RouterProtocol {
-    func openVideoContentModule() {
-        let module = VideoContentUIComposer.makeVideoContentViewController()
+    func openVideoContentModule(event: Event? = nil) {
+        let module = VideoContentUIComposer.makeVideoContentViewController(event: event)
         open(module, transition: videoContentTransition)
     }
 }

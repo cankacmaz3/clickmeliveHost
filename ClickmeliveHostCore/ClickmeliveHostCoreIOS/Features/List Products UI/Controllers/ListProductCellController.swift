@@ -29,6 +29,7 @@ public final class ListProductCellController {
     private func binded(cell: ListProductCell) -> ListProductCell {
         self.cell = cell
         cell.configure(with: viewModel, imageLoader: imageLoader, isSelected: isSelected)
+        
         return cell
     }
     

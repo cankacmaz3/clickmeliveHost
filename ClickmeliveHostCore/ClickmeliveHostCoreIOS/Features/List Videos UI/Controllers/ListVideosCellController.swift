@@ -10,20 +10,20 @@ import ClickmeliveHostCore
 
 public final class ListVideosCellController {
     
+    public var onDeleteTapped: (() -> Void)?
+    public var onEditTapped: (() -> Void)?
+    
     private let viewModel: EventViewModel
     private let imageLoader: ImageLoader
     
     public let selection: () -> Void
-    public let deleteTapped: () -> Void
-    
+   
     public init(viewModel: EventViewModel,
                 imageLoader: ImageLoader,
-                selection: @escaping () -> Void,
-                deleteTapped: @escaping () -> Void) {
+                selection: @escaping () -> Void) {
         self.viewModel = viewModel
         self.imageLoader = imageLoader
         self.selection = selection
-        self.deleteTapped = deleteTapped
     }
     
     private var cell: ListVideoCell?
@@ -36,9 +36,8 @@ public final class ListVideosCellController {
         self.cell = cell
         cell.configure(with: viewModel, imageLoader: imageLoader)
         
-        cell.onDeleteTapped = { [weak self] in
-            self?.deleteTapped()
-        }
+        cell.onDeleteTapped = onDeleteTapped
+        cell.onEditTapped = onEditTapped
         
         return cell
     }

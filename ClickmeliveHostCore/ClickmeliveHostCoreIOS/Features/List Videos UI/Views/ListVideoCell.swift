@@ -18,16 +18,22 @@ extension ListVideoCell {
     @objc func deleteTapped() {
         onDeleteTapped?()
     }
+    
+    @objc func editTapped() {
+        onEditTapped?()
+    }
 }
 
 final class ListVideoCell: UICollectionViewCell {
     
+    var onEditTapped: (() -> Void)?
     var onDeleteTapped: (() -> Void)?
     
     private enum Constants {
         static let dimBgImage: String = "img_dim_bg"
         static let playImage: String = "icon_play"
         static let deleteImage: String = "icon_delete"
+        static let editImage: String = "icon_edit"
     }
     
     private let ivEvent: UIImageView = {
@@ -69,6 +75,16 @@ final class ListVideoCell: UICollectionViewCell {
         return iv
     }()
     
+    private let ivEdit: UIImageView = {
+        let iv = UIImageView()
+        
+        iv.image = UIImage(named: Constants.editImage,
+                           in: Bundle(for: ListVideoCell.self),
+                           compatibleWith: nil)
+        iv.isUserInteractionEnabled = true
+        return iv
+    }()
+    
     private let lblTitle: UILabel = {
         let label = UILabel()
         label.textColor = .white
@@ -80,8 +96,11 @@ final class ListVideoCell: UICollectionViewCell {
     override init(frame: CGRect) {
         super.init(frame: frame)
         
-        let gesture = UITapGestureRecognizer(target: self, action: #selector(deleteTapped))
-        ivDelete.addGestureRecognizer(gesture)
+        let deleteGesture = UITapGestureRecognizer(target: self, action: #selector(deleteTapped))
+        ivDelete.addGestureRecognizer(deleteGesture)
+        
+        let editGesture = UITapGestureRecognizer(target: self, action: #selector(editTapped))
+        ivEdit.addGestureRecognizer(editGesture)
         
         setupViews()
         setupLayout()
@@ -100,6 +119,7 @@ final class ListVideoCell: UICollectionViewCell {
         addSubview(ivEvent)
         addSubview(ivDimBg)
         addSubview(ivPlay)
+        addSubview(ivEdit)
         addSubview(ivDelete)
         addSubview(lblTitle)
     }
@@ -112,6 +132,8 @@ final class ListVideoCell: UICollectionViewCell {
         ivPlay.constrainHeight(24)
         ivPlay.anchorCenterSuperview()
         
+        ivEdit.anchor(contentView.topAnchor, left: contentView.leftAnchor, bottom: nil, right: nil, topConstant: 8, leftConstant: 8, bottomConstant: 0, rightConstant: 0, widthConstant: 28, heightConstant: 28)
+
         ivDelete.anchor(contentView.topAnchor, left: nil, bottom: nil, right: contentView.rightAnchor, topConstant: 8, leftConstant: 0, bottomConstant: 0, rightConstant: 8, widthConstant: 28, heightConstant: 28)
     }
 }

@@ -35,14 +35,20 @@ final class ListVideoUIComposer {
                                                               selection: {
                     guard let url = viewModel.videoURL else { return }
                     router.openVideoModule(url: url)
-                },
-                                                              deleteTapped: {
+                })
+                
+                cellController.onDeleteTapped = {
                     router.openAlertModule(message: viewModel.deleteMessage,
                                            buttonTitle: viewModel.approveDelete,
                                            cancelButtonTitle: viewModel.cancelDelete) {
                         controller?.deleteTapped(eventId: event.id)
                     }
-                })
+                }
+                
+                cellController.onEditTapped = {
+                    router.openVideoContentModule(event: event)
+                }
+                
                 return cellController
             })
         }
