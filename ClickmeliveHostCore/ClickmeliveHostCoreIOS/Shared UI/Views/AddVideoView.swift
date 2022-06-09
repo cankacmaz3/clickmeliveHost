@@ -9,11 +9,15 @@ import Foundation
 import UIKit
 
 extension AddVideoView {
-    func setContent(fileURL: URL? = nil, image: UIImage?) {
+    func setVideo(fileURL: URL?, image: UIImage?) {
         self.fileURL = fileURL
         self.image = image
-        
         ivAddVideo.image = image
+        ivCoverPhoto.image = image
+    }
+    
+    func setImage(image: UIImage?) {
+        self.image = image
         ivCoverPhoto.image = image
     }
 }

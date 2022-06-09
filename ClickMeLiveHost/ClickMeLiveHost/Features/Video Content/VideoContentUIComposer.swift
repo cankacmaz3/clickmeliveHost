@@ -20,15 +20,18 @@ final class VideoContentUIComposer {
     static func makeVideoContentViewController(event: Event?) -> VideoContentViewController {
         let router = VideoContentRouter()
         
-        print(event, "here event")
+        print(event)
         let client = URLSessionHTTPClient(session: URLSession(configuration: .default))
         let loadingClient = LoadingViewHTTPClientDecorator(decoratee: client, loadingView: LoadingView.instance)
         
         let authTokenLoader = AuthTokenLoader(store: AuthTokenStore())
         
         let eventCategoryLoader = RemoteEventCategoryLoader(client: loadingClient, baseURL: AppEnvironment.baseURL, authTokenLoader: authTokenLoader)
+        let eventCreator = RemoteEventCreator(client: loadingClient, baseURL: AppEnvironment.baseURL, authTokenLoader: authTokenLoader)
+        let imageURLCreator = RemoteImageURLCreator(client: client, baseURL: AppEnvironment.baseURL, authTokenLoader: authTokenLoader)
+        let videoURLCreator = RemoteVideoURLCreator(client: loadingClient, baseURL: AppEnvironment.baseURL, authTokenLoader: authTokenLoader)
         
-        let viewModel = VideoContentViewModel(eventCategoryLoader: eventCategoryLoader)
+        let viewModel = VideoContentViewModel(eventCategoryLoader: eventCategoryLoader, eventCreator: eventCreator, imageURLCreator: imageURLCreator, videoURLCreator: videoURLCreator)
         let controller = VideoContentViewController(viewModel: viewModel)
         router.viewController = controller
         

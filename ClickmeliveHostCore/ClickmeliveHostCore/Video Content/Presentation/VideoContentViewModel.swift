@@ -14,9 +14,18 @@ public final class VideoContentViewModel {
     public typealias Observer<T> = PassthroughSubject<T, Never>
     
     private let eventCategoryLoader: EventCategoryLoader
+    private let eventCreator: EventCreator
+    private let imageURLCreator: ImageURLCreator
+    private let videoURLCreator: ImageURLCreator
     
-    public init(eventCategoryLoader: EventCategoryLoader) {
+    public init(eventCategoryLoader: EventCategoryLoader,
+                eventCreator: EventCreator,
+                imageURLCreator: ImageURLCreator,
+                videoURLCreator: ImageURLCreator) {
         self.eventCategoryLoader = eventCategoryLoader
+        self.eventCreator = eventCreator
+        self.imageURLCreator = imageURLCreator
+        self.videoURLCreator = videoURLCreator
     }
     
     private var maximumVideoMBForUploading: Int { return 100 }
@@ -130,6 +139,40 @@ public final class VideoContentViewModel {
                 }
         }, receiveValue: { [weak self] categories in
             self?.onCategoriesLoaded.send(categories)
+        }).store(in: &disposables)
+    }
+    
+    public func createVideoEvent(title: String, categoryId: Int?, products: [Int], tags: [String], uploadImageData: Data?, uploadVideoURL: URL?) {
+        guard let uploadVideoURL = uploadVideoURL else { return }
+        guard let imageData = uploadImageData else { return }
+        guard let videoData =  try? Data(contentsOf: uploadVideoURL) else { return }
+        
+        Publishers.Zip(imageURLCreator.load(data: imageData), videoURLCreator.load(data: videoData)).sink(
+            receiveCompletion: { _ in },
+            receiveValue: { [weak self] (uploadedImage, uploadedVideo) in
+                guard let imageUrl = uploadedImage.url else { return }
+                guard let videoUrl = uploadedVideo.url else { return }
+                self?.createVideo(title: title, categoryId: categoryId, products: products, tags: tags, imageURL: imageUrl, videoURL: videoUrl)
+        }).store(in: &disposables)
+        
+    }
+    
+    public func createVideo(title: String, categoryId: Int?, products: [Int], tags: [String], imageURL: String, videoURL: String) {
+        guard let categoryId = categoryId else {
+            return
+        }
+
+        eventCreator.createVideo(isActive: true, status: .LONG_VIDEO, title: title, categoryId: categoryId, image: imageURL, video: videoURL, products: products, tags: tags).sink(
+            receiveCompletion: { [weak self] completion in
+                guard let self = self else { return }
+                switch completion {
+                case .finished: break
+                    
+                case let .failure(error):
+                    self.onError.send(error.localizedDescription)
+                }
+        }, receiveValue: { [weak self] event in
+            print("success",  event)
         }).store(in: &disposables)
     }
 }

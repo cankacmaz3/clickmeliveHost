@@ -58,14 +58,14 @@ public final class VideoContentViewController: UIViewController, Layouting {
                                                             height: Double(abs(videoSize.height)))
         
         if  validateVideoSize == true && validateFile == true && validateImage == true {
-            layoutableView.addVideoView.setContent(fileURL: fileURL, image: coverImage)
+            layoutableView.addVideoView.setVideo(fileURL: fileURL, image: coverImage)
         }
     }
     
     public func setCoverPhoto(coverImage: UIImage) {
         let validateImage = viewModel.validateImageDataSize(data: coverImage.pngData())
         if validateImage == true {
-            layoutableView.addVideoView.setContent(image: coverImage)
+            layoutableView.addVideoView.setImage(image: coverImage)
         }
     }
     
@@ -75,13 +75,13 @@ public final class VideoContentViewController: UIViewController, Layouting {
     
     @objc private func approveTapped() {
         let title = layoutableView.tfVideoName.text ?? ""
-        let category = getSelectedCategoryId()
-        let tags = layoutableView.tfTags.tags
+        let categoryId = getSelectedCategoryId()
+        let tags = layoutableView.tfTags.tags.map { $0.text }
         let videoURL = layoutableView.addVideoView.fileURL
         let coverImage = layoutableView.addVideoView.image
         let addedProducts = layoutableView.listProductsView.selectedProductIds()
         
-        print(title, category, tags, videoURL, coverImage, addedProducts)
+        viewModel.createVideoEvent(title: title, categoryId: categoryId, products: addedProducts, tags: tags, uploadImageData: coverImage?.pngData(), uploadVideoURL: videoURL)
     }
     
     private func getSelectedCategoryId() -> Int? {

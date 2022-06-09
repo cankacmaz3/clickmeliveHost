@@ -23,6 +23,7 @@ public struct Event {
     public let video: String?
     public let operationCode: String?
     public let followingUser: Bool
+    public let tags: [String]
     
     public enum EventStatus: Int {
         case CANCELLED = -1

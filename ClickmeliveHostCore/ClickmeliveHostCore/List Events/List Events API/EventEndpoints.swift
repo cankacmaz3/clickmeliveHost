@@ -13,12 +13,21 @@ enum EventEndpoints: URLRequestBuilder {
     case updateStatus(eventId: Int, status: Event.EventStatus)
     case deleteEvent(eventId: Int)
     case getCategories
+    case createVideo(isActive: Bool,
+                     status: Event.EventStatus,
+                     title: String,
+                     categoryId: Int,
+                     image: String,
+                     video: String,
+                     products: [Int],
+                     tags: [String])
 }
 
 extension EventEndpoints {
     var path: String {
         switch self {
-        case .statusEvents:
+        case .statusEvents,
+             .createVideo:
             return "/api/v1/event"
         case let .getProducts(eventId):
             return "/api/v1/event/\(eventId)/product"
@@ -54,6 +63,19 @@ extension EventEndpoints {
             return [:]
         case .updateStatus(_, let status):
             return ["status": status.rawValue]
+        case let .createVideo(isActive, status, title, categoryId, image, video, products, tags):
+            return [
+                "isActive": isActive,
+                "status": status.rawValue,
+                "title": title,
+                "categoryId": categoryId,
+                "groupId": categoryId,
+                "description": title,
+                "image": image,
+                "video": video,
+                "products": products,
+                "tags": tags
+            ]
         }
     }
 }
@@ -78,7 +100,8 @@ extension EventEndpoints {
         case .getCategories:
             return [URLQueryItem(name: "isActive", value: "true")]
         case .updateStatus,
-             .deleteEvent:
+             .deleteEvent,
+             .createVideo:
             return []
         }
     }
@@ -95,6 +118,8 @@ extension EventEndpoints {
             return .patch
         case .deleteEvent:
             return .delete
+        case .createVideo:
+            return .post
         }
     }
 }

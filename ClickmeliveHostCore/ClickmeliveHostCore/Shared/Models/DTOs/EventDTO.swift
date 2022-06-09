@@ -9,6 +9,7 @@ import Foundation
 
 extension EventDTO {
     func toDomain() -> Event {
+        let tags = tags?.map { $0 } ?? []
         return .init(id: eventId ?? -1,
                      categoryId: categoryId ?? -1,
                      image: image,
@@ -23,7 +24,8 @@ extension EventDTO {
                      liveStream: liveStream?.toDomain(),
                      video: video,
                      operationCode: operationCode,
-                     followingUser: metadata?.isFollowing ?? false)
+                     followingUser: _metadata?.isFollowing ?? false,
+                     tags: tags)
     }
 }
 
@@ -42,7 +44,8 @@ struct EventDTO: Decodable {
     private let liveStream: LiveStreamDTO?
     private let video: String?
     private let operationCode: String?
-    private let metadata: MetadataDTO?
+    private let _metadata: MetadataDTO?
+    private let tags: [String]?
     
     private struct LiveStreamDTO: Decodable {
         let playbackUrl: String
