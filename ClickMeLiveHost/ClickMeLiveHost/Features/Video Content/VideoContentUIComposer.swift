@@ -20,7 +20,6 @@ final class VideoContentUIComposer {
     static func makeVideoContentViewController(event: Event?) -> VideoContentViewController {
         let router = VideoContentRouter()
         
-        print(event)
         let client = URLSessionHTTPClient(session: URLSession(configuration: .default))
         let loadingClient = LoadingViewHTTPClientDecorator(decoratee: client, loadingView: LoadingView.instance)
         
@@ -37,6 +36,11 @@ final class VideoContentUIComposer {
         
         viewModel.onError.sink(receiveValue: { message in
             router.openAlertModule(message: message)
+        }).store(in: &disposables)
+        
+        viewModel.onEventCreated.sink(receiveValue: { [weak controller] in
+            FileManager.default.clearTmpDirectory()
+            controller?.tabBarController?.changeTab(to: .home)
         }).store(in: &disposables)
         
         viewModel.onCategoriesLoaded.sink(receiveValue: { [weak controller] categories in

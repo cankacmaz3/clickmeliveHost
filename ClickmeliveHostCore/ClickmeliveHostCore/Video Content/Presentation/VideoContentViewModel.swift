@@ -33,6 +33,7 @@ public final class VideoContentViewModel {
     
     public var onError = Observer<String>()
     public var onCategoriesLoaded = Observer<[EventCategory]>()
+    public var onEventCreated = Observer<Void>()
     
     public var navigationTitle: String {
         Localized.VideoContent.navigationTitle
@@ -171,8 +172,8 @@ public final class VideoContentViewModel {
                 case let .failure(error):
                     self.onError.send(error.localizedDescription)
                 }
-        }, receiveValue: { [weak self] event in
-            print("success",  event)
+        }, receiveValue: { [weak self] _ in
+            self?.onEventCreated.send()
         }).store(in: &disposables)
     }
 }

@@ -12,7 +12,7 @@ extension AddVideoView {
     func setVideo(fileURL: URL?, image: UIImage?) {
         self.fileURL = fileURL
         self.image = image
-        ivAddVideo.image = image
+        ivAddedVideo.image = image
         ivCoverPhoto.image = image
     }
     
@@ -48,7 +48,17 @@ final class AddVideoView: UIView {
         iv.image = UIImage(named: Constants.addVideoImage,
                            in: Bundle(for: AddVideoView.self),
                            compatibleWith: nil)
+        iv.contentMode = .scaleAspectFill
         iv.isUserInteractionEnabled = true
+        return iv
+    }()
+    
+    private let ivAddedVideo: UIImageView = {
+        let iv = UIImageView()
+        iv.isUserInteractionEnabled = true
+        iv.contentMode = .scaleAspectFill
+        iv.clipsToBounds = true
+        iv.layer.cornerRadius = 5
         return iv
     }()
     
@@ -75,21 +85,27 @@ final class AddVideoView: UIView {
         iv.image = UIImage(named: Constants.addVideoImage,
                            in: Bundle(for: AddVideoView.self),
                            compatibleWith: nil)
+        iv.contentMode = .scaleAspectFill
         iv.isUserInteractionEnabled = true
+        iv.clipsToBounds = true
         return iv
     }()
     
     private let ivCoverPhoto: UIImageView = {
         let iv = UIImageView()
-        
+        iv.contentMode = .scaleAspectFill
+        iv.clipsToBounds = true
+        iv.layer.cornerRadius = 5
         return iv
     }()
     
     @objc private func addVideoTapped() {
-        if fileURL == nil {
-            onAddVideoTapped?()
-        } else {
-            onPlayVideoTapped?(fileURL!)
+        onAddVideoTapped?()
+    }
+    
+    @objc private func addedVideoTapped() {
+        if let fileURL = fileURL {
+            onPlayVideoTapped?(fileURL)
         }
     }
     
@@ -102,6 +118,9 @@ final class AddVideoView: UIView {
         
         let addVideoGesture = UITapGestureRecognizer(target: self, action: #selector(addVideoTapped))
         ivAddVideo.addGestureRecognizer(addVideoGesture)
+       
+        let addedVideoGesture = UITapGestureRecognizer(target: self, action: #selector(addedVideoTapped))
+        ivAddedVideo.addGestureRecognizer(addedVideoGesture)
         
         let coverPhotoGesture = UITapGestureRecognizer(target: self, action: #selector(addCoverPhotoTapped))
         ivAddCoverPhotoFromGallery.addGestureRecognizer(coverPhotoGesture)
@@ -118,6 +137,7 @@ final class AddVideoView: UIView {
         backgroundColor = .white
         addSubview(lblAddVideo)
         addSubview(ivAddVideo)
+        addSubview(ivAddedVideo)
         addSubview(lblAddVideoMessage)
         addSubview(lblAddCoverPhoto)
         addSubview(ivAddCoverPhotoFromGallery)
@@ -127,6 +147,9 @@ final class AddVideoView: UIView {
     private func setupLayout() {
         lblAddVideo.anchor(topAnchor, left: leftAnchor, bottom: nil, right: rightAnchor, topConstant: 0, leftConstant: 16, bottomConstant: 0, rightConstant: 16, widthConstant: 0, heightConstant: 0)
         ivAddVideo.anchor(lblAddVideo.bottomAnchor, left: leftAnchor, bottom: nil, right: nil, topConstant: 10, leftConstant: 16, bottomConstant: 0, rightConstant: 0, widthConstant: 94, heightConstant: 152)
+        
+        ivAddedVideo.anchor(lblAddVideo.bottomAnchor, left: ivAddVideo.rightAnchor, bottom: nil, right: nil, topConstant: 10, leftConstant: 8, bottomConstant: 0, rightConstant: 0, widthConstant: 94, heightConstant: 152)
+        
         lblAddVideoMessage.anchor(ivAddVideo.bottomAnchor, left: leftAnchor, bottom: nil, right: rightAnchor, topConstant: 10, leftConstant: 16, bottomConstant: 0, rightConstant: 16, widthConstant: 0, heightConstant: 0)
         lblAddCoverPhoto.anchor(lblAddVideoMessage.bottomAnchor, left: leftAnchor, bottom: nil, right: rightAnchor, topConstant: 25, leftConstant: 16, bottomConstant: 0, rightConstant: 16, widthConstant: 0, heightConstant: 0)
         ivAddCoverPhotoFromGallery.anchor(lblAddCoverPhoto.bottomAnchor, left: leftAnchor, bottom: bottomAnchor, right: nil, topConstant: 10, leftConstant: 16, bottomConstant: 0, rightConstant: 0, widthConstant: 94, heightConstant: 152)

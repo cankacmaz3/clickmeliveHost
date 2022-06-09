@@ -7,6 +7,12 @@
 
 import UIKit
 
+enum TabbarItem: Int {
+    case home = 0
+    case createContent = 1
+    case profile = 2
+}
+
 final class CMLTabBarController: UITabBarController {
     
     private enum Constants {
@@ -34,6 +40,12 @@ final class CMLTabBarController: UITabBarController {
         self.tabBar.layer.shadowRadius = 5
         self.tabBar.layer.shadowOpacity = 0.5
         self.tabBar.layer.masksToBounds = false
+    }
+}
+
+extension UITabBarController {
+    func changeTab(to item: TabbarItem) {
+        self.selectedIndex = item.rawValue
     }
 }
 

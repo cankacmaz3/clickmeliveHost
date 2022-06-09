@@ -44,7 +44,13 @@ final class AppModuleBuilder {
     private static func makeRootViewController() -> UIViewController {
         let tabBarController = CMLTabBarController()
         
-        tabBarController.viewControllers = [homeViewController(), createContentViewController(), profileViewController()]
+        var viewControllers: [UIViewController] = []
+        viewControllers.insert(homeViewController(), at: TabbarItem.home.rawValue)
+        viewControllers.insert(createContentViewController(), at: TabbarItem.createContent.rawValue)
+        viewControllers.insert(profileViewController(), at: TabbarItem.profile.rawValue)
+       
+        tabBarController.viewControllers = viewControllers
+        
         return tabBarController
     }
     
