@@ -164,6 +164,15 @@
         }
       },
       {
+        "package": "WSTagsField",
+        "repositoryURL": "https://github.com/whitesmith/WSTagsField",
+        "state": {
+          "branch": null,
+          "revision": "4a3f36d1903554bb6b65df0e7936df9bb95d7525",
+          "version": "5.4.0"
+        }
+      },
+      {
         "package": "YPImagePicker",
         "repositoryURL": "https://github.com/Yummypets/YPImagePicker.git",
         "state": {

@@ -1,0 +1,24 @@
+/*
+  VideoContent.strings
+  ClickmeliveHostCore
+
+  Created by Can Kaçmaz on 7.06.2022.
+  
+*/
+
+"VIDEO_CONTENT_TITLE" = "Video Oluştur";
+"VIDEO_CONTENT_VIDEO_NAME" = "Video Adı*";
+"VIDEO_CONTENT_VIDEO_NAME_PLACEHOLDER" = "Video adı giriniz.";
+"VIDEO_CONTENT_CATEGORY" = "Kategori*";
+"VIDEO_CONTENT_CATEGORY_PLACEHOLDER" = "Kategori seç.";
+"VIDEO_CONTENT_TAGS" = "Video Etiketleri*";
+"VIDEO_CONTENT_TAGS_PLACEHOLDER" = "Canlı yayına ait etiket giriniz. (Max 20 adet)";
+"VIDEO_CONTENT_ADD_VIDEO" = "Video Ekle*";
+"VIDEO_CONTENT_VIDEO_MESSAGE" = "Video 9:16 formatında, min 10, max 90 saniye ve max 100 mb boyutunda olmalıdır.";
+"VIDEO_CONTENT_COVER_PHOTO" = "Kapak Fotoğrafı Ekle*";
+"VIDEO_CONTENT_ADD_PHOTO" = "Satılacak Ürünleri Ekle*";
+"VIDEO_CONTENT_MAX_MB_ALERT" = "Yüklediğiniz video max 100 mb boyutunda olmalıdır.";
+"VIDEO_CONTENT_RATIO_ALERT" = "Yüklediğiniz video 9:16 formatında olmalıdır.";
+"VIDEO_CONTENT_IMAGE_ALERT" = "Yüklediğiniz fotoğraf max 2 mb boyutunda olmalıdır.";
+"VIDEO_CONTENT_CATEGORY_SELECT" = "Seç";
+"VIDEO_CONTENT_APPROVE" = "Onaya Gönder";

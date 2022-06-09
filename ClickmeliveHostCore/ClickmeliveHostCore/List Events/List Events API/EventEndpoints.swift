@@ -12,6 +12,7 @@ enum EventEndpoints: URLRequestBuilder {
     case getProducts(eventId: Int)
     case updateStatus(eventId: Int, status: Event.EventStatus)
     case deleteEvent(eventId: Int)
+    case getCategories
 }
 
 extension EventEndpoints {
@@ -25,6 +26,8 @@ extension EventEndpoints {
             return "/api/v1/event/\(eventId)/status"
         case .deleteEvent(let eventId):
             return "/api/v1/event/\(eventId)"
+        case .getCategories:
+            return "/api/v1/event/category"
         }
     }
 }
@@ -46,7 +49,8 @@ extension EventEndpoints {
         switch self {
         case .statusEvents,
              .getProducts,
-             .deleteEvent:
+             .deleteEvent,
+             .getCategories:
             return [:]
         case .updateStatus(_, let status):
             return ["status": status.rawValue]
@@ -71,6 +75,8 @@ extension EventEndpoints {
             return queryItems
         case .getProducts:
             return [URLQueryItem(name: "page", value: "\(1)")]
+        case .getCategories:
+            return [URLQueryItem(name: "isActive", value: "true")]
         case .updateStatus,
              .deleteEvent:
             return []
@@ -82,7 +88,8 @@ extension EventEndpoints {
     var method: HTTPMethod {
         switch self {
         case .statusEvents,
-             .getProducts:
+             .getProducts,
+             .getCategories:
             return .get
         case .updateStatus:
             return .patch

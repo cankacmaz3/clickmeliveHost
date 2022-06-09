@@ -10,11 +10,11 @@ import ClickmeliveHostCoreIOS
 
 protocol ListProductRoute {
     var listProductTransition: Transition { get }
-    func openListProductModule(selectedProducts: [ProductViewModel], delegate: ListProductsDelegate)
+    func openListProductModule(selectedProducts: [ProductViewModel], delegate: ListProductsDelegate?)
 }
 
 extension ListProductRoute where Self: RouterProtocol {
-    func openListProductModule(selectedProducts: [ProductViewModel], delegate: ListProductsDelegate) {
+    func openListProductModule(selectedProducts: [ProductViewModel], delegate: ListProductsDelegate?) {
         let module = ListProductUIComposer.makeListProductsViewController(selectedProducts: selectedProducts, openTransition: listProductTransition)
         module.delegate = delegate
         open(module, transition: listProductTransition)

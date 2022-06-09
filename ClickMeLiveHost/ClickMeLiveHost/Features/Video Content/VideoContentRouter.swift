@@ -9,7 +9,7 @@ import Foundation
 import ClickmeliveHostCoreIOS
 
 final class VideoContentRouter: Router<VideoContentViewController>, VideoContentRouter.Routes {
-    typealias Routes = ListProductRoute
+    typealias Routes = AlertRoute & ListProductRoute & VideoRoute
     var listProductTransition: Transition = PushTransition()
 }
 
